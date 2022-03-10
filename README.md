@@ -12,6 +12,7 @@ Maybe looking at this code can help people getting started with their own websit
 
 ## *How, but italic?*
 `yarn install` to download Node modules. ~~The warnings are a feature.~~
+
 `yarn start` to run a local dev server at [localhost:3000](localhost:3000).
 
 `Go nuts` and play around with the code for yourself.
