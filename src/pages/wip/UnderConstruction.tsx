@@ -5,6 +5,7 @@ import { Button, Typography, Container, Grid } from "@mui/material";
 import Image from "material-ui-image";
 
 import PylonScene from "./assets/pylon.svg";
+import { RiArrowDownLine } from "react-icons/ri";
 
 function Wip() {
 	return (
@@ -17,34 +18,12 @@ function Wip() {
 					content="This page is not quite ready yet. Check back at a later time."
 				/>
 			</Helmet>
-			<div className="title">
-				<Typography variant="h1">You're too early.</Typography>
-			</div>
-			<div className="content">
-				<Grid container spacing={4}>
-					<Grid item xs={12} sm={6}>
-						<Image
-							src={PylonScene}
-							width="100%"
-							alt="A pylon."
-							aspectRatio={2 / 1}
-							color="transparent"
-						/>
-					</Grid>
-					<Grid item xs={12} sm={6} style={{ alignSelf: "center" }}>
-						<Typography variant="h2">Nothing to see here. Yet.</Typography>
-						<Typography variant="body1">
-							The page you were looking for is not quite ready yet. Check back
-							again at a later date.
-						</Typography>
-						<br />
-						<Link to="/">
-							<Button variant="contained" size="large" color="warning">
-								Leave for now
-							</Button>
-						</Link>
-					</Grid>
-				</Grid>
+			<div className="fullscreen">
+            <img src={PylonScene} />
+				<Container className="title">
+					<Typography variant="h1">You're too early.</Typography>
+					<Typography variant="h2">There's nothing to see here yet.</Typography>
+				</Container>
 			</div>
 		</>
 	);

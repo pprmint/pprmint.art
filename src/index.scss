@@ -2,9 +2,6 @@ html {
 	width: 100vw;
 	overflow-x: hidden;
 }
-#root {
-	margin-top: var(--marginTop);
-}
 #main {
 	min-height: calc(100vh - (88px + var(--marginTop)));
 }
@@ -26,9 +23,10 @@ html {
 	--backgroundTertiary: #333;
 	/* Easing */
 	--easeOut: cubic-bezier(0, 0, 0.2, 1);
+	--easeInOut: cubic-bezier(0.6, 0, 0.1, 1);
 	/* Inset box shadow offsets */
 	--boxInsetBody: -1.3rem;
-	--boxInsetH2: -2.65rem;
+	--boxInsetH2: -2.5rem;
 	--boxInsetH3: -2rem;
 	/* Fonts */
 	--fontPrimary: "Silka", "Roboto", Helvetica, Arial, sans-serif;
@@ -36,7 +34,7 @@ html {
 	/* Top margin */
 	--marginTop: 145px;
 	@media only screen and (max-width: 1199px) {
-		--marginTop: 25px;
+		--marginTop: 100px;
 	}
 }
 
@@ -90,54 +88,54 @@ html {
 		transform: translateY(0px);
 	}
 }
-
-nav {
-	font-family: var(--fontPrimary);
-	font-weight: 600;
-	width: 20%;
-	padding-top: 15px;
-	position: fixed;
-	a.navlink {
-		clear: right;
-		display: block;
-		text-align: right;
-		font-size: 1.5em;
-		animation: fadeBottom 0.375s var(--easeOut) forwards;
-		transition: all 0.2s var(--easeOut);
-		color: var(--textPrimary);
+@keyframes fadeTopLoop {
+	0% {
 		opacity: 0;
-		&::after {
-			content: "•";
-			opacity: 0;
-			transition: all 0.2s var(--easeOut);
-			margin: 0 -6px;
-		}
-		&:hover,
-		&:focus-visible {
-			color: var(--textSecondary);
-			letter-spacing: 0.75px;
-		}
-		&:active {
-			letter-spacing: 0;
-		}
-		&.active {
-			color: var(--textSecondary);
-			&::after {
-				color: var(--greenPrimary);
-				opacity: 1;
-				margin: 0 4px 0 8px;
-			}
-		}
+		transform: translateY(-10px);
+	}
+	20% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(10px);
 	}
 }
+
+.navlink a {
+	display: inline-block;
+	transition: all 0.2s var(--easeOut);
+	color: var(--textPrimary);
+	text-align: right;
+	height: 22px;
+	margin-left: 15px;
+	&:hover {
+		color: var(--textSecondary);
+	}
+	&:focus-visible {
+		background-color: var(--backgroundTertiary);
+	}
+	&.active {
+		color: var(--textSecondary);
+	}
+}
+
 .MuiAppBar-root {
 	opacity: 0;
 	animation: fadeTop 0.375s var(--easeOut) forwards;
+	transition: 0.375s;
 }
 
 .content {
 	opacity: 0;
 	animation: fadeBottom 0.375s var(--easeOut) 0.08s forwards;
+}
+
+.section {
+    margin-top: 10vh;
 }
 
 footer {
@@ -156,26 +154,78 @@ footer {
 		}
 	}
 }
-
-.title {
-	margin-bottom: 20px;
-	@media only screen and (max-width: 1199px) {
-		h1 {
-			font-size: 4rem !important;
+.fullscreen {
+	height: 100vh;
+	position: relative;
+	img {
+		left: 50%;
+		transform: translate(-50%, -50%);
+		animation: fadeTop 1.2s var(--easeOut) 0.2s forwards;
+		opacity: 0;
+		min-height: 50%;
+	}
+	.title {
+		position: absolute;
+		top: 40vh;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		h1,
+		img {
+			animation: fadeBottom 1.2s var(--easeOut) 0.2s forwards;
+			opacity: 0;
+            max-width: 100%;
+		}
+		img {
+			height: 6rem;
+			padding-bottom: 16px;
+			@media only screen and (max-width: 1199px) {
+				height: 4rem;
+			}
 		}
 		h2 {
-			font-size: 2rem !important;
+			animation: fadeBottom 1s var(--easeOut) 0.3s forwards;
+			opacity: 0;
+		}
+		button {
+			animation: fadeBottom 1s var(--easeOut) 0.4s forwards;
+			opacity: 0;
+		}
+		svg {
+			opacity: 0;
+			animation: fadeTopLoop 1s var(--easeOut) 1.5s infinite;
 		}
 	}
-	h1,
-	.MuiCard-root {
-		animation: fadeBottom 0.375s var(--easeOut) forwards;
+}
+
+@media only screen and (max-width: 1199px) {
+    h1 {
+        font-size: 3rem !important;
+    }
+    h2 {
+        font-size: 1.5rem !important;
+    }
+}
+.title {
+	margin-top: var(--marginTop);
+	margin-bottom: 25px;
+	h1 {
+        animation: fadeBottom 0.375s var(--easeOut) forwards;
 		opacity: 0;
+        font-size: 6rem;
 	}
 	h2 {
-		animation: fadeBottom 0.375s var(--easeOut) 0.04s forwards;
+        animation: fadeBottom 0.375s var(--easeOut) 0.04s forwards;
 		opacity: 0;
+        font-size: 2.25rem;
 	}
+    @media only screen and (max-width: 1199px) {
+        h1 {
+            font-size: 3.5rem !important;
+        }
+        h2 {
+            font-size: 1.5rem !important;
+        }
+    }
 }
 
 /* General styles for links */
@@ -196,7 +246,7 @@ h3 a:focus-visible {
 p a,
 h2 a,
 h3 a {
-	transition: all 0.15s;
+	transition: all 0.2s var(--easeOut);
 	box-shadow: inset 0 -1px 0 #ffffff55;
 	margin: 0 0.35rem;
 	padding: 0;

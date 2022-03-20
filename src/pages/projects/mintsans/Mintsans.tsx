@@ -7,15 +7,15 @@ import {
 	Card,
 	CardContent,
 	CardActions,
+	Container,
 } from "@mui/material";
 
 import Image from "material-ui-image";
 
-import {
-	RiDownload2Line,
-} from "react-icons/ri";
+import { RiArrowDownLine, RiDownload2Line } from "react-icons/ri";
 
-import MintsansBanner from "./assets/mintsans.svg";
+import MintsansBanner from "./assets/mintsans_banner.svg";
+import MintsansLogo from "./assets/mintsans_logo.svg";
 
 import SlideOne from "./assets/slide1.svg";
 import SlideTwo from "./assets/slide2.svg";
@@ -35,20 +35,17 @@ function MintsansDL() {
 					content="My first geometric font. Not bad for a first attempt, but not good either."
 				/>
 			</Helmet>
-			<div className="title">
-				<Card elevation={0} variant="outlined">
-					<Image
-						src={MintsansBanner}
-						width="100%"
-						aspectRatio={20 / 5}
-						alt="Mintsans lo- well it's hardly a logo, just the name of the font written using itself."
-						color="transparent"
-					/>
-				</Card>
+			<div className="fullscreen">
+				<img src={MintsansBanner} />
+				<Container className="title">
+					<img src={MintsansLogo} />
+					<Typography variant="h2">A sans-serif font.</Typography>
+					<br />
+					<RiArrowDownLine size={25} />
+				</Container>
 			</div>
-
 			<div className="content">
-				<Card elevation={0}>
+				<div className="section">
 					<Image
 						src={SlideOne}
 						width="100%"
@@ -91,27 +88,26 @@ function MintsansDL() {
 						aspectRatio={16 / 9}
 						color="transparent"
 					/>
-				</Card>
-				<br />
-				<Card variant="outlined">
-					<CardContent>
-						<Typography variant="h2">Mintsans V2</Typography>
+				</div>
+				<div className="section">
+					<Container>
+						<Typography variant="h1">Mintsans V2</Typography>
 						<Typography variant="body1">
 							If you could actually read the text on slide 3 in a sensible
 							order, you deserve a download button.
 						</Typography>
-					</CardContent>
-					<CardActions>
+						<br />
 						<Button
-							href="/download/mintsans_2.0.zip"
+							variant="contained"
+							href="http://download.pprmint.art/mintsans_2.0.zip"
 							download
 							color="info"
 							startIcon={<RiDownload2Line />}
 						>
 							Download
 						</Button>
-					</CardActions>
-				</Card>
+					</Container>
+				</div>
 			</div>
 		</>
 	);

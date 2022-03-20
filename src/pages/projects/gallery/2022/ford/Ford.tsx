@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { Typography, Card, Skeleton } from "@mui/material";
+import { Typography, Card, Skeleton, Container } from "@mui/material";
 
 import Image from "material-ui-image";
+
+import OG from "./assets/ford-720.png";
 
 import SlideOne from "./assets/ford-m.mp4";
 import SlideTwo from "./assets/ford-b.svg";
@@ -20,21 +22,20 @@ function Ford() {
 					content="Inspired by a design by Paul Rand in 1966."
 				/>
 			</Helmet>
-			<div className="title">
+			<Container className="title">
 				<Typography variant="h1">Ford rebrand.</Typography>
 				<Typography variant="h2">
 					Concept inspired by a design by Paul Rand in 1966.
 				</Typography>
-			</div>
+			</Container>
 			<div className="content">
-				<Card elevation={0}>
+				<div className="section">
 					<video
 						src={SlideOne}
 						width="100%"
 						height="100%"
 						autoPlay
 						loop
-						controls
 						muted
 					/>
 					<a href={SlideTwo} target="_blank">
@@ -71,7 +72,7 @@ function Ford() {
 							}
 						/>
 					</a>
-				</Card>
+				</div>
 			</div>
 		</>
 	);

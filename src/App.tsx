@@ -14,19 +14,16 @@ import {
 	createTheme,
 	StyledEngineProvider,
 	CssBaseline,
-	Grid,
 	Typography,
 	IconButton,
-	Divider,
-	Container,
 	AppBar,
 	Toolbar,
 	Box,
 	SwipeableDrawer,
 	List,
 	ListItem,
-	ListItemIcon,
 	ListItemText,
+	useScrollTrigger,
 } from "@mui/material";
 
 // Imports of all the pages
@@ -145,6 +142,7 @@ const theme = createTheme({
 		h1: {
 			fontFamily: "var(--fontPrimary)",
 			color: "#EEE",
+			fontSize: "4rem",
 			fontWeight: 600,
 			lineHeight: 1.1,
 			paddingBottom: "1rem",
@@ -182,7 +180,6 @@ const theme = createTheme({
 		},
 	},
 });
-
 function IconLink(
 	props: React.PropsWithChildren<{ href: string; delay: string }>
 ) {
@@ -199,36 +196,22 @@ function IconLink(
 	);
 }
 
-function DesktopNavigation() {
-	return (
-		<nav>
-			<Link
-				to="/"
-				style={{
-					float: "right",
-					animation: "fadeBottom 0.4s cubic-bezier(0, 0.7, 0.5, 1) forwards",
-					opacity: "0",
-				}}
-			>
-				<img src={Wordmark} height="35px" alt="pprmint." />
-			</Link>
-			{nav.map((item) => {
-				const exact = item.exact ? true : false;
-				return (
-					<NavLink
-						className="navlink"
-						exact={item.exact}
-						activeClassName="active"
-						to={item.link}
-						style={{ animationDelay: "0.04s" }}
-					>
-						{item.text}
-					</NavLink>
-				);
-			})}
-		</nav>
-	);
+interface Props {
+	children: React.ReactElement;
 }
+function ElevationScroll(props: Props) {
+	const { children } = props;
+	const trigger = useScrollTrigger({
+		disableHysteresis: true,
+		threshold: 0,
+	});
+	return React.cloneElement(children, {
+		sx: trigger ? { boxShadow: 3 } : { boxShadow: 0 },
+		color: trigger ? "primary" : "transparent",
+		elevation: 0,
+	});
+}
+
 function MobileNavigation() {
 	const [open, setOpen] = useState<boolean>(false);
 	return (
@@ -310,100 +293,124 @@ function MobileNavigation() {
 	);
 }
 
-function App() {
+function App(props: Props) {
 	return (
 		<StyledEngineProvider injectFirst>
 			<ThemeProvider theme={theme}>
 				<CssBaseline />
 				<Router>
+					<ElevationScroll {...props}>
+						<AppBar
+							position="fixed"
+							sx={{
+								display: { xs: "none", lg: "block" },
+								transition: "all 0.375s",
+							}}
+						>
+							<Toolbar>
+								<Link
+									to="/"
+									style={{
+										marginTop: "9px",
+										flexGrow: "1",
+									}}
+								>
+									<img src={Wordmark} height="30px" alt="pprmint." />
+								</Link>
+								<div className="navlink">
+									{nav.map((item) => {
+										const exact = item.exact ? true : false;
+										return (
+											<NavLink
+												exact={item.exact}
+												activeClassName="active"
+												to={item.link}
+											>
+												{item.text}
+											</NavLink>
+										);
+									})}
+								</div>
+							</Toolbar>
+						</AppBar>
+					</ElevationScroll>
 					<MobileNavigation />
-					<Grid container spacing={8} id="main">
-						<Grid item xs={12} lg={2.5}>
-							<Box sx={{ display: { xs: "none", lg: "block" } }}>
-								<DesktopNavigation />
-							</Box>
-						</Grid>
-						<ScrollToTop>
-							<Grid item md={12} xl={7} lg={9}>
-								<Container maxWidth={false}>
-									{/* All the different pages that exist here, pretty much. */}
-									<Switch>
-										<Route path={"/"} exact>
-											<Home />
-										</Route>
-										<Route path={"/about"} exact>
-											{/* <About /> */}
-											<UnderConstruction />
-										</Route>
-										<Route path={"/projects"} exact>
-											<Projects />
-										</Route>
-										<Route path={"/projects/mintsans"} exact>
-											<MintsansDL />
-										</Route>
-										{/* <Route path={"/projects/mintbit"} exact>
+					<ScrollToTop>
+						{/* All the different pages that exist here, pretty much. */}
+						<Switch>
+							<Route path={"/"} exact>
+								<Home />
+							</Route>
+							<Route path={"/about"} exact>
+								{/* <About /> */}
+								<UnderConstruction />
+							</Route>
+							<Route path={"/projects"} exact>
+								<Projects />
+							</Route>
+							<Route path={"/projects/mintsans"} exact>
+								<MintsansDL />
+							</Route>
+							{/* <Route path={"/projects/mintbit"} exact>
 									<MintBitDL />
                                     </Route>
                                     <Route path={"/projects/mintalt"} exact>
 									<MintAltDL />
 								</Route> */}
-										<Route path={"/projects/mintcraft"} exact>
-											<MintcraftDL />
-										</Route>
-										<Route path={"/projects/win10tiles"} exact>
-											<Win10TilesDL />
-										</Route>
+							<Route path={"/projects/mintcraft"} exact>
+								<MintcraftDL />
+							</Route>
+							<Route path={"/projects/win10tiles"} exact>
+								<Win10TilesDL />
+							</Route>
 
-										<Route path={"/projects/works/2022/ipad"} exact>
-											<Ipad /> {/* AAAAAAAAAA */}
-										</Route>
-										<Route path={"/projects/works/2022/ford"} exact>
-											<Ford />
-										</Route>
-										<Route path={"/projects/works/2022/archwall"} exact>
-											<ArchWall />
-										</Route>
+							<Route path={"/projects/works/2022/ipad"} exact>
+								<Ipad /> {/* AAAAAAAAAA */}
+							</Route>
+							<Route path={"/projects/works/2022/ford"} exact>
+								<Ford />
+							</Route>
+							<Route path={"/projects/works/2022/archwall"} exact>
+								<ArchWall />
+							</Route>
 
-										<Route path={"/contact"} exact>
-											<Contact />
-										</Route>
+							<Route path={"/contact"} exact>
+								<Contact />
+							</Route>
 
-										<Route path={"/works"} exact>
-											<Redirect to="/projects" />
-										</Route>
-										<Route path={"/downloads"} exact>
-											<Redirect to="/projects" />
-										</Route>
-										<Route path={"/faq"} exact>
-											<Redirect to="/contact" />
-										</Route>
-										<Route path={"/mintcraft"} exact>
-											<Redirect to="/projects/mintcraft" />
-										</Route>
-										<Route path={"/mintsans"} exact>
-											<Redirect to="/projects/mintsans" />
-										</Route>
-										<Route path={"/mintalt"} exact>
-											<Redirect to="/projects/mintalt" />
-										</Route>
-										<Route path={"/win10tiles"} exact>
-											<Redirect to="/projects/win10tiles" />
-										</Route>
+							<Route path={"/works"} exact>
+								<Redirect to="/projects" />
+							</Route>
+							<Route path={"/downloads"} exact>
+								<Redirect to="/projects" />
+							</Route>
+							<Route path={"/faq"} exact>
+								<Redirect to="/contact" />
+							</Route>
+							<Route path={"/mintcraft"} exact>
+								<Redirect to="/projects/mintcraft" />
+							</Route>
+							<Route path={"/mintsans"} exact>
+								<Redirect to="/projects/mintsans" />
+							</Route>
+							<Route path={"/mintalt"} exact>
+								<Redirect to="/projects/mintalt" />
+							</Route>
+							<Route path={"/win10tiles"} exact>
+								<Redirect to="/projects/win10tiles" />
+							</Route>
 
-										<Route component={Error404}>
-											<Error404 />
-										</Route>
-									</Switch>
-								</Container>
-							</Grid>
-						</ScrollToTop>
-					</Grid>
+							<Route component={Error404}>
+								<Error404 />
+							</Route>
+						</Switch>
+					</ScrollToTop>
 				</Router>
 				<footer>
 					<div className="copyright">
 						<Typography variant="body2">
-							Made with <RiHeartFill color="var(--redSecondary)"/> and coffee by
-							pprmint.
+							Made with <RiHeartFill color="var(--redSecondary)" /> and coffee
+							by pprmint.
 						</Typography>
 					</div>
 					<div className="iconLinks">

@@ -10,6 +10,7 @@ import {
 	CardMedia,
 	CardActions,
 	Skeleton,
+	Container,
 } from "@mui/material";
 import { Masonry } from "@mui/lab";
 
@@ -128,7 +129,7 @@ const works2022 = [
 
 function Projects() {
 	return (
-		<>
+		<div className="page">
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>Things I made • pprmint.art</title>
@@ -137,164 +138,171 @@ function Projects() {
 					content="Have a look at some of my works, or download some other things I made, like my Minecraft resource pack, fonts or a few wallpapers for your phone and desktop."
 				/>
 			</Helmet>
-
-			<div className="title">
+			<Container className="title">
 				<Typography variant="h1">Things I made.</Typography>
 				<Typography variant="h2">
 					Visit the <Link to="/contact">FAQ</Link> to learn more about terms of
 					use.
 				</Typography>
-			</div>
+			</Container>
 			<div className="content">
-				<Grid container spacing={3}>
-					<Grid item xs={12} md={6}>
-						<Card variant="outlined">
-							<CardMedia
-								component="img"
-								image={MintcraftCardHeader}
-								alt="Mintcraft logo"
-							/>
-							<CardContent>
-								<Typography variant="body1">
-									What started as a simple "I don't like the colors of the
-									default Minceraft UI" ended with me trying to make the UI look
-									more modern, changing up the colors and a bit of the
-									iconography.
-								</Typography>
-							</CardContent>
-							<CardActions>
-								<Button
-									href="/download/mintcraft/Mintcraft_1.4-118.zip"
-									download
-									color="warning"
-								>
-									Download latest
-								</Button>
-								<Link to="/projects/mintcraft">
-									<Button color="inherit">Learn more</Button>
-								</Link>
-							</CardActions>
-						</Card>
-					</Grid>
-					<Grid item xs={12} md={6}>
-						<Card variant="outlined">
-							<CardMedia
-								component="img"
-								image={MintSansCardHeader}
-								alt="MintSans- well, it's hardly a logo, more like just the name of the font set in MintSans itself."
-							/>
-							<CardContent>
-								<Typography variant="body1">
-									My first attempt at creating a geometric font family. A more
-									optimized version is in development and will take at least
-									thrice as long as it has taken me to make the following page.
-								</Typography>
-							</CardContent>
-							<CardActions>
-								<Button
-									href="/download/mintsans_2.0.zip"
-									download
-									color="secondary"
-								>
-									Download latest
-								</Button>
-								<Link to="/projects/mintsans">
-									<Button color="inherit">Learn more</Button>
-								</Link>
-							</CardActions>
-						</Card>
-					</Grid>
-					<Grid item xs={12} md={6}>
-						<Card variant="outlined">
-							<CardMedia
-								component="img"
-								image={MintAltCardHeader}
-								alt="The MintAlternative 'logo' with a 2K Material icon behind it. Get it? It's funny because the want was inspired by Material icons."
-							/>
-							<CardContent>
-								<Typography variant="body1">
-									I looked at Google's Material icons, noticed some had text in
-									them, and went "Huh." The good: Numbers. The bad: That stupid
-									name. And the page for this font. That's still in the works.
-								</Typography>
-							</CardContent>
-							<CardActions>
-								<Button
-									href="/download/mintalternative_1.1.zip"
-									download
-									color="error"
-								>
-									Download latest
-								</Button>
-								{/* <Link to="/projects/mintsans"> */}
-								<Button color="inherit" disabled>
-									Learn more
-								</Button>
-								{/* </Link> */}
-							</CardActions>
-						</Card>
-					</Grid>
-					<Grid item xs={12} md={6}>
-						<Card variant="outlined">
-							<CardMedia
-								component="img"
-								image={Win10TilesCardHeader}
-								alt="Some Windows 10 tiles. With 'Windows 10 tiles' being written above them."
-							/>
-							<CardContent>
-								<Typography variant="body1">
-									Branding is a pain. That's why everyone has their own that
-									works best for them. With these 32 start menu tiles I made
-									ages ago, I wanted to make them all feel at least somewhat
-									more unified. And also fix Adobe's bullshit icons.
-								</Typography>
-							</CardContent>
-							<CardActions>
-								<Button
-									href="/download/win10tiles.zip"
-									download
-									color="primary"
-								>
-									Download latest
-								</Button>
-								<Link to="/projects/win10tiles">
-									<Button color="inherit">Learn more</Button>
-								</Link>
-							</CardActions>
-						</Card>
-					</Grid>
-				</Grid>
-				<br />
-				<br />
-				<Typography variant="h2">2022</Typography>
-				<br />
-				<Masonry columns={{ xs: 1, sm: 2, md: 3 }}>
-					{works2022.map((item) => (
-						<Link to={item.link}>
-							<Card variant="outlined" sx={{ cursor: "pointer" }}>
-								<Image
-									aspectRatio={item.ratio}
-									src={item.src}
-									alt={item.alt}
-									color="transparent"
-									loading={
-										<Skeleton
-											variant="rectangular"
-											animation="wave"
-											width="100%"
-											height="100%"
+				<div className="section">
+					<Container>
+						<Grid container spacing={3}>
+							<Grid item xs={12} md={6}>
+								<Card variant="outlined">
+									<CardMedia
+										component="img"
+										image={MintcraftCardHeader}
+										alt="Mintcraft logo"
+									/>
+									<CardContent>
+										<Typography variant="body1">
+											What started as a simple "I don't like the colors of the
+											default Minceraft UI" ended with me trying to make the UI
+											look more modern, changing up the colors and a bit of the
+											iconography.
+										</Typography>
+									</CardContent>
+									<CardActions>
+										<Button
+											href="http://download.pprmint.art/mintcraft/Mintcraft_1.4-118.zip"
+											download
+											color="warning"
+										>
+											Download latest
+										</Button>
+										<Link to="/projects/mintcraft">
+											<Button color="inherit">Learn more</Button>
+										</Link>
+									</CardActions>
+								</Card>
+							</Grid>
+							<Grid item xs={12} md={6}>
+								<Card variant="outlined">
+									<CardMedia
+										component="img"
+										image={MintSansCardHeader}
+										alt="MintSans- well, it's hardly a logo, more like just the name of the font set in MintSans itself."
+									/>
+									<CardContent>
+										<Typography variant="body1">
+											My first attempt at creating a geometric font family. A
+											more optimized version is in development and will take at
+											least thrice as long as it has taken me to make the
+											following page.
+										</Typography>
+									</CardContent>
+									<CardActions>
+										<Button
+											href="http://download.pprmint.art/mintsans_2.0.zip"
+											download
+											color="secondary"
+										>
+											Download latest
+										</Button>
+										<Link to="/projects/mintsans">
+											<Button color="inherit">Learn more</Button>
+										</Link>
+									</CardActions>
+								</Card>
+							</Grid>
+							<Grid item xs={12} md={6}>
+								<Card variant="outlined">
+									<CardMedia
+										component="img"
+										image={MintAltCardHeader}
+										alt="The MintAlternative 'logo' with a 2K Material icon behind it. Get it? It's funny because the want was inspired by Material icons."
+									/>
+									<CardContent>
+										<Typography variant="body1">
+											I looked at Google's Material icons, noticed some had text
+											in them, and went "Huh." The good: Numbers. The bad: That
+											stupid name. And the page for this font. That's still in
+											the works.
+										</Typography>
+									</CardContent>
+									<CardActions>
+										<Button
+											href="http://download.pprmint.art/mintalternative_1.1.zip"
+											download
+											color="error"
+										>
+											Download latest
+										</Button>
+										{/* <Link to="/projects/mintsans"> */}
+										<Button color="inherit" disabled>
+											Learn more
+										</Button>
+										{/* </Link> */}
+									</CardActions>
+								</Card>
+							</Grid>
+							<Grid item xs={12} md={6}>
+								<Card variant="outlined">
+									<CardMedia
+										component="img"
+										image={Win10TilesCardHeader}
+										alt="Some Windows 10 tiles. With 'Windows 10 tiles' being written above them."
+									/>
+									<CardContent>
+										<Typography variant="body1">
+											Branding is a pain. That's why everyone has their own that
+											works best for them. With these 32 start menu tiles I made
+											ages ago, I wanted to make them all feel at least somewhat
+											more unified. And also fix Adobe's bullshit icons.
+										</Typography>
+									</CardContent>
+									<CardActions>
+										<Button
+											href="http://download.pprmint.art/win10tiles.zip"
+											download
+											color="primary"
+										>
+											Download latest
+										</Button>
+										<Link to="/projects/win10tiles">
+											<Button color="inherit">Learn more</Button>
+										</Link>
+									</CardActions>
+								</Card>
+							</Grid>
+						</Grid>
+					</Container>
+				</div>
+				<div className="section" id="works2022">
+					<Container>
+						<Typography variant="h1">2022</Typography>
+						<br />
+						<Masonry columns={{ xs: 1, sm: 2, md: 3 }}>
+							{works2022.map((item) => (
+								<Link to={item.link}>
+									<Card variant="outlined" sx={{ cursor: "pointer" }}>
+										<Image
+											aspectRatio={item.ratio}
+											src={item.src}
+											alt={item.alt}
+											color="transparent"
+											loading={
+												<Skeleton
+													variant="rectangular"
+													animation="wave"
+													width="100%"
+													height="100%"
+												/>
+											}
 										/>
-									}
-								/>
-							</Card>
-						</Link>
-					))}
-				</Masonry>
-				<br />
-				<Typography variant="h2">2021</Typography>
-				<br />
-                <Typography>Coming soon...ish. I'm lazy.</Typography>
-				{/* <Masonry columns={{ xs: 1, sm: 2, md: 3 }}>
+									</Card>
+								</Link>
+							))}
+						</Masonry>
+					</Container>
+				</div>
+				<div className="section" id="works2021">
+					<Container>
+						<Typography variant="h1">2021</Typography>
+						<Typography>Coming soon...ish. I'm lazy.</Typography>
+						{/* <Masonry columns={{ xs: 1, sm: 2, md: 3 }}>
 					{works2021.map((item) => (
 						<Link to={item.link}>
 							<Card variant="outlined" sx={{ cursor: "pointer" }}>
@@ -316,8 +324,10 @@ function Projects() {
 						</Link>
 					))}
 				</Masonry> */}
+					</Container>
+				</div>
 			</div>
-		</>
+		</div>
 	);
 }
 

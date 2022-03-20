@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { Typography, Card, Skeleton } from "@mui/material";
+import { Typography, Card, Skeleton, Container } from "@mui/material";
 
 import Image from "material-ui-image";
 
@@ -19,13 +19,13 @@ function ArchWall() {
 					content="A wallpaper made to be used on Arch Linux with the Qogir theme. Very specific indeed."
 				/>
 			</Helmet>
-			<div className="title">
+			<Container className="title">
 				<Typography variant="h1">Arch wallpaper.</Typography>
 				<Typography variant="h2">I use Arch btw.</Typography>
-			</div>
+			</Container>
 			<div className="content">
-				<a href={SlideOne} target="_blank">
-					<Card elevation={0}>
+				<div className="section">
+					<a href={SlideOne} target="_blank">
 						<Image
 							src={SlideOne}
 							width="100%"
@@ -41,15 +41,14 @@ function ArchWall() {
 								/>
 							}
 						/>
-					</Card>
-				</a>
-				<br />
-				<Typography variant="body2">
-					The wallpaper. Feel free to right-click and save.
-				</Typography>
-				<br />
-				<a href={SlideTwo} target="_blank">
-					<Card elevation={0}>
+					</a>
+					<br />
+					<Typography variant="body1" textAlign="center">
+						The wallpaper. Feel free to right-click and save.
+					</Typography>
+				</div>
+				<div className="section">
+					<a href={SlideTwo} target="_blank">
 						<Image
 							src={SlideTwo}
 							width="100%"
@@ -65,30 +64,30 @@ function ArchWall() {
 								/>
 							}
 						/>
-					</Card>
-				</a>
-				<br />
-				<Typography variant="body2">
-					This theme was made to be used together with the{" "}
-					<a
-						className="external"
-						href="https://github.com/vinceliuice/Qogir-theme"
-						target="_blank"
-						rel="noreferrer noopener"
-					>
-						Qogir GTK
-					</a>{" "}
-					or{" "}
-					<a
-						className="external"
-						href="https://github.com/vinceliuice/Qogir-kde"
-						target="_blank"
-						rel="noreferrer noopener"
-					>
-						KDE
-					</a>{" "}
-					theme.
-				</Typography>
+					</a>
+					<br />
+					<Typography variant="body1" textAlign="center">
+						This theme was made to be used together with the{" "}
+						<a
+							className="external"
+							href="https://github.com/vinceliuice/Qogir-theme"
+							target="_blank"
+							rel="noreferrer noopener"
+						>
+							Qogir GTK
+						</a>{" "}
+						or{" "}
+						<a
+							className="external"
+							href="https://github.com/vinceliuice/Qogir-kde"
+							target="_blank"
+							rel="noreferrer noopener"
+						>
+							KDE
+						</a>{" "}
+						theme.
+					</Typography>
+				</div>
 			</div>
 		</>
 	);
