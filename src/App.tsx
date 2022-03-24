@@ -38,6 +38,7 @@ import MintcraftDL from "./pages/projects/mintcraft/Mintcraft";
 import Win10TilesDL from "./pages/projects/win10tiles/Win10Tiles";
 
 // Works under /projects
+import Statistics from "./pages/projects/gallery/2022/statistics/LikeStatistics";
 import Ipad from "./pages/projects/gallery/2022/ipad/iPad"; // this hurts
 import ArchWall from "./pages/projects/gallery/2022/archwall/ArchWall";
 import Ford from "./pages/projects/gallery/2022/ford/Ford";
@@ -364,6 +365,9 @@ function App(props: Props) {
 								<Win10TilesDL />
 							</Route>
 
+							<Route path={"/projects/works/2022/statistics"} exact>
+								<Statistics />
+							</Route>
 							<Route path={"/projects/works/2022/ipad"} exact>
 								<Ipad /> {/* AAAAAAAAAA */}
 							</Route>

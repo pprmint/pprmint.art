@@ -24,6 +24,7 @@ import Win10TilesCardHeader from "./win10tiles/assets/win10tiles.svg";
 
 /** Random works **/
 /* 2022 */
+import Statistics from "./gallery/2022/statistics/assets/statistics-720.png";
 import iPad from "./gallery/2022/ipad/assets/ipad-720.png";
 import ArchWall from "./gallery/2022/archwall/assets/arch_with_blue_mountains-720.png";
 import FordLogo from "./gallery/2022/ford/assets/ford-720.png";
@@ -57,6 +58,12 @@ import MainMenuImage from "./gallery/2019/2019-11-10-main_menu.png";
 
 const works2022 = [
 	{
+		src: Statistics,
+		link: "/projects/works/2022/statistics",
+		alt: "An iPad as part of another project.",
+		ratio: 1 / 1,
+	},
+	{
 		src: iPad,
 		link: "/projects/works/2022/ipad",
 		alt: "An iPad as part of another project.",
@@ -71,61 +78,19 @@ const works2022 = [
 	{
 		src: FordLogo,
 		link: "/projects/works/2022/ford",
-		alt: "Arch Linux desktop background with mountains",
+		alt: "Ford logo redesign, inspired by Raul Rand.",
 		ratio: 16 / 9,
 	},
 ];
 
-/* const works2021 = [
+const works2021 = [
 	{
 		src: ManjaroWall,
-		link: "/projects/works/2022/manjarowall",
-		alt: "Manjaro desktop background with Nyan-Cat style, I guess.",
-		ratio: 3 / 1,
-	},
-	{
-		src: ManjaroWall,
-        link: "/projects/works/2022/manjarowall",
-		alt: "Manjaro desktop background with Nyan-Cat style, I guess.",
-		ratio: 1 / 1,
-	},
-	{
-		src: ManjaroWall,
-		link: "/projects/works/2022/manjarowall",
+		link: "/projects/works/2021/manjarowall",
 		alt: "Manjaro desktop background with Nyan-Cat style, I guess.",
 		ratio: 16 / 9,
 	},
-	{
-		src: ManjaroWall,
-		link: "/projects/works/2022/manjarowall",
-		alt: "Manjaro desktop background with Nyan-Cat style, I guess.",
-		ratio: 16 / 9,
-	},
-	{
-		src: ManjaroWall,
-		link: "/projects/works/2022/manjarowall",
-		alt: "Manjaro desktop background with Nyan-Cat style, I guess.",
-		ratio: 1 / 1,
-	},
-	{
-		src: ManjaroWall,
-		link: "/projects/works/2022/manjarowall",
-		alt: "Manjaro desktop background with Nyan-Cat style, I guess.",
-		ratio: 16 / 9,
-	},
-	{
-		src: ManjaroWall,
-		link: "/projects/works/2022/manjarowall",
-		alt: "Manjaro desktop background with Nyan-Cat style, I guess.",
-		ratio: 16 / 9,
-	},
-	{
-		src: ManjaroWall,
-		link: "/projects/works/2022/manjarowall",
-		alt: "Manjaro desktop background with Nyan-Cat style, I guess.",
-		ratio: 1 / 1,
-	},
-]; */
+];
 
 function Projects() {
 	return (
@@ -273,7 +238,6 @@ function Projects() {
 				<div className="section" id="works2022">
 					<Container>
 						<Typography variant="h1">2022</Typography>
-						<br />
 						<Masonry columns={{ xs: 1, sm: 2, md: 3 }}>
 							{works2022.map((item) => (
 								<Link to={item.link}>
@@ -301,29 +265,28 @@ function Projects() {
 				<div className="section" id="works2021">
 					<Container>
 						<Typography variant="h1">2021</Typography>
-						<Typography>Coming soon...ish. I'm lazy.</Typography>
-						{/* <Masonry columns={{ xs: 1, sm: 2, md: 3 }}>
-					{works2021.map((item) => (
-						<Link to={item.link}>
-							<Card variant="outlined" sx={{ cursor: "pointer" }}>
-								<Image
-									aspectRatio={item.ratio}
-									src={item.src}
-									alt={item.alt}
-									color="transparent"
-									loading={
-										<Skeleton
-											variant="rectangular"
-											animation="wave"
-											width="100%"
-											height="100%"
+						<Masonry columns={{ xs: 1, sm: 2, md: 3 }}>
+							{works2021.map((item) => (
+								<Link to={item.link}>
+									<Card variant="outlined" sx={{ cursor: "pointer" }}>
+										<Image
+											aspectRatio={item.ratio}
+											src={item.src}
+											alt={item.alt}
+											color="transparent"
+											loading={
+												<Skeleton
+													variant="rectangular"
+													animation="wave"
+													width="100%"
+													height="100%"
+												/>
+											}
 										/>
-									}
-								/>
-							</Card>
-						</Link>
-					))}
-				</Masonry> */}
+									</Card>
+								</Link>
+							))}
+						</Masonry>
 					</Container>
 				</div>
 			</div>

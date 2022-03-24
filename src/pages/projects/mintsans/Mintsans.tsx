@@ -41,7 +41,7 @@ function MintsansDL() {
 					<img src={MintsansLogo} />
 					<Typography variant="h2">A sans-serif font.</Typography>
 					<br />
-					<RiArrowDownLine size={25} />
+					<RiArrowDownLine size={25} color="#19f" />
 				</Container>
 			</div>
 			<div className="content">

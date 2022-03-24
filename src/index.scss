@@ -2,9 +2,7 @@ html {
 	width: 100vw;
 	overflow-x: hidden;
 }
-#main {
-	min-height: calc(100vh - (88px + var(--marginTop)));
-}
+
 :root {
 	/* Main color palette */
 	--greenPrimary: #0c6;
@@ -26,7 +24,7 @@ html {
 	--easeInOut: cubic-bezier(0.6, 0, 0.1, 1);
 	/* Inset box shadow offsets */
 	--boxInsetBody: -1.3rem;
-	--boxInsetH2: -2.5rem;
+	--boxInsetH2: -2.75rem;
 	--boxInsetH3: -2rem;
 	/* Fonts */
 	--fontPrimary: "Silka", "Roboto", Helvetica, Arial, sans-serif;
@@ -110,7 +108,6 @@ html {
 	transition: all 0.2s var(--easeOut);
 	color: var(--textPrimary);
 	text-align: right;
-	height: 22px;
 	margin-left: 15px;
 	&:hover {
 		color: var(--textSecondary);
