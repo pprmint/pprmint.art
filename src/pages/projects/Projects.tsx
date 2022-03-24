@@ -83,14 +83,14 @@ const works2022 = [
 	},
 ];
 
-const works2021 = [
-	{
-		src: ManjaroWall,
-		link: "/projects/works/2021/manjarowall",
-		alt: "Manjaro desktop background with Nyan-Cat style, I guess.",
-		ratio: 16 / 9,
-	},
-];
+// const works2021 = [
+// 	{
+// 		src: ManjaroWall,
+// 		link: "/projects/works/2021/manjarowall",
+// 		alt: "Manjaro desktop background with Nyan-Cat style, I guess.",
+// 		ratio: 16 / 9,
+// 	},
+// ];
 
 function Projects() {
 	return (
@@ -265,7 +265,8 @@ function Projects() {
 				<div className="section" id="works2021">
 					<Container>
 						<Typography variant="h1">2021</Typography>
-						<Masonry columns={{ xs: 1, sm: 2, md: 3 }}>
+						<Typography variant="body1">whoopdeedooo, you didn't see a thing here.</Typography>
+						{/* <Masonry columns={{ xs: 1, sm: 2, md: 3 }}>
 							{works2021.map((item) => (
 								<Link to={item.link}>
 									<Card variant="outlined" sx={{ cursor: "pointer" }}>
@@ -286,7 +287,7 @@ function Projects() {
 									</Card>
 								</Link>
 							))}
-						</Masonry>
+						</Masonry> */}
 					</Container>
 				</div>
 			</div>
