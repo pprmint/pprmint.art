@@ -112,7 +112,7 @@ function Win10TilesDL() {
 					<img src={TilesLogo} />
 					<Typography variant="h2">Provided you still have them.</Typography>
 					<br />
-					<RiArrowDownLine size={25} />
+					<RiArrowDownLine size={25} color="#0c3" />
 				</Container>
 			</div>
 			<div className="content">
@@ -151,8 +151,11 @@ function Win10TilesDL() {
 									their apps' logos look like Media Encoder of all things.
 									<br />
 									<br />
-									Or in some instances, have used. Unfortunately, Adobe's shit
-									is not one of those.
+									Anyway, you won't find <i>that</i> many icons in this pack,
+									since I only made tiles for programs I actually use myself. Or
+									have used, in some instances.
+									<br />
+									Unfortunately, the Creative Cloud is not one such instance.
 								</Typography>
 							</Grid>
 						</Grid>

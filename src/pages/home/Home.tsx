@@ -116,7 +116,7 @@ function Home() {
 						monospace letters.
 					</Typography>
 					<br />
-					<RiArrowDownLine size={25} />
+					<RiArrowDownLine size={25} color="#0c6" />
 				</Container>
 			</div>
 			<div className="content">
@@ -131,9 +131,9 @@ function Home() {
 							headline="A shiny new domain."
 							strongText="Have you ever seen a single word of German around here? Ganz genau."
 							text="It always bothered me a bit that the top-level domain of this website
-                        was .de, even though this website is less about me being German and more about
-                        the things I create. Don't worry, pprmint.de will redirect you to the new
-                        domain for a while."
+                            was .de, even though this website is less about me being German and more about
+                            the things I create. Don't worry, pprmint.de will redirect you to the new
+                            domain for a while."
 						/>
 						<br />
 						<AnnouncementCard
@@ -143,9 +143,9 @@ function Home() {
 							headline="Layout changes and fancier code."
 							strongText="If you only believe what you see with your own eyes, this update is for you."
 							text="Content on desktop is now properly centered, left and right margins
-                        on mobile have been decreased and hovering over text links makes you want
-                        to do so for the rest of your life. I also rewrote some parts of the
-                        website and implemented components."
+                            on mobile have been decreased and hovering over text links makes you want
+                            to do so for the rest of your life. I also rewrote some parts of the
+                            website and implemented components."
 						/>
 						<br />
 						<ActionsAnnouncementCard
@@ -154,10 +154,10 @@ function Home() {
 							date="19. Dec. 2021"
 							headline="Mintcraft version 1.4 released."
 							strongText="The new version of my resource pack now supports the 1.18
-                        Caves & Cliffs update."
+                            Caves & Cliffs update."
 							text="It features new icons, a slightly updated color scheme, some
-                        tweaked icons (they move now), and a new add-on that changes
-                        the button click sound."
+                            tweaked icons (they move now), and a new add-on that changes
+                            the button click sound."
 							children={
 								<Link to="/projects/mintcraft">
 									<Button variant="contained" color="warning">
@@ -174,12 +174,12 @@ function Home() {
 							headline="This website got quite the upgrade."
 							strongText="If you have eyes, chances are you've already noticed that something was off."
 							text="I migrated to version 5 of MUI
-                        (fka. Material-UI), which brought a variety of new features.
-                        While I was at it, I also took the time to further explore the
-                        capabilities of MUI, as well as restructuring this site.
-                        Because of the quite substantial changes, there might still be
-                        some rough edges here and there. If you notice any, please get
-                        in touch with me."
+                            (fka. Material-UI), which brought a variety of new features.
+                            While I was at it, I also took the time to further explore the
+                            capabilities of MUI, as well as restructuring this site.
+                            Because of the quite substantial changes, there might still be
+                            some rough edges here and there. If you notice any, please get
+                            in touch with me."
 						/>
 					</Container>
 				</div>

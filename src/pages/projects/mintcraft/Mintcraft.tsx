@@ -80,7 +80,7 @@ function MintcraftDL() {
 					<img src={MintcraftLogo} />
 					<Typography variant="h2">A Minecraft resource pack.</Typography>
 					<br />
-					<RiArrowDownLine size={25} />
+					<RiArrowDownLine size={25} color="#fb2" />
 				</Container>
 			</div>
 			<div className="content">
@@ -374,7 +374,7 @@ function MintcraftDL() {
 										color="warning"
 										startIcon={<RiDownload2Line />}
 									>
-										Download for 1.18.X
+										Download for 1.18
 									</Button>
 									<Button
 										variant="outlined"
@@ -382,7 +382,7 @@ function MintcraftDL() {
 										download
 										color="inherit"
 									>
-										1.17.X
+										1.17
 									</Button>
 									<Button
 										variant="outlined"
@@ -390,7 +390,7 @@ function MintcraftDL() {
 										download
 										color="inherit"
 									>
-										1.16.X
+										1.16
 									</Button>
 								</Stack>
 							</Grid>
@@ -423,7 +423,7 @@ function MintcraftDL() {
 										color="warning"
 										startIcon={<RiDownload2Line />}
 									>
-										Download for 1.18.X
+										Download for 1.18
 									</Button>
 									<Button
 										variant="outlined"
@@ -431,7 +431,7 @@ function MintcraftDL() {
 										download
 										color="inherit"
 									>
-										1.17.X
+										1.17
 									</Button>
 								</Stack>
 							</Grid>
@@ -463,7 +463,7 @@ function MintcraftDL() {
 									color="warning"
 									startIcon={<RiDownload2Line />}
 								>
-									Download for 1.18.X
+									Download for 1.18
 								</Button>
 							</Grid>
 						</Grid>
