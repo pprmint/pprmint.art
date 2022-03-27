@@ -46,6 +46,7 @@ import Ford from "./pages/projects/gallery/2022/ford/Ford";
 import Contact from "./pages/contact/Contact";
 import Error404 from "./pages/404/Error404";
 import UnderConstruction from "./pages/wip/UnderConstruction";
+import Test from "./pages/test/Test";
 
 import ScrollToTop from "./ScrollToTop";
 
@@ -381,6 +382,9 @@ function App(props: Props) {
 							<Route path={"/contact"} exact>
 								<Contact />
 							</Route>
+							<Route path={"/test"} exact>
+								<Test />
+							</Route>
 
 							<Route path={"/works"} exact>
 								<Redirect to="/projects" />
@@ -407,6 +411,7 @@ function App(props: Props) {
 							<Route component={Error404}>
 								<Error404 />
 							</Route>
+
 						</Switch>
 					</ScrollToTop>
 				</Router>
