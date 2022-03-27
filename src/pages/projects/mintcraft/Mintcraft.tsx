@@ -226,6 +226,16 @@ function MintcraftDL() {
 											<RiCheckboxCircleLine />
 										</ListItemIcon>
 										<ListItemText>
+											Use this pack or parts of it in compilations. Remember to
+											leave the credits.txt in if you use the dark text from
+											Vanilla Tweaks.
+										</ListItemText>
+									</ListItem>
+									<ListItem>
+										<ListItemIcon>
+											<RiCheckboxCircleLine />
+										</ListItemIcon>
+										<ListItemText>
 											<i>Optional:</i> Credit me somewhere when you use my pack
 											by linking to this website.
 										</ListItemText>
@@ -242,18 +252,9 @@ function MintcraftDL() {
 											<RiCloseCircleLine />
 										</ListItemIcon>
 										<ListItemText>
-											Share versions, parts and/or modifications of Mintcraft
-											and/or its add-ons publicly.
-										</ListItemText>
-									</ListItem>
-									<ListItem>
-										<ListItemIcon>
-											<RiCloseCircleLine />
-										</ListItemIcon>
-										<ListItemText>
 											Host, mirror, sell or otherwise redistribute versions,
 											parts and/or modifications of Mintcraft and/or its add-ons
-											anywhere.
+											anywhere for others to download.
 										</ListItemText>
 									</ListItem>
 								</List>
