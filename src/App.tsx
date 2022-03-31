@@ -214,88 +214,8 @@ function ElevationScroll(props: Props) {
 	});
 }
 
-function MobileNavigation() {
-	const [open, setOpen] = useState<boolean>(false);
-	return (
-		<AppBar
-			elevation={2}
-			position="fixed"
-			sx={{ display: { xs: "block", lg: "none" } }}
-		>
-			<Toolbar>
-				<IconButton
-					size="large"
-					edge="start"
-					color="inherit"
-					aria-label="menu"
-					onClick={() => setOpen(true)}
-					sx={{ mr: 2 }}
-				>
-					<RiMenu2Line />
-				</IconButton>
-				<SwipeableDrawer
-					sx={{
-						width: "281px",
-						flexShrink: 0,
-						[`& .MuiDrawer-paper`]: {
-							width: "281px",
-							boxSizing: "border-box",
-						},
-					}}
-					anchor="left"
-					elevation={2}
-					open={open}
-					onClose={() => setOpen(false)}
-					onOpen={() => {}}
-				>
-					<Box
-						pl={{ xs: 2, sm: 3 }}
-						pt={{ xs: 0, sm: 1 }}
-						pb={{ xs: 0, sm: 1 }}
-					>
-						<IconButton
-							size="large"
-							edge="start"
-							color="inherit"
-							aria-label="menu"
-							onClick={() => setOpen(false)}
-							sx={{ mr: 2 }}
-						>
-							<RiMenu3Line />
-						</IconButton>
-					</Box>
-					<List>
-						{nav.map((item) => {
-							const exact = item.exact ? true : false;
-							return (
-								<NavLink
-									onClick={() => setOpen(false)}
-									exact={item.exact}
-									activeClassName="active"
-									to={item.link}
-								>
-									<ListItem button>
-										<ListItemText primary={item.text} className="navlink" />
-									</ListItem>
-								</NavLink>
-							);
-						})}
-					</List>
-				</SwipeableDrawer>
-				<Link
-					to="/"
-					style={{
-						marginTop: "9px",
-					}}
-				>
-					<img src={Wordmark} height="30px" alt="pprmint." />
-				</Link>
-			</Toolbar>
-		</AppBar>
-	);
-}
-
 function App(props: Props) {
+	const [open, setOpen] = useState<boolean>(false);
 	return (
 		<StyledEngineProvider injectFirst>
 			<ThemeProvider theme={theme}>
@@ -305,21 +225,94 @@ function App(props: Props) {
 						<AppBar
 							position="fixed"
 							sx={{
-								display: { xs: "none", lg: "block" },
 								transition: "all 0.375s",
 							}}
 						>
 							<Toolbar>
-								<Link
-									to="/"
-									style={{
+								<IconButton
+									size="large"
+									edge="start"
+									color="inherit"
+									aria-label="menu"
+									onClick={() => setOpen(true)}
+									sx={{ mr: 2, display: { xs: "inline-flex", md: "none" } }}
+								>
+									<RiMenu3Line />
+								</IconButton>
+								<SwipeableDrawer
+									sx={{
+										width: "280px",
+										flexShrink: 0,
+										[`& .MuiDrawer-paper`]: {
+											width: "280px",
+											boxSizing: "border-box",
+										},
+									}}
+									anchor="left"
+									elevation={2}
+									open={open}
+									onClose={() => setOpen(false)}
+									onOpen={() => {}}
+								>
+									<Box
+										pl={{ xs: 2, sm: 3 }}
+										pt={{ xs: 0, sm: 1 }}
+										pb={{ xs: 0, sm: 1 }}
+									>
+										<IconButton
+											size="large"
+											edge="start"
+											color="inherit"
+											aria-label="menu"
+											onClick={() => setOpen(false)}
+											sx={{ mr: 2 }}
+										>
+											<RiMenu3Line />
+										</IconButton>
+									</Box>
+									<List>
+										{nav.map((item) => {
+											const exact = item.exact ? true : false;
+											return (
+												<NavLink
+													onClick={() => setOpen(false)}
+													exact={item.exact}
+													activeClassName="active"
+													to={item.link}
+												>
+													<ListItem
+														button
+														sx={{
+															margin: "0 10px",
+															padding: "8px 16px",
+															borderRadius: "24px 0 0 24px",
+														}}
+													>
+														<ListItemText
+															primary={item.text}
+															className="navlink"
+														/>
+													</ListItem>
+												</NavLink>
+											);
+										})}
+									</List>
+								</SwipeableDrawer>
+								<Box
+									sx={{
 										marginTop: "9px",
-										flexGrow: "1",
+										flexGrow: 1,
+										display: { xs: "flex", md: "block" },
 									}}
 								>
-									<img src={Wordmark} height="30px" alt="pprmint." />
-								</Link>
-								<div className="navlink">
+									<Link to="/">
+										<img src={Wordmark} height="30px" alt="pprmint." />
+									</Link>
+								</Box>
+								<Box
+									className="navlink"
+									sx={{ display: { md: "block", xs: "none" } }}
+								>
 									{nav.map((item) => {
 										const exact = item.exact ? true : false;
 										return (
@@ -332,11 +325,10 @@ function App(props: Props) {
 											</NavLink>
 										);
 									})}
-								</div>
+								</Box>
 							</Toolbar>
 						</AppBar>
 					</ElevationScroll>
-					<MobileNavigation />
 					<ScrollToTop>
 						{/* All the different pages that exist here, pretty much. */}
 						<Switch>
@@ -411,7 +403,6 @@ function App(props: Props) {
 							<Route component={Error404}>
 								<Error404 />
 							</Route>
-
 						</Switch>
 					</ScrollToTop>
 				</Router>
