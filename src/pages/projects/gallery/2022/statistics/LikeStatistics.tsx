@@ -20,7 +20,7 @@ function Statistic() {
 			</Helmet>
 			<Container className="title">
 				<Typography variant="h1">
-					Like statistics for @ProgressBar202_
+					Like statistics for @Progress<wbr />Bar202_
 				</Typography>
 				<Typography variant="h2">
 					I was very bored before New Year's.{" "}

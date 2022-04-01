@@ -1,5 +1,4 @@
 html {
-	width: 100vw;
 	overflow-x: hidden;
 }
 
@@ -116,7 +115,10 @@ html {
 		background-color: var(--backgroundTertiary);
 	}
 	&.active {
-		color: var(--textSecondary);
+        &.MuiListText-root {
+
+            color: var(--textSecondary);
+        }
 	}
 }
 
