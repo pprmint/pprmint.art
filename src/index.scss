@@ -26,8 +26,8 @@ html {
 	--boxInsetH2: -2.75rem;
 	--boxInsetH3: -2rem;
 	/* Fonts */
-	--fontPrimary: "Silka", "Roboto", Helvetica, Arial, sans-serif;
-	--fontSecondary: "Basier Square", "Roboto", Helvetica, Arial, sans-serif;
+	--fontPrimary: Silka, Metropolis, "Clarity City", Monserrat, Roboto, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, Arial, sans-serif;
+	--fontSecondary: "Basier Square", Roboto, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, Arial, sans-serif;
 	/* Top margin */
 	--marginTop: 145px;
 	@media only screen and (max-width: 1199px) {
@@ -115,10 +115,7 @@ html {
 		background-color: var(--backgroundTertiary);
 	}
 	&.active {
-        &.MuiListText-root {
-
-            color: var(--textSecondary);
-        }
+		color: var(--textSecondary) !important;
 	}
 }
 
@@ -134,7 +131,7 @@ html {
 }
 
 .section {
-    margin-top: 10vh;
+	margin-top: 10vh;
 }
 
 footer {
@@ -172,7 +169,7 @@ footer {
 		img {
 			animation: fadeBottom 1.2s var(--easeOut) 0.2s forwards;
 			opacity: 0;
-            max-width: 100%;
+			max-width: 100%;
 		}
 		img {
 			height: 6rem;
@@ -197,34 +194,34 @@ footer {
 }
 
 @media only screen and (max-width: 1199px) {
-    h1 {
-        font-size: 3rem !important;
-    }
-    h2 {
-        font-size: 1.5rem !important;
-    }
+	h1 {
+		font-size: 3rem !important;
+	}
+	h2 {
+		font-size: 1.5rem !important;
+	}
 }
 .title {
 	margin-top: var(--marginTop);
 	margin-bottom: 25px;
 	h1 {
-        animation: fadeBottom 0.375s var(--easeOut) forwards;
+		animation: fadeBottom 0.375s var(--easeOut) forwards;
 		opacity: 0;
-        font-size: 6rem;
+		font-size: 6rem;
 	}
 	h2 {
-        animation: fadeBottom 0.375s var(--easeOut) 0.04s forwards;
+		animation: fadeBottom 0.375s var(--easeOut) 0.04s forwards;
 		opacity: 0;
-        font-size: 2.25rem;
+		font-size: 2.25rem;
 	}
-    @media only screen and (max-width: 1199px) {
-        h1 {
-            font-size: 3.5rem !important;
-        }
-        h2 {
-            font-size: 1.5rem !important;
-        }
-    }
+	@media only screen and (max-width: 1199px) {
+		h1 {
+			font-size: 3.5rem !important;
+		}
+		h2 {
+			font-size: 1.5rem !important;
+		}
+	}
 }
 
 /* General styles for links */
