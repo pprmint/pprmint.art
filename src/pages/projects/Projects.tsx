@@ -30,7 +30,7 @@ import ArchWall from "./gallery/2022/archwall/assets/arch_with_blue_mountains-72
 import FordLogo from "./gallery/2022/ford/assets/ford-720.png";
 
 /* 2021 */
-import ManjaroWall from "./gallery/2021/nyanjaro-cat.png";
+import ManjaroWall from "./gallery/2021/manjarowall/assets/nyanjaro-cat-720.png";
 
 import LogoHistoryImage from "./gallery/2021/2021-01-19-logo_history.png";
 import LogoHistoryVideo from "./gallery/2021/2021-01-19-logo_history.mp4";
@@ -83,14 +83,14 @@ const works2022 = [
 	},
 ];
 
-// const works2021 = [
-// 	{
-// 		src: ManjaroWall,
-// 		link: "/projects/works/2021/manjarowall",
-// 		alt: "Manjaro desktop background with Nyan-Cat style, I guess.",
-// 		ratio: 16 / 9,
-// 	},
-// ];
+const works2021 = [
+	{
+		src: ManjaroWall,
+		link: "/projects/works/2021/manjarowall",
+		alt: "Manjaro desktop background with Nyan-Cat style, I guess.",
+		ratio: 16 / 9,
+	},
+];
 
 function Projects() {
 	return (
@@ -111,7 +111,7 @@ function Projects() {
 				</Typography>
 			</Container>
 			<div className="content">
-				<div className="section">
+				<div className="section" id="projects">
 					<Container>
 						<Grid container spacing={3}>
 							<Grid item xs={12} md={6}>
@@ -265,8 +265,7 @@ function Projects() {
 				<div className="section" id="works2021">
 					<Container>
 						<Typography variant="h1">2021</Typography>
-						<Typography variant="body1">whoopdeedooo, you didn't see a thing here.</Typography>
-						{/* <Masonry columns={{ xs: 1, sm: 2, md: 3 }}>
+						<Masonry columns={{ xs: 1, sm: 2, md: 3 }}>
 							{works2021.map((item) => (
 								<Link to={item.link}>
 									<Card variant="outlined" sx={{ cursor: "pointer" }}>
@@ -287,7 +286,7 @@ function Projects() {
 									</Card>
 								</Link>
 							))}
-						</Masonry> */}
+						</Masonry>
 					</Container>
 				</div>
 			</div>

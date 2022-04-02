@@ -5,26 +5,22 @@ import { Typography, Card, Skeleton, Container } from "@mui/material";
 
 import Image from "material-ui-image";
 
-import SlideOne from "./assets/statistics.png";
+import SlideOne from "./assets/nyanjaro-cat.png";
 
-function Statistic() {
+function ManjaroWall() {
 	return (
 		<>
 			<Helmet>
 				<meta charSet="utf-8" />
-				<title>Like statistics for @ProgressBar202_ • pprmint.art</title>
+				<title>Manjaro wallpaper • pprmint.art</title>
 				<meta
 					name="description"
-					content="A nice dark statistic showing the likes for every percent from 2020 and 2021."
+					content="A wallpaper made to be used on Manjaro, inspired by the default SWAY background."
 				/>
 			</Helmet>
 			<Container className="title">
-				<Typography variant="h1">
-					Like statistics for @Progress<wbr />Bar202_
-				</Typography>
-				<Typography variant="h2">
-					I was very bored before New Year's.{" "}
-				</Typography>
+				<Typography variant="h1">Manjaro wallpaper.</Typography>
+				<Typography variant="h2">Inspired by the default SWAY wallpaper.</Typography>
 			</Container>
 			<div className="content">
 				<div className="section">
@@ -32,8 +28,8 @@ function Statistic() {
 						<Image
 							src={SlideOne}
 							width="100%"
-							alt="A nice dark statistic showing the likes for every percent from 2020 and 2021."
-							aspectRatio={1 / 1}
+							alt="The wallpaper in all its glory."
+							aspectRatio={16 / 9}
 							color="transparent"
 							loading={
 								<Skeleton
@@ -47,10 +43,7 @@ function Statistic() {
 					</a>
 					<br />
 					<Typography variant="body1" textAlign="center">
-						My original plan was to wait maybe a week or two after New Year's
-						before I finish this thing.
-						<br />
-						That plan saw Penguins, that's how far south it went.
+						The wallpaper. Feel free to right-click and save.
 					</Typography>
 				</div>
 			</div>
@@ -58,4 +51,4 @@ function Statistic() {
 	);
 }
 
-export default Statistic;
+export default ManjaroWall;

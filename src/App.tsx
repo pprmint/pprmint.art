@@ -37,11 +37,14 @@ import MintAltDL from "./pages/projects/mintalternative/MintAlt";
 import MintcraftDL from "./pages/projects/mintcraft/Mintcraft";
 import Win10TilesDL from "./pages/projects/win10tiles/Win10Tiles";
 
-// Works under /projects
+// Works 2022
 import Statistics from "./pages/projects/gallery/2022/statistics/LikeStatistics";
 import Ipad from "./pages/projects/gallery/2022/ipad/iPad"; // this hurts
 import ArchWall from "./pages/projects/gallery/2022/archwall/ArchWall";
 import Ford from "./pages/projects/gallery/2022/ford/Ford";
+
+// Works 2021
+import ManjaroWall from "./pages/projects/gallery/2021/manjarowall/ManjaroWall";
 
 import Contact from "./pages/contact/Contact";
 import Error404 from "./pages/404/Error404";
@@ -139,8 +142,7 @@ const theme = createTheme({
 		},
 	},
 	typography: {
-		fontFamily:
-			'"Basier Square", "Silka", "Roboto", Helvetica, Arial, sans-serif',
+		fontFamily: "var(--fontSecondary)",
 		h1: {
 			fontFamily: "var(--fontPrimary)",
 			color: "#EEE",
@@ -332,77 +334,46 @@ function App(props: Props) {
 					<ScrollToTop>
 						{/* All the different pages that exist here, pretty much. */}
 						<Switch>
-							<Route path={"/"} exact>
-								<Home />
-							</Route>
-							<Route path={"/about"} exact>
-								{/* <About /> */}
-								<UnderConstruction />
-							</Route>
-							<Route path={"/projects"} exact>
-								<Projects />
-							</Route>
-							<Route path={"/projects/mintsans"} exact>
-								<MintsansDL />
-							</Route>
-							{/* <Route path={"/projects/mintbit"} exact>
-									<MintBitDL />
-                                    </Route>
-                                    <Route path={"/projects/mintalt"} exact>
-									<MintAltDL />
-								</Route> */}
-							<Route path={"/projects/mintcraft"} exact>
-								<MintcraftDL />
-							</Route>
-							<Route path={"/projects/win10tiles"} exact>
-								<Win10TilesDL />
-							</Route>
+							<Route path="/" exact component={Home} />
+							<Route path="/about" exact component={UnderConstruction} />
 
-							<Route path={"/projects/works/2022/statistics"} exact>
-								<Statistics />
-							</Route>
-							<Route path={"/projects/works/2022/ipad"} exact>
-								<Ipad /> {/* AAAAAAAAAA */}
-							</Route>
-							<Route path={"/projects/works/2022/ford"} exact>
-								<Ford />
-							</Route>
-							<Route path={"/projects/works/2022/archwall"} exact>
-								<ArchWall />
-							</Route>
+							<Route path="/projects" exact component={Projects} />
+							<Route path="/projects/mintsans" component={MintsansDL} />
+							<Route path="/projects/mintcraft" component={MintcraftDL} />
+							<Route path="/projects/win10tiles" component={Win10TilesDL} />
 
-							<Route path={"/contact"} exact>
-								<Contact />
-							</Route>
-							<Route path={"/test"} exact>
-								<Test />
-							</Route>
+							{/* Works of 2022 */}
+							<Route
+								path="/projects/works/2022/statistics"
+								component={Statistics}
+							/>
+							<Route path="/projects/works/2022/ipad" component={Ipad} />
+							<Route path="/projects/works/2022/ford" component={Ford} />
+							<Route
+								path="/projects/works/2022/archwall"
+								component={ArchWall}
+							/>
 
-							<Route path={"/works"} exact>
-								<Redirect to="/projects" />
-							</Route>
-							<Route path={"/downloads"} exact>
-								<Redirect to="/projects" />
-							</Route>
-							<Route path={"/faq"} exact>
-								<Redirect to="/contact" />
-							</Route>
-							<Route path={"/mintcraft"} exact>
-								<Redirect to="/projects/mintcraft" />
-							</Route>
-							<Route path={"/mintsans"} exact>
-								<Redirect to="/projects/mintsans" />
-							</Route>
-							<Route path={"/mintalt"} exact>
-								<Redirect to="/projects/mintalt" />
-							</Route>
-							<Route path={"/win10tiles"} exact>
-								<Redirect to="/projects/win10tiles" />
-							</Route>
+							{/* Works of 2021 */}
+							<Route
+								path="/projects/works/2021/manjarowall"
+								component={ManjaroWall}
+							/>
 
-							<Route component={Error404}>
-								<Error404 />
-							</Route>
+							<Route path="/contact" exact component={Contact} />
+							<Route path="/test" exact component={Test} />
+
+							<Redirect from="/works" to="/projects" />
+							<Redirect from="/downloads" to="/projects" />
+							<Redirect from="/projects/works/2022" exact to="/projects" />
+							<Redirect from="/projects/works/2021" exact to="/projects" />
+							<Redirect from="/faq" to="/contact" />
+							<Redirect from="/mintcraft" to="/projects/mintcraft" />
+							<Redirect from="/mintsans" to="/projects/mintsans" />
+							<Redirect from="/mintalt" to="/projects/mintalt" />
+							<Redirect from="/win10tiles" to="/projects/win10tiles" />
+
+							<Route component={Error404} />
 						</Switch>
 					</ScrollToTop>
 				</Router>
