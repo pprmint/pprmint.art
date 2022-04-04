@@ -99,7 +99,7 @@ function MintsansDL() {
 						<br />
 						<Button
 							variant="contained"
-							href="http://download.pprmint.art/mintsans_2.0.zip"
+							href="https://download.pprmint.art/mintsans_2.0.zip"
 							download
 							color="info"
 							startIcon={<RiDownload2Line />}

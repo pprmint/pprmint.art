@@ -131,7 +131,7 @@ function Projects() {
 									</CardContent>
 									<CardActions>
 										<Button
-											href="http://download.pprmint.art/mintcraft/Mintcraft_1.4-118.zip"
+											href="https://download.pprmint.art/mintcraft/Mintcraft_1.4-118.zip"
 											download
 											color="warning"
 										>
@@ -160,7 +160,7 @@ function Projects() {
 									</CardContent>
 									<CardActions>
 										<Button
-											href="http://download.pprmint.art/mintsans_2.0.zip"
+											href="https://download.pprmint.art/mintsans_2.0.zip"
 											download
 											color="secondary"
 										>
@@ -189,7 +189,7 @@ function Projects() {
 									</CardContent>
 									<CardActions>
 										<Button
-											href="http://download.pprmint.art/mintalternative_1.1.zip"
+											href="https://download.pprmint.art/mintalternative_1.1.zip"
 											download
 											color="error"
 										>
@@ -220,7 +220,7 @@ function Projects() {
 									</CardContent>
 									<CardActions>
 										<Button
-											href="http://download.pprmint.art/win10tiles.zip"
+											href="https://download.pprmint.art/win10tiles.zip"
 											download
 											color="primary"
 										>

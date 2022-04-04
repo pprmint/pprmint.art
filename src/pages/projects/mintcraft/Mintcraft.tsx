@@ -370,7 +370,7 @@ function MintcraftDL() {
 								<Stack spacing={2} direction="row">
 									<Button
 										variant="contained"
-										href="http://download.pprmint.art/mintcraft/Mintcraft_1.4-118.zip"
+										href="https://download.pprmint.art/mintcraft/Mintcraft_1.4-118.zip"
 										download
 										color="warning"
 										startIcon={<RiDownload2Line />}
@@ -379,7 +379,7 @@ function MintcraftDL() {
 									</Button>
 									<Button
 										variant="outlined"
-										href="http://download.pprmint.art/mintcraft/Mintcraft_1.3-117.zip"
+										href="https://download.pprmint.art/mintcraft/Mintcraft_1.3-117.zip"
 										download
 										color="inherit"
 									>
@@ -387,7 +387,7 @@ function MintcraftDL() {
 									</Button>
 									<Button
 										variant="outlined"
-										href="http://download.pprmint.art/mintcraft/Mintcraft_1.1-116.zip"
+										href="https://download.pprmint.art/mintcraft/Mintcraft_1.1-116.zip"
 										download
 										color="inherit"
 									>
@@ -419,7 +419,7 @@ function MintcraftDL() {
 								<Stack spacing={2} direction="row">
 									<Button
 										variant="contained"
-										href="http://download.pprmint.art/mintcraft/Mintbit_Add-on_1.0-118.zip"
+										href="https://download.pprmint.art/mintcraft/Mintbit_Add-on_1.0-118.zip"
 										download
 										color="warning"
 										startIcon={<RiDownload2Line />}
@@ -428,7 +428,7 @@ function MintcraftDL() {
 									</Button>
 									<Button
 										variant="outlined"
-										href="http://download.pprmint.art/mintcraft/Mintbit_Add-on_1.0-117.zip"
+										href="https://download.pprmint.art/mintcraft/Mintbit_Add-on_1.0-117.zip"
 										download
 										color="inherit"
 									>
@@ -459,7 +459,7 @@ function MintcraftDL() {
 								<br />
 								<Button
 									variant="contained"
-									href="http://download.pprmint.art/mintcraft/Sounds_Add-on_1.0-118.zip"
+									href="https://download.pprmint.art/mintcraft/Sounds_Add-on_1.0-118.zip"
 									download
 									color="warning"
 									startIcon={<RiDownload2Line />}

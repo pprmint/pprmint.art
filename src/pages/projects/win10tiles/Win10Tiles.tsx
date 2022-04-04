@@ -319,7 +319,7 @@ function Win10TilesDL() {
 						<br />
 						<Button
 							variant="contained"
-							href="http://download.pprmint.art/win10tiles.zip"
+							href="https://download.pprmint.art/win10tiles.zip"
 							download
 							color="primary"
 							startIcon={<RiDownload2Line />}
