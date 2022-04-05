@@ -24,7 +24,9 @@ import {
 	ListItem,
 	ListItemText,
 	useScrollTrigger,
+    Button,
 } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 // Imports of all the pages
 import Home from "./pages/home/Home";
@@ -49,6 +51,7 @@ import ManjaroWall from "./pages/projects/gallery/2021/manjarowall/ManjaroWall";
 import Contact from "./pages/contact/Contact";
 import Error404 from "./pages/404/Error404";
 import UnderConstruction from "./pages/wip/UnderConstruction";
+import HealthSafety from "./pages/wii/HealthSafety";
 import Test from "./pages/test/Test";
 
 import ScrollToTop from "./ScrollToTop";
@@ -60,6 +63,7 @@ import "./globalassets/fonts/silka.css";
 import "./globalassets/fonts/basier_square.css";
 
 import {
+	RiArrowDownSLine,
 	RiBehanceLine,
 	RiGithubLine,
 	RiHeartFill,
@@ -71,25 +75,21 @@ import {
 
 const nav = [
 	{
-		text: "Home",
+		id: "nav.home",
 		link: "/",
 		exact: true,
-		delay: "0.04",
 	},
 	{
-		text: "About",
+		id: "nav.about",
 		link: "/about",
-		delay: "0.08",
 	},
 	{
-		text: "Projects",
+		id: "nav.projects",
 		link: "/projects",
-		delay: "0.12",
 	},
 	{
-		text: "Contact & FAQ",
+		id: "nav.contact",
 		link: "/contact",
-		delay: "0.18",
 	},
 ];
 
@@ -184,6 +184,7 @@ const theme = createTheme({
 		},
 	},
 });
+
 function IconLink(
 	props: React.PropsWithChildren<{ href: string; delay: string }>
 ) {
@@ -216,14 +217,15 @@ function ElevationScroll(props: Props) {
 	});
 }
 
-function App(props: Props) {
+function App() {
+	const { t } = useTranslation();
 	const [open, setOpen] = useState<boolean>(false);
 	return (
 		<StyledEngineProvider injectFirst>
 			<ThemeProvider theme={theme}>
 				<CssBaseline />
 				<Router>
-					<ElevationScroll {...props}>
+					<ElevationScroll>
 						<AppBar
 							position="fixed"
 							sx={{
@@ -291,7 +293,7 @@ function App(props: Props) {
 														}}
 													>
 														<ListItemText
-															primary={item.text}
+															primary={t(item.id)}
 															className="navlink"
 														/>
 													</ListItem>
@@ -323,11 +325,12 @@ function App(props: Props) {
 												activeClassName="active"
 												to={item.link}
 											>
-												{item.text}
+												{t(item.id)}
 											</NavLink>
 										);
 									})}
 								</Box>
+                                {/* <Button variant="outlined" color="inherit" endIcon={<RiArrowDownSLine />} sx={{ml: "15px"}}>Sprache</Button> */}
 							</Toolbar>
 						</AppBar>
 					</ElevationScroll>
@@ -362,6 +365,7 @@ function App(props: Props) {
 
 							<Route path="/contact" exact component={Contact} />
 							<Route path="/test" exact component={Test} />
+							<Route path="/healthsafety" exact component={HealthSafety} />
 
 							<Redirect from="/works" to="/projects" />
 							<Redirect from="/downloads" to="/projects" />

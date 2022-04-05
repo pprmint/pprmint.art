@@ -1,0 +1,52 @@
+{
+	"home": {
+		"meta": {
+			"description": "I make things look neat with vector points, keyframes, and colorful monospace letters. Have a look at my works or download things you may use for your own intents and purposes.",
+			"title": "pprmint.art"
+		},
+		"section": {
+			"news": {
+				"announcement": {
+					"newDomain": {
+						"boldDescription": "Have you ever seen a single word of German around here? Ganz genau.",
+						"description": "It always bothered me a bit that the top-level domain of this website was .de, even though this website is less about me being German and more about the things I create. Don't worry, pprmint.de will redirect you to the new domain for a while.",
+						"title": "A shiny new domain."
+					}
+				},
+				"title": "Here's what's new:"
+			}
+		},
+		"title": {
+			"main": "Good today.",
+			"sub": "I make things look neat with vector points, keyframes and colorful monospace letters."
+		}
+	},
+	"nav": {
+		"about": "About",
+		"contact": "Contact & FAQ",
+		"home": "Home",
+		"projects": "Projects"
+	},
+	"projects": {
+		"meta": {
+			"description": "I make things look neat with vector points, keyframes, and colorful monospace letters. Have a look at my works or download things you may use for your own intents and purposes.",
+			"title": "pprmint.art"
+		},
+		"section": {
+			"news": {
+				"announcement": {
+					"newDomain": {
+						"boldDescription": "Have you ever seen a single word of German around here? Ganz genau.",
+						"description": "It always bothered me a bit that the top-level domain of this website was .de, even though this website is less about me being German and more about the things I create. Don't worry, pprmint.de will redirect you to the new domain for a while.",
+						"title": "A shiny new domain."
+					}
+				},
+				"title": "Here's what's new:"
+			}
+		},
+		"title": {
+			"main": "Good today.",
+			"sub": "I make things look neat with vector points, keyframes and colorful monospace letters."
+		}
+	}
+}

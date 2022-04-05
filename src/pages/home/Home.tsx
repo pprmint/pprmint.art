@@ -10,6 +10,7 @@ import {
 	Button,
 } from "@mui/material";
 import Image from "material-ui-image";
+import { useTranslation } from "react-i18next";
 
 import MintBanner from "./assets/mint_banner.svg";
 
@@ -96,25 +97,22 @@ function ActionsAnnouncementCard(
 }
 
 function Home() {
+	const { t } = useTranslation();
 	return (
 		<>
 			<Helmet>
 				<meta charSet="utf-8" />
-				<title>pprmint.art</title>
+				<title>{t("home.meta.title")}</title>
 				<meta
 					name="description"
-					content="I make things look neat with vector points, keyframes, and colorful
-					monospace letters. Have a look at my works or download things you may use for your own intents and purposes."
+					content={t("home.meta.description")}
 				/>
 			</Helmet>
 			<div className="fullscreen">
 				<img src={MintBanner} />
 				<Container className="title">
-					<Typography variant="h1">Good today.</Typography>
-					<Typography variant="h2">
-						I make things look neat with vector points, keyframes and colorful
-						monospace letters.
-					</Typography>
+					<Typography variant="h1">{t("home.title.main")}</Typography>
+					<Typography variant="h2">{t("home.title.sub")}</Typography>
 					<br />
 					<RiArrowDownLine size={25} color="#0c6" />
 				</Container>
@@ -122,18 +120,15 @@ function Home() {
 			<div className="content">
 				<div className="section" id="news">
 					<Container>
-						<Typography variant="h1">Here's what's new:</Typography>
+						<Typography variant="h1">{t("home.section.news.title")}</Typography>
 						<br />
 						<AnnouncementCard
 							imageSrc={NewsDomain}
 							imageAlt="My shiny new domain, pprmint.art."
 							date="01. Feb. 2022"
-							headline="A shiny new domain."
-							strongText="Have you ever seen a single word of German around here? Ganz genau."
-							text="It always bothered me a bit that the top-level domain of this website
-                            was .de, even though this website is less about me being German and more about
-                            the things I create. Don't worry, pprmint.de will redirect you to the new
-                            domain for a while."
+							headline={t("home.section.news.announcement.newDomain.title")}
+							strongText={t("home.section.news.announcement.newDomain.boldDescription")}
+                            text={t("home.section.news.announcement.newDomain.description")}
 						/>
 						<br />
 						<AnnouncementCard

@@ -1,0 +1,52 @@
+{
+	"home": {
+		"meta": {
+			"description": "Ich lasse Dinge mit Vektorpunkten, Keyframes und bunten Monospace-Buchstaben schick aussehen. Schau dir meine Werke an oder lade Dinge herunter, die du für deine eigenen Zwecke verwenden kannst.",
+			"title": "pprmint.art"
+		},
+		"section": {
+			"news": {
+				"announcement": {
+					"newDomain": {
+						"boldDescription": "Hast du hier vorher ein einziges Wort auf Deutsch gesehen? Eben.",
+						"description": "Es hat mich immer etwas genevt, dass die Top-Level-Domain dieser Website .de lautete, obwohl sie weniger mein Deutsch-sein und mehr meine Kreationen vorstellen soll. Keine Sorge, pprmint.de wird noch für einige Zeit auf diese neue Domain weiterleiten.",
+						"title": "Eine schicke, neue Domain."
+					}
+				},
+				"title": "Das gibt's neues:"
+			}
+		},
+		"title": {
+			"main": "Guten Heute.",
+			"sub": "Ich lasse Dinge mit Vektorpunkten, Keyframes und bunten Monospace-Buchstaben schick aussehen."
+		}
+	},
+	"nav": {
+		"about": "Über",
+		"contact": "Kontakt & FAQ",
+		"home": "Start",
+		"projects": "Projekte"
+	},
+	"projects": {
+		"meta": {
+			"description": "Ich lasse Dinge mit Vektorpunkten, Keyframes und bunten Monospace-Buchstaben schick aussehen. Schau dir meine Werke an oder lade Dinge herunter, die du für deine eigenen Zwecke verwenden kannst.",
+			"title": "pprmint.art"
+		},
+		"section": {
+			"news": {
+				"announcement": {
+					"newDomain": {
+						"boldDescription": "Hast du hier vorher ein einziges Wort auf Deutsch gesehen? Eben.",
+						"description": "Es hat mich immer etwas genevt, dass die Top-Level-Domain dieser Website .de lautete, obwohl sie weniger mein Deutsch-sein und mehr meine Kreationen vorstellen soll. Keine Sorge, pprmint.de wird noch für einige Zeit auf diese neue Domain weiterleiten.",
+						"title": "Eine schicke, neue Domain."
+					}
+				},
+				"title": "Das gibt's neues:"
+			}
+		},
+		"title": {
+			"main": "Guten Heute.",
+			"sub": "Ich lasse Dinge mit Vektorpunkten, Keyframes und bunten Monospace-Buchstaben schick aussehen."
+		}
+	}
+}
