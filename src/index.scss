@@ -276,6 +276,7 @@ p a.external {
 /* That arrow */
 a.external::after {
 	content: "↗";
+    font-family: var(--fontPrimary);
 	color: var(--bluePrimary);
 	transition: all 0.15s;
 	position: relative;

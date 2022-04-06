@@ -17,6 +17,7 @@ import {
 	Stack,
 } from "@mui/material";
 import Image from "material-ui-image";
+import { useTranslation } from "react-i18next";
 
 import {
 	RiDownload2Line,
@@ -64,11 +65,14 @@ function ContainerImage(props: { imageSrc: string; imageAlt: string }) {
 }
 
 function MintcraftDL() {
+	const { t } = useTranslation("translation", {
+		keyPrefix: "projects.mintcraft",
+	});
 	return (
 		<>
 			<Helmet>
 				<meta charSet="utf-8" />
-				<title>A Minecraft resource pack • pprmint.art</title>
+				<title>{t("meta.title")}</title>
 				<meta
 					name="description"
 					content="Mintcraft (formerly 'MintCraft') is my Minecraft resource pack with some UI tweaks to my liking. Craft. It's basically dark mode Minecraft with some fancy new icons here and there."
@@ -78,7 +82,7 @@ function MintcraftDL() {
 				<img src={MintcraftBanner} />
 				<Container className="title">
 					<img src={MintcraftLogo} />
-					<Typography variant="h2">A Minecraft resource pack.</Typography>
+					<Typography variant="h2">{t("title.sub")}</Typography>
 					<br />
 					<RiArrowDownLine size={25} color="#fb2" />
 				</Container>
@@ -86,20 +90,16 @@ function MintcraftDL() {
 			<div className="content">
 				<div className="section" id="changes">
 					<Container>
-						<Typography variant="h1">Changes in version 1.4</Typography>
+						<Typography variant="h1">
+							{t("section.changes.headline")}
+						</Typography>
 						<List>
 							<ListItem>
 								<ListItemIcon>
 									<RiAddLine />
 								</ListItemIcon>
-								<ListItemText>Added support for Minecraft 1.18.</ListItemText>
-							</ListItem>
-							<ListItem>
-								<ListItemIcon>
-									<RiArrowRightUpLine />
-								</ListItemIcon>
 								<ListItemText>
-									Updated accent colors and those of the hunger bar.
+									{t("section.changes.addition.supportNewVersion")}
 								</ListItemText>
 							</ListItem>
 							<ListItem>
@@ -107,7 +107,7 @@ function MintcraftDL() {
 									<RiArrowRightUpLine />
 								</ListItemIcon>
 								<ListItemText>
-									Updated texture for beacon UI to have another divider line.
+									{t("section.changes.update.accentColors")}
 								</ListItemText>
 							</ListItem>
 							<ListItem>
@@ -115,7 +115,7 @@ function MintcraftDL() {
 									<RiArrowRightUpLine />
 								</ListItemIcon>
 								<ListItemText>
-									Updated textures for some icon buttons to move on hover.
+									{t("section.changes.update.textureBeacon")}
 								</ListItemText>
 							</ListItem>
 							<ListItem>
@@ -123,20 +123,32 @@ function MintcraftDL() {
 									<RiArrowRightUpLine />
 								</ListItemIcon>
 								<ListItemText>
-									Updated Mintcraft logos on loading and title screen.
+									{t("section.changes.update.textureButtonIcons")}
 								</ListItemText>
 							</ListItem>
 							<ListItem>
 								<ListItemIcon>
 									<RiArrowRightUpLine />
 								</ListItemIcon>
-								<ListItemText>Updated resouce pack icons.</ListItemText>
+								<ListItemText>
+									{t("section.changes.update.textureLogos")}
+								</ListItemText>
+							</ListItem>
+							<ListItem>
+								<ListItemIcon>
+									<RiArrowRightUpLine />
+								</ListItemIcon>
+								<ListItemText>
+									{t("section.changes.update.texturePackIcons")}
+								</ListItemText>
 							</ListItem>
 							<ListItem>
 								<ListItemIcon>
 									<RiSubtractLine />
 								</ListItemIcon>
-								<ListItemText>Removed music by C418.</ListItemText>
+								<ListItemText>
+									{t("section.changes.removal.music")}
+								</ListItemText>
 							</ListItem>
 						</List>
 						<br />
@@ -186,11 +198,13 @@ function MintcraftDL() {
 				</div>
 				<div className="section" id="dontdothedo">
 					<Container>
-						<Typography variant="h1">Dos and Don'ts</Typography>
+						<Typography variant="h1">
+							{t("section.dosAndDonts.headline")}
+						</Typography>
 						<Grid container spacing={4}>
 							<Grid item xs={12} md={6}>
 								<Typography variant="h2" color="#0c6">
-									Do:
+									{t("section.dosAndDonts.do.headline")}
 								</Typography>
 								<List>
 									<ListItem>
@@ -198,8 +212,7 @@ function MintcraftDL() {
 											<RiCheckboxCircleLine />
 										</ListItemIcon>
 										<ListItemText>
-											Use and modify Mintcraft and/or its add-ons to your liking
-											and for personal use.
+											{t("section.dosAndDonts.do.modifyPersonalUse")}
 										</ListItemText>
 									</ListItem>
 									<ListItem>
@@ -207,8 +220,7 @@ function MintcraftDL() {
 											<RiCheckboxCircleLine />
 										</ListItemIcon>
 										<ListItemText>
-											Use this pack, its add-ons or your modification in online
-											content, like YouTube videos
+											{t("section.dosAndDonts.do.modifyOnlineContent")}
 										</ListItemText>
 									</ListItem>
 									<ListItem>
@@ -216,9 +228,7 @@ function MintcraftDL() {
 											<RiCheckboxCircleLine />
 										</ListItemIcon>
 										<ListItemText>
-											Share this pack, or your modified version of it, with
-											friends
-											<i> privately</i>.
+											{t("section.dosAndDonts.do.sharePrivate")}
 										</ListItemText>
 									</ListItem>
 									<ListItem>
@@ -226,9 +236,7 @@ function MintcraftDL() {
 											<RiCheckboxCircleLine />
 										</ListItemIcon>
 										<ListItemText>
-											Use this pack or parts of it in compilations. Remember to
-											leave the credits.txt in if you use the dark text from
-											Vanilla Tweaks.
+											{t("section.dosAndDonts.do.serverPacks")}
 										</ListItemText>
 									</ListItem>
 									<ListItem>
@@ -236,15 +244,14 @@ function MintcraftDL() {
 											<RiCheckboxCircleLine />
 										</ListItemIcon>
 										<ListItemText>
-											<i>Optional:</i> Credit me somewhere when you use my pack
-											by linking to this website.
+											<i>Optional:</i> {t("section.dosAndDonts.do.optionalCredit")}
 										</ListItemText>
 									</ListItem>
 								</List>
 							</Grid>
 							<Grid item xs={12} md={6}>
 								<Typography variant="h2" color="#f34">
-									Don't:
+									{t("section.dosAndDonts.dont.headline")}
 								</Typography>
 								<List>
 									<ListItem>
@@ -252,9 +259,7 @@ function MintcraftDL() {
 											<RiCloseCircleLine />
 										</ListItemIcon>
 										<ListItemText>
-											Host, mirror, sell or otherwise redistribute versions,
-											parts and/or modifications of Mintcraft and/or its add-ons
-											anywhere for others to download.
+											{t("section.dosAndDonts.dont.redistribute")}
 										</ListItemText>
 									</ListItem>
 								</List>
@@ -264,7 +269,7 @@ function MintcraftDL() {
 				</div>
 				<div className="section" id="credits">
 					<Container>
-						<Typography variant="h1">Credits</Typography>
+						<Typography variant="h1">{t("section.credits.headline")}</Typography>
 						<Typography variant="h2">
 							<a
 								className="external"
@@ -272,19 +277,17 @@ function MintcraftDL() {
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								Vanilla Tweaks
+								{t("section.credits.vanillatweaks.name")}
 							</a>
 						</Typography>
 						<Typography variant="body1">
-							JSON files to fix some text colors. Remember how I said this pack
-							was only compatible with 3 languages? Yeah that was fixed with
-							this.
+							{t("section.credits.vanillatweaks.description")}
 						</Typography>
 					</Container>
 				</div>
 				<div className="section" id="howto">
 					<Container>
-						<Typography variant="h1">How to install</Typography>
+						<Typography variant="h1">{t("section.installation.headline")}</Typography>
 						<List>
 							<ListItem>
 								<ListItemIcon>
@@ -292,7 +295,7 @@ function MintcraftDL() {
 								</ListItemIcon>
 								<ListItemText>
 									<Typography variant="body1">
-										Install{" "}
+                                    {t("section.installation.steps.installOptifine")}
 										<a
 											className="external"
 											href="https://optifine.net/downloads"
@@ -311,7 +314,7 @@ function MintcraftDL() {
 								</ListItemIcon>
 								<ListItemText>
 									<Typography variant="body1">
-										Scroll down and click on a download button.
+										{t("section.installation.steps.downloadPacks")}
 									</Typography>
 								</ListItemText>
 							</ListItem>
@@ -321,9 +324,7 @@ function MintcraftDL() {
 								</ListItemIcon>
 								<ListItemText>
 									<Typography variant="body1">
-										Place my packs in your resource pack folder. You can find
-										yours by going to Options, Resource Packs and clicking on
-										Open Pack Folder.
+										{t("section.installation.steps.placeInFolder")}
 									</Typography>
 								</ListItemText>
 							</ListItem>
@@ -333,8 +334,7 @@ function MintcraftDL() {
 								</ListItemIcon>
 								<ListItemText>
 									<Typography variant="body1">
-										Move my packs to the top of the list. If you want. I dunno
-										what you like to use them with.
+										{t("section.installation.steps.moveToTop")}
 									</Typography>
 								</ListItemText>
 							</ListItem>
@@ -343,7 +343,7 @@ function MintcraftDL() {
 									<RiNumber5 />
 								</ListItemIcon>
 								<ListItemText>
-									<Typography variant="body1">Dig straight down.</Typography>
+									<Typography variant="body1">{t("section.installation.steps.digDown")}</Typography>
 								</ListItemText>
 							</ListItem>
 						</List>
@@ -360,11 +360,9 @@ function MintcraftDL() {
 								/>
 							</Grid>
 							<Grid item xs={12} md={9}>
-								<Typography variant="h1">Mintcraft</Typography>
+								<Typography variant="h1">{t("section.downloads.mintcraft.name")}</Typography>
 								<Typography variant="body1">
-									My resource pack providing you with dark-mode containers and a
-									selfish-color palette and many other tweaks. Some icons even
-									move when you hover over them!
+									{t("section.downloads.mintcraft.description")}
 								</Typography>
 								<br />
 								<Stack spacing={2} direction="row">
@@ -375,7 +373,7 @@ function MintcraftDL() {
 										color="warning"
 										startIcon={<RiDownload2Line />}
 									>
-										Download for 1.18
+										{t("section.downloads.commonDownloadButton")}1.18
 									</Button>
 									<Button
 										variant="outlined"
@@ -409,11 +407,9 @@ function MintcraftDL() {
 								/>
 							</Grid>
 							<Grid item xs={12} md={9}>
-								<Typography variant="h1">Mintbit font add-on</Typography>
+								<Typography variant="h1">{t("section.downloads.addonFont.name")}</Typography>
 								<Typography variant="body1">
-									A font that I specifically made to use with Mintcraft. Need
-									more convincing? This font is used in the screenshots a bit
-									above, as well as in these cards' headers.
+									{t("section.downloads.addonFont.description")}
 								</Typography>
 								<br />
 								<Stack spacing={2} direction="row">
@@ -424,7 +420,7 @@ function MintcraftDL() {
 										color="warning"
 										startIcon={<RiDownload2Line />}
 									>
-										Download for 1.18
+										{t("section.downloads.commonDownloadButton")}1.18
 									</Button>
 									<Button
 										variant="outlined"
@@ -450,11 +446,9 @@ function MintcraftDL() {
 								/>
 							</Grid>
 							<Grid item xs={12} md={9}>
-								<Typography variant="h1">Sounds add-on</Typography>
+								<Typography variant="h1">{t("section.downloads.addonSounds.name")}</Typography>
 								<Typography variant="body1">
-									Despite this add-on being named after the plural of a word,
-									this pack actually just replaces one sound, which is the
-									button click sound. This one is similar, but less jarring.
+									{t("section.downloads.addonSounds.description")}
 								</Typography>
 								<br />
 								<Button
@@ -464,7 +458,7 @@ function MintcraftDL() {
 									color="warning"
 									startIcon={<RiDownload2Line />}
 								>
-									Download for 1.18
+									{t("section.downloads.commonDownloadButton")}1.18
 								</Button>
 							</Grid>
 						</Grid>

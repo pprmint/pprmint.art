@@ -105,7 +105,7 @@ function Home() {
 				<title>{t("home.meta.title")}</title>
 				<meta
 					name="description"
-					content={t("home.meta.description")}
+					content="I make things look neat with vector points, keyframes, and colorful monospace letters. Have a look at my works or download things you may use for your own intents and purposes."
 				/>
 			</Helmet>
 			<div className="fullscreen">
@@ -127,8 +127,10 @@ function Home() {
 							imageAlt="My shiny new domain, pprmint.art."
 							date="01. Feb. 2022"
 							headline={t("home.section.news.announcement.newDomain.title")}
-							strongText={t("home.section.news.announcement.newDomain.boldDescription")}
-                            text={t("home.section.news.announcement.newDomain.description")}
+							strongText={t(
+								"home.section.news.announcement.newDomain.boldDescription"
+							)}
+							text={t("home.section.news.announcement.newDomain.description")}
 						/>
 						<br />
 						<AnnouncementCard

@@ -1,12 +1,39 @@
 {
+	"404": {
+		"meta": {
+			"title": "Seite nicht gefunden • pprmint.art"
+		},
+		"title": {
+			"button": "Tatort verlassen",
+			"main": "Wer ist der Schuldige?",
+			"sub": "Die Seite wurde nicht gefunden. Das Motiv ist unklar."
+		}
+	},
+	"common": {
+		"currentLang": "Deutsch",
+		"footer": {
+			"andCoffee": " und Kaffee von pprmint.",
+			"madeWith": "Gemacht mit "
+		},
+		"nav": {
+			"about": "Über",
+			"contact": "Kontakt & FAQ",
+			"home": "Start",
+			"projects": "Projekte"
+		}
+	},
 	"home": {
 		"meta": {
-			"description": "Ich lasse Dinge mit Vektorpunkten, Keyframes und bunten Monospace-Buchstaben schick aussehen. Schau dir meine Werke an oder lade Dinge herunter, die du für deine eigenen Zwecke verwenden kannst.",
 			"title": "pprmint.art"
 		},
 		"section": {
 			"news": {
 				"announcement": {
+					"layoutChanges": {
+						"boldDescription": "Wenn du nur das glaubst, was du sehen kannst, ist dieses Update genau für dich.",
+						"description": "Der Inhalt auf dem Desktop ist jetzt richtig zentriert, die linken und rechten Ränder auf dem Handy wurden verkleinert und wenn man mit dem Mauszeiger über Textlinks fährt, möchte man das für den Rest seines Lebens tun. Ich habe auch einige Teile der Website umgeschrieben und Komponenten implementiert.",
+						"title": "Eine schicke, neue Domain."
+					},
 					"newDomain": {
 						"boldDescription": "Hast du hier vorher ein einziges Wort auf Deutsch gesehen? Eben.",
 						"description": "Es hat mich immer etwas genevt, dass die Top-Level-Domain dieser Website .de lautete, obwohl sie weniger mein Deutsch-sein und mehr meine Kreationen vorstellen soll. Keine Sorge, pprmint.de wird noch für einige Zeit auf diese neue Domain weiterleiten.",
@@ -21,32 +48,114 @@
 			"sub": "Ich lasse Dinge mit Vektorpunkten, Keyframes und bunten Monospace-Buchstaben schick aussehen."
 		}
 	},
-	"nav": {
-		"about": "Über",
-		"contact": "Kontakt & FAQ",
-		"home": "Start",
-		"projects": "Projekte"
-	},
 	"projects": {
+		"downloadLatest": "Neustes herunterladen",
+		"learnMore": "Mehr erfahren",
 		"meta": {
-			"description": "Ich lasse Dinge mit Vektorpunkten, Keyframes und bunten Monospace-Buchstaben schick aussehen. Schau dir meine Werke an oder lade Dinge herunter, die du für deine eigenen Zwecke verwenden kannst.",
-			"title": "pprmint.art"
+			"title": "Meine Projekte • pprmint.art"
+		},
+		"mintcraft": {
+			"meta": {
+				"title": "Ein Minecraft-Ressourcenpaket • pprmint.art"
+			},
+			"section": {
+				"changes": {
+					"addition": {
+						"supportNewVersion": "Support für Minecraft 1.18 hinzugefügt."
+					},
+					"headline": "Änderungen in Version 1.4",
+					"removal": {
+						"music": "Musik von C418 entfernt."
+					},
+					"update": {
+						"accentColors": "Verbesserte Akzentfarben und die der Hungerleiste.",
+						"textureBeacon": "Verbesserte Textur für Leuchtfeuer mit weiterer Trennlinie.",
+						"textureButtonIcons": "Verbesserte Texturen für Buttons für bewegte Symbole.",
+						"textureLogos": "Verbessertes Mintcraft-Logo im Lade- und Titelbildschirm.",
+						"texturePackIcons": "Verbesserte Paketsymbole."
+					}
+				},
+				"credits": {
+					"headline": "Mitwirkende",
+					"vanillatweaks": {
+						"description": "JSON-Dateien, um einige Textfarben zu korrigieren. Erinnerst du dich noch, wie ich sagte, dass dieses Paket nur mit 3 Sprachen kompatibel war? Ja, das wurde hiermit behoben.",
+						"name": "Vanilla Tweaks"
+					}
+				},
+				"dosAndDonts": {
+					"do": {
+						"headline": "Das darfst du:",
+						"modifyOnlineContent": "Nutze Mintcraft, dessen Add-ons und/oder Modifizierungen in Online-Inhalten wie YouTube-Videos.",
+						"modifyPersonalUse": "Nutze und modifiziere Mintcraft und/oder dessen Add-ons für den persönlichen Gebrauch.",
+						"optionalCredit": "Kreditiere mich irgendwo, wenn du mein Paket verwendest, indem du auf diese Seite verlinkst.",
+						"serverPacks": "Nutze dieses Paket oder Teile davon in Server-Ressourcenpaketen. Vergiss dann nicht, Vanilla Tweaks angemessen zu kreditieren.",
+						"sharePrivate": "Teile dieses Paket, oder deine modifizierte Version davon, privat mit Freunden."
+					},
+					"dont": {
+						"headline": "Das darfst du nicht:",
+						"redistribute": "Hoste, verkaufe oder verbreite anderweitig Versionen, Teile und/oder Modifikationen von Mintcraft und/oder seinen Add-ons irgendwo öffentlich zum Download für andere."
+					},
+					"headline": "Dos and Don'ts"
+				},
+				"downloads": {
+					"addonFont": {
+						"description": "Eine Schriftart, die ich speziell für die Verwendung mit Mintcraft entworfen habe. Du kannst sie in den Screenshots weiter oben auf dieser Seite sehen, sowie in diesen Pack-Icons.",
+						"name": "Mintbit Schriftart-Add-on"
+					},
+					"addonSounds": {
+						"description": "Obwohl dieses Add-on nach dem Plural eines Wortes benannt ist, ersetzt es tatsächlich nur einen Ton, nämlich den für Knöpfchenklicks. Dieser ist ähnlich, aber weniger nervtötend.",
+						"name": "Sounds-Add-on"
+					},
+					"commonDownloadButton": "Download für ",
+					"mintcraft": {
+						"description": "Mein Ressourcenpaket versorgt dich mit Dark-Mode Containern, einer Ego-Farbpalette und vielen anderen Optimierungen. Einige Icons bewegen sich sogar, wenn man mit dem Mauszeiger über sie fährt!",
+						"name": "Mintcraft"
+					}
+				},
+				"installation": {
+					"headline": "Installation",
+					"steps": {
+						"digDown": "Grabe gerade nach unten.",
+						"downloadPacks": "Scrolle runter und klicke auf einen Download-Knopf.",
+						"installOptifine": "Installiere ",
+						"moveToTop": "Verschiebe meine Pakete nach oben auf der Liste. Wenn du willst. Hab keine Ahnung, womit du die benutzen willst.",
+						"placeInFolder": "Platziere meine Pakete in deinen Ressourcenpaket-Ordner. Du kannst deinen finden, indem du in den Optionen auf \"Ressourcenpakete\" und dann auf \"Paketordner öffnen\" klickst."
+					}
+				}
+			},
+			"title": {
+				"sub": "Ein Minecraft-Ressourcenpaket."
+			}
 		},
 		"section": {
-			"news": {
-				"announcement": {
-					"newDomain": {
-						"boldDescription": "Hast du hier vorher ein einziges Wort auf Deutsch gesehen? Eben.",
-						"description": "Es hat mich immer etwas genevt, dass die Top-Level-Domain dieser Website .de lautete, obwohl sie weniger mein Deutsch-sein und mehr meine Kreationen vorstellen soll. Keine Sorge, pprmint.de wird noch für einige Zeit auf diese neue Domain weiterleiten.",
-						"title": "Eine schicke, neue Domain."
-					}
+			"project": {
+				"mintalt": {
+					"cardText": "Ich habe mir die Material-Icons von Google angesehen und bemerkt, dass einige davon Text enthalten. Das Gute: Die Zahlen. Das Schlechte: Dieser dumme Name. Und die Seite für diese Schriftart. Die ist noch in Arbeit."
+				},
+				"mintcraft": {
+					"cardText": "Was als ein einfaches \"Ich mag die normalen Farben der Minecraft-Oberfläche nicht so\" anfing, endete damit, dass ich das ganze Interface moderner gestalten wollte, indem ich die Farben und Symbole anpasse."
+				},
+				"mintsans": {
+					"cardText": "Mein erster Versuch, eine geometrische Schriftfamilie zu erstellen. Eine optimierte Version ist in Entwicklung und wird mindestens dreimal so lange dauern, wie ich für die Erstellung der folgenden Seite gebraucht habe."
+				},
+				"startmenutiles": {
+					"cardText": "Branding ist eine Qual. Deshalb hat jeder sein eigenes, das für sich selbst am besten funktioniert. Bei diesen 32 Startmenü-Kacheln, die ich vor Ewigkeiten gemacht habe, wollte ich dafür sorgen, dass sie sich zumindest etwas einheitlicher anfühlen. Und auch Adobes beschissene Symbole verbessern."
 				},
 				"title": "Das gibt's neues:"
 			}
 		},
 		"title": {
-			"main": "Guten Heute.",
-			"sub": "Ich lasse Dinge mit Vektorpunkten, Keyframes und bunten Monospace-Buchstaben schick aussehen."
+			"main": "Meine Projekte.",
+			"sub": "Schau dir einige meiner Werke an, oder lade dir Zeug runter."
+		}
+	},
+	"wip": {
+		"meta": {
+			"title": "In Arbeit • pprmint.art"
+		},
+		"title": {
+			"main": "Du bist zu früh.",
+			"sub": "Hier gibt's noch nix zu sehen."
 		}
 	}
 }

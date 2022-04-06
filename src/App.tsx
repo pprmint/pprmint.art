@@ -24,7 +24,7 @@ import {
 	ListItem,
 	ListItemText,
 	useScrollTrigger,
-    Button,
+	Button,
 } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
@@ -55,6 +55,7 @@ import HealthSafety from "./pages/wii/HealthSafety";
 import Test from "./pages/test/Test";
 
 import ScrollToTop from "./ScrollToTop";
+import LanguageSelector from "./index";
 
 import Wordmark from "./globalassets/wordmark.svg";
 
@@ -75,20 +76,20 @@ import {
 
 const nav = [
 	{
-		id: "nav.home",
+		id: "common.nav.home",
 		link: "/",
 		exact: true,
 	},
 	{
-		id: "nav.about",
+		id: "common.nav.about",
 		link: "/about",
 	},
 	{
-		id: "nav.projects",
+		id: "common.nav.projects",
 		link: "/projects",
 	},
 	{
-		id: "nav.contact",
+		id: "common.nav.contact",
 		link: "/contact",
 	},
 ];
@@ -211,9 +212,9 @@ function ElevationScroll(props: Props) {
 		threshold: 0,
 	});
 	return React.cloneElement(children, {
-		sx: trigger ? { boxShadow: 3 } : { boxShadow: 0 },
-		color: trigger ? "primary" : "transparent",
-		elevation: 0,
+		sx: trigger
+			? { backdropFilter: "blur(20px)", backgroundColor: "#111111cc" }
+			: { backdropFilter: "blur(0px)", backgroundColor: "#11111100" },
 	});
 }
 
@@ -228,8 +229,10 @@ function App() {
 					<ElevationScroll>
 						<AppBar
 							position="fixed"
+							elevation={0}
+							color="transparent"
 							sx={{
-								transition: "all 0.375s",
+								transition: "all 0.15s",
 							}}
 						>
 							<Toolbar>
@@ -271,7 +274,7 @@ function App() {
 											onClick={() => setOpen(false)}
 											sx={{ mr: 2 }}
 										>
-											<RiMenu3Line />
+											<RiMenu2Line />
 										</IconButton>
 									</Box>
 									<List>
@@ -330,7 +333,7 @@ function App() {
 										);
 									})}
 								</Box>
-                                {/* <Button variant="outlined" color="inherit" endIcon={<RiArrowDownSLine />} sx={{ml: "15px"}}>Sprache</Button> */}
+                                <LanguageSelector />
 							</Toolbar>
 						</AppBar>
 					</ElevationScroll>
@@ -384,8 +387,9 @@ function App() {
 				<footer>
 					<div className="copyright">
 						<Typography variant="body2">
-							Made with <RiHeartFill color="var(--redSecondary)" /> and coffee
-							by pprmint.
+							{t("common.footer.madeWith")}
+							<RiHeartFill color="var(--redSecondary)" />
+							{t("common.footer.andCoffee")}
 						</Typography>
 					</div>
 					<div className="iconLinks">

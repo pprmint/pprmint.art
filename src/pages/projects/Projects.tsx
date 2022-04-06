@@ -13,6 +13,7 @@ import {
 	Container,
 } from "@mui/material";
 import { Masonry } from "@mui/lab";
+import { useTranslation } from "react-i18next";
 
 import Image from "material-ui-image";
 
@@ -93,22 +94,19 @@ const works2021 = [
 ];
 
 function Projects() {
+    const { t } = useTranslation("translation", {
+		keyPrefix: "projects",
+	});
 	return (
 		<div className="page">
 			<Helmet>
 				<meta charSet="utf-8" />
-				<title>Things I made • pprmint.art</title>
-				<meta
-					name="description"
-					content="Have a look at some of my works, or download some other things I made, like my Minecraft resource pack, fonts or a few wallpapers for your phone and desktop."
-				/>
+				<title>{t("meta.title")}</title>
+				<meta name="description" content="Have a look at some of my works, or download some other things I made, like my Minecraft resource pack, fonts or a few wallpapers for your phone and desktop." />
 			</Helmet>
 			<Container className="title">
-				<Typography variant="h1">Things I made.</Typography>
-				<Typography variant="h2">
-					Visit the <Link to="/contact">FAQ</Link> to learn more about terms of
-					use.
-				</Typography>
+				<Typography variant="h1">{t("title.main")}</Typography>
+				<Typography variant="h2">{t("title.sub")}</Typography>
 			</Container>
 			<div className="content">
 				<div className="section" id="projects">
@@ -123,10 +121,7 @@ function Projects() {
 									/>
 									<CardContent>
 										<Typography variant="body1">
-											What started as a simple "I don't like the colors of the
-											default Minceraft UI" ended with me trying to make the UI
-											look more modern, changing up the colors and a bit of the
-											iconography.
+											{t("section.project.mintcraft.cardText")}
 										</Typography>
 									</CardContent>
 									<CardActions>
@@ -135,10 +130,10 @@ function Projects() {
 											download
 											color="warning"
 										>
-											Download latest
+											{t("downloadLatest")}
 										</Button>
 										<Link to="/projects/mintcraft">
-											<Button color="inherit">Learn more</Button>
+											<Button color="inherit">{t("learnMore")}</Button>
 										</Link>
 									</CardActions>
 								</Card>
@@ -152,10 +147,7 @@ function Projects() {
 									/>
 									<CardContent>
 										<Typography variant="body1">
-											My first attempt at creating a geometric font family. A
-											more optimized version is in development and will take at
-											least thrice as long as it has taken me to make the
-											following page.
+											{t("section.project.mintsans.cardText")}
 										</Typography>
 									</CardContent>
 									<CardActions>
@@ -164,10 +156,10 @@ function Projects() {
 											download
 											color="secondary"
 										>
-											Download latest
+											{t("downloadLatest")}
 										</Button>
 										<Link to="/projects/mintsans">
-											<Button color="inherit">Learn more</Button>
+											<Button color="inherit">{t("learnMore")}</Button>
 										</Link>
 									</CardActions>
 								</Card>
@@ -181,10 +173,7 @@ function Projects() {
 									/>
 									<CardContent>
 										<Typography variant="body1">
-											I looked at Google's Material icons, noticed some had text
-											in them, and went "Huh." The good: Numbers. The bad: That
-											stupid name. And the page for this font. That's still in
-											the works.
+											{t("section.project.mintalt.cardText")}
 										</Typography>
 									</CardContent>
 									<CardActions>
@@ -193,11 +182,11 @@ function Projects() {
 											download
 											color="error"
 										>
-											Download latest
+											{t("downloadLatest")}
 										</Button>
 										{/* <Link to="/projects/mintsans"> */}
 										<Button color="inherit" disabled>
-											Learn more
+											{t("learnMore")}
 										</Button>
 										{/* </Link> */}
 									</CardActions>
@@ -212,10 +201,7 @@ function Projects() {
 									/>
 									<CardContent>
 										<Typography variant="body1">
-											Branding is a pain. That's why everyone has their own that
-											works best for them. With these 32 start menu tiles I made
-											ages ago, I wanted to make them all feel at least somewhat
-											more unified. And also fix Adobe's bullshit icons.
+											{t("section.project.startmenutiles.cardText")}
 										</Typography>
 									</CardContent>
 									<CardActions>
@@ -224,10 +210,10 @@ function Projects() {
 											download
 											color="primary"
 										>
-											Download latest
+											{t("downloadLatest")}
 										</Button>
 										<Link to="/projects/win10tiles">
-											<Button color="inherit">Learn more</Button>
+											<Button color="inherit">{t("learnMore")}</Button>
 										</Link>
 									</CardActions>
 								</Card>
