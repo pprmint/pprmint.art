@@ -11,15 +11,25 @@ import XHR from "i18next-http-backend";
 import stringsEN from "./globalassets/languages/english/strings.json";
 import stringsDE from "./globalassets/languages/german/strings.json";
 import {
+	createTheme,
+	useTheme,
+	ThemeProvider,
+	StyledEngineProvider,
+	CssBaseline,
 	Button,
+	ButtonGroup,
+	Dialog,
+	DialogTitle,
 	LinearProgress,
-	List,
-	ListItem,
-	ListSubheader,
-	Menu,
-	MenuItem,
+	Typography,
+	useMediaQuery,
+	IconButton,
+	DialogContent,
+	Divider,
+	DialogActions,
+	Box,
 } from "@mui/material";
-import { RiArrowDownSLine } from "react-icons/ri";
+import { RiCloseLine, RiSettings4Line } from "react-icons/ri";
 
 const resources = {
 	en: {
@@ -38,9 +48,134 @@ const languageMap = {
 	de: { label: "Deutsch", active: false },
 };
 
+const theme = createTheme({
+	palette: {
+		mode: "dark",
+		primary: {
+			light: "#0C6",
+			main: "#0C6",
+			dark: "#095",
+			contrastText: "#111",
+		},
+		secondary: {
+			light: "#19F",
+			main: "#19F",
+			dark: "#17c",
+			contrastText: "#111",
+		},
+		background: {
+			default: "#111",
+			paper: "#222",
+		},
+		text: {
+			primary: "#EEE",
+			secondary: "#BBB",
+		},
+		error: {
+			light: "#F34",
+			main: "#F34",
+			dark: "#f34",
+			contrastText: "#111",
+		},
+		warning: {
+			light: "#FB2",
+			main: "#FB2",
+			dark: "#d92",
+			contrastText: "#111",
+		},
+		info: {
+			light: "#19F",
+			main: "#19F",
+			dark: "#17c",
+			contrastText: "#111",
+		},
+		success: {
+			light: "#0C6",
+			main: "#0C6",
+			dark: "#095",
+			contrastText: "#111",
+		},
+	},
+	typography: {
+		fontFamily: "var(--fontSecondary)",
+		h1: {
+			fontFamily: "var(--fontPrimary)",
+			color: "#EEE",
+			fontSize: "4rem",
+			fontWeight: 600,
+			lineHeight: 1.1,
+			paddingBottom: "1rem",
+		},
+		h2: {
+			fontFamily: "var(--fontPrimary)",
+			color: "#EEE",
+			fontSize: "2rem",
+			fontWeight: 500,
+			padding: ".3rem 0",
+			lineHeight: 1.1,
+		},
+		h3: {
+			fontFamily: "var(--fontPrimary)",
+			color: "#EEE",
+			fontSize: "1.5rem",
+			fontWeight: 400,
+			padding: ".3rem 0",
+		},
+		body1: {
+			color: "#BBB",
+			lineHeight: 1.5,
+		},
+	},
+	components: {
+		MuiSkeleton: {
+			styleOverrides: {
+				root: {
+					backgroundColor: "#222",
+				},
+			},
+		},
+		MuiButton: {
+			styleOverrides: {
+				root: {
+					borderRadius: 5,
+				},
+			},
+		},
+		MuiCard: {
+			styleOverrides: {
+				root: {
+					borderRadius: 8,
+				},
+			},
+		},
+		MuiDialog: {
+			styleOverrides: {
+				paper: {
+					borderRadius: 8,
+					background: "#222",
+					boxShadow: "0 6px 10px #00000055",
+				},
+				paperFullScreen: {
+					borderRadius: 0,
+				},
+			},
+		},
+		MuiBackdrop: {
+			styleOverrides: {
+				root: {
+					background: "#111111",
+                    transition: "opacity .12s !important",
+				},
+			},
+		},
+	},
+});
+
 function LanguageSelector() {
 	const selected = localStorage.getItem("i18nLng") || "en";
 	const { t } = useTranslation();
+	const theme = useTheme();
+	const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
 
 	React.useEffect(() => {
 		document.body.dir = languageMap[selected].dir;
@@ -56,38 +191,68 @@ function LanguageSelector() {
 	return (
 		<>
 			<Button
-				variant="outlined"
+				variant="text"
 				color="inherit"
-				endIcon={<RiArrowDownSLine />}
+				startIcon={<RiSettings4Line />}
 				onClick={handleClick}
-				sx={{ ml: "20px", width: "120px" }}
+				sx={{ ml: "16px", mr: "16px", pl: "15px", pr: "15px", borderRadius: "20px" }}
 			>
-				{t("common.currentLang")}
+				{t("common.settings.title")}
 			</Button>
-			<Menu
-				id="basic-menu"
-				anchorEl={anchorEl}
+			<Dialog
+				maxWidth="sm"
+				fullWidth
+				fullScreen={fullScreen}
 				open={open}
 				onClose={handleClose}
-				anchorOrigin={{
-					vertical: "top",
-					horizontal: "right",
-				}}
-				transformOrigin={{
-					vertical: "top",
-					horizontal: "right",
-				}}
+				onBackdropClick={handleClose}
 			>
-				{Object.keys(languageMap)?.map((item) => (
-					<MenuItem
-						onClick={() => {
-							i18n.changeLanguage(item), setAnchorEl(null);
+				<Box sx={{ display: "flex", backgroundColor: "#333" }}>
+					<Box pl={1} pr={1} pt={0.5} pb={0.5}>
+						<IconButton onClick={handleClose} size="large">
+							<RiCloseLine />
+						</IconButton>
+					</Box>
+					<Typography
+						sx={{
+							mt: "10px",
+							flexGrow: 1,
+							fontSize: "1.75rem",
+							fontFamily: "var(--fontPrimary)",
+							fontWeight: 500,
+							color: "var(--textSecondary)",
 						}}
 					>
-						{languageMap[item].label}
-					</MenuItem>
-				))}
-			</Menu>
+						{t("common.settings.title")}
+					</Typography>
+					<Box pr={1} pt={0.5} pb={0.5}>
+						<IconButton size="large" disabled>
+							<RiSettings4Line />
+						</IconButton>
+					</Box>
+				</Box>
+				<Divider />
+				<DialogContent>
+					<Typography variant="h3">
+						{t("common.settings.language.title")}
+					</Typography>
+					<Typography variant="body1">
+						{t("common.settings.language.description")}
+					</Typography>
+					<br />
+					<ButtonGroup variant="contained">
+						{Object.keys(languageMap)?.map((item) => (
+							<Button
+								onClick={() => {
+									i18n.changeLanguage(item);
+								}}
+							>
+								{languageMap[item].label}
+							</Button>
+						))}
+					</ButtonGroup>
+				</DialogContent>
+			</Dialog>
 		</>
 	);
 }
@@ -110,9 +275,14 @@ i18n
 
 ReactDOM.render(
 	<Suspense fallback={<LinearProgress color="inherit" />}>
-		<React.StrictMode>
-			<App />
-		</React.StrictMode>
+		<StyledEngineProvider injectFirst>
+			<ThemeProvider theme={theme}>
+				<CssBaseline />
+				<React.StrictMode>
+					<App />
+				</React.StrictMode>
+			</ThemeProvider>
+		</StyledEngineProvider>
 	</Suspense>,
 	document.getElementById("root")
 );

@@ -10,7 +10,7 @@
 		}
 	},
 	"common": {
-		"currentLang": "English",
+		"changeLang": "Sprache ändern",
 		"footer": {
 			"andCoffee": " and coffee by pprmint.",
 			"madeWith": "Made with "
@@ -20,6 +20,14 @@
 			"contact": "Contact & FAQ",
 			"home": "Home",
 			"projects": "Projects"
+		},
+		"settings": {
+			"close": "Close",
+			"language": {
+				"description": "Change the language used on the website. If no translation is available, English will be used instead.",
+				"title": "Language"
+			},
+			"title": "Settings"
 		}
 	},
 	"home": {

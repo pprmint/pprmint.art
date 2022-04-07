@@ -108,20 +108,25 @@ html {
 	color: var(--textPrimary);
 	text-align: right;
 	margin-left: 15px;
+    &.active {
+        color: var(--textSecondary) !important;
+    }
 	&:hover {
 		color: var(--textSecondary);
 	}
 	&:focus-visible {
 		background-color: var(--backgroundTertiary);
 	}
-	&.active {
-		color: var(--textSecondary) !important;
-	}
 }
 
 .MuiAppBar-root {
 	opacity: 0;
 	animation: fadeTop 0.375s var(--easeOut) forwards;
+	transition: 0.375s;
+}
+.MuiDialog-paper {
+	opacity: 0;
+	animation: fadeBottom 0.375s var(--easeOut) .14s forwards;
 	transition: 0.375s;
 }
 
@@ -141,11 +146,12 @@ footer {
 		animation: fadeBottom 0.375s var(--easeOut) 0.18s forwards;
 		opacity: 0;
 	}
-	.iconLinks {
-		.MuiIconButton-sizeLarge {
+    #footerButtons {
+		.MuiIconButton-sizeLarge,
+        .MuiButton-root,
+        .MuiDivider-root {
 			opacity: 0;
-			animation: fadeBottom 0.375s var(--easeOut) forwards;
-			color: var(--textSecondary);
+			animation: fadeBottom 0.375s var(--easeOut) 0.3s forwards;
 			margin: 5px;
 		}
 	}
