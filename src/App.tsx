@@ -34,6 +34,7 @@ import MintsansDL from "./pages/projects/mintsans/Mintsans";
 import MintBitDL from "./pages/projects/mintbit/MintBit";
 import MintAltDL from "./pages/projects/mintalternative/MintAlt";
 import MintcraftDL from "./pages/projects/mintcraft/Mintcraft";
+import MintcraftSplashes from "./pages/projects/mintcraft/Splashes";
 import Win10TilesDL from "./pages/projects/win10tiles/Win10Tiles";
 
 // Works 2022
@@ -243,7 +244,8 @@ function App() {
 
 						<Route path="/projects" exact component={Projects} />
 						<Route path="/projects/mintsans" component={MintsansDL} />
-						<Route path="/projects/mintcraft" component={MintcraftDL} />
+						<Route path="/projects/mintcraft" exact component={MintcraftDL} />
+						<Route path="/projects/mintcraft/splashes" component={MintcraftSplashes} />
 						<Route path="/projects/win10tiles" component={Win10TilesDL} />
 
 						{/* Works of 2022 */}

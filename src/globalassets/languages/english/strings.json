@@ -132,6 +132,10 @@
 				}
 			},
 			"title": {
+				"splashes": {
+					"main": "splashes.txt",
+					"sub": "All the splashes seen in Mintcraft."
+				},
 				"sub": "A Minecraft resource pack."
 			}
 		},

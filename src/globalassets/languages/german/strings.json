@@ -24,7 +24,7 @@
 		"settings": {
 			"close": "Schließen",
 			"language": {
-				"description": "Ändern Sie die auf der Website verwendete Sprache. Wenn keine Übersetzung verfügbar ist, wird stattdessen Englisch verwendet.",
+				"description": "Ändere die auf der Website verwendete Sprache. Wenn keine Übersetzung verfügbar ist, wird stattdessen Englisch verwendet.",
 				"title": "Sprache (Language)"
 			},
 			"title": "Einstellungen"
@@ -132,6 +132,10 @@
 				}
 			},
 			"title": {
+				"splashes": {
+					"main": "splashes.txt",
+					"sub": "Alle Splash-Texte in Mintcraft."
+				},
 				"sub": "Ein Minecraft-Ressourcenpaket."
 			}
 		},
