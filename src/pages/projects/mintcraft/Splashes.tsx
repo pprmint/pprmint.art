@@ -2,21 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import {
-	Button,
 	Typography,
-	Grid,
 	List,
 	ListItem,
-	ListItemIcon,
-	ListItemText,
-	Card,
-	CardContent,
-	CardMedia,
-	CardActions,
 	Container,
-	Stack,
 } from "@mui/material";
-import Image from "material-ui-image";
 import { useTranslation } from "react-i18next";
 
 const splashes = [
@@ -407,7 +397,7 @@ const splashes = [
 	{
 		text: (
 			<span>
-				"Featuring quotes from{""}
+				Featuring quotes from{" "}
 				<a
 					className="external"
 					href="https://twitter.com/Gamer_Kold"
@@ -435,7 +425,7 @@ const splashes = [
 	{
 		text: (
 			<span>
-				"Featuring quotes from{""}
+				Featuring quotes from{" "}
 				<a
 					className="external"
 					href="https://twitter.com/ScreamRepeat"
@@ -456,14 +446,14 @@ const splashes = [
 				target="_blank"
 				rel="noopener norefferer"
 			>
-				"This is truly the moment if the century."-@gaming
+				"This is truly the moment if the century." -@gaming
 			</a>
 		),
 	},
 	{
 		text: (
 			<span>
-				"Featuring quotes from{""}
+				Featuring quotes from{" "}
 				<a
 					className="external"
 					href="https://twitter.com/notkoutsie"
@@ -491,7 +481,7 @@ const splashes = [
 	{
 		text: (
 			<span>
-				"Featuring quotes from{""}
+				Featuring quotes from{" "}
 				<a
 					className="external"
 					href="https://twitter.com/Voluna_Awoo"
@@ -546,7 +536,7 @@ const splashes = [
 	{
 		text: (
 			<span>
-				"Featuring quotes from{""}
+				Featuring quotes from{" "}
 				<a
 					className="external"
 					href="https://twitter.com/TaromaruYuki"
@@ -574,7 +564,7 @@ const splashes = [
 	{
 		text: (
 			<span>
-				"Featuring quotes from{""}
+				Featuring quotes from{" "}
 				<a
 					className="external"
 					href="https://twitter.com/emplexx"
@@ -602,7 +592,7 @@ const splashes = [
 	{
 		text: (
 			<span>
-				"Featuring quotes from{""}
+				Featuring quotes from{" "}
 				<a
 					className="external"
 					href="https://twitter.com/foxylucklol"
@@ -630,7 +620,7 @@ const splashes = [
 	{
 		text: (
 			<span>
-				"Featuring quotes from{""}
+				Featuring quotes from{" "}
 				<a
 					className="external"
 					href="https://twitter.com/novotab51"
@@ -658,7 +648,7 @@ const splashes = [
 	{
 		text: (
 			<span>
-				"Featuring "quotes"from{""}
+				Featuring "quotes" from{" "}
 				<a
 					className="external"
 					href="https://twitter.com/fluxe__"
@@ -686,7 +676,7 @@ const splashes = [
 	{
 		text: (
 			<span>
-				"Featuring quotes from{""}
+				Featuring quotes from{" "}
 				<a
 					className="external"
 					href="https://twitter.com/IAmDraconium"
@@ -714,7 +704,7 @@ const splashes = [
 	{
 		text: (
 			<span>
-				"Featuring quotes from{""}
+				Featuring quotes from{" "}
 				<a
 					className="external"
 					href="https://twitter.com/LorAndCompany"
@@ -742,7 +732,7 @@ const splashes = [
 	{
 		text: (
 			<span>
-				"Featuring <s>ads</s> quotes from{""}
+				Featuring <s>ads</s> quotes from{" "}
 				<a
 					className="external"
 					href="https://twitter.com/GrabsterTV"
@@ -771,7 +761,7 @@ const splashes = [
 	{
 		text: (
 			<span>
-				"Featuring quotes from{""}
+				Featuring quotes from{" "}
 				<a
 					className="external"
 					href="https://twitter.com/dlphesigns"
@@ -799,7 +789,7 @@ const splashes = [
 	{
 		text: (
 			<span>
-				"Featuring quotes from{""}
+				Featuring quotes from{" "}
 				<a
 					className="external"
 					href="https://twitter.com/xparacosm"
@@ -827,7 +817,7 @@ const splashes = [
 	{
 		text: (
 			<span>
-				"Featuring quotes from{""}
+				Featuring quotes from{" "}
 				<a
 					className="external"
 					href="https://twitter.com/Febbuarie"
