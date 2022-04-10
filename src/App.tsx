@@ -273,6 +273,7 @@ function App() {
 						<Redirect from="/projects/works/2021" exact to="/projects" />
 						<Redirect from="/faq" to="/contact" />
 						<Redirect from="/mintcraft" to="/projects/mintcraft" />
+						<Redirect from="/splashes" exact to="/projects/mintcraft/splashes" />
 						<Redirect from="/mintsans" to="/projects/mintsans" />
 						<Redirect from="/mintalt" to="/projects/mintalt" />
 						<Redirect from="/win10tiles" to="/projects/win10tiles" />
