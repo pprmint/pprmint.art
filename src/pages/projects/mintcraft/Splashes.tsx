@@ -157,31 +157,427 @@ const splashes = [
 		text: "Adobe ain't great, but at least they like the Wii U Download Management music!",
 	},
 	{ text: "This is sample splash!" },
-	{ text: "Now with 0.2 more decimals!" },
-	{ text: "Now with 100% more pepper!" },
-	{ text: "'This is truly the moment if the century.' -@gaming" },
-	{ text: "With extra mint flavor!" },
+	{ text: "<hr />" },
 	{
-		text: "You don't always have to be 'fine'. So if something sad happens, It's okay to feel sad. - Yuki Takeya",
+		text: (
+			<a
+				className="external"
+				href="https://twitter.com/Gamer_Kold/status/1404101125989613570"
+				target="_blank"
+				rel="noopener norefferer"
+			>
+				Now with 0.2 more decimals!
+			</a>
+		),
 	},
 	{
-		text: "It's sad that nothing can last forever, but I think it's better that way. - Yuki Takeya",
+		text: (
+			<span>
+				Featuring quotes from{" "}
+				<a
+					className="external"
+					href="https://twitter.com/Gamer_Kold"
+					target="_blank"
+					rel="noopener norefferer"
+				>
+					@Gamer_Kold
+				</a>
+				!
+			</span>
+		),
 	},
 	{
-		text: "If you bottle up your sadness too much, you'll forget what's really important. - Yuki Takeya",
+		text: (
+			<a
+				className="external"
+				href="https://twitter.com/ScreamRepeat/status/1404099235939864576"
+				target="_blank"
+				rel="noopener norefferer"
+			>
+				Now with 100% more pepper!
+			</a>
+		),
 	},
 	{
-		text: "my current mouse is so sticky and unpleasant to touch that sometimes i lowkey regret returning the mx master lol",
+		text: (
+			<span>
+				Featuring quotes from{" "}
+				<a
+					className="external"
+					href="https://twitter.com/ScreamRepeat"
+					target="_blank"
+					rel="noopener norefferer"
+				>
+					@ScreamRepeat
+				</a>
+				!
+			</span>
+		),
 	},
-	{ text: "Free encyclopedia not included!" },
-	{ text: "" },
-	{ text: "Featuring quotes from @Gamer_Kold!" },
-	{ text: "Featuring quotes from @ScreamRepeat!" },
-	{ text: "Featuring quotes from @notkoutsie!" },
-	{ text: "Featuring quotes from @Voluna_Awoo!" },
-	{ text: "Featuring quotes from @TaromaruYuki (?!?!)" },
-	{ text: "Featuring quotes from @emplexx!" },
-	{ text: "Featuring quotes from @foxylucklol!" },
+	{
+		text: (
+			<a
+				className="external"
+				href="https://twitter.com/notkoutsie/status/1404099376004448260"
+				target="_blank"
+				rel="noopener norefferer"
+			>
+				"This is truly the moment if the century." -@gaming
+			</a>
+		),
+	},
+	{
+		text: (
+			<span>
+				Featuring quotes from{" "}
+				<a
+					className="external"
+					href="https://twitter.com/notkoutsie"
+					target="_blank"
+					rel="noopener norefferer"
+				>
+					@notkoutsie
+				</a>
+				!
+			</span>
+		),
+	},
+	{
+		text: (
+			<a
+				className="external"
+				href="https://twitter.com/Voluna_Awoo/status/1404104415724908545"
+				target="_blank"
+				rel="noopener norefferer"
+			>
+				With extra mint flavor!
+			</a>
+		),
+	},
+	{
+		text: (
+			<span>
+				Featuring quotes from{" "}
+				<a
+					className="external"
+					href="https://twitter.com/Voluna_Awoo"
+					target="_blank"
+					rel="noopener norefferer"
+				>
+					@Voluna_Awoo
+				</a>
+				!
+			</span>
+		),
+	},
+	{
+		text: (
+			<a
+				className="external"
+				href="https://twitter.com/TaromaruYuki/status/1404106261516406785"
+				target="_blank"
+				rel="noopener norefferer"
+			>
+				You don't always have to be "fine". So if something sad happens, It's
+				okay to feel sad. - Yuki Takeya
+			</a>
+		),
+	},
+	{
+		text: (
+			<a
+				className="external"
+				href="https://twitter.com/TaromaruYuki/status/1404106261516406785"
+				target="_blank"
+				rel="noopener norefferer"
+			>
+				It's sad that nothing can last forever, but I think it's better that
+				way. - Yuki Takeya
+			</a>
+		),
+	},
+	{
+		text: (
+			<a
+				className="external"
+				href="https://twitter.com/TaromaruYuki/status/1404106372124454915"
+				target="_blank"
+				rel="noopener norefferer"
+			>
+				If you bottle up your sadness too much, you'll forget what's really
+				important. - Yuki Takeya
+			</a>
+		),
+	},
+	{
+		text: (
+			<span>
+				Featuring quotes from{" "}
+				<a
+					className="external"
+					href="https://twitter.com/TaromaruYuki"
+					target="_blank"
+					rel="noopener norefferer"
+				>
+					@TaromaruYuki (?!?!)
+				</a>
+			</span>
+		),
+	},
+	{
+		text: (
+			<a
+				className="external"
+				href="https://twitter.com/emplexx/status/1401247095898705922"
+				target="_blank"
+				rel="noopener norefferer"
+			>
+				my current mouse is so sticky and unpleasant to touch that sometimes i
+				lowkey regret returning the mx master lol
+			</a>
+		),
+	},
+	{
+		text: (
+			<span>
+				Featuring quotes from{" "}
+				<a
+					className="external"
+					href="https://twitter.com/emplexx"
+					target="_blank"
+					rel="noopener norefferer"
+				>
+					@emplexx
+				</a>
+				!
+			</span>
+		),
+	},
+	{
+		text: (
+			<a
+				className="external"
+				href="https://twitter.com/foxylucklol/status/1404123552672993285"
+				target="_blank"
+				rel="noopener norefferer"
+			>
+				Free encyclopedia not included!
+			</a>
+		),
+	},
+	{
+		text: (
+			<span>
+				Featuring quotes from{" "}
+				<a
+					className="external"
+					href="https://twitter.com/foxylucklol"
+					target="_blank"
+					rel="noopener norefferer"
+				>
+					@foxylucklol
+				</a>
+				!
+			</span>
+		),
+	},
+	{
+		text: (
+			<a
+				className="external"
+				href="https://twitter.com/novotab51/status/1512880210533916682"
+				target="_blank"
+				rel="noopener norefferer"
+			>
+				robot chicken latino
+			</a>
+		),
+	},
+	{
+		text: (
+			<span>
+				Featuring quotes from{" "}
+				<a
+					className="external"
+					href="https://twitter.com/novotab51"
+					target="_blank"
+					rel="noopener norefferer"
+				>
+					@novotab51
+				</a>
+				!
+			</span>
+		),
+	},
+	{
+		text: (
+			<a
+				className="external"
+				href="https://twitter.com/fluxe__/status/1512939144967823361"
+				target="_blank"
+				rel="noopener norefferer"
+			>
+				penis cock shit
+			</a>
+		),
+	},
+	{
+		text: (
+			<span>
+				Featuring "quotes" from{" "}
+				<a
+					className="external"
+					href="https://twitter.com/fluxe__"
+					target="_blank"
+					rel="noopener norefferer"
+				>
+					@fluxe
+				</a>
+				...
+			</span>
+		),
+	},
+	{
+		text: (
+			<a
+				className="external"
+				href="https://twitter.com/IAmDraconium/status/1512948515953127427"
+				target="_blank"
+				rel="noopener norefferer"
+			>
+				brought to you by a filthy comedy captialist
+			</a>
+		),
+	},
+	{
+		text: (
+			<span>
+				Featuring quotes from{" "}
+				<a
+					className="external"
+					href="https://twitter.com/IAmDraconium"
+					target="_blank"
+					rel="noopener norefferer"
+				>
+					@IAmDraconium
+				</a>
+				!
+			</span>
+		),
+	},
+	{
+		text: (
+			<a
+				className="external"
+				href="https://twitter.com/LorAndCompany/status/1512962076272054273"
+				target="_blank"
+				rel="noopener norefferer"
+			>
+				oomfie bestie vibes
+			</a>
+		),
+	},
+	{
+		text: (
+			<span>
+				Featuring quotes from{" "}
+				<a
+					className="external"
+					href="https://twitter.com/LorAndCompany"
+					target="_blank"
+					rel="noopener norefferer"
+				>
+					@LorAndCompany
+				</a>
+				!
+			</span>
+		),
+	},
+	{
+		text: (
+			<a
+				className="external"
+				href="https://twitter.com/GrabsterTV/status/1513118004934029314"
+				target="_blank"
+				rel="noopener norefferer"
+			>
+				Buy reev pro to become an epic gamer
+			</a>
+		),
+	},
+	{
+		text: (
+			<span>
+				Featuring <s>ads</s> quotes from{" "}
+				<a
+					className="external"
+					href="https://twitter.com/GrabsterTV"
+					target="_blank"
+					rel="noopener norefferer"
+				>
+					@GrabsterTV
+				</a>
+				!
+			</span>
+		),
+	},
+	{
+		text: (
+			<a
+				className="external"
+				href="https://twitter.com/dlphesigns/status/1513127603225432067"
+				target="_blank"
+				rel="noopener norefferer"
+			>
+				<span style={{ color: "yellow" }}>#StandWith</span>
+				<span style={{ color: "blue" }}>Ukraine</span>
+			</a>
+		),
+	},
+	{
+		text: (
+			<span>
+				Featuring quotes from{" "}
+				<a
+					className="external"
+					href="https://twitter.com/dlphesigns"
+					target="_blank"
+					rel="noopener norefferer"
+				>
+					@dlphesigns
+				</a>
+				! (I agree with what he said above.)
+			</span>
+		),
+	},
+	{
+		text: (
+			<a
+				className="external"
+				href="https://twitter.com/xparacosm/status/1513134014625894401"
+				target="_blank"
+				rel="noopener norefferer"
+			>
+				<span style={{ color: "aqua" }}>miku</span>
+			</a>
+		),
+	},
+	{
+		text: (
+			<span>
+				Featuring quotes from{" "}
+				<a
+					className="external"
+					href="https://twitter.com/xparacosm"
+					target="_blank"
+					rel="noopener norefferer"
+				>
+					@xparacosm
+				</a>
+				! (I definitely agree with what he said above.)
+			</span>
+		),
+	},
 ];
 
 function MintcraftSplashes() {
@@ -208,7 +604,7 @@ function MintcraftSplashes() {
 						<List>
 							{splashes.map((item) => (
 								<ListItem>
-									<ListItemText>{item.text}</ListItemText>
+									<Typography>{item.text}</Typography>
 								</ListItem>
 							))}
 						</List>
