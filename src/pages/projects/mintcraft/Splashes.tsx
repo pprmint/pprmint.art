@@ -551,41 +551,69 @@ const splashes = [
 		),
 	},
 	{
-		text: (
-			<a
-				className="external"
-				href="https://twitter.com/xparacosm/status/1513134014625894401"
-				target="_blank"
-				rel="noopener norefferer"
+        text: (
+            <a
+            className="external"
+            href="https://twitter.com/xparacosm/status/1513134014625894401"
+            target="_blank"
+            rel="noopener norefferer"
 			>
 				<span style={{ color: "aqua" }}>miku</span>
 			</a>
 		),
 	},
 	{
-		text: (
-			<span>
+        text: (
+            <span>
 				Featuring quotes from{" "}
 				<a
 					className="external"
 					href="https://twitter.com/xparacosm"
 					target="_blank"
 					rel="noopener norefferer"
-				>
+                    >
 					@xparacosm
 				</a>
 				! (I definitely agree with what he said above.)
 			</span>
 		),
 	},
+    {
+        text: (
+            <a
+                className="external"
+                href="https://twitter.com/Febbuarie/status/1513140767505940484"
+                target="_blank"
+                rel="noopener norefferer"
+            >
+                The Ivaaden Family was here
+            </a>
+        ),
+    },
+    {
+        text: (
+            <span>
+                Featuring quotes from{" "}
+                <a
+                    className="external"
+                    href="https://twitter.com/Febbuarie"
+                    target="_blank"
+                    rel="noopener norefferer"
+                >
+                    @Febbuarie
+                </a>
+                !
+            </span>
+        ),
+    },
 ];
 
 function MintcraftSplashes() {
 	const { t } = useTranslation("translation", {
-		keyPrefix: "projects.mintcraft",
+        keyPrefix: "projects.mintcraft",
 	});
 	return (
-		<>
+        <>
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>splashes.txt • pprmint.art</title>
