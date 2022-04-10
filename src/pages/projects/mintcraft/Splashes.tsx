@@ -1,12 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import {
-	Typography,
-	List,
-	ListItem,
-	Container,
-} from "@mui/material";
+import { Typography, List, ListItem, Container } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
 const splashes = [
@@ -825,6 +820,34 @@ const splashes = [
 					rel="noopener norefferer"
 				>
 					@Febbuarie
+				</a>
+				!
+			</span>
+		),
+	},
+	{
+		text: (
+			<a
+				className="external"
+				href="https://twitter.com/The_Ruby872/status/1513227087594897415"
+				target="_blank"
+				rel="noopener norefferer"
+			>
+				The femboys are approaching.{" "}
+			</a>
+		),
+	},
+	{
+		text: (
+			<span>
+				Featuring quotes from{" "}
+				<a
+					className="external"
+					href="https://twitter.com/The_Ruby872"
+					target="_blank"
+					rel="noopener norefferer"
+				>
+					@The_Ruby872
 				</a>
 				!
 			</span>
