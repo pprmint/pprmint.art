@@ -36,8 +36,19 @@ const splashes = [
 	},
 	{ text: "ppmint, haha." },
 	{ text: "Making this resource pack was a pain!" },
-	{ text: "There will never be a light mode for this!" },
-	{ text: "Shameless plug: pprmint.de" },
+	{
+		text: (
+			<a
+				className="external"
+				href="https://youtu.be/pwJtoZZFWio?t=241"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<span>There will never be a light mode for this!</span>
+			</a>
+		),
+	},
+	{ text: "Shameless plug: pprmint.art" },
 	{ text: "This is sample text!" },
 	{ text: "Uuuh!" },
 	{ text: "Aaah!" },
@@ -69,7 +80,18 @@ const splashes = [
 	{ text: "Another shameless plug: @npprmint on Twitter!" },
 	{ text: "177013" },
 	{ text: "Hehe." },
-	{ text: "youtu.be/nROvY9uiYYk?t=74 - Demo zucchini naru." },
+	{
+		text: (
+			<a
+				className="external"
+				href="https://youtu.be/nROvY9uiYYk?t=74"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<span>youtu.be/nROvY9uiYYk?t=74 - Demo zucchini naru.</span>
+			</a>
+		),
+	},
 	{ text: "I only ever used hashtags as a joke!" },
 	{ text: "My favorite numbers are 64 and 256." },
 	{ text: "Most colors here are from Material design." },
@@ -84,46 +106,246 @@ const splashes = [
 	{ text: "Bass-boosted and 8D reuploaded songs are cancer!" },
 	{ text: "Time for some funny tweets!" },
 	{
-		text: "Just went shopping with my limited edition Crash Bandicoot tote bag.",
+		text: (
+			<a
+				className="external"
+				href="https://twitter.com/npprmint/status/1418568672935821315"
+				target="_blank"
+				rel="noopener norefferer"
+			>
+				<span>
+					"Just went shopping with my limited edition Crash Bandicoot tote bag."
+				</span>
+			</a>
+		),
 	},
-	{ text: "If Illustrator was a child, I'd kick it." },
-	{ text: "The WHAT now?" },
 	{
-		text: "It's interesting how people, to this day, continue to laugh their asses off, but none seem to continue the tradition of rolling on the floor while laughing.",
+		text: (
+			<a
+				className="external"
+				href="https://twitter.com/npprmint/status/1417937743762665474"
+				target="_blank"
+				rel="noopener norefferer"
+			>
+				<span>"If Illustrator was a child, I'd kick it."</span>
+			</a>
+		),
 	},
 	{
-		text: "Your pet falling asleep on you is one of the best things that can happen.",
+		text: (
+			<a
+				className="external"
+				href="https://twitter.com/npprmint/status/1409887524076597257"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<span>"The WHAT now?"</span>
+			</a>
+		),
 	},
-	{ text: "Finally, sleep." },
-	{ text: "Gonna get my missing daily dose of cute anime girls real quick." },
-	{ text: "Why did I open Twitter again...?" },
-	{ text: "I'm sick of this overheating micropenis USB stick." },
 	{
-		text: "Think my parents are watching horror movies next room or something. Time to watch more Tamako Market.",
+		text: (
+			<span>
+				"It's interesting how people, to this day, continue to laugh their asses
+				off, but none seem to continue the tradition of rolling on the floor
+				while laughing."
+			</span>
+		),
 	},
-	{ text: "Fork in hell, mate." },
-	{ text: "I made a ` mistake." },
-	{ text: "Kinda want to throw an egg out of the window." },
-	{ text: "Fucking had to go. No more fucking allowed." },
-	{ text: "Fußgängerüberweg." },
-	{ text: "America is weird." },
-	{ text: "I think I nailed that guilt." },
 	{
-		text: "Nah, I think I would actually rather use Premiere Pro instead of Filmora, thanks literally everyone on YouTube for some reason.",
+		text: (
+			<span>
+				"Your pet falling asleep on you is one of the best things that can
+				happen."
+			</span>
+		),
 	},
-	{ text: "Trends for you: Words" },
-	{ text: "Imagine being reincarnated. As a fly." },
-	{ text: "Having a penis is quite annoying sometimes." },
-	{ text: "How to be funny. Step 1: Ask someone else than me." },
-	{ text: "Mettbrötchen." },
-	{ text: "Fußgängerüberweg." },
-	{ text: "i love bein out of character" },
 	{
-		text: "Imagine using an online alias anyone can pronounce correctly on their first attempt.",
+		text: <span>"Finally, sleep."</span>,
 	},
-	{ text: "Lol this song slaps." },
-	{ text: "America is weird." },
-	{ text: "Funny tweets end here!" },
+	{
+		text: (
+			<span>
+				"Gonna get my missing daily dose of cute anime girls real quick."
+			</span>
+		),
+	},
+	{
+		text: <span>"Why did I open Twitter again...?"</span>,
+	},
+	{ text: <span>"I'm sick of this overheating micropenis USB stick."</span> },
+	{
+		text: (
+			<span>
+				"Think my parents are watching horror movies next room or something.
+				Time to watch more Tamako Market."
+			</span>
+		),
+	},
+	{
+		text: (
+			<a className="external" href="" target="_blank" rel="noopener norefferer">
+				<span>"Fork in hell, mate."</span>
+			</a>
+		),
+	},
+	{
+		text: <span>"I made a ` mistake."</span>,
+	},
+	{
+		text: <span>"Kinda want to throw an egg out of the window."</span>,
+	},
+	{
+		text: <span>"Fucking had to go. No more fucking allowed."</span>,
+	},
+	{
+		text: (
+			<a
+				className="external"
+				href="https://twitter.com/npprmint/status/1325526328867741702"
+				target="_blank"
+				rel="noopener norefferer"
+			>
+				<span>"Fußgängerüberweg."</span>
+			</a>
+		),
+	},
+	{
+		text: (
+			<a
+				className="external"
+				href="https://twitter.com/npprmint/status/1324982552227164162"
+				target="_blank"
+				rel="noopener norefferer"
+			>
+				<span>"America is weird."</span>{" "}
+			</a>
+		),
+	},
+	{
+		text: (
+			<a
+				className="external"
+				href="https://twitter.com/npprmint/status/1323286767030751234"
+				target="_blank"
+				rel="noopener norefferer"
+			>
+				<span>"I think I nailed that guilt."</span>
+			</a>
+		),
+	},
+	{
+		text: (
+			<a
+				className="external"
+				href="https://twitter.com/npprmint/status/1322965708754587648"
+				target="_blank"
+				rel="noopener norefferer"
+			>
+				<span>
+					"Nah, I think I would actually rather use Premiere Pro instead of
+					Filmora, thanks literally everyone on YouTube for some reason."
+				</span>
+			</a>
+		),
+	},
+	{
+		text: (
+			<a
+				className="external"
+				href="https://twitter.com/npprmint/status/1322830187881484288"
+				target="_blank"
+				rel="noopener norefferer"
+			>
+				<span>"Trends for you: Words"</span>
+			</a>
+		),
+	},
+	{
+		text: (
+			<a
+				className="external"
+				href="https://twitter.com/npprmint/status/1321158422293843969"
+				target="_blank"
+				rel="noopener norefferer"
+			>
+				<span>"Imagine being reincarnated. As a fly."</span>
+			</a>
+		),
+	},
+	{
+		text: (
+			<a
+				className="external"
+				href="https://twitter.com/npprmint/status/1319247464860438528"
+				target="_blank"
+				rel="noopener norefferer"
+			>
+				<span>"Having a penis is quite annoying sometimes."</span>
+			</a>
+		),
+	},
+	{
+		text: (
+			<a
+				className="external"
+				href="https://twitter.com/npprmint/status/1317524534837260289"
+				target="_blank"
+				rel="noopener norefferer"
+			>
+				<span>"How to be funny. Step 1: Ask someone else than me."</span>{" "}
+			</a>
+		),
+	},
+	{
+		text: (
+			<a
+				className="external"
+				href="https://twitter.com/npprmint/status/1328929259906355201"
+				target="_blank"
+				rel="noopener norefferer"
+			>
+				<span>"Mettbrötchen."</span>
+			</a>
+		),
+	},
+	{
+		text: (
+			<a className="external" href="" target="_blank" rel="noopener norefferer">
+				<span>"i love bein out of character"</span>
+			</a>
+		),
+	},
+	{
+		text: (
+			<a
+				className="external"
+				href="https://twitter.com/npprmint/status/1327311406207627264"
+				target="_blank"
+				rel="noopener norefferer"
+			>
+				<span>
+					"Imagine using an online alias anyone can pronounce correctly on their
+					first attempt."
+				</span>
+			</a>
+		),
+	},
+	{
+		text: (
+			<a
+				className="external"
+				href="https://twitter.com/AdobeCare/status/1326601231079530496"
+				target="_blank"
+				rel="noopener norefferer"
+			>
+				<span>"Lol this song slaps."</span>
+			</a>
+		),
+	},
+	{
+		text: "Funny tweets end here!",
+	},
 	{ text: "Did I already add 'This is sample text'?" },
 	{ text: "Yes!" },
 	{ text: "Imagine a bear grills!" },
@@ -154,7 +376,19 @@ const splashes = [
 		text: "I feel sorry for the people stuck playing clones of this game on Android.",
 	},
 	{
-		text: "Adobe ain't great, but at least they like the Wii U Download Management music!",
+		text: (
+			<a
+				className="external"
+				href="https://twitter.com/AdobeCare/status/1326601231079530496"
+				target="_blank"
+				rel="noopener norefferer"
+			>
+				<span>
+					Adobe ain't great, but at least they like the Wii U Download
+					Management music!
+				</span>
+			</a>
+		),
 	},
 	{ text: "This is sample splash!" },
 	{ text: "<hr />" },
@@ -173,7 +407,7 @@ const splashes = [
 	{
 		text: (
 			<span>
-				Featuring quotes from{" "}
+				"Featuring quotes from{""}
 				<a
 					className="external"
 					href="https://twitter.com/Gamer_Kold"
@@ -201,7 +435,7 @@ const splashes = [
 	{
 		text: (
 			<span>
-				Featuring quotes from{" "}
+				"Featuring quotes from{""}
 				<a
 					className="external"
 					href="https://twitter.com/ScreamRepeat"
@@ -222,14 +456,14 @@ const splashes = [
 				target="_blank"
 				rel="noopener norefferer"
 			>
-				"This is truly the moment if the century." -@gaming
+				"This is truly the moment if the century."-@gaming
 			</a>
 		),
 	},
 	{
 		text: (
 			<span>
-				Featuring quotes from{" "}
+				"Featuring quotes from{""}
 				<a
 					className="external"
 					href="https://twitter.com/notkoutsie"
@@ -257,7 +491,7 @@ const splashes = [
 	{
 		text: (
 			<span>
-				Featuring quotes from{" "}
+				"Featuring quotes from{""}
 				<a
 					className="external"
 					href="https://twitter.com/Voluna_Awoo"
@@ -312,7 +546,7 @@ const splashes = [
 	{
 		text: (
 			<span>
-				Featuring quotes from{" "}
+				"Featuring quotes from{""}
 				<a
 					className="external"
 					href="https://twitter.com/TaromaruYuki"
@@ -340,7 +574,7 @@ const splashes = [
 	{
 		text: (
 			<span>
-				Featuring quotes from{" "}
+				"Featuring quotes from{""}
 				<a
 					className="external"
 					href="https://twitter.com/emplexx"
@@ -368,7 +602,7 @@ const splashes = [
 	{
 		text: (
 			<span>
-				Featuring quotes from{" "}
+				"Featuring quotes from{""}
 				<a
 					className="external"
 					href="https://twitter.com/foxylucklol"
@@ -396,7 +630,7 @@ const splashes = [
 	{
 		text: (
 			<span>
-				Featuring quotes from{" "}
+				"Featuring quotes from{""}
 				<a
 					className="external"
 					href="https://twitter.com/novotab51"
@@ -424,7 +658,7 @@ const splashes = [
 	{
 		text: (
 			<span>
-				Featuring "quotes" from{" "}
+				"Featuring "quotes"from{""}
 				<a
 					className="external"
 					href="https://twitter.com/fluxe__"
@@ -452,7 +686,7 @@ const splashes = [
 	{
 		text: (
 			<span>
-				Featuring quotes from{" "}
+				"Featuring quotes from{""}
 				<a
 					className="external"
 					href="https://twitter.com/IAmDraconium"
@@ -480,7 +714,7 @@ const splashes = [
 	{
 		text: (
 			<span>
-				Featuring quotes from{" "}
+				"Featuring quotes from{""}
 				<a
 					className="external"
 					href="https://twitter.com/LorAndCompany"
@@ -508,7 +742,7 @@ const splashes = [
 	{
 		text: (
 			<span>
-				Featuring <s>ads</s> quotes from{" "}
+				"Featuring <s>ads</s> quotes from{""}
 				<a
 					className="external"
 					href="https://twitter.com/GrabsterTV"
@@ -537,7 +771,7 @@ const splashes = [
 	{
 		text: (
 			<span>
-				Featuring quotes from{" "}
+				"Featuring quotes from{""}
 				<a
 					className="external"
 					href="https://twitter.com/dlphesigns"
@@ -551,69 +785,69 @@ const splashes = [
 		),
 	},
 	{
-        text: (
-            <a
-            className="external"
-            href="https://twitter.com/xparacosm/status/1513134014625894401"
-            target="_blank"
-            rel="noopener norefferer"
+		text: (
+			<a
+				className="external"
+				href="https://twitter.com/xparacosm/status/1513134014625894401"
+				target="_blank"
+				rel="noopener norefferer"
 			>
 				<span style={{ color: "aqua" }}>miku</span>
 			</a>
 		),
 	},
 	{
-        text: (
-            <span>
-				Featuring quotes from{" "}
+		text: (
+			<span>
+				"Featuring quotes from{""}
 				<a
 					className="external"
 					href="https://twitter.com/xparacosm"
 					target="_blank"
 					rel="noopener norefferer"
-                    >
+				>
 					@xparacosm
 				</a>
 				! (I definitely agree with what he said above.)
 			</span>
 		),
 	},
-    {
-        text: (
-            <a
-                className="external"
-                href="https://twitter.com/Febbuarie/status/1513140767505940484"
-                target="_blank"
-                rel="noopener norefferer"
-            >
-                The Ivaaden Family was here
-            </a>
-        ),
-    },
-    {
-        text: (
-            <span>
-                Featuring quotes from{" "}
-                <a
-                    className="external"
-                    href="https://twitter.com/Febbuarie"
-                    target="_blank"
-                    rel="noopener norefferer"
-                >
-                    @Febbuarie
-                </a>
-                !
-            </span>
-        ),
-    },
+	{
+		text: (
+			<a
+				className="external"
+				href="https://twitter.com/Febbuarie/status/1513140767505940484"
+				target="_blank"
+				rel="noopener norefferer"
+			>
+				The Ivaaden Family was here
+			</a>
+		),
+	},
+	{
+		text: (
+			<span>
+				"Featuring quotes from{""}
+				<a
+					className="external"
+					href="https://twitter.com/Febbuarie"
+					target="_blank"
+					rel="noopener norefferer"
+				>
+					@Febbuarie
+				</a>
+				!
+			</span>
+		),
+	},
 ];
 
 function MintcraftSplashes() {
 	const { t } = useTranslation("translation", {
-        keyPrefix: "projects.mintcraft",
+		keyPrefix: "projects.mintcraft",
 	});
 	return (
-        <>
+		<>
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>splashes.txt • pprmint.art</title>
