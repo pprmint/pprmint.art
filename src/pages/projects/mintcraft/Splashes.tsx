@@ -391,6 +391,18 @@ const splashes = [
 	},
 	{
 		text: (
+			<a
+				className="external"
+				href="https://twitter.com/Gamer_Kold/status/1513304236674764802"
+				target="_blank"
+				rel="noopener norefferer"
+			>
+				Now with marginally better quality!
+			</a>
+		),
+	},
+	{
+		text: (
 			<span>
 				Featuring quotes from{" "}
 				<a
@@ -833,7 +845,7 @@ const splashes = [
 				target="_blank"
 				rel="noopener norefferer"
 			>
-				The femboys are approaching.{" "}
+				The femboys are approaching.
 			</a>
 		),
 	},
@@ -848,6 +860,34 @@ const splashes = [
 					rel="noopener norefferer"
 				>
 					@The_Ruby872
+				</a>
+				!
+			</span>
+		),
+	},
+	{
+		text: (
+			<a
+				className="external"
+				href="https://twitter.com/Iucidcelestial/status/1513425280576143366"
+				target="_blank"
+				rel="noopener norefferer"
+			>
+				neuro grindset 24/7
+			</a>
+		),
+	},
+	{
+		text: (
+			<span>
+				Featuring quotes from{" "}
+				<a
+					className="external"
+					href="https://twitter.com/Iucidcelestial"
+					target="_blank"
+					rel="noopener norefferer"
+				>
+					@Iucidcelestial
 				</a>
 				!
 			</span>
