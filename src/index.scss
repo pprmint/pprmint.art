@@ -2,6 +2,10 @@ html {
 	overflow-x: hidden;
 }
 
+body {
+    padding-right: 0px !important; // can't quite figure out why MUI likes to change the padding when opening a menu or dialog
+}
+
 :root {
 	/* Main color palette */
 	--greenPrimary: #0c6;
