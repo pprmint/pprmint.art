@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import {
 	Button,
 	Typography,
@@ -98,7 +98,7 @@ function Projects() {
 		keyPrefix: "projects",
 	});
 	return (
-		<div className="page">
+		<>
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>{t("meta.title")}</title>
@@ -226,7 +226,7 @@ function Projects() {
 						<Typography variant="h1">2022</Typography>
 						<Masonry columns={{ xs: 1, sm: 2, md: 3 }}>
 							{works2022.map((item) => (
-								<Link to={item.link}>
+								<Link to={item.link} key={item.src}>
 									<Card variant="outlined" sx={{ cursor: "pointer" }}>
 										<Image
 											aspectRatio={item.ratio}
@@ -253,7 +253,7 @@ function Projects() {
 						<Typography variant="h1">2021</Typography>
 						<Masonry columns={{ xs: 1, sm: 2, md: 3 }}>
 							{works2021.map((item) => (
-								<Link to={item.link}>
+								<Link to={item.link} key={item.src}>
 									<Card variant="outlined" sx={{ cursor: "pointer" }}>
 										<Image
 											aspectRatio={item.ratio}
@@ -276,7 +276,7 @@ function Projects() {
 					</Container>
 				</div>
 			</div>
-		</div>
+		</>
 	);
 }
 

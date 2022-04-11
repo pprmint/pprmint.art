@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import { Helmet } from 'react-helmet-async';
 import {
 	Button,
 	Typography,

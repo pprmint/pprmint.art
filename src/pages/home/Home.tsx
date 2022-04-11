@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import { Helmet } from 'react-helmet-async';
 import {
 	Container,
 	Typography,
@@ -32,7 +32,7 @@ function AnnouncementCard(props: {
 		<Card variant="outlined">
 			<CardContent>
 				<Grid container spacing={2}>
-					<Grid item xs={12} md={8}>
+					<Grid item xs={12} sm={8}>
 						<Typography variant="subtitle1">{props.date}</Typography>
 						<Typography variant="h2">{props.headline}</Typography>
 						<Typography variant="body1">
@@ -41,7 +41,7 @@ function AnnouncementCard(props: {
 							{props.text}
 						</Typography>
 					</Grid>
-					<Grid item xs={12} md={4}>
+					<Grid item xs={12} sm={4}>
 						<Image
 							src={props.imageSrc}
 							width="100%"
@@ -70,7 +70,7 @@ function ActionsAnnouncementCard(
 		<Card variant="outlined">
 			<CardContent>
 				<Grid container spacing={2}>
-					<Grid item xs={12} md={8}>
+					<Grid item xs={12} sm={8}>
 						<Typography variant="subtitle1">{props.date}</Typography>
 						<Typography variant="h2">{props.headline}</Typography>
 						<Typography variant="body1">
@@ -81,7 +81,7 @@ function ActionsAnnouncementCard(
 						<br />
 						{props.children}
 					</Grid>
-					<Grid item xs={12} md={4}>
+					<Grid item xs={12} sm={4}>
 						<Image
 							src={props.imageSrc}
 							width="100%"

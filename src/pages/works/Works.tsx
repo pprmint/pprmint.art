@@ -1,5 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { Typography, Grid, Button, Container, Link } from "@mui/material";
 import Image from "material-ui-image";
 

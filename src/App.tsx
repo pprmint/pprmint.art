@@ -1,4 +1,5 @@
 import React from "react";
+import { HelmetProvider } from 'react-helmet-async';
 import { useState } from "react";
 import {
 	BrowserRouter as Router,
@@ -53,7 +54,7 @@ import HealthSafety from "./pages/wii/HealthSafety";
 import Test from "./pages/test/Test";
 
 import ScrollToTop from "./ScrollToTop";
-import LanguageSelector from "./index";
+import SettingsButton from "./Settings";
 
 import Wordmark from "./globalassets/wordmark.svg";
 
@@ -73,20 +74,24 @@ import {
 
 const nav = [
 	{
-		id: "common.nav.home",
+		name: "common.nav.home",
+		key: "home",
 		link: "/",
 		exact: true,
 	},
 	{
-		id: "common.nav.about",
+		name: "common.nav.about",
+		key: "about",
 		link: "/about",
 	},
 	{
-		id: "common.nav.projects",
+		name: "common.nav.projects",
+		key: "projects",
 		link: "/projects",
 	},
 	{
-		id: "common.nav.contact",
+		name: "common.nav.contact",
+		key: "contact",
 		link: "/contact",
 	},
 ];
@@ -115,8 +120,18 @@ function ElevationScroll(props: Props) {
 	});
 	return React.cloneElement(children, {
 		sx: trigger
-			? { backdropFilter: "blur(20px)", backgroundColor: "#111111cc" }
-			: { backdropFilter: "blur(0px)", backgroundColor: "#11111100" },
+			? {
+					backdropFilter: "blur(20px)",
+					backgroundColor: "#111111cc",
+					borderBottom: "1px solid rgba(255, 255, 255, 0.12)",
+					boxShadow: "0px 2px 8px -1px #111111",
+			  }
+			: {
+					backdropFilter: "blur(0px)",
+					backgroundColor: "#11111100",
+					borderBottom: "0px solid rgba(255, 255, 255, 0)",
+					boxShadow: "0 0 0 0 #111111",
+			  },
 	});
 }
 
@@ -124,28 +139,32 @@ function App() {
 	const { t } = useTranslation();
 	const [open, setOpen] = useState<boolean>(false);
 	return (
-		<>
+		<HelmetProvider>
 			<Router>
 				<ElevationScroll>
 					<AppBar
 						position="fixed"
-						elevation={0}
 						color="transparent"
 						sx={{
 							transition: "all 0.15s",
 						}}
 					>
 						<Toolbar>
-							<Box pl={{ xs: 1, sm: 0 }} pt={0.5} pb={0.5}>
+							<Box
+								pl={{ xs: 1, sm: 0 }}
+								pr={{ xs: 1.5, md: 0 }}
+								pt={0.75}
+								pb={0.75}
+							>
 								<IconButton
 									size="large"
 									edge="start"
 									color="inherit"
 									aria-label="menu"
 									onClick={() => setOpen(true)}
-									sx={{ mr: 2, display: { xs: "inline-flex", md: "none" } }}
+									sx={{ display: { xs: "inline-flex", md: "none" } }}
 								>
-									<RiMenu2Line />
+									<RiMenu2Line color="var(--textSecondary)" />
 								</IconButton>
 							</Box>
 							<SwipeableDrawer
@@ -158,12 +177,17 @@ function App() {
 									},
 								}}
 								anchor="left"
-								elevation={2}
+								elevation={1}
 								open={open}
 								onClose={() => setOpen(false)}
 								onOpen={() => {}}
 							>
-								<Box pl={3} pt={0.75} pb={0.75}>
+								<Box
+									pl={3}
+									pt={0.75}
+									pb={0.75}
+									sx={{ background: "var(--backgroundTertiary)" }}
+								>
 									<IconButton
 										size="large"
 										edge="start"
@@ -185,6 +209,7 @@ function App() {
 												exact={item.exact}
 												activeClassName="active"
 												to={item.link}
+                                                key={item.key}
 											>
 												<ListItem
 													button
@@ -194,15 +219,21 @@ function App() {
 														borderRadius: "24px 0 0 24px",
 													}}
 												>
-													{t(item.id)}
+													{t(item.name)}
 												</ListItem>
 											</NavLink>
 										);
 									})}
 								</List>
-                                <Divider />
-								<Box m="10px auto">
-									<LanguageSelector />
+								<Divider />
+								<Box
+									p={1}
+									sx={{
+										backgroundColor: "var(--backgroundTertiary)",
+										textAlign: "center",
+									}}
+								>
+									<SettingsButton />
 								</Box>
 							</SwipeableDrawer>
 							<Box
@@ -227,8 +258,9 @@ function App() {
 											exact={item.exact}
 											activeClassName="active"
 											to={item.link}
+                                            key={item.key}
 										>
-											{t(item.id)}
+											{t(item.name)}
 										</NavLink>
 									);
 								})}
@@ -245,7 +277,10 @@ function App() {
 						<Route path="/projects" exact component={Projects} />
 						<Route path="/projects/mintsans" component={MintsansDL} />
 						<Route path="/projects/mintcraft" exact component={MintcraftDL} />
-						<Route path="/projects/mintcraft/splashes" component={MintcraftSplashes} />
+						<Route
+							path="/projects/mintcraft/splashes"
+							component={MintcraftSplashes}
+						/>
 						<Route path="/projects/win10tiles" component={Win10TilesDL} />
 
 						{/* Works of 2022 */}
@@ -273,7 +308,11 @@ function App() {
 						<Redirect from="/projects/works/2021" exact to="/projects" />
 						<Redirect from="/faq" to="/contact" />
 						<Redirect from="/mintcraft" to="/projects/mintcraft" />
-						<Redirect from="/splashes" exact to="/projects/mintcraft/splashes" />
+						<Redirect
+							from="/splashes"
+							exact
+							to="/projects/mintcraft/splashes"
+						/>
 						<Redirect from="/mintsans" to="/projects/mintsans" />
 						<Redirect from="/mintalt" to="/projects/mintalt" />
 						<Redirect from="/win10tiles" to="/projects/win10tiles" />
@@ -316,11 +355,11 @@ function App() {
 						}}
 					>
 						<Divider orientation="vertical" flexItem />
-						<LanguageSelector />
+						<SettingsButton />
 					</Box>
 				</Stack>
 			</footer>
-		</>
+		</HelmetProvider>
 	);
 }
 
