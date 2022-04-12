@@ -851,6 +851,42 @@ const splashes = [
 	},
 	{
 		text: (
+			<a
+				className="external"
+				href="https://twitter.com/The_Ruby872/status/1513755013864206337"
+				target="_blank"
+				rel="noopener norefferer"
+			>
+				Touch minecraft:grass
+			</a>
+		),
+	},
+	{
+		text: (
+			<a
+				className="external"
+				href="https://twitter.com/The_Ruby872/status/1513755013864206337"
+				target="_blank"
+				rel="noopener norefferer"
+			>
+				Check out @npprmint i heard he is a pretty cool guy
+			</a>
+		),
+	},
+	{
+		text: (
+			<a
+				className="external"
+				href="https://twitter.com/The_Ruby872/status/1513755013864206337"
+				target="_blank"
+				rel="noopener norefferer"
+			>
+				Making mental brealdowns over redstone since 2009
+			</a>
+		),
+	},
+	{
+		text: (
 			<span>
 				Featuring quotes from{" "}
 				<a

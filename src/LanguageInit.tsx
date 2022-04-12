@@ -6,25 +6,11 @@ import XHR from "i18next-http-backend";
 import stringsEN from "./globalassets/languages/english/strings.json";
 import stringsDE from "./globalassets/languages/german/strings.json";
 import {
-	createTheme,
-	useTheme,
-	ThemeProvider,
-	StyledEngineProvider,
-	CssBaseline,
 	Button,
 	ButtonGroup,
-	Dialog,
-	DialogTitle,
-	LinearProgress,
 	Typography,
-	useMediaQuery,
-	IconButton,
 	DialogContent,
-	Divider,
-	DialogActions,
-	Box,
 } from "@mui/material";
-import { RiCloseLine, RiSettings4Line } from "react-icons/ri";
 
 const resources = {
 	en: {
@@ -45,7 +31,9 @@ const languageMap = {
 
 const LanguageSetting = () => {
 	const selected = localStorage.getItem("i18nLng") || "en";
-	const { t } = useTranslation();
+	const { t } = useTranslation("translation", {
+		keyPrefix: "common.settings.language",
+	});
 
 	React.useEffect(() => {
 		document.body.dir = languageMap[selected].dir;
@@ -54,10 +42,10 @@ const LanguageSetting = () => {
 		<>
 			<DialogContent>
 				<Typography variant="h3">
-					{t("common.settings.language.title")}
+					{t("title")}
 				</Typography>
 				<Typography variant="body1">
-					{t("common.settings.language.description")}
+					{t("description")}
 				</Typography>
 				<br />
 				<ButtonGroup variant="contained">

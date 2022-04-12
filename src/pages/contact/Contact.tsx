@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
 import {
 	Button,
 	Typography,
@@ -20,7 +20,7 @@ import {
 	ListItemText,
 	Card,
 	Container,
-    Stack,
+	Stack,
 } from "@mui/material";
 import {
 	RiInformationLine,
@@ -126,15 +126,15 @@ function Contact() {
 									<b></b>
 									<br />
 									<br />
-									<Alert
-										color="info"
-										variant="filled"
-										icon={<RiInformationLine />}
-									>
-										If these terms are unclear to you in any way, don't hesitate
-										to get in touch with me.
-									</Alert>
 								</Typography>
+								<Alert
+									color="info"
+									variant="filled"
+									icon={<RiInformationLine />}
+								>
+									If these terms are unclear to you in any way, don't hesitate
+									to get in touch with me.
+								</Alert>
 							</AccordionDetails>
 						</Accordion>
 						<Accordion variant="outlined">
