@@ -120,7 +120,7 @@
 								"title": "HTTP-Code."
 							},
 							"ip": {
-								"description": "Nö, ich habe keine Ahnung, wo du wohnst, aber das ist mir sowieso recht egal. Das Gesetz verlangt von meinem Hosting-Anbieter, dass dieser sämtliche IP-Adressen anonymisiert. Daher wird das letzte Oktett jeder IP-Adresse wird durch einen zufälligen Wert ersetzt. Das kann ich bestätigen: Die IP-Adresse, die in den Logs erscheint, stimmt nicht mit meiner tatsächlichen Adresse überein, also passt das.",
+								"description": "Nö, ich habe keine Ahnung, wo du wohnst, aber das ist mir sowieso recht egal. Das Gesetz verlangt von meinem Hosting-Anbieter, dass dieser sämtliche IP-Adressen anonymisiert. Daher wird das letzte Oktett jeder IP-Adresse durch einen zufälligen Wert ersetzt. Das kann ich bestätigen: Die IP-Adresse, die in den Logs erscheint, stimmt nicht mit meiner tatsächlichen Adresse überein, also passt das.",
 								"title": "IP-Adresse."
 							},
 							"title": "Inhalte eines Log-Eintrags."
