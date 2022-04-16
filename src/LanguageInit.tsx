@@ -30,7 +30,7 @@ const languageMap = {
 };
 
 const LanguageSetting = () => {
-	const selected = localStorage.getItem("i18nLng") || "en";
+	const selected = localStorage.getItem("i18nextLng") || "en";
 	const { t } = useTranslation("translation", {
 		keyPrefix: "common.settings.language",
 	});
