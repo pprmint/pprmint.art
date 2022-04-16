@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import {
 	Button,
@@ -8,17 +8,6 @@ import {
 	Accordion,
 	AccordionSummary,
 	AccordionDetails,
-	Table,
-	TableBody,
-	TableCell,
-	TableContainer,
-	TableHead,
-	TableRow,
-	List,
-	ListItem,
-	ListItemIcon,
-	ListItemText,
-	Card,
 	Container,
 	Stack,
 } from "@mui/material";
@@ -27,9 +16,6 @@ import {
 	RiMailLine,
 	RiTwitterLine,
 	RiArrowDownSLine,
-	RiNumber1,
-	RiNumber2,
-	RiNumber3,
 } from "react-icons/ri";
 
 function Contact() {

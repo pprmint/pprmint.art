@@ -1,33 +1,20 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-
 import {
-	createTheme,
 	useTheme,
-	ThemeProvider,
-	StyledEngineProvider,
-	CssBaseline,
 	Button,
-	ButtonGroup,
 	Dialog,
-	DialogTitle,
-	LinearProgress,
 	Typography,
 	useMediaQuery,
 	IconButton,
-	DialogContent,
 	Divider,
-	DialogActions,
 	Box,
 } from "@mui/material";
 import { RiCloseLine, RiSettings4Line } from "react-icons/ri";
 import LanguageSetting from "./LanguageInit";
+import ThemeSetting from "./ThemeInit";
 
 const SettingsButton = () => {
-	const { t } = useTranslation();
-	const theme = useTheme();
-	const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
-
 	const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 	const open = Boolean(anchorEl);
 	const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -89,6 +76,7 @@ const Settings = () => {
 				open={open}
 				onClose={handleClose}
 				onBackdropClick={handleClose}
+				scroll="body"
 			>
 				<Box sx={{ display: "flex", backgroundColor: "#333" }}>
 					<Box pl={1.5} pr={1.5} pt={0.75} pb={0.75}>
@@ -115,7 +103,9 @@ const Settings = () => {
 					</Box>
 				</Box>
 				<Divider />
-                <LanguageSetting />
+				<LanguageSetting />
+				{/* <Divider />
+                <ThemeSetting /> */}
 			</Dialog>
 		</>
 	);
