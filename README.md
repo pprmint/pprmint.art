@@ -7,7 +7,8 @@ Maybe looking at this code can help people getting started with their own websit
 **This repository is not meant to make it easy for you to deploy copies of my website elsewhere as is.**
 
 ## How?
-[Arch btw](https://archlinux.org/), [Visual Studio Code](https://code.visualstudio.com/), [Yarn](https://yarnpkg.com/), [React](https://reactjs.org/), [MUI](https://mui.com/) and [coffee](https://www.amazon.de/dp/B001ILT920/).
+[Windows](https://www.microsoft.com/windows), [Visual Studio Code](https://code.visualstudio.com/), [Yarn](https://yarnpkg.com/), [React](https://reactjs.org/), [react-i18next](https://react.i18next.com/), [BabelEdit](https://www.codeandweb.com/babeledit), [MUI](https://mui.com/) and [coffee](https://www.amazon.de/dp/B001ILT920/).
+
 (Mainly.)
 
 ## *How, but italic?*
