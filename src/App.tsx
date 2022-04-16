@@ -1,5 +1,5 @@
 import React from "react";
-import { HelmetProvider } from 'react-helmet-async';
+import { HelmetProvider } from "react-helmet-async";
 import { useState } from "react";
 import {
 	BrowserRouter as Router,
@@ -48,6 +48,7 @@ import Ford from "./pages/projects/gallery/2022/ford/Ford";
 import ManjaroWall from "./pages/projects/gallery/2021/manjarowall/ManjaroWall";
 
 import Contact from "./pages/contact/Contact";
+import PrivacyPolicy from "./pages/privacypolicy/PrivacyPolicy";
 import Error404 from "./pages/404/Error404";
 import UnderConstruction from "./pages/wip/UnderConstruction";
 import HealthSafety from "./pages/wii/HealthSafety";
@@ -55,6 +56,7 @@ import Test from "./pages/test/Test";
 
 import ScrollToTop from "./ScrollToTop";
 import SettingsButton from "./Settings";
+import CookieSnackbar from "./CookieSnackbar";
 
 import Wordmark from "./globalassets/wordmark.svg";
 
@@ -209,7 +211,7 @@ function App() {
 												exact={item.exact}
 												activeClassName="active"
 												to={item.link}
-                                                key={item.key}
+												key={item.key}
 											>
 												<ListItem
 													button
@@ -258,7 +260,7 @@ function App() {
 											exact={item.exact}
 											activeClassName="active"
 											to={item.link}
-                                            key={item.key}
+											key={item.key}
 										>
 											{t(item.name)}
 										</NavLink>
@@ -268,6 +270,7 @@ function App() {
 						</Toolbar>
 					</AppBar>
 				</ElevationScroll>
+				<CookieSnackbar />
 				<ScrollToTop>
 					{/* All the different pages that exist here, pretty much. */}
 					<Switch>
@@ -299,6 +302,7 @@ function App() {
 						/>
 
 						<Route path="/contact" exact component={Contact} />
+						<Route path="/privacy" exact component={PrivacyPolicy} />
 						<Route path="/test" exact component={Test} />
 						<Route path="/healthsafety" exact component={HealthSafety} />
 
@@ -319,46 +323,50 @@ function App() {
 
 						<Route component={Error404} />
 					</Switch>
+
+					<footer>
+						<div className="copyright">
+							<Typography variant="body2">
+								{t("common.footer.madeWith")}
+								<RiHeartFill color="var(--redSecondary)" />
+								{t("common.footer.andCoffee")}
+							</Typography>
+							<Typography>
+								<Link to="/privacy">{t("common.footer.privacyPolicy")}</Link>
+							</Typography>
+						</div>
+						<br />
+						<Stack
+							id="footerButtons"
+							spacing={2}
+							direction="row"
+							sx={{ justifyContent: "center", alignItems: "center" }}
+						>
+							<IconLink href="https://twitter.com/npprmint">
+								<RiTwitterLine />
+							</IconLink>
+							<IconLink href="https://www.youtube.com/c/pprmint">
+								<RiYoutubeLine />
+							</IconLink>
+							<IconLink href="https://www.behance.net/pprmint">
+								<RiBehanceLine />
+							</IconLink>
+							<IconLink href="https://github.com/pprmint">
+								<RiGithubLine />
+							</IconLink>
+							<Box
+								ml="0 !important"
+								sx={{
+									display: { md: "flex", xs: "none" },
+								}}
+							>
+								<Divider orientation="vertical" flexItem />
+								<SettingsButton />
+							</Box>
+						</Stack>
+					</footer>
 				</ScrollToTop>
 			</Router>
-			<footer>
-				<div className="copyright">
-					<Typography variant="body2">
-						{t("common.footer.madeWith")}
-						<RiHeartFill color="var(--redSecondary)" />
-						{t("common.footer.andCoffee")}
-					</Typography>
-					<br />
-				</div>
-				<Stack
-					id="footerButtons"
-					spacing={2}
-					direction="row"
-					sx={{ justifyContent: "center", alignItems: "center" }}
-				>
-					<IconLink href="https://twitter.com/npprmint">
-						<RiTwitterLine />
-					</IconLink>
-					<IconLink href="https://www.youtube.com/c/pprmint">
-						<RiYoutubeLine />
-					</IconLink>
-					<IconLink href="https://www.behance.net/pprmint">
-						<RiBehanceLine />
-					</IconLink>
-					<IconLink href="https://github.com/pprmint">
-						<RiGithubLine />
-					</IconLink>
-					<Box
-						ml="0 !important"
-						sx={{
-							display: { md: "flex", xs: "none" },
-						}}
-					>
-						<Divider orientation="vertical" flexItem />
-						<SettingsButton />
-					</Box>
-				</Stack>
-			</footer>
 		</HelmetProvider>
 	);
 }

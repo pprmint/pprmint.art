@@ -11,9 +11,16 @@
 	},
 	"common": {
 		"changeLang": "Change language",
+		"cookies": {
+			"agreement": "Durch die Verwendung der Seite akzeptierst du die ",
+			"link": "Verwendung von Cookies",
+			"noFutureAppear": "Diese Meldung wird in Zukunft nicht mehr erscheinen.",
+			"use": "Diese Website verwendet ein paar Cookies, um deine bevorzugte Sprache zu speichern und ob du diese Nachricht gesehen hast."
+		},
 		"footer": {
 			"andCoffee": " und Kaffee von pprmint.",
-			"madeWith": "Gemacht mit "
+			"madeWith": "Gemacht mit ",
+			"privacyPolicy": "Datenschutzerklärung"
 		},
 		"nav": {
 			"about": "Über",
@@ -26,6 +33,14 @@
 			"language": {
 				"description": "Ändere die auf der Website verwendete Sprache. Wenn keine Übersetzung verfügbar ist, wird stattdessen Englisch verwendet.",
 				"title": "Sprache (Language)"
+			},
+			"theme": {
+				"caption": {
+					"dark": "Dunkel",
+					"darkCb": "Dunkel (Farbenblind)"
+				},
+				"description": "Wähle eine Farbpalette, bei der Blau und Gelb die Hauptakzentfarben sind, um die Darstellung für Farbenblinde angenehmer zu machen.",
+				"title": "Thema"
 			},
 			"title": "Einstellungen"
 		}
@@ -54,6 +69,79 @@
 		"title": {
 			"main": "Guten Heute.",
 			"sub": "Ich lasse Dinge mit Vektorpunkten, Keyframes und bunten Monospace-Buchstaben schick aussehen."
+		}
+	},
+	"privacypolicy": {
+		"meta": {
+			"title": "Datenschutzerklärung • pprmint.art"
+		},
+		"section": {
+			"contact": {
+				"text": "Schicke bei Fragen zum Thema Datenschutz einfach eine E-Mail an privacy[at]pprmint.art.",
+				"title": "Noch Fragen?"
+			},
+			"cookies": {
+				"text": {
+					"long": "Bei deinem ersten Besuch wird die bevorzugte Sprache deines Browsers erkannt und in den \"localStorage\" geschrieben. Wenn du die Sprache über die Einstellungen änderst, wird dieser Wert überschrieben. Diese und zukünftige Präferenzen werden bei jedem Besuch dieser Website gelesen, damit du sie nicht immer auf's Neue vornehmen musst.",
+					"tldr": "Einstellungen wie deine bevorzugte Sprache werden, wie der Name schon ahnen lässt, lokal im \"localStorage\" deines Browsers gespeichert, so dass du sie nicht immer wieder neu einstellen musst. Per Definition müsste das auch als \"Cookie\" zählen."
+				},
+				"title": "Kekse!"
+			},
+			"externalLinks": {
+				"text": "Einige Seiten können Links zu externen Websites enthalten. Jeder Link, der dich zu einer anderen Website führt, ist mit einem blauen Pfeil und, wenn du den Mauszeiger darüber bewegst, mit einem blauen Hintergrund versehen. Sobald du solche externen Websites besuchst, unterliegst du den jeweiligen Datenschutzrichtlinien dieser Websites. Ich übernehme keine Verantwortung für die Praktiken oder den Inhalt dieser anderen Websites.",
+				"title": "Externe Links."
+			},
+			"responsible": {
+				"text": "Verantwortlich für den Inhalt dieser Website bin ich, Nicklas Scharp. Bei Fragen zum Datenschutz kannst du gerne eine E-Mail an privacy[at]pprmint.art schicken.",
+				"title": "Verantwortlicher."
+			},
+			"weblogs": {
+				"text": {
+					"long": {
+						"contents": {
+							"accessTime": {
+								"description": "Der Zeitpunkt, zu dem ein Client eine Datei vom Server erhalten hat. Falls es dich interessiert: Das Format ist DD/MMMM/YYYY: HH:MM:SS +GMT.",
+								"title": "Zugriffszeit."
+							},
+							"agent": {
+								"description": "Darin wird dem Server mitgeteilt, welcher Browser, welches Betriebssystem und welche Rendering-Engine verwendet wird. Ich kann dir außerdem sagen, dass Windows 11 dort immer noch als \"(Windows NT 10.0; Win64; x64)\" bezeichnet wird. Für mehr Infos darüber, was sich im User-Agent-Header befindet, lies:",
+								"title": "User-Agent."
+							},
+							"domain": {
+								"description": "Stell dir vor: Es ist alles pprmint.art. Wer hätte das gedacht.",
+								"title": "Domain."
+							},
+							"file": {
+								"description": "Pfad und Name der Datei, die der Client erhalten hat, wie z. B. das Favicon, Schriftarten und andere Assets.",
+								"title": "Erhaltene Datei."
+							},
+							"httpCodes": {
+								"description": "Normalerweise ist das \"200 OK\", weil hier alles super ist. Wenn du mehr über all die verschiedenen Codes erfahren willst, die die HTTP-Welt zu bieten hat, lies:",
+								"title": "HTTP-Code."
+							},
+							"ip": {
+								"description": "Nö, ich habe keine Ahnung, wo du wohnst, aber das ist mir sowieso recht egal. Das Gesetz verlangt von meinem Hosting-Anbieter, dass dieser sämtliche IP-Adressen anonymisiert. Daher wird das letzte Oktett jeder IP-Adresse wird durch einen zufälligen Wert ersetzt. Das kann ich bestätigen: Die IP-Adresse, die in den Logs erscheint, stimmt nicht mit meiner tatsächlichen Adresse überein, also passt das.",
+								"title": "IP-Adresse."
+							},
+							"title": "Inhalte eines Log-Eintrags."
+						},
+						"storagePeriod": {
+							"description": "Einträge werden in den Logs für bis zu 7 Tage gespeichert.",
+							"title": "Speicherdauer."
+						},
+						"usage": {
+							"description": "Vorhin hab ich erwähnt, dass mit diesen Daten Statistiken generiert werden. Das war's auch. Für einen Statistik-Fanboy wie meine Wenigkeit ist das natürlich ein wahrgewordener Traum und höchst interessant zu sehen, dass 0.3 % versucht haben, die Seite auf Windows XP aufzurufen. Ungefähr da hört die Nützlichkeit für mich auch auf. Die Statistiken sind (für mich zumindest) nett anzusehen, aber ich verticke die Logs nicht auf eBay oder so.",
+							"title": "Mein Nutzen."
+						}
+					},
+					"tldr": "Wie die meisten anderen Webserver sammelt auch dieser einige Daten über deinen Browser, wenn du diese Website besuchst. Mein Hosting-Provider erstellt mit diesen Daten einige nette Statistiken, aber das war's auch schon mit meinem Nutzen dieser Daten."
+				},
+				"title": "Server-Logs."
+			}
+		},
+		"title": {
+			"main": "Datenschutzerklärung.",
+			"sub": "Sehr spannend."
 		}
 	},
 	"projects": {
@@ -137,6 +225,21 @@
 					"sub": "Alle Splash-Texte in Mintcraft."
 				},
 				"sub": "Ein Minecraft-Ressourcenpaket."
+			}
+		},
+		"mintsans": {
+			"meta": {
+				"title": "Eine serifenlose Schriftart • pprmint.art"
+			},
+			"section": {
+				"downloads": {
+					"description": "Wenn du den Text auf Folie 3 tatsächlich in einer vernünftigen Reihenfolge lesen konntest, verdienst du einen Download-Button.",
+					"downloadButton": "Download",
+					"headline": "Mintsans V2"
+				}
+			},
+			"title": {
+				"sub": "Eine serifenlose Schriftart."
 			}
 		},
 		"section": {

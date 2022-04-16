@@ -11,9 +11,16 @@
 	},
 	"common": {
 		"changeLang": "Sprache ändern",
+		"cookies": {
+			"agreement": "By using this site, you agree to the ",
+			"link": "use of cookies",
+			"noFutureAppear": "This message won't appear again in the future.",
+			"use": "This website uses a few cookies to remember your preferred language and whether you saw this message."
+		},
 		"footer": {
 			"andCoffee": " and coffee by pprmint.",
-			"madeWith": "Made with "
+			"madeWith": "Made with ",
+			"privacyPolicy": "Privacy policy"
 		},
 		"nav": {
 			"about": "About",
@@ -26,6 +33,14 @@
 			"language": {
 				"description": "Change the language used on the website. If no translation is available, English will be used instead.",
 				"title": "Language"
+			},
+			"theme": {
+				"caption": {
+					"dark": "Dark",
+					"darkCb": "Dark (Colorblind)"
+				},
+				"description": "Choose a color palette where blue and yellow are the main accent colors to better account for colorblindness.",
+				"title": "Theme"
 			},
 			"title": "Settings"
 		}
@@ -54,6 +69,79 @@
 		"title": {
 			"main": "Good today.",
 			"sub": "I make things look neat with vector points, keyframes and colorful monospace letters."
+		}
+	},
+	"privacypolicy": {
+		"meta": {
+			"title": "Privacy policy • pprmint.art"
+		},
+		"section": {
+			"contact": {
+				"text": "If you have any other privacy-related questions just send an email to privacy[at]pprmint.art.",
+				"title": "Any questions?"
+			},
+			"cookies": {
+				"text": {
+					"long": "On your first visit, the preferred language of your browser is detected and written to the \"localStorage\". If you change the language from the Settings menu, this value will be overwritten. These and future preferences are read each time you visit this site, so you don't have to set them up again and again.",
+					"tldr": "Settings such as your preferred language are, as the name suggests, stored locally in your browser's \"localStorage\" so you don't have to set them up again and again. Per definition, I guess this also counts as a \"cookie\"."
+				},
+				"title": "Cookies!"
+			},
+			"externalLinks": {
+				"text": "Some pages may contain links to external websites. Any link that takes you to another website will have a blue arrow and, when you hover over it, a blue background. Once you visit such external websites, you are subject to their respective privacy policies. I take no responsibility for the practices nor content of those other websites.",
+				"title": "External links."
+			},
+			"responsible": {
+				"text": "Responsible for content on this website is me, Nicklas Scharp. For privacy-related questions, feel free to send an email to privacy[at]pprmint.art.",
+				"title": "Person responsible."
+			},
+			"weblogs": {
+				"text": {
+					"long": {
+						"contents": {
+							"accessTime": {
+								"description": "The time when a client got a file from the server. If you care: The format's DD/MMMM/YYYY: HH:MM:SS +GMT.",
+								"title": "Access time."
+							},
+							"agent": {
+								"description": "This thing tells the server infos like what browser, operating system and rendering engine is used. I can also tell you that Windows 11 is still referred to as \"(Windows NT 10.0; Win64; x64)\" in there. For more info on what's in the User-Agent header, see:",
+								"title": "User-Agent."
+							},
+							"domain": {
+								"description": "Imagine that: It's all pprmint.art. Who knew.",
+								"title": "Domain."
+							},
+							"file": {
+								"description": "The path and name of the file that the client received, like the favicon, fonts and other assets.",
+								"title": "Received file."
+							},
+							"httpCodes": {
+								"description": "Usually that's \"200 OK\", because everything's awesome. If you wanna learn more about all the different codes that the HTTP world has to offer, see:",
+								"title": "HTTP code."
+							},
+							"ip": {
+								"description": "Nope, I got no clue where you live. Not that I give a damn anyway. The law requires my hosting provider to anonymize IP addresses, so the last octet of every IP address is replaced by a random value. I can confirm: The IP address that appears in the logs doesn't match my actual address, so that's cool.",
+								"title": "IP address."
+							},
+							"title": "Contents of a log entry."
+						},
+						"storagePeriod": {
+							"description": "Each log entry is stored for up to 7 days.",
+							"title": "Storage period."
+						},
+						"usage": {
+							"description": "Earlier I mentioned that statistics are created with this data. That's it. For a statistics fanboy like yours truly, this is of course a dream come true and most interesting to see that 0.3% (tried to) access the site on Windows XP. That's about as useful as it gets for me. The statistics are interesting to look at (to me at least), but I'm not selling the logs on eBay or anything.",
+							"title": "Usage for me."
+						}
+					},
+					"tldr": "Like most other web servers, this one collects some data about your browser when you visit this site. My hosting provider creates some nice statistics with this data, but that's about it for my usefulness of this data."
+				},
+				"title": "Server logs."
+			}
+		},
+		"title": {
+			"main": "Privacy policy.",
+			"sub": "Very exciting."
 		}
 	},
 	"projects": {
@@ -137,6 +225,21 @@
 					"sub": "All the splashes seen in Mintcraft."
 				},
 				"sub": "A Minecraft resource pack."
+			}
+		},
+		"mintsans": {
+			"meta": {
+				"title": "A sans-serif font • pprmint.art"
+			},
+			"section": {
+				"downloads": {
+					"description": "If you could actually read the text on slide 3 in a sensible order, you deserve a download button.",
+					"downloadButton": "Download",
+					"headline": "Mintsans V2"
+				}
+			},
+			"title": {
+				"sub": "A sans-serif font."
 			}
 		},
 		"section": {
