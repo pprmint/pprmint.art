@@ -144,8 +144,8 @@ body {
 }
 
 footer {
-	padding: 40px 0 30px 0;
-	text-align: center;
+    padding: 40px 0 30px 0;
+    text-align: center;
 	.copyright {
 		animation: fadeBottom 0.375s var(--easeOut) 0.18s forwards;
 		opacity: 0;
@@ -164,11 +164,8 @@ footer {
 	height: 100vh;
 	position: relative;
 	img {
-		left: 50%;
-		transform: translate(-50%, -50%);
 		animation: fadeTop 1.2s var(--easeOut) 0.2s forwards;
 		opacity: 0;
-		min-height: 50%;
 	}
 	.title {
 		position: absolute;
