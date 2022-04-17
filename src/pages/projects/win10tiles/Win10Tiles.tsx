@@ -1,16 +1,6 @@
-import React from "react";
 import { Helmet } from "react-helmet-async";
-import {
-	Button,
-	Typography,
-	Grid,
-	Container,
-	Card,
-	CardContent,
-	CardActions,
-	Skeleton,
-	Tooltip,
-} from "@mui/material";
+import { useTranslation } from "react-i18next";
+import { Button, Typography, Grid, Container, Skeleton } from "@mui/material";
 import Image from "material-ui-image";
 
 import { RiArrowDownLine, RiDownload2Line } from "react-icons/ri";
@@ -53,64 +43,77 @@ import WhatsApp from "./assets/WhatsApp.png";
 import Word from "./assets/Word.png";
 
 const tilesCreative = [
-	{ src: AfterEffects },
-	{ src: Audition },
-	{ src: Premiere },
-	{ src: MediaEncoder },
-	{ src: Designer },
-	{ src: Photo },
-	{ src: Publisher },
-	{ src: Cinema4D },
+	{ src: AfterEffects, alt: "After Effects" },
+	{ src: Audition, alt: "Audition" },
+	{ src: Premiere, alt: "Premiere Pro" },
+	{ src: MediaEncoder, alt: "Media Encoder" },
+	{ src: Designer, alt: "Affinity Designer" },
+	{ src: Photo, alt: "Affinity Photo" },
+	{ src: Publisher, alt: "Affinity Publisher" },
+	{ src: Cinema4D, alt: "Cinema 4D" },
 ];
 const tilesSocial = [
-	{ src: Discord },
-	{ src: ProtonMail },
-	{ src: Telegram },
-	{ src: WhatsApp },
+	{ src: Discord, alt: "Discord" },
+	{ src: ProtonMail, alt: "ProtonMail" },
+	{ src: Telegram, alt: "Telegram" },
+	{ src: WhatsApp, alt: "WhatsApp" },
 ];
 const tilesGames = [
-	{ src: Steam },
-	{ src: MinecraftJava },
-	{ src: Osu },
-	{ src: Pcsx2 },
+	{ src: Steam, alt: "Steam" },
+	{ src: MinecraftJava, alt: "Minecraft Java" },
+	{ src: Osu, alt: "osu" },
+	{ src: Pcsx2, alt: "PCSX2" },
 ];
 const tilesOther1 = [
-	{ src: Word },
-	{ src: Excel },
-	{ src: PowerPoint },
-	{ src: Code },
-	{ src: Netflix },
-	{ src: PrimeVideo },
-	{ src: Spotify },
-	{ src: Vmware },
+	{ src: Word, alt: "Word" },
+	{ src: Excel, alt: "Excel" },
+	{ src: PowerPoint, alt: "PowerPoint" },
+	{ src: Code, alt: "Code" },
+	{ src: Netflix, alt: "Netflix" },
+	{ src: PrimeVideo, alt: "Prime Video" },
+	{ src: Spotify, alt: "Spotify" },
+	{ src: Vmware, alt: "Vmware Workstation Pro" },
 ];
 const tilesOther2 = [
-	{ src: MinecraftBedrock },
-	{ src: Aseprite },
-	{ src: Blender },
-	{ src: QBittorrent },
-	{ src: Obs },
-	{ src: Dolphin },
-	{ src: FlStudio },
-	{ src: Live },
+	{ src: MinecraftBedrock, alt: "Minecraft Bedrock" },
+	{ src: Aseprite, alt: "Aseprite" },
+	{ src: Blender, alt: "Blender" },
+	{ src: QBittorrent, alt: "QBittorrent" },
+	{ src: Obs, alt: "OBS" },
+	{ src: Dolphin, alt: "Dolphin" },
+	{ src: FlStudio, alt: "FL Studio" },
+	{ src: Live, alt: "Live" },
 ];
 
-function Win10TilesDL() {
+export default function Win10TilesDL() {
+	const { t } = useTranslation("translation", {
+		keyPrefix: "projects.win10tiles",
+	});
 	return (
 		<>
 			<Helmet>
 				<meta charSet="utf-8" />
-				<title>Start menu tiles • pprmint.art</title>
+				<title>{t("meta.title")}</title>
 				<meta
 					name="description"
 					content="Make your start menu pretty (maybe) by using these in yours. Best if you're running version 20H2 or later."
+                    />
+                <meta name="theme-color" content="#00cc66" />
+				<meta
+					property="og:description"
+					content="Make your start menu pretty (maybe) by using these in yours. Best if you're running version 20H2 or later."
 				/>
+				<meta property="og:image" content="https://pprmint.art/og/win10tiles.jpg" />
+				<meta property="og:image:width" content="1280" />
+				<meta property="og:image:height" content="720" />
+				<meta property="og:title" content="Start menu tiles." />
+				<meta property="og:url" content="https://pprmint.art/win10tiles" />
 			</Helmet>
 			<div className="fullscreen">
 				<img src={TilesBanner} />
 				<Container className="title">
 					<img src={TilesLogo} />
-					<Typography variant="h2">Provided you still have them.</Typography>
+					<Typography variant="h2">{t("title.sub")}</Typography>
 					<br />
 					<RiArrowDownLine size={25} color="#0c3" />
 				</Container>
@@ -122,12 +125,12 @@ function Win10TilesDL() {
 							<Grid item xs={12} md={5}>
 								<Grid container spacing={1}>
 									{tilesCreative.map((item) => (
-										<Grid item xs={3}>
+										<Grid item xs={3} key={item.alt}>
 											<Image
 												src={item.src}
 												width="100%"
 												color="#222222"
-												alt=""
+												alt={item.alt}
 												loading={
 													<Skeleton
 														variant="rectangular"
@@ -142,20 +145,17 @@ function Win10TilesDL() {
 								</Grid>
 							</Grid>
 							<Grid item xs={12} md={7}>
-								<Typography variant="h2">You enjoy pain? Great!</Typography>
-								<Typography variant="h1">Creative apps.</Typography>
+								<Typography variant="h2">
+									{t("section.creative.subtitle")}
+								</Typography>
+								<Typography variant="h1">
+									{t("section.creative.headline")}
+								</Typography>
 								<Typography variant="body1">
-									The Creative Cloud is a thing that... exists. For better or
-									worse. It's still beyond me how a company that develops
-									programs for designing stuff decided they should make all
-									their apps' logos look like Media Encoder of all things.
+									{t("section.creative.text1")}
 									<br />
 									<br />
-									Anyway, you won't find <i>that</i> many icons in this pack,
-									since I only made tiles for programs I actually use myself. Or
-									have used, in some instances.
-									<br />
-									Unfortunately, the Creative Cloud is not one such instance.
+									{t("section.creative.text2")}
 								</Typography>
 							</Grid>
 						</Grid>
@@ -164,27 +164,53 @@ function Win10TilesDL() {
 				<div className="section" id="social">
 					<Container maxWidth="xl">
 						<Grid container spacing={4}>
-							<Grid item xs={12} md={7}>
-								<Typography variant="h2">
-									Not everyone's strong suit.
-								</Typography>
-								<Typography variant="h1">Socializing.</Typography>
-								<Typography variant="body1">
-									This Discord tile is a perfect example for miscommunication
-									between parts of my brain. That's at least the only logical
-									explanation I can think of as to how this abomination came to
-									be.
-								</Typography>
-							</Grid>
-							<Grid item xs={12} md={5}>
+							<Grid
+								item
+								xs={12}
+								md={5}
+								sx={{ display: { xs: "flex", md: "none" } }}
+							>
 								<Grid container spacing={1}>
 									{tilesSocial.map((item) => (
-										<Grid item xs={3}>
+										<Grid item xs={3} key={item.alt}>
 											<Image
 												src={item.src}
 												width="100%"
 												color="#222222"
-												alt=""
+												alt={item.alt}
+												loading={
+													<Skeleton
+														variant="rectangular"
+														animation="wave"
+														width="100%"
+														height="100%"
+													/>
+												}
+											/>
+										</Grid>
+									))}
+								</Grid>
+							</Grid>
+							<Grid item xs={12} md={7}>
+								<Typography variant="h2">
+									{t("section.social.subtitle")}
+								</Typography>
+								<Typography variant="h1">
+									{t("section.social.headline")}
+								</Typography>
+								<Typography variant="body1">
+									{t("section.social.text")}
+								</Typography>
+							</Grid>
+							<Grid item xs={12} md={5} sx={{display: {xs: "none", md: "flex"}}}>
+								<Grid container spacing={1}>
+									{tilesSocial.map((item) => (
+										<Grid item xs={3} key={item.alt}>
+											<Image
+												src={item.src}
+												width="100%"
+												color="#222222"
+												alt={item.alt}
 												loading={
 													<Skeleton
 														variant="rectangular"
@@ -207,12 +233,12 @@ function Win10TilesDL() {
 							<Grid item xs={12} md={5}>
 								<Grid container spacing={1}>
 									{tilesGames.map((item) => (
-										<Grid item xs={3}>
+										<Grid item xs={3} key={item.alt}>
 											<Image
 												src={item.src}
 												width="100%"
 												color="#222222"
-												alt=""
+												alt={item.alt}
 												loading={
 													<Skeleton
 														variant="rectangular"
@@ -227,12 +253,14 @@ function Win10TilesDL() {
 								</Grid>
 							</Grid>
 							<Grid item xs={12} md={7}>
-								<Typography variant="h2">Waste your time.</Typography>
-								<Typography variant="h1">Gaming.</Typography>
+								<Typography variant="h2">
+									{t("section.gaming.subtitle")}
+								</Typography>
+								<Typography variant="h1">
+									{t("section.gaming.headline")}
+								</Typography>
 								<Typography variant="body1">
-									I'm not asking where you got these ROMs from. I'm sure you
-									acquired them totally legally and ripped yourself straight
-									from the disc or cartridge.
+									{t("section.gaming.text")}
 								</Typography>
 							</Grid>
 						</Grid>
@@ -241,18 +269,18 @@ function Win10TilesDL() {
 				<div className="section" id="other">
 					<Container maxWidth="xl">
 						<Typography variant="h1" textAlign="center">
-							And a bunch more.
+							{t("section.more.headline")}
 						</Typography>
 						<Grid container spacing={4}>
 							<Grid item xs={12} md={6}>
 								<Grid container spacing={1}>
 									{tilesOther1.map((item) => (
-										<Grid item xs={3}>
+										<Grid item xs={3} key={item.alt}>
 											<Image
 												src={item.src}
 												width="500px"
 												color="#222222"
-												alt=""
+												alt={item.alt}
 												loading={
 													<Skeleton
 														variant="rectangular"
@@ -269,12 +297,12 @@ function Win10TilesDL() {
 							<Grid item xs={12} md={6}>
 								<Grid container spacing={1}>
 									{tilesOther2.map((item) => (
-										<Grid item xs={3}>
+										<Grid item xs={3} key={item.alt}>
 											<Image
 												src={item.src}
 												width="500px"
 												color="#222222"
-												alt=""
+												alt={item.alt}
 												loading={
 													<Skeleton
 														variant="rectangular"
@@ -293,10 +321,11 @@ function Win10TilesDL() {
 				</div>
 				<div className="section" id="download">
 					<Container>
-						<Typography variant="h1">Start menu tiles</Typography>
+						<Typography variant="h1">
+							{t("section.download.headline")}
+						</Typography>
 						<Typography variant="body1">
-							For easily changing the tile image for any link in your start
-							menu, I recommend{" "}
+							{t("section.download.text1")}
 							<a
 								className="external"
 								href="http://github.com/Jonno12345/TileIconifier"
@@ -305,7 +334,7 @@ function Win10TilesDL() {
 							>
 								TileIconifier
 							</a>
-							. If you're on Windows 11, I'm sorry. You can grab something like{" "}
+							{t("section.download.text2")}
 							<a
 								className="external"
 								href="https://www.stardock.com/products/start11/"
@@ -314,7 +343,7 @@ function Win10TilesDL() {
 							>
 								Start11
 							</a>{" "}
-							to get the previous start menu back.
+							{t("section.download.text3")}
 						</Typography>
 						<br />
 						<Button
@@ -324,7 +353,7 @@ function Win10TilesDL() {
 							color="primary"
 							startIcon={<RiDownload2Line />}
 						>
-							Download
+							{t("section.download.downloadButton")}
 						</Button>
 					</Container>
 				</div>
@@ -332,5 +361,3 @@ function Win10TilesDL() {
 		</>
 	);
 }
-
-export default Win10TilesDL;

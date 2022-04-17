@@ -45,6 +45,81 @@
 			"title": "Settings"
 		}
 	},
+	"contact": {
+		"meta": {
+			"title": "Contact me • pprmint.art"
+		},
+		"section": {
+			"contact": {
+				"button": {
+					"email": "Send email",
+					"twitter": "Send Twitter DM"
+				},
+				"text": "If your question wasn't answered here, feel free to get in touch with me. Maybe your question will end up on this page as well.",
+				"title": "Is something still unclear?"
+			},
+			"faq": {
+				"1commission": {
+					"long": "Generally speaking, I don't work for others, unless it's for people I know well enough for me to consider them so-called friends. There are several reasons why I won't work for strangers for the time being, one of which is the lack of a proper payment method that I could accept.",
+					"title": "Can you make a (thing here) for me?",
+					"tldr": "Most likely not. "
+				},
+				"2terms": {
+					"fonts": {
+						"text1": "My fonts are licensed under the ",
+						"text2": ". This means that you may freely use the fonts for personal and commercial projects. However, you may not sell the fonts and/or derivatives thereof.",
+						"title": "Fonts"
+					},
+					"illustrations": {
+						"text": "For these kinds of works, I'd rather you simply focus your senses on them and just look at them. Think of my website and YouTube channel as my little art gallery where you can have a look at my works. No buy, no rent, no nothing. Only look.",
+						"title": "Animations, illustrations and other works."
+					},
+					"long": "There are some exceptions to this as mentioned below. If you're ever not sure about what you may do with a thing I made, please don't hesitate to get in touch with me and ask me.",
+					"reminder": "If these terms are unclear to you in any way, don't hesitate to get in touch with me.",
+					"stuff": {
+						"text1": "I encourage you to download and use projects like ",
+						"text2": "and my ",
+						"text3": "as well as my occasional desktop backgrounds for yourself. You are also free to make your own changes and share them privately with your friends.\nGenerally, if it has its own download button, you can go download and use it for yourself. Except for reselling and redistributing of course.",
+						"title": "Desktop and phone wallpapers and other projects.",
+						"win10tiles": "Windows 10 tiles"
+					},
+					"title": "What are the terms of use for your creations?",
+					"tldr": "Generally, you are not allowed to re-use, sell or otherwise redistribute my works in any way unless stated otherwise. "
+				},
+				"3software": {
+					"and": " and ",
+					"audio": "Audio recording and editing: ",
+					"graphics": "Graphics: ",
+					"mograph": "Motion graphics: ",
+					"music": "\"Music\": ",
+					"title": "What software do you use?",
+					"video": "Video editing: ",
+					"withExtensions": " with the extensions ",
+					"withVSTs": " with the VSTs "
+				},
+				"4gamecube": {
+					"long": "since I had only used a Wii U in recent years. Make of that what you will.\nIf you don't know what this question is about, have a look at the comments below ",
+					"thisVideo": "this video",
+					"title": "Why did you forget the GameCube disc?",
+					"tldr": "I forgot the original Wii had that backwards compatibility, "
+				},
+				"5support": {
+					"long": "If you think they would be interested in what I make as well, you could also tell your friends about me. If there's ever growing demand to support me financially as well, I might reconsider setting up a profile on Patreon or Ko-fi.",
+					"title": "Are there ways for me to support you?",
+					"tldr": "Kind words go a long way. "
+				},
+				"6actually": {
+					"text": "Nah.",
+					"title": "Are any of these questions actually \"frequently asked\"?"
+				},
+				"title": "Any questions?"
+			}
+		},
+		"title": {
+			"main": "Contact me.",
+			"sub": "Maybe I can already answer your question here."
+		}
+	},
 	"home": {
 		"meta": {
 			"title": "pprmint.art"
@@ -193,7 +268,7 @@
 					},
 					"headline": "Dos and Don'ts"
 				},
-				"downloads": {
+				"download": {
 					"addonFont": {
 						"description": "A font that I specifically made to use with Mintcraft. You can see it used in the screenshots further up on this page, as well as in these pack icons.",
 						"name": "Mintbit font add-on"
@@ -232,10 +307,10 @@
 				"title": "A sans-serif font • pprmint.art"
 			},
 			"section": {
-				"downloads": {
+				"download": {
 					"description": "If you could actually read the text on slide 3 in a sensible order, you deserve a download button.",
 					"downloadButton": "Download",
-					"headline": "Mintsans V2"
+					"headline": "MintSans V2"
 				}
 			},
 			"title": {
@@ -262,6 +337,117 @@
 		"title": {
 			"main": "My projects.",
 			"sub": "Look at some of my works or download stuff."
+		},
+		"win10tiles": {
+			"meta": {
+				"title": "Start menu tiles • pprmint.art"
+			},
+			"section": {
+				"creative": {
+					"headline": "Creative apps.",
+					"subtitle": "You enjoy pain? Great!",
+					"text1": "The Creative Cloud is a thing that... exists. For better or worse. It's still beyond me how a company that develops programs for designing stuff decided they should make all their apps' logos look like Media Encoder of all things.",
+					"text2": "Anyway, you won't find that many icons in this pack, since I only made tiles for programs I actually use myself. Or have used, in some instances.\nUnfortunately, the Creative Cloud is not one such instance."
+				},
+				"download": {
+					"downloadButton": "Download",
+					"headline": "Start menu tiles",
+					"text1": "For easily changing the tile image for any link in your start menu, I recommend ",
+					"text2": ". If you're on Windows 11, I'm sorry. You can grab something like ",
+					"text3": " to get the previous start menu back."
+				},
+				"gaming": {
+					"headline": "Gaming.",
+					"subtitle": "Waste your time.",
+					"text": "I'm not asking where you got these ROMs from. I'm sure you acquired them totally legally and ripped yourself straight from the disc or cartridge."
+				},
+				"more": {
+					"headline": "And a bunch more."
+				},
+				"social": {
+					"headline": "Socializing.",
+					"subtitle": "Not everyone's strong suit.",
+					"text": "This Discord tile is a perfect example for miscommunication between parts of my brain. That's at least the only logical explanation I can think of as to how this abomination came to be."
+				}
+			},
+			"title": {
+				"splashes": {
+					"main": "splashes.txt",
+					"sub": "All the splashes seen in Mintcraft."
+				},
+				"sub": "Provided you still have them."
+			}
+		},
+		"works": {
+			"2021": {
+				"manjaroWall": {
+					"captions": {
+						"theme1": "This picture was made to be used together with the ",
+						"theme2": " or ",
+						"theme3": " theme.",
+						"wallpaper": "The wallpaper. Feel free to right-click and save."
+					},
+					"meta": {
+						"title": "Arch wallpaper • pprmint.art"
+					},
+					"title": {
+						"main": "Arch wallpaper.",
+						"sub": "I used Arch btw."
+					}
+				}
+			},
+			"2022": {
+				"archWall": {
+					"captions": {
+						"theme1": "This picture was made to be used together with the ",
+						"theme2": " or ",
+						"theme3": " theme.",
+						"wallpaper": "The wallpaper. Feel free to right-click and save."
+					},
+					"meta": {
+						"title": "Arch wallpaper • pprmint.art"
+					},
+					"title": {
+						"main": "Arch wallpaper.",
+						"sub": "I used Arch btw."
+					}
+				},
+				"ford": {
+					"meta": {
+						"title": "Ford rebrand • pprmint.art"
+					},
+					"title": {
+						"main": "Ford rebrand.",
+						"sub": "Concept inspired by a design by Paul Rand in 1966."
+					}
+				},
+				"iPad": {
+					"captions": {
+						"leTablet": "Originally made as part of a completely different project."
+					},
+					"meta": {
+						"title": "iPad • pprmint.art"
+					},
+					"title": {
+						"main": "iPad.",
+						"smallSub": "That's a lie.",
+						"sub": "The i stands for isometric."
+					}
+				},
+				"likeStatistics": {
+					"captions": {
+						"graphs1": "My original plan was to wait maybe a week or two after New Year's before I finish this thing.",
+						"graphs2": "That plan saw Penguins, that's how far south it went."
+					},
+					"meta": {
+						"title": "Like statistics for @ProgressBar202_ • pprmint.art"
+					},
+					"title": {
+						"main": "Like statistics for @ProgressBar202_.",
+						"sub": "I was very bored before New Year's Eve. "
+					}
+				}
+			}
 		}
 	},
 	"wip": {

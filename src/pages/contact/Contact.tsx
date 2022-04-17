@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { useTranslation } from "react-i18next";
 import {
 	Button,
 	Typography,
@@ -18,22 +19,23 @@ import {
 	RiArrowDownSLine,
 } from "react-icons/ri";
 
-function Contact() {
+export default function Contact() {
+	const { t } = useTranslation("translation", {
+		keyPrefix: "contact",
+	});
 	return (
 		<>
 			<Helmet>
 				<meta charSet="utf-8" />
-				<title>Get in touch • pprmint.art</title>
+				<title>{t("meta.title")}</title>
 				<meta
 					name="description"
 					content="Learn more about what software I use to make my thingies, how you may use some of the things I make and click spicy buttons to send me an email or DM on Twitter."
 				/>
 			</Helmet>
 			<Container className="title">
-				<Typography variant="h1">Contact me.</Typography>
-				<Typography variant="h2">
-					Maybe I can already answer your question here.
-				</Typography>
+				<Typography variant="h1">{t("title.main")}</Typography>
+				<Typography variant="h2">{t("title.sub")}</Typography>
 			</Container>
 			<div className="content">
 				<div className="section" id="faq">
@@ -41,63 +43,49 @@ function Contact() {
 						<Accordion variant="outlined">
 							<AccordionSummary expandIcon={<RiArrowDownSLine />}>
 								<Typography variant="h3">
-									Can you make a (thing here) for me?
+									{t("section.faq.1commission.title")}
 								</Typography>
 							</AccordionSummary>
 							<AccordionDetails>
 								<Typography variant="body1">
-									<strong>Most likely not.</strong> Generally speaking, I don't
-									work for others, unless it's for people I know well enough for
-									me to consider them so-called friends. There are several
-									reasons why I won't work for strangers for the time being, one
-									of which is the lack of a proper payment method that I could
-									accept.
+									<b>{t("section.faq.1commission.tldr")}</b>
+									{t("section.faq.1commission.long")}
 								</Typography>
 							</AccordionDetails>
 						</Accordion>
 						<Accordion variant="outlined">
 							<AccordionSummary expandIcon={<RiArrowDownSLine />}>
 								<Typography variant="h3">
-									What are the terms of use for your creations?
+									{t("section.faq.2terms.title")}
 								</Typography>
 							</AccordionSummary>
 							<AccordionDetails>
 								<Typography variant="body1">
-									<b>
-										Generally, you are not allowed to re-use, sell or otherwise
-										redistribute my works in any way unless stated otherwise.{" "}
-									</b>
-									There are some exceptions to this as mentioned below. If
-									you're ever not sure about what you may do with a thing I
-									made, please don't hesitate to get in touch with me and ask
-									me.
+									<b>{t("section.faq.2terms.tldr")}</b>
+									{t("section.faq.2terms.long")}
 								</Typography>
 								<br />
 								<Typography variant="body1">
-									<b>Animations, illustrations and other works</b>
+									<b>{t("section.faq.2terms.illustrations.title")}</b>
 									<br />
-									For these kinds of works, I'd rather you simply focus your
-									senses on them and just look at them. Think of my website and
-									YouTube channel as my little art gallery where you can have a
-									look at my works. No buy, no rent, no nothing. Only look.
+									{t("section.faq.2terms.illustrations.text")}
 								</Typography>
 								<br />
 								<Typography variant="body1">
-									<b>Desktop and phone wallpapers and other projects</b>
-									<br />I encourage you to download and use projects like{" "}
-									<Link to="/projects/mintcraft">Mintcraft</Link> and my{" "}
-									<Link to="/projects/win10tiles">Windows 10 tiles</Link> as
-									well as my occasional desktop backgrounds for yourself. You
-									are also free to make your own changes and share them{" "}
-									<i>privately</i> with your friends.
+									<b>{t("section.faq.2terms.stuff.title")}</b>
 									<br />
-									Generally, if it has its own download button, you can go and
-									use it for whatever you'd like.
+									{t("section.faq.2terms.stuff.text1")}
+									<Link to="/projects/mintcraft">Mintcraft</Link>{" "}
+									{t("section.faq.2terms.stuff.text2")}
+									<Link to="/projects/win10tiles">
+										{t("section.faq.2terms.stuff.win10tiles")}
+									</Link>
+									{t("section.faq.2terms.stuff.text3")}
 									<br />
 									<br />
-									<b>Fonts</b>
+									<b>{t("section.faq.2terms.fonts.title")}</b>
 									<br />
-									My fonts are licensed under the{" "}
+									{t("section.faq.2terms.fonts.text1")}
 									<a
 										className="external"
 										href="https://scripts.sil.org/cms/scripts/page.php?item_id=OFL"
@@ -106,9 +94,7 @@ function Contact() {
 									>
 										SIL Open Font License
 									</a>
-									. This means that you may freely use the fonts for personal
-									and commercial projects. However, you may not sell the fonts
-									and/or derivatives thereof.
+									{t("section.faq.2terms.fonts.text2")}
 									<b></b>
 									<br />
 									<br />
@@ -118,18 +104,19 @@ function Contact() {
 									variant="filled"
 									icon={<RiInformationLine />}
 								>
-									If these terms are unclear to you in any way, don't hesitate
-									to get in touch with me.
+									{t("section.faq.2terms.reminder")}
 								</Alert>
 							</AccordionDetails>
 						</Accordion>
 						<Accordion variant="outlined">
 							<AccordionSummary expandIcon={<RiArrowDownSLine />}>
-								<Typography variant="h3">What software do you use?</Typography>
+								<Typography variant="h3">
+									{t("section.faq.3software.title")}
+								</Typography>
 							</AccordionSummary>
 							<AccordionDetails>
 								<Typography variant="body1">
-									Design:{" "}
+									{t("section.faq.3software.graphics")}
 									<a
 										className="external"
 										href="https://affinity.serif.com/designer/"
@@ -147,8 +134,9 @@ function Contact() {
 									>
 										Photo
 									</a>
+									.
 									<br />
-									Motion graphics:{" "}
+									{t("section.faq.3software.mograph")}
 									<a
 										className="external"
 										href="https://www.adobe.com/products/aftereffects.html"
@@ -157,7 +145,7 @@ function Contact() {
 									>
 										Adobe After Effects
 									</a>
-									with the extensions{" "}
+									{t("section.faq.3software.withExtensions")}
 									<a
 										className="external"
 										href="https://www.mtmograph.com/products/motion-3"
@@ -175,7 +163,7 @@ function Contact() {
 									>
 										Boombox
 									</a>
-									and{" "}
+									{t("section.faq.3software.and")}
 									<a
 										className="external"
 										href="https://aescripts.com/ease-and-wizz/"
@@ -184,8 +172,9 @@ function Contact() {
 									>
 										Ease and Wizz
 									</a>
+									.
 									<br />
-									Video editing:{" "}
+									{t("section.faq.3software.video")}
 									<a
 										className="external"
 										href="https://www.adobe.com/products/premiere.html"
@@ -194,8 +183,9 @@ function Contact() {
 									>
 										Adobe Premiere Pro
 									</a>
+									.
 									<br />
-									Audio recording and editing:{" "}
+									{t("section.faq.3software.audio")}
 									<a
 										className="external"
 										href="https://www.adobe.com/products/audition.html"
@@ -204,6 +194,36 @@ function Contact() {
 									>
 										Adobe Audition
 									</a>
+									.
+									<br />
+									{t("section.faq.3software.music")}
+									<a
+										className="external"
+										href="https://www.image-line.com/"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										FL Studio
+									</a>
+									{t("section.faq.3software.withVSTs")}
+									<a
+										className="external"
+										href="https://vital.audio/"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										Vital
+									</a>
+									{t("section.faq.3software.and")}
+									<a
+										className="external"
+										href="https://labs.spitfireaudio.com/"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										LABS
+									</a>
+									.
 									<br />
 								</Typography>
 							</AccordionDetails>
@@ -211,26 +231,20 @@ function Contact() {
 						<Accordion variant="outlined">
 							<AccordionSummary expandIcon={<RiArrowDownSLine />}>
 								<Typography variant="h3">
-									Why did you forget the GameCube disc?
+									{t("section.faq.4gamecube.title")}
 								</Typography>
 							</AccordionSummary>
 							<AccordionDetails>
 								<Typography variant="body1">
-									<strong>
-										I forgot the original Wii had that backwards compatibility
-									</strong>
-									, since I had only used a Wii U in recent years. Make of that
-									what you will.
-									<br />
-									If you don't know what this question is about, have a look at
-									the comments below{" "}
+									<b>{t("section.faq.4gamecube.tldr")}</b>
+									{t("section.faq.4gamecube.long")}
 									<a
 										className="external"
 										href="https://www.youtube.com/watch?v=iEw9ZqHatPI"
 										target="_blank"
 										rel="noopener noreferrer"
 									>
-										this video
+										{t("section.faq.4gamecube.thisVideo")}
 									</a>
 									.
 								</Typography>
@@ -239,38 +253,34 @@ function Contact() {
 						<Accordion variant="outlined">
 							<AccordionSummary expandIcon={<RiArrowDownSLine />}>
 								<Typography variant="h3">
-									Is there a way for me to support you?
+									{t("section.faq.5support.title")}
 								</Typography>
 							</AccordionSummary>
 							<AccordionDetails>
 								<Typography variant="body1">
-									<strong>Kind words go a long way.</strong> If you think they
-									would be interested in what I make as well, you could also
-									tell your friends about me. If there's ever growing demand to
-									support me financially as well, I might reconsider opening a
-									Patreon or Ko-fi.
+									<b>{t("section.faq.5support.tldr")}</b>
+									{t("section.faq.5support.long")}
 								</Typography>
 							</AccordionDetails>
 						</Accordion>
 						<Accordion variant="outlined">
 							<AccordionSummary expandIcon={<RiArrowDownSLine />}>
 								<Typography variant="h3">
-									Are any of these questions actually "frequently asked"?
+									{t("section.faq.6actually.title")}
 								</Typography>
 							</AccordionSummary>
 							<AccordionDetails>
-								<Typography variant="body1">Nah.</Typography>
+								<Typography variant="body1">
+									{t("section.faq.6actually.text")}
+								</Typography>
 							</AccordionDetails>
 						</Accordion>
 					</Container>
 				</div>
 				<div className="section" id="contact">
 					<Container>
-						<Typography variant="h1">Is something still unclear?</Typography>
-						<Typography variant="body1">
-							If your question wasn't answered here, feel free to get in touch
-							with me. Maybe it'll end up on this page as well.
-						</Typography>
+						<Typography variant="h1">{t("section.contact.title")}</Typography>
+						<Typography variant="body1">{t("section.contact.text")}</Typography>
 						<br />
 						<Stack spacing={2} direction="row">
 							<Button
@@ -280,7 +290,7 @@ function Contact() {
 								variant="contained"
 								startIcon={<RiMailLine />}
 							>
-								Send email
+								{t("section.contact.button.email")}
 							</Button>
 							<Button
 								href="https://twitter.com/messages/compose?recipient_id=1296863056266502144"
@@ -290,7 +300,7 @@ function Contact() {
 								color="info"
 								startIcon={<RiTwitterLine />}
 							>
-								Send Twitter DM
+								{t("section.contact.button.twitter")}
 							</Button>
 						</Stack>
 					</Container>
@@ -299,5 +309,3 @@ function Contact() {
 		</>
 	);
 }
-
-export default Contact;

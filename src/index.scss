@@ -94,15 +94,21 @@ body {
 		opacity: 0;
 		transform: translateY(-10px);
 	}
-	20% {
-		opacity: 1;
-	}
 	50% {
 		opacity: 1;
 	}
 	100% {
 		opacity: 0;
 		transform: translateY(10px);
+	}
+}
+
+@media only screen and (max-width: 1199px) {
+	h1 {
+		font-size: 3rem !important;
+	}
+	h2 {
+		font-size: 1.5rem !important;
 	}
 }
 
@@ -134,28 +140,34 @@ body {
 	transition: 0.375s;
 }
 
-.content {
-	opacity: 0;
-	animation: fadeBottom 0.375s var(--easeOut) 0.08s forwards;
-}
-
 .section {
-	margin-top: 10vh;
+    margin-top: 10vh;
+	margin-bottom: 10vh;
+    opacity: 0;
+    animation: fadeBottom 0.375s var(--easeOut) 0.12s forwards;
+    &:first-of-type {
+        animation-delay: 0.08s;
+    }
 }
 
 footer {
-    padding: 40px 0 30px 0;
     text-align: center;
+    hr {
+        opacity: 0;
+        animation: fadeBottom 0.375s var(--easeOut) 0.16s forwards;
+    }
 	.copyright {
-		animation: fadeBottom 0.375s var(--easeOut) 0.18s forwards;
-		opacity: 0;
+        opacity: 0;
+        padding-top: 40px;
+		animation: fadeBottom 0.375s var(--easeOut) 0.2s forwards;
 	}
     #footerButtons {
+        padding-bottom: 40px;
 		.MuiIconButton-sizeLarge,
         .MuiButton-root,
         .MuiDivider-root {
 			opacity: 0;
-			animation: fadeBottom 0.375s var(--easeOut) 0.3s forwards;
+			animation: fadeBottom 0.375s var(--easeOut) 0.24s forwards;
 			margin: 5px;
 		}
 	}
@@ -200,14 +212,6 @@ footer {
 	}
 }
 
-@media only screen and (max-width: 1199px) {
-	h1 {
-		font-size: 3rem !important;
-	}
-	h2 {
-		font-size: 1.5rem !important;
-	}
-}
 .title {
 	margin-top: var(--marginTop);
 	margin-bottom: 25px;

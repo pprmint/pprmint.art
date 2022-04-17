@@ -1,7 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { Typography, Card, Skeleton, Container } from "@mui/material";
+import { useTranslation } from "react-i18next";
+import { Typography, Skeleton, Container } from "@mui/material";
 
 import Image from "material-ui-image";
 
@@ -9,19 +8,32 @@ import SlideOne from "./assets/arch_with_blue_mountains.png";
 import SlideTwo from "./assets/arch_screenshot.png";
 
 function ArchWall() {
+	const { t } = useTranslation("translation", {
+		keyPrefix: "projects.works.2022.archWall",
+	});
 	return (
 		<>
 			<Helmet>
 				<meta charSet="utf-8" />
-				<title>Arch btw wallpaper • pprmint.art</title>
+				<title>{t("meta.title")}</title>
 				<meta
 					name="description"
 					content="A wallpaper made to be used on Arch Linux with the Qogir theme. Very specific indeed."
+                    />
+				<meta name="theme-color" content="#00cc66" />
+				<meta
+					property="og:description"
+					content="A wallpaper made to be used on Arch Linux with the Qogir theme. Very specific indeed."
 				/>
+				<meta property="og:image" content="https://pprmint.art/og/works/archwall.jpg" />
+				<meta property="og:image:width" content="1280" />
+				<meta property="og:image:height" content="720" />
+				<meta property="og:title" content="Arch wallpaper." />
+				<meta property="og:url" content="https://pprmint.art/projects/works/2022/archwall" />
 			</Helmet>
 			<Container className="title">
-				<Typography variant="h1">Arch wallpaper.</Typography>
-				<Typography variant="h2">I use Arch btw.</Typography>
+				<Typography variant="h1">{t("title.main")}</Typography>
+				<Typography variant="h2">{t("title.sub")}</Typography>
 			</Container>
 			<div className="content">
 				<div className="section">
@@ -44,7 +56,7 @@ function ArchWall() {
 					</a>
 					<br />
 					<Typography variant="body1" textAlign="center">
-						The wallpaper. Feel free to right-click and save.
+						{t("captions.wallpaper")}
 					</Typography>
 				</div>
 				<div className="section">
@@ -67,7 +79,7 @@ function ArchWall() {
 					</a>
 					<br />
 					<Typography variant="body1" textAlign="center">
-						This theme was made to be used together with the{" "}
+						{t("captions.theme1")}
 						<a
 							className="external"
 							href="https://github.com/vinceliuice/Qogir-theme"
@@ -75,8 +87,8 @@ function ArchWall() {
 							rel="noreferrer noopener"
 						>
 							Qogir GTK
-						</a>{" "}
-						or{" "}
+						</a>
+						{t("captions.theme2")}
 						<a
 							className="external"
 							href="https://github.com/vinceliuice/Qogir-kde"
@@ -84,8 +96,8 @@ function ArchWall() {
 							rel="noreferrer noopener"
 						>
 							KDE
-						</a>{" "}
-						theme.
+						</a>
+						{t("captions.theme3")}
 					</Typography>
 				</div>
 			</div>

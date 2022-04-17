@@ -1,6 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { useTranslation } from "react-i18next";
 import { Typography, Card, Skeleton, Container } from "@mui/material";
 
 import Image from "material-ui-image";
@@ -8,21 +7,34 @@ import Image from "material-ui-image";
 import SlideOne from "./assets/ipad.png";
 
 function ArchWall() {
+	const { t } = useTranslation("translation", {
+		keyPrefix: "projects.works.2022.iPad",
+	});
 	return (
 		<>
 			<Helmet>
 				<meta charSet="utf-8" />
-				<title>iPad • pprmint.art</title>
+				<title>{t("meta.title")}</title>
 				<meta
 					name="description"
-					content="Inspired by a design by Paul Rand in 1966."
+					content="It's an iPad."
+                    />
+                <meta name="theme-color" content="#00cc66" />
+				<meta
+					property="og:description"
+					content="It's an iPad."
 				/>
+				<meta property="og:image" content="https://pprmint.art/og/works/ipad.jpg" />
+				<meta property="og:image:width" content="1280" />
+				<meta property="og:image:height" content="720" />
+				<meta property="og:title" content="iPad." />
+				<meta property="og:url" content="https://pprmint.art/projects/works/2022/ipad" />
 			</Helmet>
 			<Container className="title">
-				<Typography variant="h1">iPad.</Typography>
+				<Typography variant="h1">{t("title.main")}</Typography>
 				<Typography variant="h2">
-					The i stands for isometric.{" "}
-					<Typography variant="caption">That's a lie.</Typography>
+					{t("title.sub")}{" "}
+					<Typography variant="caption">{t("title.smallSub")}</Typography>
 				</Typography>
 			</Container>
 			<div className="content">
@@ -46,7 +58,7 @@ function ArchWall() {
 					</a>
 					<br />
 					<Typography variant="body1" textAlign="center">
-						Originally made as part of a completely different project.
+						{t("captions.leTablet")}
 					</Typography>
 				</div>
 			</div>

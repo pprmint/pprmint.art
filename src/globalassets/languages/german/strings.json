@@ -45,6 +45,81 @@
 			"title": "Einstellungen"
 		}
 	},
+	"contact": {
+		"meta": {
+			"title": "Kontaktiere mich • pprmint.art"
+		},
+		"section": {
+			"contact": {
+				"button": {
+					"email": "Email senden",
+					"twitter": "Nachricht auf Twitter senden"
+				},
+				"text": "Wurde deine Frage hier nicht beantwortet, kannst du mich gerne direkt kontaktieren. Vielleicht taucht deine Frage hier dann auch auf.",
+				"title": "Ist noch was unklar?"
+			},
+			"faq": {
+				"1commission": {
+					"long": "In der Regel arbeite ich nicht für andere, es sei denn, es handelt sich um Menschen, die ich gut genug kenne, um sie als sogenannte Freunde zu betrachten. Es gibt mehrere Gründe, warum ich vorerst nicht für Fremde arbeiten werde. Einer davon ist das Fehlen einer geeigneten Zahlungsmethode, die ich akzeptieren könnte.",
+					"title": "Kannst du ein (Dingsbums hier) für mich machen?",
+					"tldr": "Höchstwahrscheinlich nicht. "
+				},
+				"2terms": {
+					"fonts": {
+						"text1": "Meine Schriftarten sind unter der ",
+						"text2": "lizenziert. Das bedeutet, dass du die Schriftarten für persönliche und kommerzielle Projekte frei verwenden darfst. Allerdings darfst du die Schriftarten und/oder Derivate davon nicht verkaufen.",
+						"title": "Schriftarten"
+					},
+					"illustrations": {
+						"text": "Bei dieser Art von Werken ist es mir lieber, wenn du einfach deine Sinne auf sie richtest und sie dir ansiehst. Betrachte meine Website und meinen YouTube-Kanal als meine kleine Kunstgalerie, in der du dir meine Werke einfach angucken kannst. Nix kaufen, nix mieten, nix gar nix. Nur gucken.",
+						"title": "Animationen, Illustrationen und andere Werke."
+					},
+					"long": "Es gibt einige Ausnahmen, wie unten erwähnt. Wenn du dir mal nicht sicher bist, was du mit einem von mir gemachtem Ding tun darfst, zöger nicht, mich zu kontaktieren und mich zu fragen.",
+					"reminder": "Sollten diese Bedingungen für dich irgendwo unklar sein, zögere nicht, dich mit mir in Verbindung zu setzen.",
+					"stuff": {
+						"text1": "Du darfst gerne Projekte wie ",
+						"text2": "und meine ",
+						"text3": " sowie meine gelegentlichen Desktop-Hintergründe für dich selbst herunterladen und verwenden. Du darfst auch selbst Veränderungen vornehmen und sie privat mit Freunden teilen. Allgemein gilt: Wenn es einen eigenen Download-Knopf hat, kannst du es herunterladen und selbst verwenden. Wiederverkauf und -verbreitung natürlich ausgeschlossen.",
+						"title": "Desktop- und Handy-Hintergrundbilder sowie andere Projekte.",
+						"win10tiles": "Windows-10-Kacheln"
+					},
+					"title": "Wie sind die Nutzungsbedingungen für deine Kreationen?",
+					"tldr": "Grundsätzlich ist es dir nicht erlaubt, meine Werke weiterzuverwenden, zu verkaufen oder anderweitig zu verbreiten, sofern nicht anders angegeben. "
+				},
+				"3software": {
+					"and": " und ",
+					"audio": "Audioaufnahme und -bearbeitung: ",
+					"graphics": "Grafiken: ",
+					"mograph": "Motion Graphics: ",
+					"music": "\"Musik\": ",
+					"title": "Welche Programme verwendest du?",
+					"video": "Videobearbeitung: ",
+					"withExtensions": " mit den Erweiterungen ",
+					"withVSTs": " mit den VSTs "
+				},
+				"4gamecube": {
+					"long": "da ich in den letzten Jahren nur eine Wii U benutzt habe. Mach daraus, was du willst. Wenn du keine Ahnung hast, worum es bei dieser Frage geht, wirf einen Blick in die Kommentare unter ",
+					"thisVideo": "diesem Video",
+					"title": "Warum hast du die GameCube-Disc vergessen?",
+					"tldr": "Ich habe vergessen, dass die originale Wii überhaupt diese Abwärtskompatibilität besaß, "
+				},
+				"5support": {
+					"long": "Wenn du denkst, dass die sich auch für das interessieren, was ich so mache, könntest du auch deinen Freunden von mir erzählen. Sollte es je eine größere Nachfrage geben, mich auch finanziell zu unterstützen, überlege ich mir vielleicht nochmal, ein Profil auf Patreon oder Ko-fi einzurichten.",
+					"title": "Gibt es Möglichkeiten, dich zu unterstützen?",
+					"tldr": "Nette Worte kommen schon weit. "
+				},
+				"6actually": {
+					"text": "Nee.",
+					"title": "Werden irgendwelche dieser Fragen tatsächlich \"häufig gestellt\"?"
+				},
+				"title": "Noch Fragen?"
+			}
+		},
+		"title": {
+			"main": "Kontaktiere mich.",
+			"sub": "Vielleicht kann ich deine Frage auch gleich hier beantworten."
+		}
+	},
 	"home": {
 		"meta": {
 			"title": "pprmint.art"
@@ -193,7 +268,7 @@
 					},
 					"headline": "Dos and Don'ts"
 				},
-				"downloads": {
+				"download": {
 					"addonFont": {
 						"description": "Eine Schriftart, die ich speziell für die Verwendung mit Mintcraft entworfen habe. Du kannst sie in den Screenshots weiter oben auf dieser Seite sehen, sowie in diesen Pack-Icons.",
 						"name": "Mintbit Schriftart-Add-on"
@@ -202,7 +277,7 @@
 						"description": "Obwohl dieses Add-on nach dem Plural eines Wortes benannt ist, ersetzt es tatsächlich nur einen Ton, nämlich den für Knöpfchenklicks. Dieser ist ähnlich, aber weniger nervtötend.",
 						"name": "Sounds-Add-on"
 					},
-					"commonDownloadButton": "Download für ",
+					"commonDownloadButton": "Herunterladen für ",
 					"mintcraft": {
 						"description": "Mein Ressourcenpaket versorgt dich mit Dark-Mode Containern, einer Ego-Farbpalette und vielen anderen Optimierungen. Einige Icons bewegen sich sogar, wenn man mit dem Mauszeiger über sie fährt!",
 						"name": "Mintcraft"
@@ -232,10 +307,10 @@
 				"title": "Eine serifenlose Schriftart • pprmint.art"
 			},
 			"section": {
-				"downloads": {
+				"download": {
 					"description": "Wenn du den Text auf Folie 3 tatsächlich in einer vernünftigen Reihenfolge lesen konntest, verdienst du einen Download-Button.",
-					"downloadButton": "Download",
-					"headline": "Mintsans V2"
+					"downloadButton": "Herunterladen",
+					"headline": "MintSans V2"
 				}
 			},
 			"title": {
@@ -262,6 +337,117 @@
 		"title": {
 			"main": "Meine Projekte.",
 			"sub": "Schau dir einige meiner Werke an, oder lade dir Zeug runter."
+		},
+		"win10tiles": {
+			"meta": {
+				"title": "Start-Menü-Kacheln • pprmint.art"
+			},
+			"section": {
+				"creative": {
+					"headline": "Apps für Kreative.",
+					"subtitle": "Du magst Schmerz? Prima!",
+					"text1": "Die Creative Cloud ist eine Sache, die... existiert. Wohl oder übel. Es ist mir immer noch schleierhaft, wie ein Unternehmen, das Programme zum Entwerfen von Designs entwickelt, sich dazu entschlossen hat, die Logos all seiner Apps ausgerechnet wie Media Encoder aussehen zu lassen.",
+					"text2": "Du wirst in diesem Paket nicht allzu viele Symbole finden, da ich nur Kacheln für die Programme erstellt habe, die ich selbst benutze. Oder in manchen Fällen benutzt habe.\nLeider gehören die Creative-Cloud-Apps nicht zu jenen Programmen."
+				},
+				"download": {
+					"downloadButton": "Herunterladen",
+					"headline": "Start-Menü-Kacheln",
+					"text1": "Um das Kachelbild für jede Verknüpfung in deinem Startmenü zu ändern, empfehle ich ",
+					"text2": ". Bist du auf Windows 11 unterwegs, tust du mir leid. Du kannst dir sowas wie ",
+					"text3": " schnappen, um das vorherige Startmenü zurückzubekommen."
+				},
+				"gaming": {
+					"headline": "Gaming.",
+					"subtitle": "Verschwende deine Zeit.",
+					"text": "Ich frage nicht, woher du diese ROMs her hast. Ich bin mir sicher, dass du sie dir völlig legal angeeignet und selbst von der Cartridge gerippt hast."
+				},
+				"more": {
+					"headline": "Und noch mehr."
+				},
+				"social": {
+					"headline": "Soziales.",
+					"subtitle": "Nicht jedermanns Sache.",
+					"text": "Diese Discord-Kachel ist ein perfektes Beispiel für eine Fehlkommunikation zwischen Teilen meines Gehirns. Das ist zumindest die einzige logische Erklärung, die mir einfällt, wie diese Schande zustande kam."
+				}
+			},
+			"title": {
+				"splashes": {
+					"main": "splashes.txt",
+					"sub": "Alle Splash-Texte in Mintcraft."
+				},
+				"sub": "Vorausgesetzt du hast die noch."
+			}
+		},
+		"works": {
+			"2021": {
+				"manjaroWall": {
+					"captions": {
+						"theme1": "Dieses Bild wurde gemacht, um es zusammen mit dem ",
+						"theme2": "- oder ",
+						"theme3": "-Design zu verwenden.",
+						"wallpaper": "Das Hintergrundbild. Klick drauf und speicher es."
+					},
+					"meta": {
+						"title": "Arch Hintergrundbild • pprmint.art"
+					},
+					"title": {
+						"main": "Arch Hintergrundbild.",
+						"sub": "Ich hatte nebenbei Arch benutzt."
+					}
+				}
+			},
+			"2022": {
+				"archWall": {
+					"captions": {
+						"theme1": "Dieses Bild wurde gemacht, um es zusammen mit dem ",
+						"theme2": "- oder ",
+						"theme3": "-Design zu verwenden.",
+						"wallpaper": "Das Hintergrundbild. Klick drauf und speicher es."
+					},
+					"meta": {
+						"title": "Arch Hintergrundbild • pprmint.art"
+					},
+					"title": {
+						"main": "Arch Hintergrundbild.",
+						"sub": "Ich hatte nebenbei Arch benutzt."
+					}
+				},
+				"ford": {
+					"meta": {
+						"title": "Ford Rebrand • pprmint.art"
+					},
+					"title": {
+						"main": "Ford Rebranding.",
+						"sub": "Konzept inspiriert von einem Design von Paul Rand in 1966."
+					}
+				},
+				"iPad": {
+					"captions": {
+						"leTablet": "Eigentlich ist das Teil eines komplett anderen Projekts."
+					},
+					"meta": {
+						"title": "iPad • pprmint.art"
+					},
+					"title": {
+						"main": "iPad.",
+						"smallSub": "Das ist ne Lüge.",
+						"sub": "Das i steht für isometrisch."
+					}
+				},
+				"likeStatistics": {
+					"captions": {
+						"graphs1": "Mein ursprünglicher Plan war es, mit der Fertigstellung noch bis ein oder zwei Wochen nach Neujahr zu warten.",
+						"graphs2": "Der Plan hat Pinguine gesehen, so weit ging der abwärts."
+					},
+					"meta": {
+						"title": "Like-Statistiken für @ProgressBar202_ • pprmint.art"
+					},
+					"title": {
+						"main": "Like-Statistiken für @ProgressBar202_.",
+						"sub": "Vor Silvester war mir sehr langweilig."
+					}
+				}
+			}
 		}
 	},
 	"wip": {

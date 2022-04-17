@@ -64,7 +64,7 @@ function ContainerImage(props: { imageSrc: string; imageAlt: string }) {
 	);
 }
 
-function MintcraftDL() {
+export default function MintcraftDL() {
 	const { t } = useTranslation("translation", {
 		keyPrefix: "projects.mintcraft",
 	});
@@ -77,6 +77,16 @@ function MintcraftDL() {
 					name="description"
 					content="Mintcraft (formerly 'MintCraft') is my Minecraft resource pack with some UI tweaks to my liking. Craft. It's basically dark mode Minecraft with some fancy new icons here and there."
 				/>
+				<meta name="theme-color" content="#ffbb22" />
+				<meta
+					property="og:description"
+					content="Mintcraft (formerly 'MintCraft') is my Minecraft resource pack with some UI tweaks to my liking. Craft. It's basically dark mode Minecraft with some fancy new icons here and there."
+				/>
+				<meta property="og:image" content="https://pprmint.art/og/mintcraft.jpg" />
+				<meta property="og:image:width" content="1280" />
+				<meta property="og:image:height" content="720" />
+				<meta property="og:title" content="A Minecraft resource pack." />
+				<meta property="og:url" content="https://pprmint.art/mintcraft" />
 			</Helmet>
 			<div className="fullscreen">
 				<img src={MintcraftBanner} />
@@ -244,7 +254,8 @@ function MintcraftDL() {
 											<RiCheckboxCircleLine />
 										</ListItemIcon>
 										<ListItemText>
-											<i>Optional:</i> {t("section.dosAndDonts.do.optionalCredit")}
+											<i>Optional:</i>{" "}
+											{t("section.dosAndDonts.do.optionalCredit")}
 										</ListItemText>
 									</ListItem>
 								</List>
@@ -269,7 +280,9 @@ function MintcraftDL() {
 				</div>
 				<div className="section" id="credits">
 					<Container>
-						<Typography variant="h1">{t("section.credits.headline")}</Typography>
+						<Typography variant="h1">
+							{t("section.credits.headline")}
+						</Typography>
 						<Typography variant="h2">
 							<a
 								className="external"
@@ -287,7 +300,9 @@ function MintcraftDL() {
 				</div>
 				<div className="section" id="howto">
 					<Container>
-						<Typography variant="h1">{t("section.installation.headline")}</Typography>
+						<Typography variant="h1">
+							{t("section.installation.headline")}
+						</Typography>
 						<List>
 							<ListItem>
 								<ListItemIcon>
@@ -295,7 +310,7 @@ function MintcraftDL() {
 								</ListItemIcon>
 								<ListItemText>
 									<Typography variant="body1">
-                                    {t("section.installation.steps.installOptifine")}
+										{t("section.installation.steps.installOptifine")}
 										<a
 											className="external"
 											href="https://optifine.net/downloads"
@@ -343,7 +358,9 @@ function MintcraftDL() {
 									<RiNumber5 />
 								</ListItemIcon>
 								<ListItemText>
-									<Typography variant="body1">{t("section.installation.steps.digDown")}</Typography>
+									<Typography variant="body1">
+										{t("section.installation.steps.digDown")}
+									</Typography>
 								</ListItemText>
 							</ListItem>
 						</List>
@@ -360,9 +377,11 @@ function MintcraftDL() {
 								/>
 							</Grid>
 							<Grid item xs={12} md={9}>
-								<Typography variant="h1">{t("section.downloads.mintcraft.name")}</Typography>
+								<Typography variant="h1">
+									{t("section.download.mintcraft.name")}
+								</Typography>
 								<Typography variant="body1">
-									{t("section.downloads.mintcraft.description")}
+									{t("section.download.mintcraft.description")}
 								</Typography>
 								<br />
 								<Stack spacing={2} direction="row">
@@ -373,7 +392,7 @@ function MintcraftDL() {
 										color="warning"
 										startIcon={<RiDownload2Line />}
 									>
-										{t("section.downloads.commonDownloadButton")}1.18
+										{t("section.download.commonDownloadButton")}1.18
 									</Button>
 									<Button
 										variant="outlined"
@@ -407,9 +426,11 @@ function MintcraftDL() {
 								/>
 							</Grid>
 							<Grid item xs={12} md={9}>
-								<Typography variant="h1">{t("section.downloads.addonFont.name")}</Typography>
+								<Typography variant="h1">
+									{t("section.download.addonFont.name")}
+								</Typography>
 								<Typography variant="body1">
-									{t("section.downloads.addonFont.description")}
+									{t("section.download.addonFont.description")}
 								</Typography>
 								<br />
 								<Stack spacing={2} direction="row">
@@ -420,7 +441,7 @@ function MintcraftDL() {
 										color="warning"
 										startIcon={<RiDownload2Line />}
 									>
-										{t("section.downloads.commonDownloadButton")}1.18
+										{t("section.download.commonDownloadButton")}1.18
 									</Button>
 									<Button
 										variant="outlined"
@@ -446,9 +467,11 @@ function MintcraftDL() {
 								/>
 							</Grid>
 							<Grid item xs={12} md={9}>
-								<Typography variant="h1">{t("section.downloads.addonSounds.name")}</Typography>
+								<Typography variant="h1">
+									{t("section.download.addonSounds.name")}
+								</Typography>
 								<Typography variant="body1">
-									{t("section.downloads.addonSounds.description")}
+									{t("section.download.addonSounds.description")}
 								</Typography>
 								<br />
 								<Button
@@ -458,7 +481,7 @@ function MintcraftDL() {
 									color="warning"
 									startIcon={<RiDownload2Line />}
 								>
-									{t("section.downloads.commonDownloadButton")}1.18
+									{t("section.download.commonDownloadButton")}1.18
 								</Button>
 							</Grid>
 						</Grid>
@@ -468,5 +491,3 @@ function MintcraftDL() {
 		</>
 	);
 }
-
-export default MintcraftDL;

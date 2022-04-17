@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
 import { Button, Typography, Container, Grid } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
@@ -18,7 +18,17 @@ function FourOhFour() {
 				<meta
 					name="description"
 					content="This page was not found. Unless you found it on Google, somehow, which means you technically found it...? Which probably means that I royally fucked something up."
+                    />
+				<meta name="theme-color" content="#ffbb22" />
+				<meta
+					property="og:description"
+					content="Why this link was sent is beyond me, since it doesn't really exist. But you do you."
 				/>
+				<meta property="og:image" content="https://pprmint.art/og/404.jpg" />
+				<meta property="og:image:width" content="1280" />
+				<meta property="og:image:height" content="720" />
+				<meta property="og:title" content="pprmint.art" />
+				<meta property="og:url" content="https://pprmint.art" />
 			</Helmet>
 			<div className="fullscreen">
 				<img src={IceCreamCrimeScene} />

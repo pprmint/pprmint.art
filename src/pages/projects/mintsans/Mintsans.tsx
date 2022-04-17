@@ -1,12 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { useTranslation } from "react-i18next";
 import {
 	Button,
 	Typography,
-	Card,
-	CardContent,
-	CardActions,
 	Container,
 } from "@mui/material";
 
@@ -25,21 +22,34 @@ import SlideFive from "./assets/slide5.svg";
 import SlideSix from "./assets/slide6.svg";
 
 function MintsansDL() {
+    const { t } = useTranslation("translation", {
+		keyPrefix: "projects.mintsans",
+	});
 	return (
 		<>
 			<Helmet>
 				<meta charSet="utf-8" />
-				<title>A sans-serif font • pprmint.art</title>
+				<title>{t("meta.title")}</title>
 				<meta
 					name="description"
 					content="My first geometric font. Not bad for a first attempt, but not good either."
+                    />
+                <meta name="theme-color" content="#1199ff" />
+				<meta
+					property="og:description"
+					content="My first geometric font. Not bad for a first attempt, but not good either."
 				/>
+				<meta property="og:image" content="https://pprmint.art/og/mintsans.jpg" />
+				<meta property="og:image:width" content="1280" />
+				<meta property="og:image:height" content="720" />
+				<meta property="og:title" content="A sans-serif font." />
+				<meta property="og:url" content="https://pprmint.art/mintsans" />
 			</Helmet>
 			<div className="fullscreen">
 				<img src={MintsansBanner} />
 				<Container className="title">
 					<img src={MintsansLogo} />
-					<Typography variant="h2">A sans-serif font.</Typography>
+					<Typography variant="h2">{t("title.sub")}</Typography>
 					<br />
 					<RiArrowDownLine size={25} color="#19f" />
 				</Container>
@@ -91,10 +101,9 @@ function MintsansDL() {
 				</div>
 				<div className="section">
 					<Container>
-						<Typography variant="h1">Mintsans V2</Typography>
+						<Typography variant="h1">{t("section.download.headline")}</Typography>
 						<Typography variant="body1">
-							If you could actually read the text on slide 3 in a sensible
-							order, you deserve a download button.
+                        {t("section.download.description")}
 						</Typography>
 						<br />
 						<Button
@@ -104,7 +113,7 @@ function MintsansDL() {
 							color="info"
 							startIcon={<RiDownload2Line />}
 						>
-							Download
+							{t("section.download.downloadButton")}
 						</Button>
 					</Container>
 				</div>

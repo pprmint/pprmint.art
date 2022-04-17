@@ -943,7 +943,17 @@ function MintcraftSplashes() {
 				<meta
 					name="description"
 					content="The splashes seen in Mintcraft on the title screen."
+                    />
+                <meta name="theme-color" content="#ffbb22" />
+				<meta
+					property="og:description"
+					content="The splashes seen in Mintcraft on the title screen."
 				/>
+				<meta property="og:image" content="https://pprmint.art/og/mintcraft.jpg" />
+				<meta property="og:image:width" content="1280" />
+				<meta property="og:image:height" content="720" />
+				<meta property="og:title" content="splashes.txt" />
+				<meta property="og:url" content="https://pprmint.art/splashes" />
 			</Helmet>
 			<Container className="title">
 				<Typography variant="h1">{t("title.splashes.main")}</Typography>

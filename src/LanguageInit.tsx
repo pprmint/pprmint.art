@@ -29,7 +29,7 @@ const languageMap = {
 	de: { label: "Deutsch", active: false },
 };
 
-const LanguageSetting = () => {
+export default function LanguageSetting() {
 	const selected = localStorage.getItem("i18nextLng") || "en";
 	const { t } = useTranslation("translation", {
 		keyPrefix: "common.settings.language",
@@ -63,7 +63,6 @@ const LanguageSetting = () => {
 		</>
 	);
 };
-export default LanguageSetting;
 
 i18n
 	.use(XHR)

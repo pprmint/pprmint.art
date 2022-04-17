@@ -11,6 +11,7 @@ import {
 	CardActions,
 	Skeleton,
 	Container,
+	Box,
 } from "@mui/material";
 import { Masonry } from "@mui/lab";
 import { useTranslation } from "react-i18next";
@@ -59,25 +60,25 @@ import MainMenuImage from "./gallery/2019/2019-11-10-main_menu.png";
 
 const works2022 = [
 	{
-		src: Statistics,
+		src: "https://media.pprmint.art/works/2022/statistics/statistics-720.png",
 		link: "/projects/works/2022/statistics",
 		alt: "An iPad as part of another project.",
 		ratio: 1 / 1,
 	},
 	{
-		src: iPad,
+		src: "https://media.pprmint.art/works/2022/ipad/ipad-720.png",
 		link: "/projects/works/2022/ipad",
 		alt: "An iPad as part of another project.",
 		ratio: 16 / 9,
 	},
 	{
-		src: ArchWall,
+		src: "https://media.pprmint.art/works/2022/archwall/arch_with_blue_mountains-720.png",
 		link: "/projects/works/2022/archwall",
 		alt: "Arch Linux desktop background with mountains",
 		ratio: 16 / 9,
 	},
 	{
-		src: FordLogo,
+		src: "https://media.pprmint.art/works/2022/ford/ford-720.png",
 		link: "/projects/works/2022/ford",
 		alt: "Ford logo redesign, inspired by Raul Rand.",
 		ratio: 16 / 9,
@@ -93,8 +94,8 @@ const works2021 = [
 	},
 ];
 
-function Projects() {
-    const { t } = useTranslation("translation", {
+export default function Projects() {
+	const { t } = useTranslation("translation", {
 		keyPrefix: "projects",
 	});
 	return (
@@ -102,7 +103,20 @@ function Projects() {
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>{t("meta.title")}</title>
-				<meta name="description" content="Have a look at some of my works, or download some other things I made, like my Minecraft resource pack, fonts or a few wallpapers for your phone and desktop." />
+				<meta
+					name="description"
+					content="Have a look at some of my works, or download some other things I made, like my Minecraft resource pack, fonts or a few wallpapers for your phone and desktop."
+                    />
+                <meta name="theme-color" content="#00cc66" />
+				<meta
+					property="og:description"
+					content="Have a look at some of my works, or download some other things I made, like my Minecraft resource pack, fonts or a few wallpapers for your phone and desktop."
+				/>
+				<meta property="og:image" content="https://pprmint.art/og/index.jpg" />
+				<meta property="og:image:width" content="1280" />
+				<meta property="og:image:height" content="720" />
+				<meta property="og:title" content="My projects." />
+				<meta property="og:url" content="https://pprmint.art/projects" />
 			</Helmet>
 			<Container className="title">
 				<Typography variant="h1">{t("title.main")}</Typography>
@@ -224,31 +238,40 @@ function Projects() {
 				<div className="section" id="works2022">
 					<Container>
 						<Typography variant="h1">2022</Typography>
-						<Masonry columns={{ xs: 1, sm: 2, md: 3 }}>
-							{works2022.map((item) => (
-								<Link to={item.link} key={item.src}>
-									<Card variant="outlined" sx={{ cursor: "pointer" }}>
-										<Image
-											aspectRatio={item.ratio}
-											src={item.src}
-											alt={item.alt}
-											color="transparent"
-											loading={
-												<Skeleton
-													variant="rectangular"
-													animation="wave"
-													width="100%"
-													height="100%"
-												/>
-											}
-										/>
-									</Card>
-								</Link>
-							))}
-						</Masonry>
 					</Container>
+					<Masonry columns={{ xs: 1, sm: 2, md: 3 }} spacing={0}>
+						{works2022.map((item) => (
+							<Link to={item.link} key={item.src}>
+								<Button
+                                    color="inherit"
+									sx={{
+										width: "100%",
+										display: "block",
+										padding: 0,
+										margin: 0,
+                                        borderRadius: 0
+									}}
+								>
+									<Image
+										aspectRatio={item.ratio}
+										src={item.src}
+										alt={item.alt}
+										color="transparent"
+										loading={
+											<Skeleton
+												variant="rectangular"
+												animation="wave"
+												width="100%"
+												height="100%"
+											/>
+										}
+									/>
+								</Button>
+							</Link>
+						))}
+					</Masonry>
 				</div>
-				<div className="section" id="works2021">
+				{/* <div className="section" id="works2021">
 					<Container>
 						<Typography variant="h1">2021</Typography>
 						<Masonry columns={{ xs: 1, sm: 2, md: 3 }}>
@@ -274,10 +297,8 @@ function Projects() {
 							))}
 						</Masonry>
 					</Container>
-				</div>
+				</div> */}
 			</div>
 		</>
 	);
 }
-
-export default Projects;

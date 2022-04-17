@@ -1,24 +1,14 @@
-import React from "react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import {
 	Button,
 	Typography,
 	Alert,
-	Accordion,
-	AccordionSummary,
-	AccordionDetails,
 	Container,
 	Stack,
 	AlertTitle,
 	Grid,
 } from "@mui/material";
 import {
-	RiInformationLine,
-	RiMailLine,
-	RiTwitterLine,
-	RiArrowDownSLine,
-	RiTestTubeLine,
 	RiTestTubeFill,
 } from "react-icons/ri";
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
 import {
 	Container,
 	Typography,
@@ -96,7 +96,7 @@ function ActionsAnnouncementCard(
 	);
 }
 
-function Home() {
+export default function Home() {
 	const { t } = useTranslation();
 	return (
 		<>
@@ -106,7 +106,17 @@ function Home() {
 				<meta
 					name="description"
 					content="I make things look neat with vector points, keyframes, and colorful monospace letters. Have a look at my works or download things you may use for your own intents and purposes."
+                    />
+				<meta name="theme-color" content="#00cc66" />
+				<meta
+					property="og:description"
+					content="I make things look neat with vector points, keyframes, and colorful monospace letters. Have a look at my works or download things you may use for your own intents and purposes."
 				/>
+				<meta property="og:image" content="https://pprmint.art/og/index.jpg" />
+				<meta property="og:image:width" content="1280" />
+				<meta property="og:image:height" content="720" />
+				<meta property="og:title" content="Good today." />
+				<meta property="og:url" content="https://pprmint.art" />
 			</Helmet>
 			<div className="fullscreen">
 				<img src={MintBanner} />
@@ -184,4 +194,3 @@ function Home() {
 		</>
 	);
 }
-export default Home;

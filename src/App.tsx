@@ -325,6 +325,7 @@ function App() {
 					</Switch>
 
 					<footer>
+                        <Divider />
 						<div className="copyright">
 							<Typography variant="body2">
 								{t("common.footer.madeWith")}
