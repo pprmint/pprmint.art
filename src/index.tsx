@@ -90,7 +90,7 @@ const darkTheme = createTheme({
 		MuiSkeleton: {
 			styleOverrides: {
 				root: {
-					backgroundColor: "#222",
+					backgroundColor: "transparent",
 				},
 			},
 		},
