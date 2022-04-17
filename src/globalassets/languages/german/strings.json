@@ -127,14 +127,25 @@
 		"section": {
 			"news": {
 				"announcement": {
-					"layoutChanges": {
-						"boldDescription": "Wenn du nur das glaubst, was du sehen kannst, ist dieses Update genau für dich.",
-						"description": "Der Inhalt auf dem Desktop ist jetzt richtig zentriert, die linken und rechten Ränder auf dem Handy wurden verkleinert und wenn man mit dem Mauszeiger über Textlinks fährt, möchte man das für den Rest seines Lebens tun. Ich habe auch einige Teile der Website umgeschrieben und Komponenten implementiert.",
-						"title": "Eine schicke, neue Domain."
+					"common": {
+						"tellMore": "Erzähl mir mehr"
+					},
+					"german": {
+						"boldText": "Genau nachdem ich eine Domain gekauft habe, weil es hier kein Deutsch gab.",
+						"imageAlt": "Flagge Deutschlands mit dem Text \"Jetzt auch auf Deutsch!\" links daneben.",
+						"text": "Da es mir immer mehr Spaß gemacht hat, mit meiner Website herumzuspielen (und weil meine Mom meine Seite ansehen wollte), habe ich beschlossen, Übersetzungen einzuführen. Du kannst die Sprache jederzeit über die Einstellungen in der Fußzeile ändern, wenn du auf einem Desktop unterwegs bist, oder über das Seitenmenü auf dem Handy.",
+						"title": "Deutsche Übersetzungen!"
+					},
+					"mintcraft14": {
+						"boldText": "Die neue Version meines Ressourcenpakets unterstützt jetzt das Update 1.18 Caves & Cliffs.",
+						"imageAlt": "Die neue Domain, pprmint.art, ist über einer grünen Mülltonne geschrieben. In der Mülltonne befinden sich die Buchstaben d und e der vorherigen Domain. Neben der Tonne steht eine grüne Weinflasche.",
+						"text": "Es enthält neue Symbole, ein leicht angepasstes Farbschema, einige überarbeitete Symbole (sie bewegen sich jetzt) und ein neues Add-on, das den Sound für das Klicken von Buttons ändert.",
+						"title": "Mintcraft Version 1.4 veröffentlicht."
 					},
 					"newDomain": {
-						"boldDescription": "Hast du hier vorher ein einziges Wort auf Deutsch gesehen? Eben.",
-						"description": "Es hat mich immer etwas genevt, dass die Top-Level-Domain dieser Website .de lautete, obwohl sie weniger mein Deutsch-sein und mehr meine Kreationen vorstellen soll. Keine Sorge, pprmint.de wird noch für einige Zeit auf diese neue Domain weiterleiten.",
+						"boldText": "Hast du hier vorher ein einziges Wort auf Deutsch gesehen? Eben.",
+						"imageAlt": "Die neue Domain, pprmint.art, ist über einer grünen Mülltonne geschrieben. In der Mülltonne befinden sich die Buchstaben d und e der vorherigen Domain. Neben der Tonne steht eine grüne Weinflasche.",
+						"text": "Es hat mich immer etwas genevt, dass die Top-Level-Domain dieser Website .de lautete, obwohl sie weniger mein Deutsch-sein und mehr meine Kreationen vorstellen soll. Keine Sorge, pprmint.de wird noch für einige Zeit auf diese neue Domain weiterleiten.",
 						"title": "Eine schicke, neue Domain."
 					}
 				},

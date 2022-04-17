@@ -127,14 +127,25 @@
 		"section": {
 			"news": {
 				"announcement": {
-					"layoutChanges": {
-						"boldDescription": "If you only believe what you see with your own eyes, this update is for you.",
-						"description": "Content on desktop is now properly centered, left and right margins on mobile have been decreased and hovering over text links makes you want to do so for the rest of your life. I also rewrote some parts of the website and implemented components.",
-						"title": "A shiny new domain."
+					"common": {
+						"tellMore": "Tell me more"
+					},
+					"german": {
+						"boldText": "Right after I bought a domain because there was no German around here.",
+						"imageAlt": "German flag with German text left to it that translates to \"Now also in German!\"",
+						"text": "Since I grew to like playing around with my website (and because my mom wanted to have a look at my site), I decided to finally implement translations. You can always change the language from the settings found in the footer if you're on a desktop, or in the drawer on mobile.",
+						"title": "Now also in German!"
+					},
+					"mintcraft14": {
+						"boldText": "The new version of my resource pack now supports the 1.18 Caves & Cliffs update.",
+						"imageAlt": "The new domain, pprmint.art, is written above a green trash can that contains the letters d and e from the previous top level domain. Right next to it is a small green wine bottle.",
+						"text": "It features new icons, a slightly updated color scheme, some tweaked icons (they move now), and a new add-on that changes the button click sound.",
+						"title": "Mintcraft version 1.4 released."
 					},
 					"newDomain": {
-						"boldDescription": "Have you ever seen a single word of German around here? Ganz genau.",
-						"description": "It always bothered me a bit that the top-level domain of this website was .de, even though this website is less about me being German and more about the things I create. Don't worry, pprmint.de will redirect you to the new domain for a while.",
+						"boldText": "Have you ever seen a single word of German around here? Ganz genau.",
+						"imageAlt": "The new domain, pprmint.art, is written above a green trash can that contains the letters d and e from the previous top level domain. Right next to it is a small green wine bottle.",
+						"text": "It always bothered me a bit that the top-level domain of this website was .de, even though this website is less about me being German and more about the things I create. Don't worry, pprmint.de will redirect you to the new domain for a while.",
 						"title": "A shiny new domain."
 					}
 				},
