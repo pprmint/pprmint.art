@@ -1,0 +1,25 @@
+:root {
+	--buttonBorderT: #6c6c6c;
+	--buttonBorderBLR: #2b2b2b;
+	--buttonBG: #3f3f3f;
+	--buttonHoverBorderT: #7a7a7a;
+	--buttonHoverBorderBLR: #303030;
+	--buttonHoverBG: #5e5e5e;
+}
+
+button.Mintcraft {
+	font-family: MintBit;
+	font-weight: normal;
+	font-size: 26px;
+	color: #ffffff;
+	padding: 7px 42px 7px 42px;
+	border: none;
+	border-radius: 0;
+	background-color: var(--buttonBG);
+	text-shadow: 3px 3px 0 var(--buttonBG);
+	box-shadow: 0 -3px 0 var(--buttonBorderT), 0 3px 0 var(--buttonBorderBLR), -3px 0 0 var(--buttonBorderBLR), 3px 0 0 var(--buttonBorderBLR), ;
+	&:hover {
+        background-color: #5e5e5e;
+        box-shadow: 0 -3px 0 var(--buttonHoverBorderT), 0 3px 0 var(--buttonHoverBorderBLR), -3px 0 0 var(--buttonHoverBorderBLR), 3px 0 0 var(--buttonBorderBLR), ;
+	}
+}

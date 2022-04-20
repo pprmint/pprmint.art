@@ -294,7 +294,7 @@
 						"name": "Mintbit font add-on"
 					},
 					"addonSounds": {
-						"description": "Despite this add-on being named after the plural of a word, this pack actually just replaces one sound, which is the button click sound. This one is similar, but less jarring.",
+						"clickMe": "Click me",
 						"name": "Sounds add-on"
 					},
 					"commonDownloadButton": "Download for ",

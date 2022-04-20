@@ -294,7 +294,7 @@
 						"name": "Mintbit Schriftart-Add-on"
 					},
 					"addonSounds": {
-						"description": "Obwohl dieses Add-on nach dem Plural eines Wortes benannt ist, ersetzt es tatsächlich nur einen Ton, nämlich den für Knöpfchenklicks. Dieser ist ähnlich, aber weniger nervtötend.",
+						"clickMe": "Klick mich",
 						"name": "Sounds-Add-on"
 					},
 					"commonDownloadButton": "Herunterladen für ",

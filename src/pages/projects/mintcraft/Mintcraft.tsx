@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import {
@@ -9,15 +8,14 @@ import {
 	ListItem,
 	ListItemIcon,
 	ListItemText,
-	Card,
-	CardContent,
-	CardMedia,
-	CardActions,
 	Container,
 	Stack,
 } from "@mui/material";
 import Image from "material-ui-image";
 import { useTranslation } from "react-i18next";
+
+import "./assets/mintbit.css";
+import "./assets/buttonStyles.scss";
 
 import {
 	RiDownload2Line,
@@ -38,10 +36,9 @@ import Marquee from "react-fast-marquee";
 
 import MintcraftLogo from "./assets/mintcraft_logo.svg";
 import MintcraftBanner from "./assets/mintcraft_banner.svg";
+import ClickSound from "./assets/click_stereo.ogg";
 
 import SlideOne from "./assets/slide1.png";
-import SlideTwo from "./assets/slide2.png";
-import SlideThree from "./assets/slide3.png";
 
 import ScreenshotChest from "./assets/chest.png";
 import ScreenshotBeacon from "./assets/beacon.png";
@@ -68,6 +65,7 @@ export default function MintcraftDL() {
 	const { t } = useTranslation("translation", {
 		keyPrefix: "projects.mintcraft",
 	});
+    let click = new Audio(ClickSound);
 	return (
 		<>
 			<Helmet>
@@ -443,7 +441,8 @@ export default function MintcraftDL() {
 								rel="noopener norefferer"
 							>
 								@The_Ruby872
-							</a>{t("section.credits.twitterFellas.description2")}
+							</a>
+							{t("section.credits.twitterFellas.description2")}
 							<a
 								className="external"
 								href="https://twitter.com/Iucidcelestial"
@@ -451,8 +450,12 @@ export default function MintcraftDL() {
 								rel="noopener norefferer"
 							>
 								@Iucidcelestial
-							</a>{t("section.credits.twitterFellas.description3")}
-                            <Link to="/projects/mintcraft/splashes">{t("section.credits.twitterFellas.descriptionLink")}</Link>.
+							</a>
+							{t("section.credits.twitterFellas.description3")}
+							<Link to="/projects/mintcraft/splashes">
+								{t("section.credits.twitterFellas.descriptionLink")}
+							</Link>
+							.
 						</Typography>
 					</Container>
 				</div>
@@ -636,9 +639,8 @@ export default function MintcraftDL() {
 								<Typography variant="h1">
 									{t("section.download.addonSounds.name")}
 								</Typography>
-								<Typography variant="body1">
-									{t("section.download.addonSounds.description")}
-								</Typography>
+								<button className="Mintcraft" onClick={() => click.play()}>{t("section.download.addonSounds.clickMe")}</button>
+								<br />
 								<br />
 								<Stack spacing={2} direction="row">
 									<Button
