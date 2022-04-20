@@ -136,11 +136,11 @@
 						"text": "Da es mir immer mehr Spaß gemacht hat, mit meiner Website herumzuspielen (und weil meine Mom meine Seite ansehen wollte), habe ich beschlossen, Übersetzungen einzuführen. Du kannst die Sprache jederzeit über die Einstellungen in der Fußzeile ändern, wenn du auf einem Desktop unterwegs bist, oder über das Seitenmenü auf dem Handy.",
 						"title": "Deutsche Übersetzungen!"
 					},
-					"mintcraft14": {
-						"boldText": "Die neue Version meines Ressourcenpakets unterstützt jetzt das Update 1.18 Caves & Cliffs.",
+					"mintcraft15": {
+						"boldText": "Anpassen von Farben und Hinzufügen übersehener Texturen.",
 						"imageAlt": "Die neue Domain, pprmint.art, ist über einer grünen Mülltonne geschrieben. In der Mülltonne befinden sich die Buchstaben d und e der vorherigen Domain. Neben der Tonne steht eine grüne Weinflasche.",
-						"text": "Es enthält neue Symbole, ein leicht angepasstes Farbschema, einige überarbeitete Symbole (sie bewegen sich jetzt) und ein neues Add-on, das den Sound für das Klicken von Buttons ändert.",
-						"title": "Mintcraft Version 1.4 veröffentlicht."
+						"text": "Ich habe nicht nur fragwürdige Splash-Texte einiger meiner Twitter-Follower, sondern auch fehlende Texturen (gefrorene Herzen, Schmiedetisch...) hinzugefügt, sowie Bestehende (Widgets, Ping-Anzeigen, Rezeptbuch...) verbessert. Schau's dir definitv an, denn habe ich dir erstmal erzählt, dass Texte auf Buttons immer einen Schatten warfen, der nur ein bisschen heller war als der Hintergrund, wirst du es nie wieder übersehen.",
+						"title": "Mintcraft Version 1.5 veröffentlicht."
 					},
 					"newDomain": {
 						"boldText": "Hast du hier vorher ein einziges Wort auf Deutsch gesehen? Eben.",
@@ -243,22 +243,31 @@
 			"section": {
 				"changes": {
 					"addition": {
-						"supportNewVersion": "Support für Minecraft 1.18 hinzugefügt."
+						"1": "Weitere Splash-Texte meiner Twitter-Follower hinzugefügt.",
+						"2": "Fehlende Texturen für gefrorene Herzen, Bündel, Spielmodi-Wechsler, Schmiedetisch, Texthintergründe für Fortschritte und andere Teile von Texturen hinzugefügt, die es in früheren Spielversionen nicht gab.",
+						"3": "Dunklere Blocktexturen für Fortschritte-Hintergründe hinzugefügt.",
+						"1more": "Vollständige Liste der Splash-Texte"
 					},
-					"headline": "Änderungen in Version 1.4",
-					"removal": {
-						"music": "Musik von C418 entfernt."
-					},
+					"headline": "Änderungen in Version 1.5",
 					"update": {
-						"accentColors": "Verbesserte Akzentfarben und die der Hungerleiste.",
-						"textureBeacon": "Verbesserte Textur für Leuchtfeuer mit weiterer Trennlinie.",
-						"textureButtonIcons": "Verbesserte Texturen für Buttons für bewegte Symbole.",
-						"textureLogos": "Verbessertes Mintcraft-Logo im Lade- und Titelbildschirm.",
-						"texturePackIcons": "Verbesserte Paketsymbole."
+						"1": "Uneinheitliche Farben aller Buttons und Container verbessert.",
+						"2": "Tabs im Fortschritte-Fenster verbessert.",
+						"3": "Ankreuzfeld welches beim ersten Öffnen des Mehrspieler-Bildschirms angezeigt wird verbessert.",
+						"4": "Texturen für Zaubertisch, Rezeptbuch, Ping-Anzeigen und Pfeile zur Welt-/Server-/Ressourcenpaket-Auswahl verbessert.",
+						"5": "Verschiedene Icons und Buttons für Realms angepasst.",
+						"6": "Buttons mit Symbolen angepasst, sodass sie jetzt wie solche mit Text einen Schatten werfen, wenn mit der Maus darübergefahren wird.",
+						"7": "Sprach-Dateien mit den Aktuellsten aus dem Vanilla Tweaks Dark-UI-Pack ersetzt. Nur für den Fall."
 					}
 				},
 				"credits": {
 					"headline": "Mitwirkende",
+					"twitterFellas": {
+						"description1": "Ein herzliches Danke an ",
+						"description2": " und ",
+						"description3": " für eure komischen Splash-Texte. Ihr findest Links zu euren jeweiligen Tweets in ",
+						"descriptionLink": "dieser Liste",
+						"name": "Ein paar Leute auf Twitter"
+					},
 					"vanillatweaks": {
 						"description": "JSON-Dateien, um einige Textfarben zu korrigieren. Erinnerst du dich noch, wie ich sagte, dass dieses Paket nur mit 3 Sprachen kompatibel war? Ja, das wurde hiermit behoben.",
 						"name": "Vanilla Tweaks"
@@ -334,7 +343,7 @@
 					"cardText": "Ich habe mir die Material-Icons von Google angesehen und bemerkt, dass einige davon Text enthalten. Das Gute: Die Zahlen. Das Schlechte: Dieser dumme Name. Und die Seite für diese Schriftart. Die ist noch in Arbeit."
 				},
 				"mintcraft": {
-					"cardText": "Was als ein einfaches \"Ich mag die normalen Farben der Minecraft-Oberfläche nicht so\" anfing, endete damit, dass ich das ganze Interface moderner gestalten wollte, indem ich die Farben und Symbole anpasse."
+					"cardText": "Was als ein einfaches \"Ich mag die Farben der normalen Minecraft-Oberfläche nicht so\" anfing, endete als ein mit drei Spielversionen kompatibles Ressourcenpaket mit zwei Add-ons zum Ändern der Schriftart und des Sounds für Buttons."
 				},
 				"mintsans": {
 					"cardText": "Mein erster Versuch, eine geometrische Schriftfamilie zu erstellen. Eine optimierte Version ist in Entwicklung und wird mindestens dreimal so lange dauern, wie ich für die Erstellung der folgenden Seite gebraucht habe."

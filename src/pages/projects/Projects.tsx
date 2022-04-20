@@ -12,6 +12,7 @@ import {
 	Skeleton,
 	Container,
 	Box,
+	Badge,
 } from "@mui/material";
 import { Masonry } from "@mui/lab";
 import { useTranslation } from "react-i18next";
@@ -106,8 +107,8 @@ export default function Projects() {
 				<meta
 					name="description"
 					content="Have a look at some of my works, or download some other things I made, like my Minecraft resource pack, fonts or a few wallpapers for your phone and desktop."
-                    />
-                <meta name="theme-color" content="#00cc66" />
+				/>
+				<meta name="theme-color" content="#00cc66" />
 				<meta
 					property="og:description"
 					content="Have a look at some of my works, or download some other things I made, like my Minecraft resource pack, fonts or a few wallpapers for your phone and desktop."
@@ -125,8 +126,15 @@ export default function Projects() {
 			<div className="content">
 				<div className="section" id="projects">
 					<Container>
-						<Grid container spacing={3}>
-							<Grid item xs={12} md={6}>
+						<Masonry columns={{ xs: 1, md: 2 }} spacing={2}>
+							<Badge
+								badgeContent={"1.5"}
+								color="warning"
+								anchorOrigin={{
+									vertical: "top",
+									horizontal: "left",
+								}}
+							>
 								<Card variant="outlined">
 									<CardMedia
 										component="img"
@@ -140,7 +148,7 @@ export default function Projects() {
 									</CardContent>
 									<CardActions>
 										<Button
-											href="https://download.pprmint.art/mintcraft/Mintcraft_1.4-118.zip"
+											href="https://download.pprmint.art/mintcraft/1.18/Mintcraft_1.5.zip"
 											download
 											color="warning"
 										>
@@ -151,88 +159,82 @@ export default function Projects() {
 										</Link>
 									</CardActions>
 								</Card>
-							</Grid>
-							<Grid item xs={12} md={6}>
-								<Card variant="outlined">
-									<CardMedia
-										component="img"
-										image={MintSansCardHeader}
-										alt="MintSans- well, it's hardly a logo, more like just the name of the font set in MintSans itself."
-									/>
-									<CardContent>
-										<Typography variant="body1">
-											{t("section.project.mintsans.cardText")}
-										</Typography>
-									</CardContent>
-									<CardActions>
-										<Button
-											href="https://download.pprmint.art/mintsans_2.0.zip"
-											download
-											color="secondary"
-										>
-											{t("downloadLatest")}
-										</Button>
-										<Link to="/projects/mintsans">
-											<Button color="inherit">{t("learnMore")}</Button>
-										</Link>
-									</CardActions>
-								</Card>
-							</Grid>
-							<Grid item xs={12} md={6}>
-								<Card variant="outlined">
-									<CardMedia
-										component="img"
-										image={MintAltCardHeader}
-										alt="The MintAlternative 'logo' with a 2K Material icon behind it. Get it? It's funny because the want was inspired by Material icons."
-									/>
-									<CardContent>
-										<Typography variant="body1">
-											{t("section.project.mintalt.cardText")}
-										</Typography>
-									</CardContent>
-									<CardActions>
-										<Button
-											href="https://download.pprmint.art/mintalternative_1.1.zip"
-											download
-											color="error"
-										>
-											{t("downloadLatest")}
-										</Button>
-										{/* <Link to="/projects/mintsans"> */}
-										<Button color="inherit" disabled>
-											{t("learnMore")}
-										</Button>
-										{/* </Link> */}
-									</CardActions>
-								</Card>
-							</Grid>
-							<Grid item xs={12} md={6}>
-								<Card variant="outlined">
-									<CardMedia
-										component="img"
-										image={Win10TilesCardHeader}
-										alt="Some Windows 10 tiles. With 'Windows 10 tiles' being written above them."
-									/>
-									<CardContent>
-										<Typography variant="body1">
-											{t("section.project.startmenutiles.cardText")}
-										</Typography>
-									</CardContent>
-									<CardActions>
-										<Button
-											href="https://download.pprmint.art/win10tiles.zip"
-											download
-											color="primary"
-										>
-											{t("downloadLatest")}
-										</Button>
-										<Link to="/projects/win10tiles">
-											<Button color="inherit">{t("learnMore")}</Button>
-										</Link>
-									</CardActions>
-								</Card>
-							</Grid>
-						</Grid>
+							</Badge>
+							<Card variant="outlined">
+								<CardMedia
+									component="img"
+									image={MintSansCardHeader}
+									alt="MintSans- well, it's hardly a logo, more like just the name of the font set in MintSans itself."
+								/>
+								<CardContent>
+									<Typography variant="body1">
+										{t("section.project.mintsans.cardText")}
+									</Typography>
+								</CardContent>
+								<CardActions>
+									<Button
+										href="https://download.pprmint.art/mintsans_2.0.zip"
+										download
+										color="secondary"
+									>
+										{t("downloadLatest")}
+									</Button>
+									<Link to="/projects/mintsans">
+										<Button color="inherit">{t("learnMore")}</Button>
+									</Link>
+								</CardActions>
+							</Card>
+							<Card variant="outlined">
+								<CardMedia
+									component="img"
+									image={MintAltCardHeader}
+									alt="The MintAlternative 'logo' with a 2K Material icon behind it. Get it? It's funny because the want was inspired by Material icons."
+								/>
+								<CardContent>
+									<Typography variant="body1">
+										{t("section.project.mintalt.cardText")}
+									</Typography>
+								</CardContent>
+								<CardActions>
+									<Button
+										href="https://download.pprmint.art/mintalternative_1.1.zip"
+										download
+										color="error"
+									>
+										{t("downloadLatest")}
+									</Button>
+									{/* <Link to="/projects/mintsans"> */}
+									<Button color="inherit" disabled>
+										{t("learnMore")}
+									</Button>
+									{/* </Link> */}
+								</CardActions>
+							</Card>
+							<Card variant="outlined">
+								<CardMedia
+									component="img"
+									image={Win10TilesCardHeader}
+									alt="Some Windows 10 tiles. With 'Windows 10 tiles' being written above them."
+								/>
+								<CardContent>
+									<Typography variant="body1">
+										{t("section.project.startmenutiles.cardText")}
+									</Typography>
+								</CardContent>
+								<CardActions>
+									<Button
+										href="https://download.pprmint.art/win10tiles.zip"
+										download
+										color="primary"
+									>
+										{t("downloadLatest")}
+									</Button>
+									<Link to="/projects/win10tiles">
+										<Button color="inherit">{t("learnMore")}</Button>
+									</Link>
+								</CardActions>
+							</Card>
+						</Masonry>
 					</Container>
 				</div>
 				<div className="section" id="works2022">
@@ -243,13 +245,13 @@ export default function Projects() {
 						{works2022.map((item) => (
 							<Link to={item.link} key={item.src}>
 								<Button
-                                    color="inherit"
+									color="inherit"
 									sx={{
 										width: "100%",
 										display: "block",
 										padding: 0,
 										margin: 0,
-                                        borderRadius: 0
+										borderRadius: 0,
 									}}
 								>
 									<Image

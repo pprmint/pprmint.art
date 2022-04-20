@@ -99,6 +99,21 @@ export default function Home() {
 						<Typography variant="h1">{t("section.news.title")}</Typography>
 						<br />
 						<AnnouncementCard
+							imageSrc={NewsMintcraft}
+							imageAlt={t("section.news.announcement.mintcraft15.imageAlt")}
+							date="20.04.2022"
+							headline={t("section.news.announcement.mintcraft15.title")}
+							strongText={t("section.news.announcement.mintcraft15.boldText")}
+							text={t("section.news.announcement.mintcraft15.text")}
+						>
+							<Link to="/projects/mintcraft">
+								<Button variant="contained" color="warning">
+									{t("section.news.announcement.common.tellMore")}
+								</Button>
+							</Link>
+						</AnnouncementCard>
+						<br />
+						<AnnouncementCard
 							imageSrc={NewsGerman}
 							imageAlt={t("section.news.announcement.german.imageAlt")}
 							date="18.04.2022"
@@ -115,21 +130,6 @@ export default function Home() {
 							strongText={t("section.news.announcement.newDomain.boldText")}
 							text={t("section.news.announcement.newDomain.text")}
 						/>
-						<br />
-						<AnnouncementCard
-							imageSrc={NewsMintcraft}
-							imageAlt={t("section.news.announcement.mintcraft14.imageAlt")}
-							date="19.12.2021"
-							headline={t("section.news.announcement.mintcraft14.title")}
-							strongText={t("section.news.announcement.mintcraft14.boldText")}
-							text={t("section.news.announcement.mintcraft14.text")}
-						>
-							<Link to="/projects/mintcraft">
-								<Button variant="contained" color="warning">
-									{t("section.news.announcement.common.tellMore")}
-								</Button>
-							</Link>
-						</AnnouncementCard>
 					</Container>
 				</div>
 			</div>

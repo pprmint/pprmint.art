@@ -136,11 +136,11 @@
 						"text": "Since I grew to like playing around with my website (and because my mom wanted to have a look at my site), I decided to finally implement translations. You can always change the language from the settings found in the footer if you're on a desktop, or in the drawer on mobile.",
 						"title": "Now also in German!"
 					},
-					"mintcraft14": {
-						"boldText": "The new version of my resource pack now supports the 1.18 Caves & Cliffs update.",
+					"mintcraft15": {
+						"boldText": "Optimizing colors and adding overlooked textures.",
 						"imageAlt": "The new domain, pprmint.art, is written above a green trash can that contains the letters d and e from the previous top level domain. Right next to it is a small green wine bottle.",
-						"text": "It features new icons, a slightly updated color scheme, some tweaked icons (they move now), and a new add-on that changes the button click sound.",
-						"title": "Mintcraft version 1.4 released."
+						"text": "Not only have I added some questionable quotes by some of my Twitter followers, I also added some missing textures (frozen hearts, smithing table...) and improved existing ones (widgets, ping indicators, recipe book...). Definitely check it out, because once I told you that texts on buttons in the previous version had a drop shadow that was ever so slightly lighter than the background, you won't unsee it.",
+						"title": "Mintcraft version 1.5 released."
 					},
 					"newDomain": {
 						"boldText": "Have you ever seen a single word of German around here? Ganz genau.",
@@ -243,22 +243,31 @@
 			"section": {
 				"changes": {
 					"addition": {
-						"supportNewVersion": "Added support for Minecraft 1.18."
+						"1": "Added more splash texts submitted by my Twitter followers.",
+						"2": "Added missing textures for frozen hearts, bundles, gamemode switcher, toasts, smithing table, advancement widgets and other parts of textures that weren't a thing previous game versions.",
+						"3": "Added darker block textures for the advancements window backgrounds.",
+						"1more": "Full list of splash texts"
 					},
-					"headline": "Changes in version 1.4",
-					"removal": {
-						"music": "Removed music by C418."
-					},
+					"headline": "Changes in version 1.5",
 					"update": {
-						"accentColors": "Updated accent colors and those of the hunger bar.",
-						"textureBeacon": "Updated texture for beacon UI to have another divider line.",
-						"textureButtonIcons": "Updated textures for some icon buttons to move on hover.",
-						"textureLogos": "Updated Mintcraft logos on loading and title screen.",
-						"texturePackIcons": "Updated resouce pack icons."
+						"1": "Fixed inconsistent colors for all buttons and containers.",
+						"2": "Improved tabs in the advancements window.",
+						"3": "Fixed checkbox shown when first opening the Multiplayer screen.",
+						"4": "Updated textures for the enchanting table, recipe book, connection indicators and arrows for world/server/resource pack selection.",
+						"5": "Updated several icons and buttons relating to Realms.",
+						"6": "Updated buttons with icons so they also show a drop shadow when hovering over them, much like texts on buttons do.",
+						"7": "Updated language files with the latest currently available in the Vanilla Tweaks Dark UI pack. Just in case."
 					}
 				},
 				"credits": {
 					"headline": "Credits",
+					"twitterFellas": {
+						"description1": "Many thanks to ",
+						"description2": " and ",
+						"description3": " for your witty splash texts. You can find links to your respective tweets in ",
+						"descriptionLink": "this list",
+						"name": "Some fellas on Twitter"
+					},
 					"vanillatweaks": {
 						"description": "JSON files to fix some text colors. Remember how I said this pack was only compatible with 3 languages? Yeah that was fixed with this.",
 						"name": "Vanilla Tweaks"
@@ -334,7 +343,7 @@
 					"cardText": "I looked at Google's Material icons, noticed some had text in them, and went \"Huh.\" The good: Numbers. The bad: That stupid name. And the page for this font. That's still in the works."
 				},
 				"mintcraft": {
-					"cardText": "What started as a simple \"I don't like the colors of the default Minceraft UI\" ended with me trying to make the UI look more modern, changing up the colors and a bit of the iconography."
+					"cardText": "What started as a simple \"I don't like the colors of the default Minceraft UI\" ended as a resource pack compatible with three game versions and two optional add-ons to change the font and button click sound."
 				},
 				"mintsans": {
 					"cardText": "My first attempt at creating a geometric font family. A more optimized version is in development and will take at least thrice as long as it has taken me to make the following page."
