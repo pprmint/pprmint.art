@@ -301,6 +301,10 @@
 					"mintcraft": {
 						"description": "My resource pack providing you with dark-mode containers and a selfish-color palette and many other tweaks. Some icons even move when you hover over them!",
 						"name": "Mintcraft"
+					},
+					"saucecraft": {
+						"description": "Too lazy to download all packs individually? Download the latest version of Mintcraft and all add-ons combined in one handy pack.",
+						"name": "The Full Sauce"
 					}
 				},
 				"installation": {

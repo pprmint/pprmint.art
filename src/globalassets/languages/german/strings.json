@@ -301,6 +301,10 @@
 					"mintcraft": {
 						"description": "Mein Ressourcenpaket versorgt dich mit Dark-Mode Containern, einer Ego-Farbpalette und vielen anderen Optimierungen. Einige Icons bewegen sich sogar, wenn man mit dem Mauszeiger über sie fährt!",
 						"name": "Mintcraft"
+					},
+					"saucecraft": {
+						"description": "Zu faul um alle Pakete einzeln runterzuladen? Lade dir die aktuellste Version von Mintcraft zusammen mit allen Add-ons in einem Paket herunter.",
+						"name": "Das Komplettpaket"
 					}
 				},
 				"installation": {

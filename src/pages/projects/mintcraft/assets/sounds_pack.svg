@@ -2,10 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="100%" height="100%" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:1.5;">
     <rect x="0" y="0" width="64" height="64"/>
-    <clipPath id="_clip1">
-        <rect x="0" y="0" width="64" height="64"/>
-    </clipPath>
-    <g clip-path="url(#_clip1)">
+    <g>
         <g opacity="0.25">
             <g transform="matrix(21.5,12.413,4.26996e-15,99.3042,-54,-18)">
                 <rect x="0" y="0" width="4" height="1" style="fill:rgb(127,127,127);fill-opacity:0.5;"/>
@@ -25,11 +22,11 @@
                 <path d="M43,27L43,37L39,37L39,39L43,39L43,37L45,37L45,27L43,27ZM41,35L41,29L39,29L39,35L41,35ZM43,25L39,25L39,27L43,27L43,25Z" style="fill:rgb(238,238,238);"/>
             </g>
             <g transform="matrix(1,0,0,1,-4,6)">
-                <path d="M27,37L29,37L29,39L31,39L31,41L33,41L33,43L35,43L35,21L33,21L33,23L31,23L31,25L29,25L29,27L27,27L27,37ZM27,23L27,25L25,25L25,39L27,39L27,41L29,41L29,43L31,43L31,45L37,45L37,19L31,19L31,21L29,21L29,23L27,23Z" style="fill:rgb(255,187,34);"/>
+                <path d="M27,37L27,27L29,27L29,25L31,25L31,23L33,23L33,21L35,21L35,43L33,43L33,41L31,41L31,39L29,39L29,37L27,37ZM27,23L27,25L25,25L25,39L27,39L27,41L29,41L29,43L31,43L31,45L37,45L37,19L31,19L31,21L29,21L29,23L27,23Z" style="fill:rgb(255,187,34);"/>
             </g>
         </g>
         <g transform="matrix(0.291667,0,0,0.411765,0.166667,37.8235)">
-            <path d="M32,32L32,49" style="fill:none;stroke:url(#_Linear2);stroke-width:2.8px;"/>
+            <path d="M32,32L32,49" style="fill:none;stroke:url(#_Linear1);stroke-width:2.8px;"/>
         </g>
         <g transform="matrix(1.78594e-17,-0.291667,0.411765,2.52133e-17,-7.17647,63.8333)">
             <path d="M32,32L32,49" style="fill:none;stroke:rgb(255,187,34);stroke-width:2.8px;"/>
@@ -55,9 +52,9 @@
             </g>
         </g>
     </g>
-    <rect x="0" y="0" width="64" height="64" style="fill:none;stroke:url(#_Linear3);stroke-width:1px;"/>
+    <rect x="0" y="0" width="64" height="64" style="fill:none;stroke:url(#_Linear2);stroke-width:1px;"/>
     <defs>
-        <linearGradient id="_Linear2" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.46958e-15,-17,24,1.04095e-15,32,49)"><stop offset="0" style="stop-color:rgb(221,153,34);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(153,102,0);stop-opacity:1"/></linearGradient>
-        <linearGradient id="_Linear3" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(64,64,-64,64,0,0)"><stop offset="0" style="stop-color:white;stop-opacity:0.1"/><stop offset="1" style="stop-color:white;stop-opacity:0"/></linearGradient>
+        <linearGradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.04095e-15,-17,17,1.04095e-15,32,49)"><stop offset="0" style="stop-color:rgb(221,153,34);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(153,102,0);stop-opacity:1"/></linearGradient>
+        <linearGradient id="_Linear2" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(64,64,-64,64,0,0)"><stop offset="0" style="stop-color:white;stop-opacity:0.1"/><stop offset="1" style="stop-color:white;stop-opacity:0"/></linearGradient>
     </defs>
 </svg>

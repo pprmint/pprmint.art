@@ -10,6 +10,7 @@ import {
 	ListItemText,
 	Container,
 	Stack,
+	Card,
 } from "@mui/material";
 import Image from "material-ui-image";
 import { useTranslation } from "react-i18next";
@@ -39,7 +40,6 @@ import MintcraftBanner from "./assets/mintcraft_banner.svg";
 import ClickSound from "./assets/click_stereo.ogg";
 
 import SlideOne from "./assets/slide1.png";
-
 import ScreenshotChest from "./assets/chest.png";
 import ScreenshotBeacon from "./assets/beacon.png";
 import ScreenshotInventory from "./assets/inventory.png";
@@ -48,6 +48,7 @@ import ScreenshotFurnace from "./assets/furnace.png";
 import ScreenshotAnvil from "./assets/anvil.png";
 
 import MintcraftPack from "./assets/mintcraft_pack.svg";
+import SaucyPack from "./assets/mintcraft_fullsauce_pack.svg";
 import MintbitPack from "./assets/mintbit_pack.svg";
 import SoundsPack from "./assets/sounds_pack.svg";
 
@@ -65,7 +66,7 @@ export default function MintcraftDL() {
 	const { t } = useTranslation("translation", {
 		keyPrefix: "projects.mintcraft",
 	});
-    let click = new Audio(ClickSound);
+	let click = new Audio(ClickSound);
 	return (
 		<>
 			<Helmet>
@@ -527,7 +528,40 @@ export default function MintcraftDL() {
 						</List>
 					</Container>
 				</div>
-				<div className="section" id="download">
+				<div className="section">
+					<Container>
+						<Card variant="outlined" sx={{ p: 3 }}>
+							<Grid container spacing={4}>
+								<Grid item xs={4} md={2.4}>
+									<Image
+										src={SaucyPack}
+										alt="Mintcraft Full Sauce icon"
+										color="transparent"
+									/>
+								</Grid>
+								<Grid item xs={12} md={9}>
+									<Typography variant="h1">
+										{t("section.download.saucecraft.name")}
+									</Typography>
+									<Typography variant="body1">
+										{t("section.download.saucecraft.description")}
+									</Typography>
+									<br />
+									<Button
+										variant="contained"
+										href="https://download.pprmint.art/mintcraft/1.18/Mintcraft_1.5_(FullSauce).zip"
+										download
+										color="warning"
+										startIcon={<RiDownload2Line />}
+									>
+										{t("section.download.commonDownloadButton")}1.18
+									</Button>
+								</Grid>
+							</Grid>
+						</Card>
+					</Container>
+				</div>
+				<div className="section">
 					<Container>
 						<Grid container spacing={4}>
 							<Grid item xs={4} md={2.4}>
@@ -639,7 +673,9 @@ export default function MintcraftDL() {
 								<Typography variant="h1">
 									{t("section.download.addonSounds.name")}
 								</Typography>
-								<button className="Mintcraft" onClick={() => click.play()}>{t("section.download.addonSounds.clickMe")}</button>
+								<button className="Mintcraft" onClick={() => click.play()}>
+									{t("section.download.addonSounds.clickMe")}
+								</button>
 								<br />
 								<br />
 								<Stack spacing={2} direction="row">
