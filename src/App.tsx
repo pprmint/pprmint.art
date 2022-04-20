@@ -60,7 +60,6 @@ import CookieSnackbar from "./CookieSnackbar";
 
 import Wordmark from "./globalassets/wordmark.svg";
 
-/* import "./globalassets/fonts/archia.css"; */
 import "./globalassets/fonts/silka.css";
 import "./globalassets/fonts/basier_square.css";
 
