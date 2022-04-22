@@ -549,7 +549,7 @@ export default function MintcraftDL() {
 									<br />
 									<Button
 										variant="contained"
-										href="https://download.pprmint.art/mintcraft/1.18/Mintcraft_1.5_(FullSauce).zip"
+										href="https://download.pprmint.art/mintcraft/1.18/Mintcraft_1.5.1_(FullSauce).zip"
 										download
 										color="warning"
 										startIcon={<RiDownload2Line />}
@@ -631,7 +631,7 @@ export default function MintcraftDL() {
 								<Stack spacing={2} direction="row">
 									<Button
 										variant="contained"
-										href="https://download.pprmint.art/mintcraft/1.18/MintBit_Addon_1.0.zip"
+										href="https://download.pprmint.art/mintcraft/1.18/MintBit_Add-on_1.0.zip"
 										download
 										color="warning"
 										startIcon={<RiDownload2Line />}
@@ -640,7 +640,7 @@ export default function MintcraftDL() {
 									</Button>
 									<Button
 										variant="outlined"
-										href="https://download.pprmint.art/mintcraft/1.17/MintBit_Addon_1.0.zip"
+										href="https://download.pprmint.art/mintcraft/1.17/MintBit_Add-on_1.0.zip"
 										download
 										color="inherit"
 									>
@@ -648,7 +648,7 @@ export default function MintcraftDL() {
 									</Button>
 									<Button
 										variant="outlined"
-										href="https://download.pprmint.art/mintcraft/1.16/MintBit_Addon_1.0.zip"
+										href="https://download.pprmint.art/mintcraft/1.16/MintBit_Add-on_1.0.zip"
 										download
 										color="inherit"
 									>
@@ -681,7 +681,7 @@ export default function MintcraftDL() {
 								<Stack spacing={2} direction="row">
 									<Button
 										variant="contained"
-										href="https://download.pprmint.art/mintcraft/1.18/Sounds_Addon_1.0.zip"
+										href="https://download.pprmint.art/mintcraft/1.18/Sounds_Add-on_1.1.zip"
 										download
 										color="warning"
 										startIcon={<RiDownload2Line />}
@@ -690,7 +690,7 @@ export default function MintcraftDL() {
 									</Button>
 									<Button
 										variant="outlined"
-										href="https://download.pprmint.art/mintcraft/1.17/Sounds_Addon_1.0.zip"
+										href="https://download.pprmint.art/mintcraft/1.17/Sounds_Add-on_1.0.zip"
 										download
 										color="inherit"
 									>
@@ -698,7 +698,7 @@ export default function MintcraftDL() {
 									</Button>
 									<Button
 										variant="outlined"
-										href="https://download.pprmint.art/mintcraft/1.16/Sounds_Addon_1.0.zip"
+										href="https://download.pprmint.art/mintcraft/1.16/Sounds_Add-on_1.0.zip"
 										download
 										color="inherit"
 									>

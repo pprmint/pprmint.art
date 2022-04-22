@@ -433,15 +433,15 @@
 					},
 					"title": {
 						"main": "Arch Hintergrundbild.",
-						"sub": "Ich hatte nebenbei Arch benutzt."
+						"sub": "Ich hatte mal Arch benutzt nebenbei."
 					}
 				},
 				"ford": {
 					"meta": {
-						"title": "Ford Rebrand • pprmint.art"
+						"title": "Ford Rebrand-Konzept • pprmint.art"
 					},
 					"title": {
-						"main": "Ford Rebranding.",
+						"main": "Ford Rebrand-Konzept.",
 						"sub": "Konzept inspiriert von einem Design von Paul Rand in 1966."
 					}
 				},
@@ -469,6 +469,15 @@
 					"title": {
 						"main": "Like-Statistiken für @ProgressBar202_.",
 						"sub": "Vor Silvester war mir sehr langweilig."
+					}
+				},
+				"suseRebrand": {
+					"meta": {
+						"title": "SUSE Rebrand-Konzept • pprmint.art"
+					},
+					"title": {
+						"main": "SUSE Rebrand-Konzept.",
+						"sub": "Oder: Übertrieben vereinfachtes Chamäleon."
 					}
 				}
 			}

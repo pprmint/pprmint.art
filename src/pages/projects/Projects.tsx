@@ -61,26 +61,32 @@ import MainMenuImage from "./gallery/2019/2019-11-10-main_menu.png";
 
 const works2022 = [
 	{
-		src: "https://media.pprmint.art/works/2022/statistics/statistics-720.png",
-		link: "/projects/works/2022/statistics",
-		alt: "An iPad as part of another project.",
+		src: "https://media.pprmint.art/2022/SUSE/suse-720.png",
+		link: "/projects/2022/suserebrand",
+		alt: "Oversimplified/redesigned logo for SUSE.",
+		ratio: 16 / 9,
+	},
+	{
+		src: "https://media.pprmint.art/2022/Statistics/statistics-720.png",
+		link: "/projects/2022/statistics",
+		alt: "Like statistics for the @ProgressBar202_ Twitter account.",
 		ratio: 1 / 1,
 	},
 	{
-		src: "https://media.pprmint.art/works/2022/ipad/ipad-720.png",
-		link: "/projects/works/2022/ipad",
+		src: "https://media.pprmint.art/2022/iPad/iPad-720.png",
+		link: "/projects/2022/ipad",
 		alt: "An iPad as part of another project.",
 		ratio: 16 / 9,
 	},
 	{
-		src: "https://media.pprmint.art/works/2022/archwall/arch_with_blue_mountains-720.png",
-		link: "/projects/works/2022/archwall",
+		src: "https://media.pprmint.art/2022/ArchWall/Arch_Qogir-720.png",
+		link: "/projects/2022/archwall",
 		alt: "Arch Linux desktop background with mountains",
 		ratio: 16 / 9,
 	},
 	{
-		src: "https://media.pprmint.art/works/2022/ford/ford-720.png",
-		link: "/projects/works/2022/ford",
+		src: "https://media.pprmint.art/2022/Ford/Ford-720.png",
+		link: "/projects/2022/ford",
 		alt: "Ford logo redesign, inspired by Raul Rand.",
 		ratio: 16 / 9,
 	},
@@ -89,7 +95,7 @@ const works2022 = [
 const works2021 = [
 	{
 		src: ManjaroWall,
-		link: "/projects/works/2021/manjarowall",
+		link: "/projects/2021/manjarowall",
 		alt: "Manjaro desktop background with Nyan-Cat style, I guess.",
 		ratio: 16 / 9,
 	},
@@ -148,7 +154,7 @@ export default function Projects() {
 									</CardContent>
 									<CardActions>
 										<Button
-											href="https://download.pprmint.art/mintcraft/1.18/Mintcraft_1.5.zip"
+											href="https://download.pprmint.art/mintcraft/1.18/Mintcraft_1.5.1_(FullSauce).zip"
 											download
 											color="warning"
 										>

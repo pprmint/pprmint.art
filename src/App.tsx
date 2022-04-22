@@ -39,10 +39,11 @@ import MintcraftSplashes from "./pages/projects/mintcraft/Splashes";
 import Win10TilesDL from "./pages/projects/win10tiles/Win10Tiles";
 
 // Works 2022
-import Statistics from "./pages/projects/gallery/2022/statistics/LikeStatistics";
-import Ipad from "./pages/projects/gallery/2022/ipad/iPad"; // this hurts
-import ArchWall from "./pages/projects/gallery/2022/archwall/ArchWall";
-import Ford from "./pages/projects/gallery/2022/ford/Ford";
+import suseRebrand from "./pages/projects/gallery/2022/suseRebrand";
+import Statistics from "./pages/projects/gallery/2022/LikeStatistics";
+import Ipad from "./pages/projects/gallery/2022/iPad"; // this hurts
+import ArchWall from "./pages/projects/gallery/2022/ArchWall";
+import Ford from "./pages/projects/gallery/2022/Ford";
 
 // Works 2021
 import ManjaroWall from "./pages/projects/gallery/2021/manjarowall/ManjaroWall";
@@ -287,16 +288,24 @@ function App() {
 
 						{/* Works of 2022 */}
 						<Route
-							path="/projects/works/2022/statistics"
+							path="/projects/2022/suserebrand"
+							component={suseRebrand}
+						/>
+						<Route
+							path="/projects/2022/statistics"
 							component={Statistics}
 						/>
-						<Route path="/projects/works/2022/ipad" component={Ipad} />
-						<Route path="/projects/works/2022/ford" component={Ford} />
-						<Route path="/projects/works/2022/archwall" component={ArchWall} />
+						<Route
+							path="/projects/2022/statistics"
+							component={Statistics}
+						/>
+						<Route path="/projects/2022/ipad" component={Ipad} />
+						<Route path="/projects/2022/ford" component={Ford} />
+						<Route path="/projects/2022/archwall" component={ArchWall} />
 
 						{/* Works of 2021 */}
 						<Route
-							path="/projects/works/2021/manjarowall"
+							path="/projects/2021/manjarowall"
 							component={ManjaroWall}
 						/>
 
@@ -307,8 +316,8 @@ function App() {
 
 						<Redirect from="/works" to="/projects" />
 						<Redirect from="/downloads" to="/projects" />
-						<Redirect from="/projects/works/2022" exact to="/projects" />
-						<Redirect from="/projects/works/2021" exact to="/projects" />
+						<Redirect from="/projects/2022" exact to="/projects" />
+						<Redirect from="/projects/2021" exact to="/projects" />
 						<Redirect from="/faq" to="/contact" />
 						<Redirect from="/mintcraft" to="/projects/mintcraft" />
 						<Redirect
