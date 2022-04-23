@@ -260,6 +260,10 @@
 					}
 				},
 				"credits": {
+					"blizzy": {
+						"description": "For his custom songs available in the Sounds add-on. More tracks to come.",
+						"name": "Blizzy?"
+					},
 					"headline": "Credits",
 					"twitterFellas": {
 						"description1": "Many thanks to ",

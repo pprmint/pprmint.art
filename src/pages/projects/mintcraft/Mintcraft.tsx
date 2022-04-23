@@ -311,6 +311,20 @@ export default function MintcraftDL() {
 						</Typography>
 						<br />
 						<Typography variant="h2">
+							<a
+								className="external"
+								href="https://twitter.com/AfkBlizzy"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								{t("section.credits.blizzy.name")}
+							</a>
+						</Typography>
+						<Typography variant="body1">
+							{t("section.credits.blizzy.description")}
+						</Typography>
+						<br />
+						<Typography variant="h2">
 							{t("section.credits.twitterFellas.name")}
 						</Typography>
 						<Typography variant="body1">

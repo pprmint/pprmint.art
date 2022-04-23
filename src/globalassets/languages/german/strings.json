@@ -260,6 +260,10 @@
 					}
 				},
 				"credits": {
+					"blizzy": {
+						"description": "Für seine eigenen Songs im Sounds-Add-on. Weitere Titel werden folgen.",
+						"name": "Blizzy?"
+					},
 					"headline": "Mitwirkende",
 					"twitterFellas": {
 						"description1": "Ein herzliches Danke an ",
