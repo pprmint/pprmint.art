@@ -66,6 +66,7 @@ import "./globalassets/fonts/basier_square.css";
 
 import {
 	RiBehanceLine,
+	RiDiscordLine,
 	RiGithubLine,
 	RiHeartFill,
 	RiMenu2Line,
@@ -362,6 +363,9 @@ function App() {
 							</IconLink>
 							<IconLink href="https://github.com/pprmint">
 								<RiGithubLine />
+							</IconLink>
+							<IconLink href="https://discord.com/invite/Vw9JXwr">
+								<RiDiscordLine />
 							</IconLink>
 							<Box
 								ml="0 !important"
