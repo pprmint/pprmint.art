@@ -61,6 +61,12 @@ import MainMenuImage from "./gallery/2019/2019-11-10-main_menu.png";
 
 const works2022 = [
 	{
+		src: "https://media.pprmint.art/2022/Geoices/geoballs-720.png",
+		link: "/projects/2022/geoices",
+		alt: "3D remake of Geoices' logo.",
+		ratio: 16 / 9,
+	},
+	{
 		src: "https://media.pprmint.art/2022/SUSE/suse-720.png",
 		link: "/projects/2022/suserebrand",
 		alt: "Oversimplified/redesigned logo for SUSE.",

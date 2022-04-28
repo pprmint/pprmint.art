@@ -39,6 +39,7 @@ import MintcraftSplashes from "./pages/projects/mintcraft/Splashes";
 import Win10TilesDL from "./pages/projects/win10tiles/Win10Tiles";
 
 // Works 2022
+import Geoices from "./pages/projects/gallery/2022/Geoices";
 import suseRebrand from "./pages/projects/gallery/2022/suseRebrand";
 import Statistics from "./pages/projects/gallery/2022/LikeStatistics";
 import Ipad from "./pages/projects/gallery/2022/iPad"; // this hurts
@@ -288,6 +289,10 @@ function App() {
 						<Route path="/projects/win10tiles" component={Win10TilesDL} />
 
 						{/* Works of 2022 */}
+						<Route
+							path="/projects/2022/geoices"
+							component={Geoices}
+						/>
 						<Route
 							path="/projects/2022/suserebrand"
 							component={suseRebrand}
