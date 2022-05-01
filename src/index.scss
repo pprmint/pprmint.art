@@ -1,9 +1,8 @@
 html {
 	overflow-x: hidden;
 }
-
 body {
-    padding-right: 0px !important; // can't quite figure out why MUI likes to change the padding when opening a menu or dialog
+	padding-right: 0px !important; // can't quite figure out why MUI likes to change the padding when opening a menu or dialog
 }
 
 :root {
@@ -30,8 +29,12 @@ body {
 	--boxInsetH2: -2.75rem;
 	--boxInsetH3: -2rem;
 	/* Fonts */
-	--fontPrimary: Silka, Metropolis, "Clarity City", Monserrat, Roboto, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, Arial, sans-serif;
-	--fontSecondary: "Basier Square", Roboto, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, Arial, sans-serif;
+	--fontPrimary: Silka, Metropolis, "Clarity City", Monserrat, Roboto,
+		"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica,
+		Arial, Arial, sans-serif;
+	--fontSecondary: "Basier Square", Roboto, "HelveticaNeue-Light",
+		"Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, Arial,
+		sans-serif;
 	/* Top margin */
 	--marginTop: 145px;
 	@media only screen and (max-width: 1199px) {
@@ -68,7 +71,7 @@ body {
 		opacity: 0;
 		transform: translateY(20px);
 	}
-	50% {
+	75% {
 		opacity: 1;
 	}
 	100% {
@@ -81,12 +84,38 @@ body {
 		opacity: 0;
 		transform: translateY(-20px);
 	}
-	50% {
+	75% {
 		opacity: 1;
 	}
 	100% {
 		opacity: 1;
 		transform: translateY(0px);
+	}
+}
+@keyframes fadeLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(-20px);
+	}
+	75% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+@keyframes fadeRight {
+	0% {
+		opacity: 0;
+		transform: translateX(20px);
+	}
+	75% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0px);
 	}
 }
 @keyframes fadeTopLoop {
@@ -103,6 +132,26 @@ body {
 	}
 }
 
+.fadeBottom {
+	opacity: 0;
+	animation: fadeBottom var(--easeOut) forwards;
+	animation-duration: 0.375s !important;
+	animation-delay: 0.05s !important;
+}
+.fadeLeft {
+	opacity: 0;
+	animation: fadeLeft var(--easeOut) forwards;
+	animation-duration: 0.375s !important;
+	animation-delay: 0.05s !important;
+}
+.fadeRight {
+	opacity: 0;
+	animation: fadeRight var(--easeOut) forwards;
+	animation-duration: 0.375s !important;
+	animation-delay: 0.05s !important;
+}
+
+// Optimized text sizes on mobile
 @media only screen and (max-width: 1199px) {
 	h1 {
 		font-size: 3rem !important;
@@ -112,15 +161,16 @@ body {
 	}
 }
 
+// Change color of navigation links in desktop app bar
 .navlink a {
 	display: inline-block;
 	transition: all 0.2s var(--easeOut);
 	color: var(--textPrimary);
 	text-align: right;
 	margin-left: 15px;
-    &.active {
-        color: var(--textSecondary) !important;
-    }
+	&.active {
+		color: var(--textSecondary) !important;
+	}
 	&:hover {
 		color: var(--textSecondary);
 	}
@@ -136,49 +186,82 @@ body {
 }
 .MuiDialog-paper {
 	opacity: 0;
-	animation: fadeBottom 0.375s var(--easeOut) .14s forwards;
+	animation: fadeBottom 0.375s var(--easeOut) 0.14s forwards;
 	transition: 0.375s;
 }
 
 .section {
-    margin-top: 10vh;
+	margin-top: 10vh;
 	margin-bottom: 10vh;
-    opacity: 0;
-    animation: fadeBottom 0.375s var(--easeOut) 0.12s forwards;
-    &:first-of-type {
-        animation-delay: 0.08s;
-    }
+	z-index: 1;
 }
 
 footer {
-    text-align: center;
-    hr {
-        opacity: 0;
-        animation: fadeBottom 0.375s var(--easeOut) 0.16s forwards;
-    }
+	text-align: center;
+	hr {
+		opacity: 0;
+		animation: fadeBottom 0.375s var(--easeOut) 0.16s forwards;
+	}
 	.copyright {
-        opacity: 0;
-        padding-top: 40px;
+		opacity: 0;
+		padding-top: 40px;
 		animation: fadeBottom 0.375s var(--easeOut) 0.2s forwards;
 	}
-    #footerButtons {
-        padding-bottom: 40px;
+	#footerButtons {
+		padding-bottom: 40px;
 		.MuiIconButton-sizeLarge,
-        .MuiButton-root,
-        .MuiDivider-root {
+		.MuiButton-root,
+		.MuiDivider-root {
 			opacity: 0;
 			animation: fadeBottom 0.375s var(--easeOut) 0.24s forwards;
 			margin: 5px;
 		}
 	}
 }
+
+// Page headers
+
+// Background image
+img.hero {
+	position: absolute;
+	z-index: 0;
+	animation: fadeTop 1.2s var(--easeOut) 0.2s forwards;
+	opacity: 0;
+	width: 100%;
+	height: auto;
+    margin-top: calc(-1 * var(--marginTop));
+    &.fullscreen {
+        margin-top: 0;
+    }
+}
+
+// Regular title
+.title {
+	margin-top: var(--marginTop);
+	margin-bottom: 25px;
+	h1 {
+		animation: fadeBottom 0.375s var(--easeOut) forwards;
+		opacity: 0;
+		font-size: 6rem;
+	}
+	h2 {
+		animation: fadeBottom 0.375s var(--easeOut) 0.04s forwards;
+		opacity: 0;
+		font-size: 2.25rem;
+	}
+	@media only screen and (max-width: 1199px) {
+		h1 {
+			font-size: 3.5rem !important;
+		}
+		h2 {
+			font-size: 1.5rem !important;
+		}
+	}
+}
+// Vertically centered title texts for pages I think are worthy of one
 .fullscreen {
 	height: 100vh;
 	position: relative;
-	img {
-		animation: fadeTop 1.2s var(--easeOut) 0.2s forwards;
-		opacity: 0;
-	}
 	.title {
 		position: absolute;
 		top: 40vh;
@@ -208,29 +291,6 @@ footer {
 		svg {
 			opacity: 0;
 			animation: fadeTopLoop 1s var(--easeOut) 1.5s infinite;
-		}
-	}
-}
-
-.title {
-	margin-top: var(--marginTop);
-	margin-bottom: 25px;
-	h1 {
-		animation: fadeBottom 0.375s var(--easeOut) forwards;
-		opacity: 0;
-		font-size: 6rem;
-	}
-	h2 {
-		animation: fadeBottom 0.375s var(--easeOut) 0.04s forwards;
-		opacity: 0;
-		font-size: 2.25rem;
-	}
-	@media only screen and (max-width: 1199px) {
-		h1 {
-			font-size: 3.5rem !important;
-		}
-		h2 {
-			font-size: 1.5rem !important;
 		}
 	}
 }
@@ -287,7 +347,7 @@ p a.external {
 /* That arrow */
 a.external::after {
 	content: "↗";
-    font-family: var(--fontPrimary);
+	font-family: var(--fontPrimary);
 	color: var(--bluePrimary);
 	transition: all 0.15s;
 	position: relative;
@@ -314,6 +374,10 @@ h3 a.external:hover {
 img {
 	-webkit-user-drag: none;
 	user-select: none;
+}
+
+video {
+	margin-bottom: -0.41rem;
 }
 
 .MuiListItemIcon-root {

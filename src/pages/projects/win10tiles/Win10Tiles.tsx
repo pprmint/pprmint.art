@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
+import ScrollAnimation from "react-animate-on-scroll";
 import { Button, Typography, Grid, Container, Skeleton } from "@mui/material";
 import Image from "material-ui-image";
 
@@ -12,7 +13,6 @@ import AfterEffects from "./assets/After_Effects.png";
 import Aseprite from "./assets/Aseprite.png";
 import Audition from "./assets/Audition.png";
 import Blender from "./assets/Blender.png";
-import Bundled from "./assets/Bundled.png";
 import Cinema4D from "./assets/Cinema_4D.png";
 import Code from "./assets/Code.png";
 import Designer from "./assets/Designer.png";
@@ -97,20 +97,23 @@ export default function Win10TilesDL() {
 				<meta
 					name="description"
 					content="Make your start menu pretty (maybe) by using these in yours. Best if you're running version 20H2 or later."
-                    />
-                <meta name="theme-color" content="#00cc66" />
+				/>
+				<meta name="theme-color" content="#00cc66" />
 				<meta
 					property="og:description"
 					content="Make your start menu pretty (maybe) by using these in yours. Best if you're running version 20H2 or later."
 				/>
-				<meta property="og:image" content="https://pprmint.art/og/win10tiles.jpg" />
+				<meta
+					property="og:image"
+					content="https://pprmint.art/og/win10tiles.jpg"
+				/>
 				<meta property="og:image:width" content="1280" />
 				<meta property="og:image:height" content="720" />
 				<meta property="og:title" content="Start menu tiles." />
 				<meta property="og:url" content="https://pprmint.art/win10tiles" />
 			</Helmet>
+			<img src={TilesBanner} className="hero fullscreen" />
 			<div className="fullscreen">
-				<img src={TilesBanner} />
 				<Container className="title">
 					<img src={TilesLogo} />
 					<Typography variant="h2">{t("title.sub")}</Typography>
@@ -118,11 +121,11 @@ export default function Win10TilesDL() {
 					<RiArrowDownLine size={25} color="#0c3" />
 				</Container>
 			</div>
-			<div className="content">
-				<div className="section" id="creative">
-					<Container maxWidth="xl">
-						<Grid container spacing={4}>
-							<Grid item xs={12} md={5}>
+			<div className="section" id="creative">
+				<Container maxWidth="xl">
+					<Grid container spacing={4}>
+						<Grid item xs={12} md={5}>
+							<ScrollAnimation animateIn="fadeLeft" animateOnce>
 								<Grid container spacing={1}>
 									{tilesCreative.map((item) => (
 										<Grid item xs={3} key={item.alt}>
@@ -143,8 +146,10 @@ export default function Win10TilesDL() {
 										</Grid>
 									))}
 								</Grid>
-							</Grid>
-							<Grid item xs={12} md={7}>
+							</ScrollAnimation>
+						</Grid>
+						<Grid item xs={12} md={7}>
+							<ScrollAnimation animateIn="fadeRight" animateOnce>
 								<Typography variant="h2">
 									{t("section.creative.subtitle")}
 								</Typography>
@@ -157,19 +162,16 @@ export default function Win10TilesDL() {
 									<br />
 									{t("section.creative.text2")}
 								</Typography>
-							</Grid>
+							</ScrollAnimation>
 						</Grid>
-					</Container>
-				</div>
-				<div className="section" id="social">
-					<Container maxWidth="xl">
-						<Grid container spacing={4}>
-							<Grid
-								item
-								xs={12}
-								md={5}
-								sx={{ display: { xs: "flex", md: "none" } }}
-							>
+					</Grid>
+				</Container>
+			</div>
+			<div className="section" id="gaming">
+				<Container maxWidth="xl">
+					<Grid container spacing={4}>
+						<Grid item xs={12} md={5}>
+							<ScrollAnimation animateIn="fadeLeft" animateOnce>
 								<Grid container spacing={1}>
 									{tilesSocial.map((item) => (
 										<Grid item xs={3} key={item.alt}>
@@ -190,8 +192,10 @@ export default function Win10TilesDL() {
 										</Grid>
 									))}
 								</Grid>
-							</Grid>
-							<Grid item xs={12} md={7}>
+							</ScrollAnimation>
+						</Grid>
+						<Grid item xs={12} md={7}>
+							<ScrollAnimation animateIn="fadeRight" animateOnce>
 								<Typography variant="h2">
 									{t("section.social.subtitle")}
 								</Typography>
@@ -201,36 +205,16 @@ export default function Win10TilesDL() {
 								<Typography variant="body1">
 									{t("section.social.text")}
 								</Typography>
-							</Grid>
-							<Grid item xs={12} md={5} sx={{display: {xs: "none", md: "flex"}}}>
-								<Grid container spacing={1}>
-									{tilesSocial.map((item) => (
-										<Grid item xs={3} key={item.alt}>
-											<Image
-												src={item.src}
-												width="100%"
-												color="#222222"
-												alt={item.alt}
-												loading={
-													<Skeleton
-														variant="rectangular"
-														animation="wave"
-														width="100%"
-														height="100%"
-													/>
-												}
-											/>
-										</Grid>
-									))}
-								</Grid>
-							</Grid>
+							</ScrollAnimation>
 						</Grid>
-					</Container>
-				</div>
-				<div className="section" id="gaming">
-					<Container maxWidth="xl">
-						<Grid container spacing={4}>
-							<Grid item xs={12} md={5}>
+					</Grid>
+				</Container>
+			</div>
+			<div className="section" id="gaming">
+				<Container maxWidth="xl">
+					<Grid container spacing={4}>
+						<Grid item xs={12} md={5}>
+							<ScrollAnimation animateIn="fadeLeft" animateOnce>
 								<Grid container spacing={1}>
 									{tilesGames.map((item) => (
 										<Grid item xs={3} key={item.alt}>
@@ -251,8 +235,10 @@ export default function Win10TilesDL() {
 										</Grid>
 									))}
 								</Grid>
-							</Grid>
-							<Grid item xs={12} md={7}>
+							</ScrollAnimation>
+						</Grid>
+						<Grid item xs={12} md={7}>
+							<ScrollAnimation animateIn="fadeRight" animateOnce>
 								<Typography variant="h2">
 									{t("section.gaming.subtitle")}
 								</Typography>
@@ -262,65 +248,73 @@ export default function Win10TilesDL() {
 								<Typography variant="body1">
 									{t("section.gaming.text")}
 								</Typography>
-							</Grid>
+							</ScrollAnimation>
 						</Grid>
-					</Container>
-				</div>
-				<div className="section" id="other">
-					<Container maxWidth="xl">
+					</Grid>
+				</Container>
+			</div>
+			<div className="section" id="other">
+				<Container maxWidth="xl">
+					<ScrollAnimation animateIn="fadeBottom" animateOnce>
 						<Typography variant="h1" textAlign="center">
 							{t("section.more.headline")}
 						</Typography>
 						<Grid container spacing={4}>
 							<Grid item xs={12} md={6}>
-								<Grid container spacing={1}>
-									{tilesOther1.map((item) => (
-										<Grid item xs={3} key={item.alt}>
-											<Image
-												src={item.src}
-												width="500px"
-												color="#222222"
-												alt={item.alt}
-												loading={
-													<Skeleton
-														variant="rectangular"
-														animation="wave"
-														width="100%"
-														height="100%"
-													/>
-												}
-											/>
-										</Grid>
-									))}
-								</Grid>
+								<ScrollAnimation animateIn="fadeRight" animateOnce>
+									<Grid container spacing={1}>
+										{tilesOther1.map((item) => (
+											<Grid item xs={3} key={item.alt}>
+												<Image
+													src={item.src}
+													width="500px"
+													color="#222222"
+													alt={item.alt}
+													loading={
+														<Skeleton
+															variant="rectangular"
+															animation="wave"
+															width="100%"
+															height="100%"
+														/>
+													}
+												/>
+											</Grid>
+										))}
+									</Grid>
+								</ScrollAnimation>
 							</Grid>
 							<Grid item xs={12} md={6}>
-								<Grid container spacing={1}>
-									{tilesOther2.map((item) => (
-										<Grid item xs={3} key={item.alt}>
-											<Image
-												src={item.src}
-												width="500px"
-												color="#222222"
-												alt={item.alt}
-												loading={
-													<Skeleton
-														variant="rectangular"
-														animation="wave"
-														width="100%"
-														height="100%"
-													/>
-												}
-											/>
-										</Grid>
-									))}
-								</Grid>
+								<ScrollAnimation animateIn="fadeLeft" animateOnce>
+									<Grid container spacing={1}>
+										{tilesOther2.map((item) => (
+											<Grid item xs={3} key={item.alt}>
+												<Image
+													src={item.src}
+													width="500px"
+													color="#222222"
+													alt={item.alt}
+													loading={
+														<Skeleton
+															variant="rectangular"
+															animation="wave"
+															width="100%"
+															height="100%"
+														/>
+													}
+												/>
+											</Grid>
+										))}
+									</Grid>
+								</ScrollAnimation>
 							</Grid>
 						</Grid>
-					</Container>
-				</div>
-				<div className="section" id="download">
-					<Container>
+					</ScrollAnimation>
+				</Container>
+			</div>
+			<div className="section" id="download">
+				<Container>
+					<ScrollAnimation animateIn="fadeBottom" animateOnce>
 						<Typography variant="h1">
 							{t("section.download.headline")}
 						</Typography>
@@ -355,8 +349,8 @@ export default function Win10TilesDL() {
 						>
 							{t("section.download.downloadButton")}
 						</Button>
-					</Container>
-				</div>
+					</ScrollAnimation>
+				</Container>
 			</div>
 		</>
 	);

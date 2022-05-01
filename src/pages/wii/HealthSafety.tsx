@@ -14,7 +14,7 @@ import ErrorSound from "./assets/Sample_0011.wav";
 
 import "./assets/popupStyles.scss";
 
-function HealthSafety() {
+export default function HealthSafety() {
 	let hover = new Audio(HoverSound);
 	let click = new Audio(ClickSound);
 	let error = new Audio(ErrorSound);
@@ -47,5 +47,3 @@ function HealthSafety() {
 		</>
 	);
 }
-
-export default HealthSafety;

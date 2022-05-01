@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
+import ScrollAnimation from "react-animate-on-scroll";
 import { Typography, Skeleton, Container } from "@mui/material";
-
 import Image from "material-ui-image";
 
 export default function Geoices() {
@@ -36,11 +36,23 @@ export default function Geoices() {
 			</Helmet>
 			<Container className="title">
 				<Typography variant="h1">{t("title.main")}</Typography>
-				<Typography variant="h2"><a className="external" href="https://twitter.com/geoices" target="_blank" rel="noopener noreferrer">{t("title.sub")}</a></Typography>
+				<Typography variant="h2">
+					<a
+						className="external"
+						href="https://twitter.com/geoices"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						{t("title.sub")}
+					</a>
+				</Typography>
 			</Container>
-			<div className="content">
-				<div className="section">
-					<a href="https://media.pprmint.art/2022/Geoices/geoballs.png" target="_blank">
+			<div className="section">
+				<ScrollAnimation animateIn="fadeBottom" animateOnce>
+					<a
+						href="https://media.pprmint.art/2022/Geoices/geoballs.png"
+						target="_blank"
+					>
 						<Image
 							src="https://media.pprmint.art/2022/Geoices/geoballs.png"
 							width="100%"
@@ -57,7 +69,7 @@ export default function Geoices() {
 							}
 						/>
 					</a>
-				</div>
+				</ScrollAnimation>
 			</div>
 		</>
 	);

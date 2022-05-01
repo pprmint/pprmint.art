@@ -16,6 +16,7 @@ import {
 } from "@mui/material";
 import { Masonry } from "@mui/lab";
 import { useTranslation } from "react-i18next";
+import ScrollAnimation from "react-animate-on-scroll";
 
 import Image from "material-ui-image";
 
@@ -60,6 +61,12 @@ import RadioThreeImage from "./gallery/2020/2020-01-22-radio3.png";
 import MainMenuImage from "./gallery/2019/2019-11-10-main_menu.png";
 
 const works2022 = [
+	{
+		src: "https://media.pprmint.art/2022/WiiRemake/WiiRemake-720.png",
+		link: "/projects/2022/wiimenu",
+		alt: "Modern remake of the Wii Menu.",
+		ratio: 16 / 9,
+	},
 	{
 		src: "https://media.pprmint.art/2022/Geoices/geoballs-720.png",
 		link: "/projects/2022/geoices",
@@ -135,43 +142,35 @@ export default function Projects() {
 				<Typography variant="h1">{t("title.main")}</Typography>
 				<Typography variant="h2">{t("title.sub")}</Typography>
 			</Container>
-			<div className="content">
-				<div className="section" id="projects">
-					<Container>
+
+			<div className="section" id="projects">
+				<Container maxWidth="xl">
+					<ScrollAnimation animateIn="fadeBottom" animateOnce>
 						<Masonry columns={{ xs: 1, md: 2 }} spacing={2}>
-							<Badge
-								badgeContent={"1.5"}
-								color="warning"
-								anchorOrigin={{
-									vertical: "top",
-									horizontal: "left",
-								}}
-							>
-								<Card variant="outlined">
-									<CardMedia
-										component="img"
-										image={MintcraftCardHeader}
-										alt="Mintcraft logo"
-									/>
-									<CardContent>
-										<Typography variant="body1">
-											{t("section.project.mintcraft.cardText")}
-										</Typography>
-									</CardContent>
-									<CardActions>
-										<Button
-											href="https://download.pprmint.art/mintcraft/1.18/Mintcraft_1.5.1_(FullSauce).zip"
-											download
-											color="warning"
-										>
-											{t("downloadLatest")}
-										</Button>
-										<Link to="/projects/mintcraft">
-											<Button color="inherit">{t("learnMore")}</Button>
-										</Link>
-									</CardActions>
-								</Card>
-							</Badge>
+							<Card variant="outlined">
+								<CardMedia
+									component="img"
+									image={MintcraftCardHeader}
+									alt="Mintcraft logo"
+								/>
+								<CardContent>
+									<Typography variant="body1">
+										{t("section.project.mintcraft.cardText")}
+									</Typography>
+								</CardContent>
+								<CardActions>
+									<Button
+										href="https://download.pprmint.art/mintcraft/1.18/Mintcraft_1.5.1_(FullSauce).zip"
+										download
+										color="warning"
+									>
+										{t("downloadLatest")}
+									</Button>
+									<Link to="/projects/mintcraft">
+										<Button color="inherit">{t("learnMore")}</Button>
+									</Link>
+								</CardActions>
+							</Card>
 							<Card variant="outlined">
 								<CardMedia
 									component="img"
@@ -247,15 +246,19 @@ export default function Projects() {
 								</CardActions>
 							</Card>
 						</Masonry>
-					</Container>
-				</div>
-				<div className="section" id="works2022">
-					<Container>
+					</ScrollAnimation>
+				</Container>
+			</div>
+			<div className="section" id="works2022">
+				<Container>
+					<ScrollAnimation animateIn="fadeBottom" animateOnce>
 						<Typography variant="h1">2022</Typography>
-					</Container>
-					<Masonry columns={{ xs: 1, sm: 2, md: 3 }} spacing={0}>
-						{works2022.map((item) => (
-							<Link to={item.link} key={item.src}>
+					</ScrollAnimation>
+				</Container>
+				<Masonry columns={{ xs: 1, sm: 2, md: 3 }} spacing={0}>
+					{works2022.map((item, index) => (
+						<ScrollAnimation key={index} animateIn="fadeBottom" animateOnce>
+							<Link to={item.link}>
 								<Button
 									color="inherit"
 									sx={{
@@ -282,10 +285,11 @@ export default function Projects() {
 									/>
 								</Button>
 							</Link>
-						))}
-					</Masonry>
-				</div>
-				{/* <div className="section" id="works2021">
+						</ScrollAnimation>
+					))}
+				</Masonry>
+			</div>
+			{/* <div className="section" id="works2021">
 					<Container>
 						<Typography variant="h1">2021</Typography>
 						<Masonry columns={{ xs: 1, sm: 2, md: 3 }}>
@@ -312,7 +316,6 @@ export default function Projects() {
 						</Masonry>
 					</Container>
 				</div> */}
-			</div>
 		</>
 	);
 }

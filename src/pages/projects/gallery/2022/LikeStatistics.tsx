@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
+import ScrollAnimation from "react-animate-on-scroll";
 import { Typography, Skeleton, Container } from "@mui/material";
-
 import Image from "material-ui-image";
 
 export default function LikeStatistics() {
@@ -38,9 +38,12 @@ export default function LikeStatistics() {
 				<Typography variant="h1">{t("title.main")}</Typography>
 				<Typography variant="h2">{t("title.sub")}</Typography>
 			</Container>
-			<div className="content">
-				<div className="section">
-					<a href="https://media.pprmint.art/2022/Statistics/statistics.png" target="_blank">
+			<div className="section">
+				<ScrollAnimation animateIn="fadeBottom" animateOnce>
+					<a
+						href="https://media.pprmint.art/2022/Statistics/statistics.png"
+						target="_blank"
+					>
 						<Image
 							src="https://media.pprmint.art/2022/Statistics/statistics.png"
 							width="100%"
@@ -63,7 +66,7 @@ export default function LikeStatistics() {
 						<br />
 						{t("captions.graphs2")}
 					</Typography>
-				</div>
+				</ScrollAnimation>
 			</div>
 		</>
 	);

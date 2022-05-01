@@ -7,7 +7,7 @@ import { Typography, Container } from "@mui/material";
 import PylonScene from "./assets/pylon.svg";
 
 function Wip() {
-    const { t } = useTranslation("translation", {
+	const { t } = useTranslation("translation", {
 		keyPrefix: "wip",
 	});
 	return (
@@ -18,8 +18,8 @@ function Wip() {
 				<meta
 					name="description"
 					content="This page is not quite ready yet. Check back at a later time."
-                    />
-                <meta name="theme-color" content="#ffbb22" />
+				/>
+				<meta name="theme-color" content="#ffbb22" />
 				<meta
 					property="og:description"
 					content="This page is not quite ready yet. Check back at a later time."
@@ -30,8 +30,8 @@ function Wip() {
 				<meta property="og:title" content="pprmint.art" />
 				<meta property="og:url" content="https://pprmint.art" />
 			</Helmet>
+			<img src={PylonScene} className="hero fullscreen" />
 			<div className="fullscreen">
-            <img src={PylonScene} />
 				<Container className="title">
 					<Typography variant="h1">{t("title.main")}</Typography>
 					<Typography variant="h2">{t("title.sub")}</Typography>

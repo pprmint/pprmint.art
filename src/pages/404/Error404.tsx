@@ -18,7 +18,7 @@ function FourOhFour() {
 				<meta
 					name="description"
 					content="This page was not found. Unless you found it on Google, somehow, which means you technically found it...? Which probably means that I royally fucked something up."
-                    />
+				/>
 				<meta name="theme-color" content="#ffbb22" />
 				<meta
 					property="og:description"
@@ -30,8 +30,8 @@ function FourOhFour() {
 				<meta property="og:title" content="pprmint.art" />
 				<meta property="og:url" content="https://pprmint.art" />
 			</Helmet>
+			<img src={IceCreamCrimeScene} className="hero fullscreen" />
 			<div className="fullscreen">
-				<img src={IceCreamCrimeScene} />
 				<Container className="title">
 					<Typography variant="h1">{t("title.main")}</Typography>
 					<Typography variant="h2">{t("title.sub")}</Typography>

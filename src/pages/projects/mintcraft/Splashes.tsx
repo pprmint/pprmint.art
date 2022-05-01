@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import ScrollAnimation from "react-animate-on-scroll";
 import { Typography, List, ListItem, Container } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
@@ -943,13 +944,16 @@ function MintcraftSplashes() {
 				<meta
 					name="description"
 					content="The splashes seen in Mintcraft on the title screen."
-                    />
-                <meta name="theme-color" content="#ffbb22" />
+				/>
+				<meta name="theme-color" content="#ffbb22" />
 				<meta
 					property="og:description"
 					content="The splashes seen in Mintcraft on the title screen."
 				/>
-				<meta property="og:image" content="https://pprmint.art/og/mintcraft.jpg" />
+				<meta
+					property="og:image"
+					content="https://pprmint.art/og/mintcraft.jpg"
+				/>
 				<meta property="og:image:width" content="1280" />
 				<meta property="og:image:height" content="720" />
 				<meta property="og:title" content="splashes.txt" />
@@ -959,9 +963,9 @@ function MintcraftSplashes() {
 				<Typography variant="h1">{t("title.splashes.main")}</Typography>
 				<Typography variant="h2">{t("title.splashes.sub")}</Typography>
 			</Container>
-			<div className="content">
-				<div className="section" id="changes">
-					<Container>
+			<div className="section" id="changes">
+				<Container>
+					<ScrollAnimation animateIn="fadeBottom" animateOnce>
 						<List>
 							{splashes.map((item) => (
 								<ListItem>
@@ -969,8 +973,8 @@ function MintcraftSplashes() {
 								</ListItem>
 							))}
 						</List>
-					</Container>
-				</div>
+					</ScrollAnimation>
+				</Container>
 			</div>
 		</>
 	);

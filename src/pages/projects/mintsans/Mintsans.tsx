@@ -1,11 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
-import {
-	Button,
-	Typography,
-	Container,
-} from "@mui/material";
+import ScrollAnimation from "react-animate-on-scroll";
+import { Button, Typography, Container } from "@mui/material";
 
 import Image from "material-ui-image";
 
@@ -21,8 +18,8 @@ import SlideFour from "./assets/slide4.svg";
 import SlideFive from "./assets/slide5.svg";
 import SlideSix from "./assets/slide6.svg";
 
-function MintsansDL() {
-    const { t } = useTranslation("translation", {
+export default function MintsansDL() {
+	const { t } = useTranslation("translation", {
 		keyPrefix: "projects.mintsans",
 	});
 	return (
@@ -33,20 +30,23 @@ function MintsansDL() {
 				<meta
 					name="description"
 					content="My first geometric font. Not bad for a first attempt, but not good either."
-                    />
-                <meta name="theme-color" content="#1199ff" />
+				/>
+				<meta name="theme-color" content="#1199ff" />
 				<meta
 					property="og:description"
 					content="My first geometric font. Not bad for a first attempt, but not good either."
 				/>
-				<meta property="og:image" content="https://pprmint.art/og/mintsans.jpg" />
+				<meta
+					property="og:image"
+					content="https://pprmint.art/og/mintsans.jpg"
+				/>
 				<meta property="og:image:width" content="1280" />
 				<meta property="og:image:height" content="720" />
 				<meta property="og:title" content="A sans-serif font." />
 				<meta property="og:url" content="https://pprmint.art/mintsans" />
 			</Helmet>
+			<img src={MintsansBanner} className="hero fullscreen" />
 			<div className="fullscreen">
-				<img src={MintsansBanner} />
 				<Container className="title">
 					<img src={MintsansLogo} />
 					<Typography variant="h2">{t("title.sub")}</Typography>
@@ -54,8 +54,8 @@ function MintsansDL() {
 					<RiArrowDownLine size={25} color="#19f" />
 				</Container>
 			</div>
-			<div className="content">
-				<div className="section">
+			<div className="section">
+				<ScrollAnimation animateIn="fadeBottom" animateOnce>
 					<Image
 						src={SlideOne}
 						width="100%"
@@ -63,6 +63,8 @@ function MintsansDL() {
 						aspectRatio={16 / 9}
 						color="transparent"
 					/>
+				</ScrollAnimation>
+				<ScrollAnimation animateIn="fadeBottom" animateOnce>
 					<Image
 						src={SlideTwo}
 						width="100%"
@@ -70,6 +72,8 @@ function MintsansDL() {
 						aspectRatio={16 / 9}
 						color="transparent"
 					/>
+				</ScrollAnimation>
+				<ScrollAnimation animateIn="fadeBottom" animateOnce>
 					<Image
 						src={SlideThree}
 						width="100%"
@@ -77,6 +81,8 @@ function MintsansDL() {
 						aspectRatio={16 / 9}
 						color="transparent"
 					/>
+				</ScrollAnimation>
+				<ScrollAnimation animateIn="fadeBottom" animateOnce>
 					<Image
 						src={SlideFour}
 						width="100%"
@@ -84,6 +90,8 @@ function MintsansDL() {
 						aspectRatio={16 / 9}
 						color="transparent"
 					/>
+				</ScrollAnimation>
+				<ScrollAnimation animateIn="fadeBottom" animateOnce>
 					<Image
 						src={SlideFive}
 						width="100%"
@@ -91,6 +99,8 @@ function MintsansDL() {
 						aspectRatio={16 / 9}
 						color="transparent"
 					/>
+				</ScrollAnimation>
+				<ScrollAnimation animateIn="fadeBottom" animateOnce>
 					<Image
 						src={SlideSix}
 						width="100%"
@@ -98,12 +108,16 @@ function MintsansDL() {
 						aspectRatio={16 / 9}
 						color="transparent"
 					/>
-				</div>
-				<div className="section">
-					<Container>
-						<Typography variant="h1">{t("section.download.headline")}</Typography>
+				</ScrollAnimation>
+			</div>
+			<div className="section">
+				<Container>
+					<ScrollAnimation animateIn="fadeBottom" animateOnce>
+						<Typography variant="h1">
+							{t("section.download.headline")}
+						</Typography>
 						<Typography variant="body1">
-                        {t("section.download.description")}
+							{t("section.download.description")}
 						</Typography>
 						<br />
 						<Button
@@ -115,11 +129,9 @@ function MintsansDL() {
 						>
 							{t("section.download.downloadButton")}
 						</Button>
-					</Container>
-				</div>
+					</ScrollAnimation>
+				</Container>
 			</div>
 		</>
 	);
 }
-
-export default MintsansDL;
