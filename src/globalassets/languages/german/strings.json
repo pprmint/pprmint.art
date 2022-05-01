@@ -52,11 +52,13 @@
 		"section": {
 			"contact": {
 				"button": {
-					"email": "Email senden",
-					"twitter": "Nachricht auf Twitter senden"
+					"discord": "Discord",
+					"discordTagCopied": "Magie! Mein Discord-Tag wurde in die Zwischenablage kopiert. Sende nun eine Freundschaftsanfrage, um in meinen DMs zu schreiben.",
+					"email": "Email",
+					"twitter": "Twitter"
 				},
-				"text": "Wurde deine Frage hier nicht beantwortet, kannst du mich gerne direkt kontaktieren. Vielleicht taucht deine Frage hier dann auch auf.",
-				"title": "Ist noch was unklar?"
+				"text": "Wenn deine Frage hier nicht beantwortet wurde oder du mich einfach direkt anschreiben willst, dann tu das mit einem von diesen hier:",
+				"title": "Doch nicht?"
 			},
 			"faq": {
 				"1commission": {
@@ -357,7 +359,7 @@
 					"cardText": "Mein erster Versuch, eine geometrische Schriftfamilie zu erstellen. Eine optimierte Version ist in Entwicklung und wird mindestens dreimal so lange dauern, wie ich für die Erstellung der folgenden Seite gebraucht habe."
 				},
 				"startmenutiles": {
-					"cardText": "Branding ist eine Qual. Deshalb hat jeder sein eigenes, das für sich selbst am besten funktioniert. Bei diesen 32 Startmenü-Kacheln, die ich vor Ewigkeiten gemacht habe, wollte ich dafür sorgen, dass sie sich zumindest etwas einheitlicher anfühlen. Und auch Adobes beschissene Symbole verbessern."
+					"cardText": "Branding ist eine Qual. Deshalb hat jeder sein eigenes, das für einen am besten funktioniert. Mit diesen 32 Startmenü-Kacheln wollte ich sie zumindest etwas einheitlicher anfühlen lassen. Und auch Adobes beschissene Symbole verbessern."
 				},
 				"title": "Das gibt's neues:"
 			}
@@ -491,6 +493,15 @@
 					"title": {
 						"main": "SUSE Rebrand-Konzept.",
 						"sub": "Oder: Übertrieben vereinfachtes Chamäleon."
+					}
+				},
+				"wiiRemake": {
+					"meta": {
+						"title": "Wii-Menü-Remake • pprmint.art"
+					},
+					"title": {
+						"main": "Wii-Menü-Remake.",
+						"sub": "Hier sind die Kanal-Banner, die ich bisher fertiggestellt habe."
 					}
 				}
 			}

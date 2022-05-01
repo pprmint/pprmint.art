@@ -52,11 +52,13 @@
 		"section": {
 			"contact": {
 				"button": {
-					"email": "Send email",
-					"twitter": "Send Twitter DM"
+					"discord": "Discord",
+					"discordTagCopied": "Magic! My Discord tag was copied to your clipboard. Now send me a friend request to write in DMs.",
+					"email": "Email",
+					"twitter": "Twitter"
 				},
-				"text": "If your question wasn't answered here, feel free to get in touch with me. Maybe your question will end up on this page as well.",
-				"title": "Is something still unclear?"
+				"text": "If your question wasn't answered here, or you just want to text to me directly, do so with one of these:",
+				"title": "Still no?"
 			},
 			"faq": {
 				"1commission": {
@@ -491,6 +493,15 @@
 					"title": {
 						"main": "SUSE rebrand concept.",
 						"sub": "Or: Oversimplified chameleon."
+					}
+				},
+				"wiiRemake": {
+					"meta": {
+						"title": "Wii Menu remake • pprmint.art"
+					},
+					"title": {
+						"main": "Wii Menu remake.",
+						"sub": "Here are the channel banners I've finished so far."
 					}
 				}
 			}
