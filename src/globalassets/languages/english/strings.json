@@ -134,24 +134,31 @@
 					},
 					"german": {
 						"boldText": "Right after I bought a domain because there was no German around here.",
-						"imageAlt": "German flag with German text left to it that translates to \"Now also in German!\"",
-						"text": "Since I grew to like playing around with my website (and because my mom wanted to have a look at my site), I decided to finally implement translations. You can always change the language from the settings found in the footer if you're on a desktop, or in the drawer on mobile.",
-						"title": "Now also in German!"
+						"fullText": "Since I grew to like playing around with my website (and because my mom wanted to have a look at my site), I decided to finally implement translations. You can always change the language from the settings found in the footer if you're on a desktop, or in the drawer on mobile.",
+						"headline": "Now also in German!",
+						"imageAlt": "German flag with German text left to it that translates to \"Now also in German!\""
 					},
 					"mintcraft15": {
 						"boldText": "Optimizing colors and adding overlooked textures.",
-						"imageAlt": "The Mintcraft logo with the version number 1.5 written left to it. In the background there's the improved recipe book texture fading away towards the left.",
-						"text": "Not only have I added some questionable quotes by some of my Twitter followers, I also added some missing textures (frozen hearts, smithing table...) and improved existing ones (widgets, ping indicators, recipe book...). Definitely check it out, because once I told you that texts on buttons in the previous version had a drop shadow that was ever so slightly lighter than the background, you won't unsee it.",
-						"title": "Mintcraft version 1.5 available."
+						"fullText": "Not only have I added some questionable quotes by some of my Twitter followers, I also added some missing textures (frozen hearts, smithing table...) and improved existing ones (widgets, ping indicators, recipe book...). Definitely check it out, because once I told you that texts on buttons in the previous version had a drop shadow that was ever so slightly lighter than the background, you won't unsee it.",
+						"headline": "Mintcraft version 1.5 available.",
+						"imageAlt": "The Mintcraft logo with the version number 1.5 written left to it. In the background there's the improved recipe book texture fading away towards the left."
 					},
 					"newDomain": {
 						"boldText": "Have you ever seen a single word of German around here? Ganz genau.",
-						"imageAlt": "The new domain, pprmint.art, is written above a green trash can that contains the letters d and e from the previous top level domain. Right next to it is a small green wine bottle.",
-						"text": "It always bothered me a bit that the top-level domain of this website was .de, even though this website is less about me being German and more about the things I create. Don't worry, pprmint.de will redirect you to the new domain for a while.",
-						"title": "A shiny new domain."
+						"fullText": "It always bothered me a bit that the top-level domain of this website was .de, even though this website is less about me being German and more about the things I create. Don't worry, pprmint.de will redirect you to the new domain for a while.",
+						"headline": "A shiny new domain.",
+						"imageAlt": "The new domain, pprmint.art, is written above a green trash can that contains the letters d and e from the previous top level domain. Right next to it is a small green wine bottle."
 					}
 				},
-				"title": "Here's what's new:"
+				"next": "Next",
+				"previous": "Previous",
+				"title": "News."
+			},
+			"recent": {
+				"description": "My take on a modernized Wii menu. Click on this image to see what I've finished so far.",
+				"name": "Wii Menu Remake",
+				"title": "Latest creation."
 			}
 		},
 		"title": {

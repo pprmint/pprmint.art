@@ -222,17 +222,20 @@ footer {
 // Page headers
 
 // Background image
-img.hero {
-	position: absolute;
-	z-index: 0;
-	animation: fadeTop 1.2s var(--easeOut) 0.2s forwards;
-	opacity: 0;
-	width: 100%;
-	height: auto;
-    margin-top: calc(-1 * var(--marginTop));
-    &.fullscreen {
-        margin-top: 0;
-    }
+img,
+video {
+	&.hero {
+		position: absolute;
+		z-index: 0;
+		animation: fadeTop 1.2s var(--easeOut) 0.2s forwards;
+		opacity: 0;
+		width: 100%;
+		height: auto;
+		margin-top: calc(-1 * var(--marginTop));
+		&.fullscreen {
+			margin-top: 0;
+		}
+	}
 }
 
 // Regular title
@@ -372,8 +375,11 @@ h3 a.external:hover {
 }
 
 img {
-	-webkit-user-drag: none;
-	user-select: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 video {

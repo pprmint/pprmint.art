@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import ScrollAnimation from "react-animate-on-scroll";
+import SwipeableViews from "react-swipeable-views";
 import { Helmet } from "react-helmet-async";
 import {
 	Container,
@@ -9,62 +10,85 @@ import {
 	CardContent,
 	Grid,
 	Button,
+	Box,
+	MobileStepper,
+	Paper,
+	Divider,
+	Skeleton,
 } from "@mui/material";
 import Image from "material-ui-image";
 import { useTranslation } from "react-i18next";
-
-import MintBanner from "./assets/mint_banner.svg";
 
 import NewsGerman from "./assets/german.svg";
 import NewsDomain from "./assets/newdomain.svg";
 import NewsMintcraft from "./assets/mintcraft.svg";
 import NewsMuiFive from "./assets/mui5.svg";
-import { RiArrowDownLine } from "react-icons/ri";
+import {
+	RiArrowDownLine,
+	RiArrowLeftSLine,
+	RiArrowRightSLine,
+} from "react-icons/ri";
 
-function AnnouncementCard(
+function ReadMore(
 	props: React.PropsWithChildren<{
-		imageSrc: string;
-		imageAlt: string;
-		date: string;
-		headline: string;
-		strongText: string;
-		text: string;
+		link: string;
 	}>
 ) {
+	const { t } = useTranslation("translation", {
+		keyPrefix: "home.section.news.announcement.common",
+	});
 	return (
-		<Card variant="outlined">
-			<CardContent>
-				<Grid container spacing={2}>
-					<Grid item xs={12} sm={8}>
-						<Typography variant="caption">{props.date}</Typography>
-						<Typography variant="h2">{props.headline}</Typography>
-						<Typography variant="body1">
-							<strong>{props.strongText}</strong>
-							<br />
-							{props.text}
-						</Typography>
-						<br />
-						{props.children}
-					</Grid>
-					<Grid item xs={12} sm={4}>
-						<Image
-							src={props.imageSrc}
-							width="100%"
-							alt={props.imageAlt}
-							aspectRatio={16 / 9}
-							color="transparent"
-						/>
-					</Grid>
-				</Grid>
-			</CardContent>
-		</Card>
+		<>
+			<Box
+				p={2}
+				sx={{
+					textAlign: "center",
+				}}
+			>
+				<Link to={props.link}>
+					<Button size="small">{t("tellMore")}</Button>
+				</Link>
+			</Box>
+		</>
 	);
 }
+
+const announcements = [
+	{
+		id: "mintcraft15",
+		date: "20.04.2022",
+		imageSrc: NewsMintcraft,
+		actions: <ReadMore link="/projects/mintcraft" />,
+	},
+	{
+		id: "german",
+		date: "18.04.2022",
+		imageSrc: NewsGerman,
+	},
+	{
+		id: "newDomain",
+		date: "01.02.2022",
+		imageSrc: NewsDomain,
+	},
+];
 
 export default function Home() {
 	const { t } = useTranslation("translation", {
 		keyPrefix: "home",
 	});
+
+	const [activeStep, setActiveStep] = React.useState(0);
+	const maxSteps = announcements.length;
+	const handleNext = () => {
+		setActiveStep((prevActiveStep) => prevActiveStep + 1);
+	};
+	const handleBack = () => {
+		setActiveStep((prevActiveStep) => prevActiveStep - 1);
+	};
+	const handleStepChange = (step: number) => {
+		setActiveStep(step);
+	};
+
 	return (
 		<>
 			<Helmet>
@@ -85,7 +109,12 @@ export default function Home() {
 				<meta property="og:title" content="Good today." />
 				<meta property="og:url" content="https://pprmint.art" />
 			</Helmet>
-			<img src={MintBanner} className="hero fullscreen" />
+			<video
+				src="https://media.pprmint.art/mint.webm"
+				className="hero fullscreen"
+				autoPlay
+				muted
+			/>
 			<div className="fullscreen">
 				<Container className="title">
 					<Typography variant="h1">{t("title.main")}</Typography>
@@ -94,52 +123,168 @@ export default function Home() {
 					<RiArrowDownLine size={25} color="#0c6" />
 				</Container>
 			</div>
-			<div className="section" id="news">
-				<Container>
-					<ScrollAnimation animateIn="fadeBottom" animateOnce>
-						<Typography variant="h1">{t("section.news.title")}</Typography>
-						<br />
-						<ScrollAnimation animateIn="fadeBottom" animateOnce>
-							<AnnouncementCard
-								imageSrc={NewsMintcraft}
-								imageAlt={t("section.news.announcement.mintcraft15.imageAlt")}
-								date="20.04.2022"
-								headline={t("section.news.announcement.mintcraft15.title")}
-								strongText={t("section.news.announcement.mintcraft15.boldText")}
-								text={t("section.news.announcement.mintcraft15.text")}
-							>
-								<Link to="/projects/mintcraft">
-									<Button variant="contained" color="warning">
-										{t("section.news.announcement.common.tellMore")}
-									</Button>
-								</Link>
-							</AnnouncementCard>
-						</ScrollAnimation>
-						<br />
-						<ScrollAnimation animateIn="fadeBottom" animateOnce>
-							<AnnouncementCard
-								imageSrc={NewsGerman}
-								imageAlt={t("section.news.announcement.german.imageAlt")}
-								date="18.04.2022"
-								headline={t("section.news.announcement.german.title")}
-								strongText={t("section.news.announcement.german.boldText")}
-								text={t("section.news.announcement.german.text")}
-							/>
-						</ScrollAnimation>
-						<br />
-						<ScrollAnimation animateIn="fadeBottom" animateOnce>
-							<AnnouncementCard
-								imageSrc={NewsDomain}
-								imageAlt={t("section.news.announcement.newDomain.imageAlt")}
-								date="01.02.2022"
-								headline={t("section.news.announcement.newDomain.title")}
-								strongText={t("section.news.announcement.newDomain.boldText")}
-								text={t("section.news.announcement.newDomain.text")}
-							/>
-						</ScrollAnimation>
-					</ScrollAnimation>
-				</Container>
-			</div>
+			<Container maxWidth="xl">
+				<Grid container spacing={7}>
+					<Grid item md={12} lg={7}>
+						<div className="section" id="latestWork">
+							<ScrollAnimation animateIn="fadeBottom" animateOnce>
+								<Typography variant="h1">
+									{t("section.recent.title")}
+								</Typography>
+								<br />
+								<ScrollAnimation animateIn="fadeBottom" animateOnce>
+									<Card variant="outlined">
+										<Link to="/projects/2022/wiimenu">
+											<Button
+												color="inherit"
+												sx={{
+													width: "100%",
+													display: "block",
+													padding: 0,
+													margin: 0,
+													borderRadius: 0,
+												}}
+											>
+												<Image
+													src="https://media.pprmint.art/2022/WiiRemake/WiiRemake.jpg"
+													alt={t("section.recent.name")}
+													aspectRatio={16 / 9}
+													color="transparent"
+													loading={
+														<Skeleton
+															variant="rectangular"
+															animation="wave"
+															width="100%"
+															height="100%"
+														/>
+													}
+												/>
+											</Button>
+										</Link>
+									</Card>
+									<br />
+									<Typography variant="h2">
+										{t("section.recent.name")}
+									</Typography>
+									<Typography variant="body1">
+										{t("section.recent.description")}
+									</Typography>
+								</ScrollAnimation>
+							</ScrollAnimation>
+						</div>
+					</Grid>
+					<Grid item md={12} lg={5}>
+						<div className="section" id="news">
+							<ScrollAnimation animateIn="fadeBottom" animateOnce>
+								<Typography variant="h1">{t("section.news.title")}</Typography>
+							</ScrollAnimation>
+							<br />
+							<ScrollAnimation animateIn="fadeBottom" animateOnce>
+								<Box maxWidth="calc(100vw - 32px)">
+									<Card variant="outlined">
+										<Paper
+											square
+											elevation={2}
+											sx={{
+												display: "flex",
+												alignItems: "center",
+												height: 64,
+												p: 3,
+											}}
+										>
+											<Typography
+												variant="h2"
+												sx={{
+													display: "flex",
+													flexGrow: 1,
+													fontSize: "1.5rem",
+												}}
+											>
+												{t(
+													"section.news.announcement." +
+														announcements[activeStep].id +
+														".headline"
+												)}
+											</Typography>
+											<Typography>{announcements[activeStep].date}</Typography>
+										</Paper>
+										<SwipeableViews
+											index={activeStep}
+											onChangeIndex={handleStepChange}
+											enableMouseEvents
+										>
+											{announcements.map((item, index) => (
+												<div key={item.id}>
+													{Math.abs(activeStep - index) <= 2 ? (
+														<Container>
+															<Box p={3}>
+																<Image
+																	src={item.imageSrc}
+																	alt={t(
+																		"section.news.announcement." +
+																			item.id +
+																			".imageAlt"
+																	)}
+																	aspectRatio={16 / 9}
+																	color="transparent"
+																/>
+															</Box>
+															<Box p={1}>
+																<Typography variant="h3">
+																	{t(
+																		"section.news.announcement." +
+																			item.id +
+																			".boldText"
+																	)}
+																</Typography>
+																<Typography variant="body1">
+																	{t(
+																		"section.news.announcement." +
+																			item.id +
+																			".fullText"
+																	)}
+																</Typography>
+																{item.actions}
+															</Box>
+														</Container>
+													) : null}
+												</div>
+											))}
+										</SwipeableViews>
+										<Divider />
+										<MobileStepper
+											variant="text"
+											steps={maxSteps}
+											position="static"
+											activeStep={activeStep}
+											nextButton={
+												<Button
+													size="small"
+													onClick={handleNext}
+													disabled={activeStep === maxSteps - 1}
+													endIcon={<RiArrowRightSLine />}
+												>
+													{t("section.news.next")}
+												</Button>
+											}
+											backButton={
+												<Button
+													size="small"
+													onClick={handleBack}
+													disabled={activeStep === 0}
+													startIcon={<RiArrowLeftSLine />}
+												>
+													{t("section.news.previous")}
+												</Button>
+											}
+										/>
+									</Card>
+								</Box>
+							</ScrollAnimation>
+						</div>
+					</Grid>
+				</Grid>
+			</Container>
 		</>
 	);
 }

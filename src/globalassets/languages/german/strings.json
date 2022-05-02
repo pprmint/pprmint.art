@@ -134,24 +134,31 @@
 					},
 					"german": {
 						"boldText": "Genau nachdem ich eine Domain gekauft habe, weil es hier kein Deutsch gab.",
-						"imageAlt": "Flagge Deutschlands mit dem Text \"Jetzt auch auf Deutsch!\" links daneben.",
-						"text": "Da es mir immer mehr Spaß gemacht hat, mit meiner Website herumzuspielen (und weil meine Mom meine Seite ansehen wollte), habe ich beschlossen, Übersetzungen einzuführen. Du kannst die Sprache jederzeit über die Einstellungen in der Fußzeile ändern, wenn du auf einem Desktop unterwegs bist, oder über das Seitenmenü auf dem Handy.",
-						"title": "Deutsche Übersetzungen!"
+						"fullText": "Da es mir immer mehr Spaß gemacht hat, mit meiner Website herumzuspielen (und weil meine Mom meine Seite ansehen wollte), habe ich beschlossen, Übersetzungen einzuführen. Du kannst die Sprache jederzeit über die Einstellungen in der Fußzeile ändern, wenn du auf einem Desktop unterwegs bist, oder über das Seitenmenü auf dem Handy.",
+						"headline": "Deutsche Übersetzungen!",
+						"imageAlt": "Flagge Deutschlands mit dem Text \"Jetzt auch auf Deutsch!\" links daneben."
 					},
 					"mintcraft15": {
 						"boldText": "Anpassen von Farben und Hinzufügen übersehener Texturen.",
-						"imageAlt": "Das Mintcraft-Logo mit der Versionsnummer 1.5 links daneben geschrieben. Im Hintergrund befindet sich die verbesserte Textur für das Rezeptbuch, welches nach links hin verschwindet.",
-						"text": "Ich habe nicht nur fragwürdige Splash-Texte einiger meiner Twitter-Follower, sondern auch fehlende Texturen (gefrorene Herzen, Schmiedetisch...) hinzugefügt, sowie Bestehende (Widgets, Ping-Anzeigen, Rezeptbuch...) verbessert. Schau's dir definitv an, denn habe ich dir erstmal erzählt, dass Texte auf Buttons immer einen Schatten warfen, der nur ein bisschen heller war als der Hintergrund, wirst du es nie wieder übersehen.",
-						"title": "Mintcraft Version 1.5 verfügbar."
+						"fullText": "Ich habe nicht nur fragwürdige Splash-Texte einiger meiner Twitter-Follower, sondern auch fehlende Texturen (gefrorene Herzen, Schmiedetisch...) hinzugefügt, sowie Bestehende (Widgets, Ping-Anzeigen, Rezeptbuch...) verbessert. Schau's dir definitv an, denn habe ich dir erstmal erzählt, dass Texte auf Buttons immer einen Schatten warfen, der nur ein bisschen heller war als der Hintergrund, wirst du es nie wieder übersehen.",
+						"headline": "Mintcraft Version 1.5 verfügbar.",
+						"imageAlt": "Das Mintcraft-Logo mit der Versionsnummer 1.5 links daneben geschrieben. Im Hintergrund befindet sich die verbesserte Textur für das Rezeptbuch, welches nach links hin verschwindet."
 					},
 					"newDomain": {
 						"boldText": "Hast du hier vorher ein einziges Wort auf Deutsch gesehen? Eben.",
-						"imageAlt": "Die neue Domain, pprmint.art, ist über einer grünen Mülltonne geschrieben. In der Mülltonne befinden sich die Buchstaben d und e der vorherigen Domain. Neben der Tonne steht eine grüne Weinflasche.",
-						"text": "Es hat mich immer etwas genevt, dass die Top-Level-Domain dieser Website .de lautete, obwohl sie weniger mein Deutsch-sein und mehr meine Kreationen vorstellen soll. Keine Sorge, pprmint.de wird noch für einige Zeit auf diese neue Domain weiterleiten.",
-						"title": "Eine schicke, neue Domain."
+						"fullText": "Es hat mich immer etwas genevt, dass die Top-Level-Domain dieser Website .de lautete, obwohl sie weniger mein Deutsch-sein und mehr meine Kreationen vorstellen soll. Keine Sorge, pprmint.de wird noch für einige Zeit auf diese neue Domain weiterleiten.",
+						"headline": "Eine schicke, neue Domain.",
+						"imageAlt": "Die neue Domain, pprmint.art, ist über einer grünen Mülltonne geschrieben. In der Mülltonne befinden sich die Buchstaben d und e der vorherigen Domain. Neben der Tonne steht eine grüne Weinflasche."
 					}
 				},
-				"title": "Das gibt's neues:"
+				"next": "Weiter",
+				"previous": "Zurück",
+				"title": "Neugikeiten."
+			},
+			"recent": {
+				"description": "Mein Versuch an einem modernisiertem Wii-Menü. Klicke auf das obige Bild, um zu sehen, was ich bisher fertiggestellt habe.",
+				"name": "Wii-Menü-Remake.",
+				"title": "Neuste Kreation."
 			}
 		},
 		"title": {

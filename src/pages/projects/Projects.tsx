@@ -144,7 +144,7 @@ export default function Projects() {
 			</Container>
 
 			<div className="section" id="projects">
-				<Container maxWidth="xl">
+				<Container>
 					<ScrollAnimation animateIn="fadeBottom" animateOnce>
 						<Masonry columns={{ xs: 1, md: 2 }} spacing={2}>
 							<Card variant="outlined">
