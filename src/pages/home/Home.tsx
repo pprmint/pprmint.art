@@ -19,6 +19,8 @@ import {
 import Image from "material-ui-image";
 import { useTranslation } from "react-i18next";
 
+import Banner from "./assets/mint_banner.svg";
+
 import NewsGerman from "./assets/german.svg";
 import NewsDomain from "./assets/newdomain.svg";
 import NewsMintcraft from "./assets/mintcraft.svg";
@@ -109,12 +111,7 @@ export default function Home() {
 				<meta property="og:title" content="Good today." />
 				<meta property="og:url" content="https://pprmint.art" />
 			</Helmet>
-			<video
-				src="https://media.pprmint.art/mint.webm"
-				className="hero fullscreen"
-				autoPlay
-				muted
-			/>
+            <img src={Banner} className="hero" />
 			<div className="fullscreen">
 				<Container className="title">
 					<Typography variant="h1">{t("title.main")}</Typography>
