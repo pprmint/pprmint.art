@@ -111,7 +111,7 @@ export default function Home() {
 				<meta property="og:title" content="Good today." />
 				<meta property="og:url" content="https://pprmint.art" />
 			</Helmet>
-            <img src={Banner} className="hero" />
+            <img src={Banner} className="hero fullscreen" />
 			<div className="fullscreen">
 				<Container className="title">
 					<Typography variant="h1">{t("title.main")}</Typography>
