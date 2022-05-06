@@ -15,20 +15,24 @@ import {
 	Paper,
 	Divider,
 	Skeleton,
+	CardActions,
 } from "@mui/material";
 import Image from "material-ui-image";
 import { useTranslation } from "react-i18next";
 
-import Banner from "./assets/mint_banner.svg";
+import MintBanner from "./assets/mintBanner";
 
 import NewsGerman from "./assets/german.svg";
 import NewsDomain from "./assets/newdomain.svg";
 import NewsMintcraft from "./assets/mintcraft.svg";
-import NewsMuiFive from "./assets/mui5.svg";
 import {
 	RiArrowDownLine,
 	RiArrowLeftSLine,
 	RiArrowRightSLine,
+	RiArrowRightUpLine,
+	RiDiscordLine,
+	RiTwitterLine,
+	RiYoutubeLine,
 } from "react-icons/ri";
 
 function ReadMore(
@@ -111,7 +115,7 @@ export default function Home() {
 				<meta property="og:title" content="Good today." />
 				<meta property="og:url" content="https://pprmint.art" />
 			</Helmet>
-            <img src={Banner} className="hero fullscreen" />
+			<MintBanner />
 			<div className="fullscreen">
 				<Container className="title">
 					<Typography variant="h1">{t("title.main")}</Typography>
@@ -120,63 +124,180 @@ export default function Home() {
 					<RiArrowDownLine size={25} color="#0c6" />
 				</Container>
 			</div>
+			<div className="section" id="about">
+				<Container>
+					<ScrollAnimation animateIn="fadeBottom" animateOnce>
+						<Typography variant="h1">{t("section.about.title")}</Typography>
+					</ScrollAnimation>
+					<ScrollAnimation animateIn="fadeBottom" animateOnce>
+						<Typography variant="body1">
+							{t("section.about.intro1")}
+							<Link to="/about">{t("section.about.aboutMePage")}</Link>
+							{t("section.about.intro2")}
+						</Typography>
+					</ScrollAnimation>
+				</Container>
+				<br />
+				<br />
+				<Container maxWidth="xl">
+					<Grid container spacing={4}>
+						<Grid item xs={12} sm={4}>
+							<ScrollAnimation animateIn="fadeBottom" animateOnce>
+								<Card
+									variant="outlined"
+									sx={{ backgroundColor: "#1da1f255", borderWidth: 2 }}
+								>
+									<CardContent>
+										<Typography variant="h2">
+											<RiTwitterLine
+												style={{ paddingTop: 7, marginRight: 10 }}
+											/>
+											{t("section.about.twitter.title")}
+										</Typography>
+										<Typography variant="body2">
+											{t("section.about.twitter.text")}
+										</Typography>
+									</CardContent>
+									<CardActions>
+										<Box sx={{ marginLeft: "auto" }}>
+											<Button color="inherit" endIcon={<RiArrowRightUpLine />}>
+												<a
+													href="https://twitter.com/npprmint"
+													target="_blank"
+													rel="noopener noreferrer"
+												>
+													{t("section.about.twitter.follow")}
+												</a>
+											</Button>
+										</Box>
+									</CardActions>
+								</Card>
+							</ScrollAnimation>
+						</Grid>
+						<Grid item xs={12} sm={4}>
+							<ScrollAnimation animateIn="fadeBottom" animateOnce>
+								<Card
+									variant="outlined"
+									sx={{ backgroundColor: "#ff000055", borderWidth: 2 }}
+								>
+									<CardContent>
+										<Typography variant="h2">
+											<RiYoutubeLine
+												style={{ paddingTop: 7, marginRight: 10 }}
+											/>
+											{t("section.about.youtube.title")}
+										</Typography>
+										<Typography variant="body2">
+											{t("section.about.youtube.text")}
+										</Typography>
+									</CardContent>
+									<CardActions>
+										<Box sx={{ marginLeft: "auto" }}>
+											<Button color="inherit" endIcon={<RiArrowRightUpLine />}>
+												<a
+													href="https://youtube.com/c/pprmint"
+													target="_blank"
+													rel="noopener noreferrer"
+												>
+													{t("section.about.youtube.subscribe")}
+												</a>
+											</Button>
+										</Box>
+									</CardActions>
+								</Card>
+							</ScrollAnimation>
+						</Grid>
+						<Grid item xs={12} sm={4}>
+							<ScrollAnimation animateIn="fadeBottom" animateOnce>
+								<Card
+									variant="outlined"
+									sx={{ backgroundColor: "#5865F255", borderWidth: 2 }}
+								>
+									<CardContent>
+										<Typography variant="h2">
+											<RiDiscordLine
+												style={{ paddingTop: 7, marginRight: 10 }}
+											/>
+											{t("section.about.discord.title")}
+										</Typography>
+										<Typography variant="body2">
+											{t("section.about.discord.text")}
+										</Typography>
+									</CardContent>
+									<CardActions>
+										<Box sx={{ marginLeft: "auto" }}>
+											<Button color="inherit" endIcon={<RiArrowRightUpLine />}>
+												<a
+													href="https://discord.com/invite/Vw9JXwr"
+													target="_blank"
+													rel="noopener noreferrer"
+												>
+													{t("section.about.discord.join")}
+												</a>
+											</Button>
+										</Box>
+									</CardActions>
+								</Card>
+							</ScrollAnimation>
+						</Grid>
+					</Grid>
+				</Container>
+			</div>
 			<Container maxWidth="xl">
 				<Grid container spacing={7}>
 					<Grid item md={12} lg={7}>
 						<div className="section" id="latestWork">
-							<ScrollAnimation animateIn="fadeBottom" animateOnce>
+							<ScrollAnimation animateIn="fadeLeft" animateOnce>
 								<Typography variant="h1">
 									{t("section.recent.title")}
 								</Typography>
+							</ScrollAnimation>
+							<br />
+							<ScrollAnimation animateIn="fadeLeft" animateOnce>
+								<Card variant="outlined">
+									<Link to="/projects/2022/wiimenu">
+										<Button
+											color="inherit"
+											sx={{
+												width: "100%",
+												display: "block",
+												padding: 0,
+												margin: 0,
+												borderRadius: 0,
+											}}
+										>
+											<Image
+												src="https://media.pprmint.art/2022/WiiRemake/WiiRemake.jpg"
+												alt={t("section.recent.name")}
+												aspectRatio={16 / 9}
+												color="transparent"
+												loading={
+													<Skeleton
+														variant="rectangular"
+														animation="wave"
+														width="100%"
+														height="100%"
+													/>
+												}
+											/>
+										</Button>
+									</Link>
+								</Card>
 								<br />
-								<ScrollAnimation animateIn="fadeBottom" animateOnce>
-									<Card variant="outlined">
-										<Link to="/projects/2022/wiimenu">
-											<Button
-												color="inherit"
-												sx={{
-													width: "100%",
-													display: "block",
-													padding: 0,
-													margin: 0,
-													borderRadius: 0,
-												}}
-											>
-												<Image
-													src="https://media.pprmint.art/2022/WiiRemake/WiiRemake.jpg"
-													alt={t("section.recent.name")}
-													aspectRatio={16 / 9}
-													color="transparent"
-													loading={
-														<Skeleton
-															variant="rectangular"
-															animation="wave"
-															width="100%"
-															height="100%"
-														/>
-													}
-												/>
-											</Button>
-										</Link>
-									</Card>
-									<br />
-									<Typography variant="h2">
-										{t("section.recent.name")}
-									</Typography>
-									<Typography variant="body1">
-										{t("section.recent.description")}
-									</Typography>
-								</ScrollAnimation>
+								<Typography variant="h2">{t("section.recent.name")}</Typography>
+								<Typography variant="body1">
+									{t("section.recent.description")}
+								</Typography>
 							</ScrollAnimation>
 						</div>
 					</Grid>
 					<Grid item md={12} lg={5}>
 						<div className="section" id="news">
-							<ScrollAnimation animateIn="fadeBottom" animateOnce>
+							<ScrollAnimation animateIn="fadeRight" animateOnce>
 								<Typography variant="h1">{t("section.news.title")}</Typography>
 							</ScrollAnimation>
 							<br />
-							<ScrollAnimation animateIn="fadeBottom" animateOnce>
+							<ScrollAnimation animateIn="fadeRight" animateOnce>
 								<Box maxWidth="calc(100vw - 32px)">
 									<Card variant="outlined">
 										<Paper
