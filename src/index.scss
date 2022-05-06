@@ -132,22 +132,98 @@ body {
 	}
 }
 
+@keyframes mintBanner_M {
+	from {
+		transform: translateY(0);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(calc(-14.3% * 1));
+		opacity: 0.5;
+	}
+}
+@keyframes mintBanner_I {
+	from {
+		transform: translateY(0);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(calc(-14.3% * 2));
+		opacity: 0.5;
+	}
+}
+@keyframes mintBanner_N {
+	from {
+		transform: translateY(0);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(calc(-14.3% * 3));
+		opacity: 0.5;
+	}
+}
+@keyframes mintBanner_T {
+	from {
+		transform: translateY(0);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(calc(-14.3% * 4));
+		opacity: 0.5;
+	}
+}
+@keyframes mintBanner_Gradient {
+	from {
+		transform: translateY(0);
+	}
+	to {
+		transform: translateY(calc(-14.3% * 4));
+	}
+}
+
+.mintBanner {
+	height: auto;
+	img {
+		position: absolute;
+	}
+	.M {
+		opacity: 0;
+		animation: mintBanner_M 1.86s cubic-bezier(0, 1, 0.5, 1) 0.2s forwards;
+	}
+	.I {
+		opacity: 0;
+		animation: mintBanner_I 1.84s cubic-bezier(0, 1, 0.5, 1) 0.22s forwards;
+	}
+	.N {
+		opacity: 0;
+		animation: mintBanner_N 1.82s cubic-bezier(0, 1, 0.5, 1) 0.24s forwards;
+	}
+	.T {
+		opacity: 0;
+		animation: mintBanner_T 1.8s cubic-bezier(0, 1, 0.5, 1) 0.26s forwards;
+	}
+	.gradient {
+		animation: mintBanner_Gradient 1.8s cubic-bezier(0, 1, 0.5, 1) 0.26s
+			forwards;
+	}
+}
+
 .fadeBottom {
 	opacity: 0;
 	animation: fadeBottom var(--easeOut) forwards;
-	animation-duration: 0.375s !important;
+	animation-duration: 0.5s !important;
 	animation-delay: 0.05s !important;
 }
 .fadeLeft {
 	opacity: 0;
 	animation: fadeLeft var(--easeOut) forwards;
-	animation-duration: 0.375s !important;
+	animation-duration: 0.5s !important;
 	animation-delay: 0.05s !important;
 }
 .fadeRight {
 	opacity: 0;
 	animation: fadeRight var(--easeOut) forwards;
-	animation-duration: 0.375s !important;
+	animation-duration: 0.5s !important;
 	animation-delay: 0.05s !important;
 }
 
@@ -176,6 +252,17 @@ body {
 	}
 	&:focus-visible {
 		background-color: var(--backgroundTertiary);
+	}
+}
+.active {
+	.MuiButtonBase-root {
+		transition: all 0.2s;
+		color: var(--backgroundSecondary) !important;
+		background-color: var(--greenPrimary);
+		font-weight: 500 !important;
+	}
+	.MuiListItemIcon-root {
+		color: var(--backgroundSecondary) !important;
 	}
 }
 
@@ -375,11 +462,11 @@ h3 a.external:hover {
 }
 
 img {
-    -webkit-user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+	-webkit-user-drag: none;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
 }
 
 video {

@@ -23,6 +23,7 @@ import {
 	Button,
 	Stack,
 	Divider,
+	ListItemIcon,
 } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
@@ -68,12 +69,16 @@ import "./globalassets/fonts/basier_square.css";
 
 import {
 	RiBehanceLine,
+	RiChat1Line,
 	RiDiscordLine,
 	RiGithubLine,
 	RiHeartFill,
+	RiHomeLine,
 	RiMenu2Line,
 	RiMenu3Line,
+	RiPencilRuler2Line,
 	RiTwitterLine,
+	RiUserLine,
 	RiYoutubeLine,
 } from "react-icons/ri";
 
@@ -83,21 +88,25 @@ const nav = [
 		key: "home",
 		link: "/",
 		exact: true,
+		icon: <RiHomeLine />,
 	},
 	{
 		name: "common.nav.about",
 		key: "about",
 		link: "/about",
+		icon: <RiUserLine />,
 	},
 	{
 		name: "common.nav.projects",
 		key: "projects",
 		link: "/projects",
+		icon: <RiPencilRuler2Line />,
 	},
 	{
 		name: "common.nav.contact",
 		key: "contact",
 		link: "/contact",
+		icon: <RiChat1Line />,
 	},
 ];
 
@@ -205,7 +214,7 @@ function App() {
 									</IconButton>
 								</Box>
 								<Divider />
-								<List sx={{ flex: "1 0", width: "calc(100% - 10px)" }}>
+								<List sx={{ flex: "1" }}>
 									{nav.map((item) => {
 										const exact = item.exact ? true : false;
 										return (
@@ -219,11 +228,15 @@ function App() {
 												<ListItem
 													button
 													sx={{
-														margin: "0 0 0 10px",
-														padding: "10px 0 10px 16px",
-														borderRadius: "24px 0 0 24px",
+														margin: "0 10px 5px 0",
+														padding: "10px 28px 10px 28px",
+														borderRadius: "0 24px 24px 0",
+														width: "max-content",
 													}}
 												>
+													<ListItemIcon sx={{ minWidth: "36px" }}>
+														{item.icon}
+													</ListItemIcon>
 													{t(item.name)}
 												</ListItem>
 											</NavLink>
@@ -290,31 +303,16 @@ function App() {
 						<Route path="/projects/win10tiles" component={Win10TilesDL} />
 
 						{/* Works of 2022 */}
-                        <Route
-                            path="/projects/2022/wiimenu"
-                            component={WiiMenu}
-                        />
-						<Route
-							path="/projects/2022/geoices"
-							component={Geoices}
-						/>
-						<Route
-							path="/projects/2022/suserebrand"
-							component={suseRebrand}
-						/>
-						<Route
-							path="/projects/2022/statistics"
-							component={Statistics}
-						/>
+						<Route path="/projects/2022/wiimenu" component={WiiMenu} />
+						<Route path="/projects/2022/geoices" component={Geoices} />
+						<Route path="/projects/2022/suserebrand" component={suseRebrand} />
+						<Route path="/projects/2022/statistics" component={Statistics} />
 						<Route path="/projects/2022/ipad" component={Ipad} />
 						<Route path="/projects/2022/ford" component={Ford} />
 						<Route path="/projects/2022/archwall" component={ArchWall} />
 
 						{/* Works of 2021 */}
-						<Route
-							path="/projects/2021/manjarowall"
-							component={ManjaroWall}
-						/>
+						<Route path="/projects/2021/manjarowall" component={ManjaroWall} />
 
 						<Route path="/contact" exact component={Contact} />
 						<Route path="/privacy" exact component={PrivacyPolicy} />
@@ -340,7 +338,7 @@ function App() {
 					</Switch>
 
 					<footer>
-                        <Divider />
+						<Divider />
 						<div className="copyright">
 							<Typography variant="body2">
 								{t("common.footer.madeWith")}
