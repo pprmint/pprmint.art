@@ -12,10 +12,10 @@
 	"common": {
 		"changeLang": "Change language",
 		"cookies": {
-			"agreement": "Durch die Verwendung der Seite akzeptierst du die ",
-			"link": "Verwendung von Cookies",
+			"agreement": "Durch Verwendung der Seite akzeptierst du die ",
+			"link": "Nutzung von Cookies",
 			"noFutureAppear": "Diese Meldung wird in Zukunft nicht mehr erscheinen.",
-			"use": "Diese Website verwendet ein paar Cookies, um deine bevorzugte Sprache zu speichern und ob du diese Nachricht gesehen hast."
+			"use": "Diese Website verwendet \"Cookies\", um Einstellungen zu speichern und festzustellen, ob du diese Nachricht gesehen hast."
 		},
 		"footer": {
 			"andCoffee": " und Kaffee von pprmint.",
@@ -23,7 +23,7 @@
 			"privacyPolicy": "Datenschutzerklärung"
 		},
 		"nav": {
-			"about": "Über",
+			"about": "Über mich",
 			"contact": "Kontakt & FAQ",
 			"home": "Start",
 			"projects": "Projekte"
@@ -127,6 +127,27 @@
 			"title": "pprmint.art"
 		},
 		"section": {
+			"about": {
+				"aboutMePage": "Über-mich-Seite",
+				"discord": {
+					"join": "Beitreten",
+					"text": "Chatte mit mir und Gleichgesinnten und erfahre mit als Erstes von neuen Ankündigungen.",
+					"title": "Discord-Server."
+				},
+				"intro1": "Mein Name ist Nicklas. Ich mag Dinge mit Pfefferminzgeschmack und beschäftige mich in meiner Freizeit mit Design, Motion Graphics und Code. Wenn du mehr über mich erfahren willst, dann schau dir die ",
+				"intro2": " an (sobald es mal eine gibt), oder folge mir auf einen dieser Plattformen:",
+				"title": "Über mich.",
+				"twitter": {
+					"follow": "Folgen",
+					"text": "Schlechte Witze und gelegentliche Updates zu meinen Projekten.",
+					"title": "Twitter."
+				},
+				"youtube": {
+					"subscribe": "Abonnieren",
+					"text": "Alle meine animierten Werke, in schlechterer Qualität als auf meiner Website.",
+					"title": "YouTube."
+				}
+			},
 			"news": {
 				"announcement": {
 					"common": {
@@ -183,7 +204,7 @@
 				"title": "Kekse!"
 			},
 			"externalLinks": {
-				"text": "Einige Seiten können Links zu externen Websites enthalten. Jeder Link, der dich zu einer anderen Website führt, ist mit einem blauen Pfeil und, wenn du den Mauszeiger darüber bewegst, mit einem blauen Hintergrund versehen. Sobald du solche externen Websites besuchst, unterliegst du den jeweiligen Datenschutzrichtlinien dieser Websites. Ich übernehme keine Verantwortung für die Praktiken oder den Inhalt dieser anderen Websites.",
+				"text": "Einige Seiten können Links zu externen Websites enthalten. Jeder Link, der dich zu einer anderen Website führt, ist mit einem blauen Pfeil und, wenn du den Mauszeiger darüber bewegst, mit einem blauen Hintergrund versehen. Sobald du solche externen Websites besuchst, unterliegst du deren jeweiligen Datenschutzrichtlinien. Für die Inhalte und Praktiken der Websites Dritter übernehme ich keinerlei Verantwortung.",
 				"title": "Externe Links."
 			},
 			"responsible": {

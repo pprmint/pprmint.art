@@ -15,7 +15,7 @@
 			"agreement": "By using this site, you agree to the ",
 			"link": "use of cookies",
 			"noFutureAppear": "This message won't appear again in the future.",
-			"use": "This website uses a few cookies to remember your preferred language and whether you saw this message."
+			"use": "This website uses a \"cookie\" to remember settings and whether you saw this message."
 		},
 		"footer": {
 			"andCoffee": " and coffee by pprmint.",
@@ -23,7 +23,7 @@
 			"privacyPolicy": "Privacy policy"
 		},
 		"nav": {
-			"about": "About",
+			"about": "About me",
 			"contact": "Contact & FAQ",
 			"home": "Home",
 			"projects": "Projects"
@@ -127,6 +127,27 @@
 			"title": "pprmint.art"
 		},
 		"section": {
+			"about": {
+				"aboutMePage": "About me page",
+				"discord": {
+					"join": "Join",
+					"text": "Chat with me and like-minded people and be the first to know of new announcements.",
+					"title": "Discord server."
+				},
+				"intro1": "Name's Nick. I like things with mint flavor and to spend my time with design, motion graphics and code. To learn more about me, have a look at the ",
+				"intro2": " (once there is one) or follow me on some of these platforms:",
+				"title": "About me.",
+				"twitter": {
+					"follow": "Follow",
+					"text": "Bad jokes and occasional updates on my projects.",
+					"title": "Twitter."
+				},
+				"youtube": {
+					"subscribe": "Subscribe",
+					"text": "All my animated works, in worse quality than you can find them on my website.",
+					"title": "YouTube."
+				}
+			},
 			"news": {
 				"announcement": {
 					"common": {
@@ -183,7 +204,7 @@
 				"title": "Cookies!"
 			},
 			"externalLinks": {
-				"text": "Some pages may contain links to external websites. Any link that takes you to another website will have a blue arrow and, when you hover over it, a blue background. Once you visit such external websites, you are subject to their respective privacy policies. I take no responsibility for the practices nor content of those other websites.",
+				"text": "Some pages may contain links to external websites. Any link that takes you to another website will have a blue arrow and, when you hover over it, a blue background. Once you visit such external websites, you are subject to their respective privacy policies. I take no responsibility for the practices of nor content on said websites.",
 				"title": "External links."
 			},
 			"responsible": {
