@@ -311,8 +311,7 @@ export default function MintcraftDL() {
 									{t("section.credits.vanillatweaks.name")}
 								</a>
 							</Typography>
-						</ScrollAnimation>
-						<ScrollAnimation animateIn="fadeBottom" animateOnce>
+
 							<Typography variant="body1">
 								{t("section.credits.vanillatweaks.description")}
 							</Typography>
@@ -329,8 +328,7 @@ export default function MintcraftDL() {
 									{t("section.credits.blizzy.name")}
 								</a>
 							</Typography>
-						</ScrollAnimation>
-						<ScrollAnimation animateIn="fadeBottom" animateOnce>
+
 							<Typography variant="body1">
 								{t("section.credits.blizzy.description")}
 							</Typography>
@@ -340,153 +338,152 @@ export default function MintcraftDL() {
 							<Typography variant="h2">
 								{t("section.credits.twitterFellas.name")}
 							</Typography>
-							<ScrollAnimation animateIn="fadeBottom" animateOnce>
-								<Typography variant="body1">
-									{t("section.credits.twitterFellas.description1")}
-									<a
-										className="external"
-										href="https://twitter.com/Gamer_Kold"
-										target="_blank"
-										rel="noopener norefferer"
-									>
-										@Gamer_Kold
-									</a>{" "}
-									<a
-										className="external"
-										href="https://twitter.com/ScreamRepeat"
-										target="_blank"
-										rel="noopener norefferer"
-									>
-										@ScreamRepeat
-									</a>{" "}
-									<a
-										className="external"
-										href="https://twitter.com/notkoutsie"
-										target="_blank"
-										rel="noopener norefferer"
-									>
-										@notkoutsie
-									</a>{" "}
-									<a
-										className="external"
-										href="https://twitter.com/Voluna_Awoo"
-										target="_blank"
-										rel="noopener norefferer"
-									>
-										@Voluna_Awoo
-									</a>{" "}
-									<a
-										className="external"
-										href="https://twitter.com/TaromaruYuki"
-										target="_blank"
-										rel="noopener norefferer"
-									>
-										@TaromaruYuki
-									</a>{" "}
-									<a
-										className="external"
-										href="https://twitter.com/emplexx"
-										target="_blank"
-										rel="noopener norefferer"
-									>
-										@emplexx
-									</a>{" "}
-									<a
-										className="external"
-										href="https://twitter.com/foxylucklol"
-										target="_blank"
-										rel="noopener norefferer"
-									>
-										@foxylucklol
-									</a>{" "}
-									<a
-										className="external"
-										href="https://twitter.com/novotab51"
-										target="_blank"
-										rel="noopener norefferer"
-									>
-										@novotab51
-									</a>{" "}
-									<a
-										className="external"
-										href="https://twitter.com/fluxe__"
-										target="_blank"
-										rel="noopener norefferer"
-									>
-										@fluxe
-									</a>{" "}
-									<a
-										className="external"
-										href="https://twitter.com/IAmDraconium"
-										target="_blank"
-										rel="noopener norefferer"
-									>
-										@IAmDraconium
-									</a>{" "}
-									<a
-										className="external"
-										href="https://twitter.com/LorAndCompany"
-										target="_blank"
-										rel="noopener norefferer"
-									>
-										@LorAndCompany
-									</a>{" "}
-									<a
-										className="external"
-										href="https://twitter.com/GrabsterTV"
-										target="_blank"
-										rel="noopener norefferer"
-									>
-										@GrabsterTV
-									</a>{" "}
-									<a
-										className="external"
-										href="https://twitter.com/dlphesigns"
-										target="_blank"
-										rel="noopener norefferer"
-									>
-										@dlphesigns
-									</a>{" "}
-									<a
-										className="external"
-										href="https://twitter.com/xparacosm"
-										target="_blank"
-										rel="noopener norefferer"
-									>
-										@xparacosm
-									</a>{" "}
-									<a
-										className="external"
-										href="https://twitter.com/Febbuarie"
-										target="_blank"
-										rel="noopener norefferer"
-									>
-										@Febbuarie
-									</a>{" "}
-									<a
-										className="external"
-										href="https://twitter.com/The_Ruby872"
-										target="_blank"
-										rel="noopener norefferer"
-									>
-										@The_Ruby872
-									</a>
-									{t("section.credits.twitterFellas.description2")}
-									<a
-										className="external"
-										href="https://twitter.com/Iucidcelestial"
-										target="_blank"
-										rel="noopener norefferer"
-									>
-										@Iucidcelestial
-									</a>
-									{t("section.credits.twitterFellas.description3")}
-									<Link to="/projects/mintcraft/splashes">
-										{t("section.credits.twitterFellas.descriptionLink")}
-									</Link>
-									.
-								</Typography>
-							</ScrollAnimation>
+
+							<Typography variant="body1">
+								{t("section.credits.twitterFellas.description1")}
+								<a
+									className="external"
+									href="https://twitter.com/Gamer_Kold"
+									target="_blank"
+									rel="noopener norefferer"
+								>
+									@Gamer_Kold
+								</a>{" "}
+								<a
+									className="external"
+									href="https://twitter.com/ScreamRepeat"
+									target="_blank"
+									rel="noopener norefferer"
+								>
+									@ScreamRepeat
+								</a>{" "}
+								<a
+									className="external"
+									href="https://twitter.com/notkoutsie"
+									target="_blank"
+									rel="noopener norefferer"
+								>
+									@notkoutsie
+								</a>{" "}
+								<a
+									className="external"
+									href="https://twitter.com/Voluna_Awoo"
+									target="_blank"
+									rel="noopener norefferer"
+								>
+									@Voluna_Awoo
+								</a>{" "}
+								<a
+									className="external"
+									href="https://twitter.com/TaromaruYuki"
+									target="_blank"
+									rel="noopener norefferer"
+								>
+									@TaromaruYuki
+								</a>{" "}
+								<a
+									className="external"
+									href="https://twitter.com/emplexx"
+									target="_blank"
+									rel="noopener norefferer"
+								>
+									@emplexx
+								</a>{" "}
+								<a
+									className="external"
+									href="https://twitter.com/foxylucklol"
+									target="_blank"
+									rel="noopener norefferer"
+								>
+									@foxylucklol
+								</a>{" "}
+								<a
+									className="external"
+									href="https://twitter.com/novotab51"
+									target="_blank"
+									rel="noopener norefferer"
+								>
+									@novotab51
+								</a>{" "}
+								<a
+									className="external"
+									href="https://twitter.com/fluxe__"
+									target="_blank"
+									rel="noopener norefferer"
+								>
+									@fluxe
+								</a>{" "}
+								<a
+									className="external"
+									href="https://twitter.com/IAmDraconium"
+									target="_blank"
+									rel="noopener norefferer"
+								>
+									@IAmDraconium
+								</a>{" "}
+								<a
+									className="external"
+									href="https://twitter.com/LorAndCompany"
+									target="_blank"
+									rel="noopener norefferer"
+								>
+									@LorAndCompany
+								</a>{" "}
+								<a
+									className="external"
+									href="https://twitter.com/GrabsterTV"
+									target="_blank"
+									rel="noopener norefferer"
+								>
+									@GrabsterTV
+								</a>{" "}
+								<a
+									className="external"
+									href="https://twitter.com/dlphesigns"
+									target="_blank"
+									rel="noopener norefferer"
+								>
+									@dlphesigns
+								</a>{" "}
+								<a
+									className="external"
+									href="https://twitter.com/xparacosm"
+									target="_blank"
+									rel="noopener norefferer"
+								>
+									@xparacosm
+								</a>{" "}
+								<a
+									className="external"
+									href="https://twitter.com/Febbuarie"
+									target="_blank"
+									rel="noopener norefferer"
+								>
+									@Febbuarie
+								</a>{" "}
+								<a
+									className="external"
+									href="https://twitter.com/The_Ruby872"
+									target="_blank"
+									rel="noopener norefferer"
+								>
+									@The_Ruby872
+								</a>
+								{t("section.credits.twitterFellas.description2")}
+								<a
+									className="external"
+									href="https://twitter.com/Iucidcelestial"
+									target="_blank"
+									rel="noopener norefferer"
+								>
+									@Iucidcelestial
+								</a>
+								{t("section.credits.twitterFellas.description3")}
+								<Link to="/projects/mintcraft/splashes">
+									{t("section.credits.twitterFellas.descriptionLink")}
+								</Link>
+								.
+							</Typography>
 						</ScrollAnimation>
 					</ScrollAnimation>
 				</Container>
