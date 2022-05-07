@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 import {
 	Button,
 	Typography,
@@ -12,7 +12,7 @@ import {
 	Stack,
 	Card,
 } from "@mui/material";
-import Image from "material-ui-image";
+import Image from "mui-image";
 import { useTranslation } from "react-i18next";
 import ScrollAnimation from "react-animate-on-scroll";
 

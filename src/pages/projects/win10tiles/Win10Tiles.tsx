@@ -1,8 +1,15 @@
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import ScrollAnimation from "react-animate-on-scroll";
-import { Button, Typography, Grid, Container, Skeleton } from "@mui/material";
-import Image from "material-ui-image";
+import {
+	Button,
+	Typography,
+	Grid,
+	Container,
+	Skeleton,
+	CircularProgress,
+} from "@mui/material";
+import Image from "mui-image";
 
 import { RiArrowDownLine, RiDownload2Line } from "react-icons/ri";
 
@@ -132,16 +139,11 @@ export default function Win10TilesDL() {
 											<Image
 												src={item.src}
 												width="100%"
-												color="#222222"
+												bgColor="#222222"
 												alt={item.alt}
-												loading={
-													<Skeleton
-														variant="rectangular"
-														animation="wave"
-														width="100%"
-														height="100%"
-													/>
-												}
+												duration={1000}
+												easing="ease-out"
+												showLoading={<CircularProgress />}
 											/>
 										</Grid>
 									))}
@@ -178,16 +180,11 @@ export default function Win10TilesDL() {
 											<Image
 												src={item.src}
 												width="100%"
-												color="#222222"
+												bgColor="#222222"
 												alt={item.alt}
-												loading={
-													<Skeleton
-														variant="rectangular"
-														animation="wave"
-														width="100%"
-														height="100%"
-													/>
-												}
+												duration={1000}
+												easing="ease-out"
+												showLoading={<CircularProgress />}
 											/>
 										</Grid>
 									))}
@@ -221,16 +218,10 @@ export default function Win10TilesDL() {
 											<Image
 												src={item.src}
 												width="100%"
-												color="#222222"
-												alt={item.alt}
-												loading={
-													<Skeleton
-														variant="rectangular"
-														animation="wave"
-														width="100%"
-														height="100%"
-													/>
-												}
+												bgColor="#222222"
+												duration={1000}
+												easing="ease-out"
+												showLoading={<CircularProgress />}
 											/>
 										</Grid>
 									))}
@@ -267,17 +258,11 @@ export default function Win10TilesDL() {
 											<Grid item xs={3} key={item.alt}>
 												<Image
 													src={item.src}
-													width="500px"
-													color="#222222"
+													bgColor="#222222"
 													alt={item.alt}
-													loading={
-														<Skeleton
-															variant="rectangular"
-															animation="wave"
-															width="100%"
-															height="100%"
-														/>
-													}
+													duration={1000}
+													easing="ease-out"
+													showLoading={<CircularProgress />}
 												/>
 											</Grid>
 										))}
@@ -291,17 +276,11 @@ export default function Win10TilesDL() {
 											<Grid item xs={3} key={item.alt}>
 												<Image
 													src={item.src}
-													width="500px"
-													color="#222222"
+													bgColor="#222222"
 													alt={item.alt}
-													loading={
-														<Skeleton
-															variant="rectangular"
-															animation="wave"
-															width="100%"
-															height="100%"
-														/>
-													}
+													duration={1000}
+													easing="ease-out"
+													showLoading={<CircularProgress />}
 												/>
 											</Grid>
 										))}

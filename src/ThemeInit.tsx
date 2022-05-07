@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.scss";
 import { useTranslation } from "react-i18next";
-import Image from "material-ui-image";
+import Image from "mui-image";
 import {
 	createTheme,
 	Button,
@@ -18,6 +18,8 @@ import {
 } from "@mui/material";
 import WireframeDark from "./globalassets/wireframes/wireframe_dark.svg";
 import WireframeLight from "./globalassets/wireframes/wireframe_light.svg";
+// import WireframeLight from "./globalassets/wireframes/wireframe_dark.svg";
+// import WireframeLightCb from "./globalassets/wireframes/wireframe_dark.svg";
 
 const ThemeSetting = () => {
 	const selected = localStorage.getItem("theme") || "dark";
@@ -41,20 +43,16 @@ const ThemeSetting = () => {
 				<Grid container spacing={3}>
 					<Grid item xs={12} md={6}>
 						<Card variant="outlined" elevation={0}>
-							<Image
+							<img
 								src={WireframeDark}
-								aspectRatio={16 / 9}
-								color="transparent"
 							/>
 						</Card>
                         <Typography variant="caption">{t("caption.dark")}</Typography>
 					</Grid>
 					<Grid item xs={12} md={6}>
 						<Card variant="outlined" elevation={0}>
-							<Image
+							<img
 								src={WireframeLight}
-								aspectRatio={16 / 9}
-								color="transparent"
 							/>
 						</Card>
                         <Typography variant="caption">{t("caption.light")}</Typography>

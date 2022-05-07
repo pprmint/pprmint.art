@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import ScrollAnimation from "react-animate-on-scroll";
 import SwipeableViews from "react-swipeable-views";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 import {
 	Container,
 	Typography,
@@ -16,8 +16,9 @@ import {
 	Divider,
 	Skeleton,
 	CardActions,
+	CircularProgress,
 } from "@mui/material";
-import Image from "material-ui-image";
+import Image from "mui-image";
 import { useTranslation } from "react-i18next";
 
 import MintBanner from "./assets/mintBanner";
@@ -150,7 +151,7 @@ export default function Home() {
 												style={{
 													position: "relative",
 													top: "4px",
-                                                    marginRight: "12px",
+													marginRight: "12px",
 													color: "#1da1f2",
 												}}
 											/>
@@ -185,7 +186,7 @@ export default function Home() {
 												style={{
 													position: "relative",
 													top: "4px",
-                                                    marginRight: "12px",
+													marginRight: "12px",
 													color: "#ff0000",
 												}}
 											/>
@@ -220,7 +221,7 @@ export default function Home() {
 												style={{
 													position: "relative",
 													top: "4px",
-                                                    marginRight: "12px",
+													marginRight: "12px",
 													color: "#5865F2",
 												}}
 											/>
@@ -275,16 +276,9 @@ export default function Home() {
 											<Image
 												src="https://media.pprmint.art/2022/WiiRemake/WiiRemake.jpg"
 												alt={t("section.recent.name")}
-												aspectRatio={16 / 9}
-												color="transparent"
-												loading={
-													<Skeleton
-														variant="rectangular"
-														animation="wave"
-														width="100%"
-														height="100%"
-													/>
-												}
+												duration={1000}
+												easing="ease-out"
+												showLoading={<CircularProgress />}
 											/>
 										</Button>
 									</Link>
@@ -349,8 +343,9 @@ export default function Home() {
 																			item.id +
 																			".imageAlt"
 																	)}
-																	aspectRatio={16 / 9}
-																	color="transparent"
+																	duration={1000}
+																	easing="ease-out"
+																	showLoading={<CircularProgress />}
 																/>
 															</Box>
 															<Box p={1}>

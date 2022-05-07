@@ -239,10 +239,13 @@ body {
 // Change color of navigation links in desktop app bar
 .desktopNav a {
 	display: inline-block;
-	transition: all 0.2s var(--easeOut);
-	color: var(--textPrimary);
 	text-align: right;
 	margin-left: 15px;
+	.MuiButtonBase-root,
+	.MuiListItemIcon-root {
+		color: var(--textPrimary);
+		transition: all 0.375s var(--easeOut);
+	}
 	&.active {
 		.MuiButtonBase-root {
 			color: var(--textSecondary) !important;
@@ -258,6 +261,7 @@ body {
 	.MuiButtonBase-root,
 	.MuiListItemIcon-root {
 		color: var(--textPrimary);
+		transition: all 0.375s var(--easeOut);
 	}
 	.active {
 		.MuiButtonBase-root {

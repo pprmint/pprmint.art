@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 import { Container, Grid } from "@mui/material";
 
 import Text from "./assets/text.svg";

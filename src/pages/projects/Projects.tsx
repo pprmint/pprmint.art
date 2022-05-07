@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 import {
 	Button,
 	Typography,
@@ -14,12 +14,13 @@ import {
 	Box,
 	Badge,
 	Stack,
+	CircularProgress,
 } from "@mui/material";
 import { Masonry } from "@mui/lab";
 import { useTranslation } from "react-i18next";
 import ScrollAnimation from "react-animate-on-scroll";
 
-import Image from "material-ui-image";
+import Image from "mui-image";
 
 /* Projects */
 import MintcraftCardHeader from "./mintcraft/assets/mintcraft.svg";
@@ -242,15 +243,9 @@ export default function Projects() {
 										aspectRatio={item.ratio}
 										src={item.src}
 										alt={item.alt}
-										color="transparent"
-										loading={
-											<Skeleton
-												variant="rectangular"
-												animation="wave"
-												width="100%"
-												height="100%"
-											/>
-										}
+										duration={1000}
+										easing="ease-out"
+										showLoading={<CircularProgress />}
 									/>
 								</Button>
 							</Link>

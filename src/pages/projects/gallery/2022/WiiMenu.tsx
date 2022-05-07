@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import ScrollAnimation from "react-animate-on-scroll";
 import { Typography, Skeleton, Container } from "@mui/material";

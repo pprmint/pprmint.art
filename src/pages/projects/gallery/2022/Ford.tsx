@@ -1,8 +1,13 @@
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import ScrollAnimation from "react-animate-on-scroll";
-import { Typography, Skeleton, Container } from "@mui/material";
-import Image from "material-ui-image";
+import {
+	Typography,
+	Skeleton,
+	Container,
+	CircularProgress,
+} from "@mui/material";
+import Image from "mui-image";
 
 export default function Ford() {
 	const { t } = useTranslation("translation", {
@@ -59,16 +64,9 @@ export default function Ford() {
 							src="https://media.pprmint.art/2022/Ford/Ford-b.svg"
 							width="100%"
 							alt="Ford logo outline on a blue background."
-							aspectRatio={16 / 9}
-							color="transparent"
-							loading={
-								<Skeleton
-									variant="rectangular"
-									animation="wave"
-									width="100%"
-									height="100%"
-								/>
-							}
+							duration={1000}
+							easing="ease-out"
+							showLoading={<CircularProgress />}
 						/>
 					</a>
 				</ScrollAnimation>
@@ -81,16 +79,9 @@ export default function Ford() {
 							src="https://media.pprmint.art/2022/Ford/Ford-slogan.svg"
 							width="100%"
 							alt="Slogan, literally translated from the German one currently in use... I think."
-							aspectRatio={16 / 9}
-							color="transparent"
-							loading={
-								<Skeleton
-									variant="rectangular"
-									animation="wave"
-									width="100%"
-									height="100%"
-								/>
-							}
+							duration={1000}
+							easing="ease-out"
+							showLoading={<CircularProgress />}
 						/>
 					</a>
 				</ScrollAnimation>

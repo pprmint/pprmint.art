@@ -1,9 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
-import { Typography, Card, Skeleton, Container } from "@mui/material";
+import { Helmet } from "react-helmet";
+import {
+	Typography,
+	Card,
+	Skeleton,
+	Container,
+	CircularProgress,
+} from "@mui/material";
 
-import Image from "material-ui-image";
+import Image from "mui-image";
 
 import SlideOne from "./assets/nyanjaro-cat.png";
 
@@ -20,7 +26,9 @@ function ManjaroWall() {
 			</Helmet>
 			<Container className="title">
 				<Typography variant="h1">Manjaro wallpaper.</Typography>
-				<Typography variant="h2">Inspired by the default SWAY wallpaper.</Typography>
+				<Typography variant="h2">
+					Inspired by the default SWAY wallpaper.
+				</Typography>
 			</Container>
 			<div className="content">
 				<div className="section">
@@ -29,16 +37,9 @@ function ManjaroWall() {
 							src={SlideOne}
 							width="100%"
 							alt="The wallpaper in all its glory."
-							aspectRatio={16 / 9}
-							color="transparent"
-							loading={
-								<Skeleton
-									variant="rectangular"
-									animation="wave"
-									width="100%"
-									height="100%"
-								/>
-							}
+							duration={1000}
+							easing="ease-out"
+							showLoading={<CircularProgress />}
 						/>
 					</a>
 					<br />

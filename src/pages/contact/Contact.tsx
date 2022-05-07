@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import ScrollAnimation from "react-animate-on-scroll";
 import {
@@ -18,6 +18,7 @@ import {
 	RiMailLine,
 	RiTwitterLine,
 	RiArrowDownSLine,
+	RiDiscordLine,
 } from "react-icons/ri";
 import Banner from "./assets/banner.svg";
 
@@ -103,11 +104,7 @@ export default function Contact() {
 										<br />
 										<br />
 									</Typography>
-									<Alert
-										color="info"
-										variant="filled"
-										icon={<RiInformationLine />}
-									>
+									<Alert variant="filled" icon={<RiInformationLine />}>
 										{t("section.faq.2terms.reminder")}
 									</Alert>
 								</AccordionDetails>
@@ -291,29 +288,35 @@ export default function Contact() {
 									{t("section.contact.text")}
 								</Typography>
 								<br />
-								<ScrollAnimation animateIn="fadeBottom" animateOnce>
-									<Stack spacing={2} direction="row">
-										<Button
-											href="mailto:mail@pprmint.art?subject=I'll%20gladly%20ignore%20any%20ads%20or%20offers%20you%20might%20have%20for%20me."
-											target="_blank"
-											rel="noopener noreferrer"
-											variant="contained"
-											startIcon={<RiMailLine />}
-										>
-											{t("section.contact.button.email")}
-										</Button>
-										<Button
-											href="https://twitter.com/messages/compose?recipient_id=1296863056266502144"
-											target="_blank"
-											rel="noopener noreferrer"
-											variant="contained"
-											color="info"
-											startIcon={<RiTwitterLine />}
-										>
-											{t("section.contact.button.twitter")}
-										</Button>
-									</Stack>
-								</ScrollAnimation>
+								<Stack spacing={2} direction="row">
+									<Button
+										href="mailto:mail@pprmint.art?subject=I'll%20gladly%20ignore%20any%20ads%20or%20offers%20you%20might%20have%20for%20me."
+										target="_blank"
+										rel="noopener noreferrer"
+										variant="contained"
+										startIcon={<RiMailLine />}
+									>
+										{t("section.contact.button.email")}
+									</Button>
+									<Button
+										href="https://twitter.com/messages/compose?recipient_id=1296863056266502144"
+										target="_blank"
+										rel="noopener noreferrer"
+										variant="outlined"
+										startIcon={<RiTwitterLine />}
+									>
+										{t("section.contact.button.twitter")}
+									</Button>
+									<Button
+										href="https://discord.com/invite/Vw9JXwr"
+										target="_blank"
+										rel="noopener noreferrer"
+										variant="outlined"
+										startIcon={<RiDiscordLine />}
+									>
+										{t("section.contact.button.discord")}
+									</Button>
+								</Stack>
 							</ScrollAnimation>
 						</ScrollAnimation>
 					</Container>

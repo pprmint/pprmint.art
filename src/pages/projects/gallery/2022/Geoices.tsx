@@ -1,8 +1,13 @@
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import ScrollAnimation from "react-animate-on-scroll";
-import { Typography, Skeleton, Container } from "@mui/material";
-import Image from "material-ui-image";
+import {
+	Typography,
+	Skeleton,
+	Container,
+	CircularProgress,
+} from "@mui/material";
+import Image from "mui-image";
 
 export default function Geoices() {
 	const { t } = useTranslation("translation", {
@@ -57,16 +62,9 @@ export default function Geoices() {
 							src="https://media.pprmint.art/2022/Geoices/geoballs.png"
 							width="100%"
 							alt="A 3D remake of Geoices' logo made with Cinema 4D and Octane."
-							aspectRatio={16 / 9}
-							color="transparent"
-							loading={
-								<Skeleton
-									variant="rectangular"
-									animation="wave"
-									width="100%"
-									height="100%"
-								/>
-							}
+							duration={1000}
+							easing="ease-out"
+							showLoading={<CircularProgress />}
 						/>
 					</a>
 				</ScrollAnimation>

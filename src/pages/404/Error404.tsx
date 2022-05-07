@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 import { Button, Typography, Container, Grid } from "@mui/material";
 import { useTranslation } from "react-i18next";
 

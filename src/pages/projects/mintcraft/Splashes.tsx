@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 import ScrollAnimation from "react-animate-on-scroll";
 import { Typography, List, ListItem, Container } from "@mui/material";
 import { useTranslation } from "react-i18next";

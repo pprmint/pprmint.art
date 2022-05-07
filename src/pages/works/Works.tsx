@@ -1,7 +1,7 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 import { Typography, Grid, Button, Container, Link } from "@mui/material";
-import Image from "material-ui-image";
+import Image from "mui-image";
 
 import WiiMenuPreview from "./assets/wip/wii_menu.png";
 import EuroBillsPreview from "./assets/wip/euros.png";
