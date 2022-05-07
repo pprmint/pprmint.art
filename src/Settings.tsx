@@ -14,32 +14,6 @@ import { RiCloseLine, RiSettings4Line } from "react-icons/ri";
 import LanguageSetting from "./LanguageInit";
 import ThemeSetting from "./ThemeInit";
 
-const SettingsButton = () => {
-	const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-	const open = Boolean(anchorEl);
-	const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-		setAnchorEl(event.currentTarget);
-	};
-	const handleClose = () => {
-		setAnchorEl(null);
-	};
-	return (
-		<Button
-			variant="text"
-			color="inherit"
-			startIcon={<RiSettings4Line />}
-			onClick={handleClick}
-			sx={{
-				ml: "16px",
-				mr: "16px",
-				pl: "15px",
-				pr: "15px",
-				borderRadius: "20px",
-			}}
-		></Button>
-	);
-};
-
 const Settings = () => {
 	const { t } = useTranslation();
 	const theme = useTheme();
@@ -55,16 +29,13 @@ const Settings = () => {
 	return (
 		<>
 			<Button
-				variant="text"
 				color="inherit"
 				startIcon={<RiSettings4Line />}
 				onClick={handleClick}
 				sx={{
-					ml: "16px",
-					mr: "16px",
-					pl: "15px",
-					pr: "15px",
-					borderRadius: "20px",
+					pl: 2,
+					pr: 2,
+					borderRadius: 20,
 				}}
 			>
 				{t("common.settings.title")}

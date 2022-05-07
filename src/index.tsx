@@ -70,7 +70,7 @@ const darkTheme = createTheme({
 			color: "#EEE",
 			fontSize: "2rem",
 			fontWeight: 500,
-			padding: ".3rem 0",
+			padding: ".5rem 0",
 			lineHeight: 1.1,
 			hyphens: "auto",
 		},

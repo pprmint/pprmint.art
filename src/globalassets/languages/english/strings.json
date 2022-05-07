@@ -37,7 +37,7 @@
 			"theme": {
 				"caption": {
 					"dark": "Dark",
-					"darkCb": "Dark (Colorblind)"
+					"light": "Light"
 				},
 				"description": "Choose a color palette where blue and yellow are the main accent colors to better account for colorblindness.",
 				"title": "Theme"

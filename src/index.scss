@@ -69,7 +69,7 @@ body {
 @keyframes fadeBottom {
 	0% {
 		opacity: 0;
-		transform: translateY(20px);
+		transform: translateY(30px);
 	}
 	75% {
 		opacity: 1;
@@ -82,7 +82,7 @@ body {
 @keyframes fadeTop {
 	0% {
 		opacity: 0;
-		transform: translateY(-20px);
+		transform: translateY(-30px);
 	}
 	75% {
 		opacity: 1;
@@ -95,7 +95,7 @@ body {
 @keyframes fadeLeft {
 	0% {
 		opacity: 0;
-		transform: translateX(-20px);
+		transform: translateX(-30px);
 	}
 	75% {
 		opacity: 1;
@@ -108,7 +108,7 @@ body {
 @keyframes fadeRight {
 	0% {
 		opacity: 0;
-		transform: translateX(20px);
+		transform: translateX(30px);
 	}
 	75% {
 		opacity: 1;
@@ -172,7 +172,7 @@ body {
 		opacity: 0.5;
 	}
 }
-@keyframes mintBanner_Gradient {
+@keyframes mintBanner_grad {
 	from {
 		transform: translateY(0);
 	}
@@ -203,8 +203,7 @@ body {
 		animation: mintBanner_T 1.8s cubic-bezier(0, 1, 0.5, 1) 0.26s forwards;
 	}
 	.gradient {
-		animation: mintBanner_Gradient 1.8s cubic-bezier(0, 1, 0.5, 1) 0.26s
-			forwards;
+		animation: mintBanner_grad 1.8s cubic-bezier(0, 1, 0.5, 1) 0.26s forwards;
 	}
 }
 
@@ -238,31 +237,36 @@ body {
 }
 
 // Change color of navigation links in desktop app bar
-.navlink a {
+.desktopNav a {
 	display: inline-block;
 	transition: all 0.2s var(--easeOut);
 	color: var(--textPrimary);
 	text-align: right;
 	margin-left: 15px;
 	&.active {
-		color: var(--textSecondary) !important;
-	}
-	&:hover {
-		color: var(--textSecondary);
-	}
-	&:focus-visible {
-		background-color: var(--backgroundTertiary);
+		.MuiButtonBase-root {
+			color: var(--textSecondary) !important;
+			background-color: var(--backgroundTertiary);
+		}
+		.MuiButton-startIcon {
+			color: var(--greenPrimary);
+		}
 	}
 }
-.active {
-	.MuiButtonBase-root {
-		transition: all 0.2s;
-		color: var(--backgroundSecondary) !important;
-		background-color: var(--greenPrimary);
-		font-weight: 500 !important;
-	}
+
+.mobileNav {
+	.MuiButtonBase-root,
 	.MuiListItemIcon-root {
-		color: var(--backgroundSecondary) !important;
+		color: var(--textPrimary);
+	}
+	.active {
+		.MuiButtonBase-root {
+			color: var(--textSecondary);
+			background-color: var(--backgroundTertiary);
+		}
+		.MuiListItemIcon-root {
+			color: var(--greenPrimary);
+		}
 	}
 }
 

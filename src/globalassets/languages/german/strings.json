@@ -37,7 +37,7 @@
 			"theme": {
 				"caption": {
 					"dark": "Dunkel",
-					"darkCb": "Dunkel (Farbenblind)"
+					"light": "Hell"
 				},
 				"description": "Wähle eine Farbpalette, bei der Blau und Gelb die Hauptakzentfarben sind, um die Darstellung für Farbenblinde angenehmer zu machen.",
 				"title": "Thema"

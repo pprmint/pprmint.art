@@ -143,14 +143,16 @@ export default function Home() {
 					<Grid container spacing={4}>
 						<Grid item xs={12} sm={4}>
 							<ScrollAnimation animateIn="fadeBottom" animateOnce>
-								<Card
-									variant="outlined"
-									sx={{ backgroundColor: "#1da1f255", borderWidth: 2 }}
-								>
+								<Card variant="outlined">
 									<CardContent>
 										<Typography variant="h2">
 											<RiTwitterLine
-												style={{ paddingTop: 7, marginRight: 10 }}
+												style={{
+													position: "relative",
+													top: "4px",
+                                                    marginRight: "12px",
+													color: "#1da1f2",
+												}}
 											/>
 											{t("section.about.twitter.title")}
 										</Typography>
@@ -176,14 +178,16 @@ export default function Home() {
 						</Grid>
 						<Grid item xs={12} sm={4}>
 							<ScrollAnimation animateIn="fadeBottom" animateOnce>
-								<Card
-									variant="outlined"
-									sx={{ backgroundColor: "#ff000055", borderWidth: 2 }}
-								>
+								<Card variant="outlined">
 									<CardContent>
 										<Typography variant="h2">
 											<RiYoutubeLine
-												style={{ paddingTop: 7, marginRight: 10 }}
+												style={{
+													position: "relative",
+													top: "4px",
+                                                    marginRight: "12px",
+													color: "#ff0000",
+												}}
 											/>
 											{t("section.about.youtube.title")}
 										</Typography>
@@ -209,14 +213,16 @@ export default function Home() {
 						</Grid>
 						<Grid item xs={12} sm={4}>
 							<ScrollAnimation animateIn="fadeBottom" animateOnce>
-								<Card
-									variant="outlined"
-									sx={{ backgroundColor: "#5865F255", borderWidth: 2 }}
-								>
+								<Card variant="outlined">
 									<CardContent>
 										<Typography variant="h2">
 											<RiDiscordLine
-												style={{ paddingTop: 7, marginRight: 10 }}
+												style={{
+													position: "relative",
+													top: "4px",
+                                                    marginRight: "12px",
+													color: "#5865F2",
+												}}
 											/>
 											{t("section.about.discord.title")}
 										</Typography>

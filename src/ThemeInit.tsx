@@ -17,9 +17,7 @@ import {
 	Box,
 } from "@mui/material";
 import WireframeDark from "./globalassets/wireframes/wireframe_dark.svg";
-import WireframeDarkCb from "./globalassets/wireframes/wireframe_dark_cb.svg";
-// import WireframeLight from "./globalassets/wireframes/wireframe_dark.svg";
-// import WireframeLightCb from "./globalassets/wireframes/wireframe_dark.svg";
+import WireframeLight from "./globalassets/wireframes/wireframe_light.svg";
 
 const ThemeSetting = () => {
 	const selected = localStorage.getItem("theme") || "dark";
@@ -54,12 +52,12 @@ const ThemeSetting = () => {
 					<Grid item xs={12} md={6}>
 						<Card variant="outlined" elevation={0}>
 							<Image
-								src={WireframeDarkCb}
+								src={WireframeLight}
 								aspectRatio={16 / 9}
 								color="transparent"
 							/>
 						</Card>
-                        <Typography variant="caption">{t("caption.darkCb")}</Typography>
+                        <Typography variant="caption">{t("caption.light")}</Typography>
 					</Grid>
 				</Grid>
 			</DialogContent>

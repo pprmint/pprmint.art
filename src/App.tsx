@@ -59,7 +59,7 @@ import HealthSafety from "./pages/wii/HealthSafety";
 import Test from "./pages/test/Test";
 
 import ScrollToTop from "./ScrollToTop";
-import SettingsButton from "./Settings";
+import Settings from "./Settings";
 import CookieSnackbar from "./CookieSnackbar";
 
 import Wordmark from "./globalassets/wordmark.svg";
@@ -214,7 +214,7 @@ function App() {
 									</IconButton>
 								</Box>
 								<Divider />
-								<List sx={{ flex: "1" }}>
+								<List className="mobileNav" sx={{ flex: "1" }}>
 									{nav.map((item) => {
 										const exact = item.exact ? true : false;
 										return (
@@ -228,7 +228,7 @@ function App() {
 												<ListItem
 													button
 													sx={{
-														margin: "0 10px 5px 0",
+														margin: "0 10px 10px 0",
 														padding: "10px 28px 10px 28px",
 														borderRadius: "0 24px 24px 0",
 														width: "max-content",
@@ -251,7 +251,7 @@ function App() {
 										textAlign: "center",
 									}}
 								>
-									<SettingsButton />
+									<Settings />
 								</Box>
 							</SwipeableDrawer>
 							<Box
@@ -266,23 +266,37 @@ function App() {
 								</Link>
 							</Box>
 							<Box
-								className="navlink"
-								sx={{ display: { md: "block", xs: "none" } }}
+								className="desktopNav"
+								sx={{ display: { md: "flex", xs: "none" }, flexGrow: 1 }}
 							>
-								{nav.map((item) => {
-									const exact = item.exact ? true : false;
-									return (
-										<NavLink
-											exact={item.exact}
-											activeClassName="active"
-											to={item.link}
-											key={item.key}
-										>
-											{t(item.name)}
-										</NavLink>
-									);
-								})}
+								<Stack spacing={1} direction="row">
+									{nav.map((item) => {
+										const exact = item.exact ? true : false;
+										return (
+											<NavLink
+												exact={item.exact}
+												activeClassName="active"
+												to={item.link}
+												key={item.key}
+											>
+												<Button
+													color="inherit"
+													startIcon={item.icon}
+													sx={{
+														width: "max-content",
+														borderRadius: "20px",
+														pl: 2,
+														pr: 2,
+													}}
+												>
+													{t(item.name)}
+												</Button>
+											</NavLink>
+										);
+									})}
+								</Stack>
 							</Box>
+							<Settings />
 						</Toolbar>
 					</AppBar>
 				</ElevationScroll>
@@ -371,15 +385,6 @@ function App() {
 							<IconLink href="https://discord.com/invite/Vw9JXwr">
 								<RiDiscordLine />
 							</IconLink>
-							<Box
-								ml="0 !important"
-								sx={{
-									display: { md: "flex", xs: "none" },
-								}}
-							>
-								<Divider orientation="vertical" flexItem />
-								<SettingsButton />
-							</Box>
 						</Stack>
 					</footer>
 				</ScrollToTop>
