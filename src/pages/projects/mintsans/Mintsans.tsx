@@ -2,11 +2,27 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import ScrollAnimation from "react-animate-on-scroll";
-import { Button, Typography, Container } from "@mui/material";
+import {
+	Button,
+	Typography,
+	Container,
+	Card,
+	CardContent,
+	Slider,
+	Grid,
+	Box,
+	Paper,
+	Alert,
+} from "@mui/material";
 
 import Image from "mui-image";
 
-import { RiArrowDownLine, RiDownload2Line } from "react-icons/ri";
+import "./assets/mintsans/mintsans.css";
+import {
+	RiArrowDownLine,
+	RiDownload2Line,
+	RiInformationLine,
+} from "react-icons/ri";
 
 import MintsansBanner from "./assets/mintsans_banner.svg";
 import MintsansLogo from "./assets/mintsans_logo.svg";
@@ -18,10 +34,56 @@ import SlideFour from "./assets/slide4.svg";
 import SlideFive from "./assets/slide5.svg";
 import SlideSix from "./assets/slide6.svg";
 
+const weights = [
+	{
+		value: 200,
+	},
+	{
+		value: 400,
+	},
+	{
+		value: 700,
+	},
+];
+
+const tracking = [
+	{
+		value: -0.25,
+	},
+	{
+		value: 0,
+	},
+	{
+		value: 1,
+	},
+];
+
 export default function MintsansDL() {
 	const { t } = useTranslation("translation", {
 		keyPrefix: "projects.mintsans",
 	});
+
+	const [fontSize, setFontSize] = React.useState<
+		number | string | Array<number | string>
+	>(40);
+	const handleSizeChange = (event: Event, newValue: number | number[]) => {
+		setFontSize(newValue);
+	};
+
+	const [fontWeight, setFontWeight] = React.useState<
+		number | string | Array<number | string>
+	>(400);
+	const handleWeightChange = (event: Event, newValue: number | number[]) => {
+		setFontWeight(newValue);
+	};
+
+	const [fontTracking, setFontTracking] = React.useState<
+		number | string | Array<number | string>
+	>(0);
+	const handleTrackingChange = (event: Event, newValue: number | number[]) => {
+		setFontTracking(newValue);
+	};
+
 	return (
 		<>
 			<Helmet>
@@ -60,8 +122,6 @@ export default function MintsansDL() {
 						src={SlideOne}
 						width="100%"
 						alt="Aboslutely censored hideous."
-						aspectRatio={16 / 9}
-						color="transparent"
 					/>
 				</ScrollAnimation>
 				<ScrollAnimation animateIn="fadeBottom" animateOnce>
@@ -69,8 +129,6 @@ export default function MintsansDL() {
 						src={SlideTwo}
 						width="100%"
 						alt="Geometrical inconsistency, feat. A Quick Brown Fox."
-						aspectRatio={16 / 9}
-						color="transparent"
 					/>
 				</ScrollAnimation>
 				<ScrollAnimation animateIn="fadeBottom" animateOnce>
@@ -78,8 +136,6 @@ export default function MintsansDL() {
 						src={SlideThree}
 						width="100%"
 						alt="If you look up the definition for"
-						aspectRatio={16 / 9}
-						color="transparent"
 					/>
 				</ScrollAnimation>
 				<ScrollAnimation animateIn="fadeBottom" animateOnce>
@@ -87,8 +143,6 @@ export default function MintsansDL() {
 						src={SlideFour}
 						width="100%"
 						alt="mistake, it'll be set in MintSans."
-						aspectRatio={16 / 9}
-						color="transparent"
 					/>
 				</ScrollAnimation>
 				<ScrollAnimation animateIn="fadeBottom" animateOnce>
@@ -96,8 +150,6 @@ export default function MintsansDL() {
 						src={SlideFive}
 						width="100%"
 						alt="The quick brown fox jumps over the lazy dog."
-						aspectRatio={16 / 9}
-						color="transparent"
 					/>
 				</ScrollAnimation>
 				<ScrollAnimation animateIn="fadeBottom" animateOnce>
@@ -105,12 +157,127 @@ export default function MintsansDL() {
 						src={SlideSix}
 						width="100%"
 						alt="Some tips for using MintSans!"
-						aspectRatio={16 / 9}
-						color="transparent"
 					/>
 				</ScrollAnimation>
 			</div>
-			<div className="section">
+			<div className="section" id="try">
+				<Container>
+					<ScrollAnimation animateIn="fadeBottom" animateOnce>
+						<Typography variant="h1">{t("section.try.headline")}</Typography>
+						<Typography variant="body1">
+							{t("section.try.description")}
+						</Typography>
+					</ScrollAnimation>
+				</Container>
+				<br />
+				<br />
+				<Container maxWidth="xl">
+					<ScrollAnimation animateIn="fadeBottom" animateOnce>
+						<Box maxWidth="calc(100vw - 32px)">
+							<Card variant="outlined">
+								<Paper
+									square
+									elevation={2}
+									sx={{
+										display: "flex",
+										alignItems: "center",
+										pr: 3,
+										pl: 3,
+										pt: 2,
+										pb: 1,
+									}}
+								>
+									<Grid container spacing={4}>
+										<Grid item sm={4} xs={12}>
+											<Typography gutterBottom>
+												{t("section.try.size")}
+											</Typography>
+											<Slider
+												aria-label="Font size"
+												color="secondary"
+												value={typeof fontSize === "number" ? fontSize : 0}
+												valueLabelDisplay="auto"
+												valueLabelFormat={fontSize + " px"}
+												onChange={handleSizeChange}
+											/>
+										</Grid>
+										<Grid item sm={4} xs={12}>
+											<Typography gutterBottom>
+												{t("section.try.weight")}
+											</Typography>
+											<Slider
+												aria-label="Font weight"
+												color="secondary"
+												valueLabelDisplay="auto"
+												defaultValue={400}
+												min={200}
+												max={700}
+												step={null}
+												marks={weights}
+												onChange={handleWeightChange}
+											/>
+										</Grid>
+										<Grid item sm={4} xs={12}>
+											<Typography gutterBottom>
+												{t("section.try.tracking")}
+											</Typography>
+											<Slider
+												aria-label="Font tracking"
+												color="secondary"
+												value={
+													typeof fontTracking === "number" ? fontTracking : 0
+												}
+												valueLabelDisplay="auto"
+												valueLabelFormat={fontTracking + " rem"}
+												min={-0.25}
+												max={1}
+												step={0.01}
+												marks={tracking}
+												onChange={handleTrackingChange}
+											/>
+										</Grid>
+									</Grid>
+								</Paper>
+								<Box p={3}>
+									<Alert
+										variant="filled"
+										severity="info"
+										icon={<RiInformationLine />}
+									>
+										{t("section.try.info")}
+									</Alert>
+								</Box>
+								<Box
+									minHeight="50vh"
+									p={3}
+									sx={{
+										display: "flex",
+										alignItems: "center",
+										justifyContent: "center",
+                                        textAlign: "center",
+									}}
+								>
+									<Typography
+										sx={{
+											fontFamily: "Mintsans",
+											color: "var(--textSecondary)",
+											outline: "none",
+											fontWeight: fontWeight,
+											fontSize: fontSize,
+											letterSpacing: fontTracking + "rem",
+										}}
+										contentEditable="true"
+										suppressContentEditableWarning
+									>
+										{t("section.try.pangram")}
+									</Typography>
+								</Box>
+							</Card>
+						</Box>
+					</ScrollAnimation>
+				</Container>
+			</div>
+			<div className="section" id="download">
 				<Container>
 					<ScrollAnimation animateIn="fadeBottom" animateOnce>
 						<Typography variant="h1">

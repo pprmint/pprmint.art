@@ -369,6 +369,15 @@
 					"description": "If you could actually read the text on slide 3 in a sensible order, you deserve a download button.",
 					"downloadButton": "Download",
 					"headline": "MintSans V2"
+				},
+				"try": {
+					"description": "Click on the text below to enter your own.",
+					"headline": "Try it out.",
+					"info": "Currently, only basic Latin with a few special characters and digits is supported.",
+					"pangram": "The quick brown fox jumps over the lazy dog.",
+					"size": "Size",
+					"tracking": "Tracking",
+					"weight": "Weight"
 				}
 			},
 			"title": {

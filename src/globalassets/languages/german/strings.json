@@ -369,6 +369,15 @@
 					"description": "Wenn du den Text auf Folie 3 tatsächlich in einer vernünftigen Reihenfolge lesen konntest, verdienst du einen Download-Button.",
 					"downloadButton": "Herunterladen",
 					"headline": "MintSans V2"
+				},
+				"try": {
+					"description": "Klicke auf den unten stehenden Text, um ihn zu bearbeiten.",
+					"headline": "Probier es aus.",
+					"info": "Aktuell wird nur einfaches Latein mit einigen wenigen Sonderzeichen und Ziffern unterstützt.",
+					"pangram": "Franz jagt im komplett verwahrlosten Taxi quer durch Bayern.",
+					"size": "Größe",
+					"tracking": "Laufweite",
+					"weight": "Breite"
 				}
 			},
 			"title": {

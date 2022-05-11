@@ -139,7 +139,7 @@ const darkTheme = createTheme({
 					borderRadius: 8,
 					background: "#333",
 					boxShadow: "0 6px 10px #00000055",
-                    transition: "all cubic-bezier(0, 0, 0.2, 1)",
+					transition: "all cubic-bezier(0, 0, 0.2, 1)",
 				},
 			},
 		},
@@ -159,15 +159,25 @@ const darkTheme = createTheme({
 				},
 			},
 		},
+		MuiSlider: {
+			styleOverrides: {
+				valueLabel: {
+					backgroundColor: "#555555",
+					borderRadius: "5px",
+					boxShadow: "0px 1px 5px 0px rgba(0,0,0,0.12)",
+					color: "#eeeeee",
+				},
+			},
+		},
 	},
 });
 
 import {
-    createTheme,
+	createTheme,
 	ThemeProvider,
 	StyledEngineProvider,
 	CssBaseline,
-    LinearProgress,
+	LinearProgress,
 } from "@mui/material";
 
 ReactDOM.render(
