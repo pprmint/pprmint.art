@@ -16,7 +16,7 @@ import Image from "mui-image";
 import { useTranslation } from "react-i18next";
 import ScrollAnimation from "react-animate-on-scroll";
 
-import "./assets/mintbit.css";
+import "./assets/mintbit/mintbit.css";
 import "./assets/buttonStyles.scss";
 
 import {
