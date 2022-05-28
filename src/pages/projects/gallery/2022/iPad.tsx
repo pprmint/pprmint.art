@@ -10,7 +10,6 @@ import {
 	CircularProgress,
 } from "@mui/material";
 import Image from "mui-image";
-import { flexbox } from "@mui/system";
 
 export default function iPad() {
 	const { t } = useTranslation("translation", {

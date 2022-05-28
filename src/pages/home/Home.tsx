@@ -163,15 +163,18 @@ export default function Home() {
 									</CardContent>
 									<CardActions>
 										<Box sx={{ marginLeft: "auto" }}>
-											<Button color="inherit" endIcon={<RiArrowRightUpLine />}>
-												<a
-													href="https://twitter.com/npprmint"
-													target="_blank"
-													rel="noopener noreferrer"
+											<a
+												href="https://twitter.com/npprmint"
+												target="_blank"
+												rel="noopener noreferrer"
+											>
+												<Button
+													color="inherit"
+													endIcon={<RiArrowRightUpLine />}
 												>
 													{t("section.about.twitter.follow")}
-												</a>
-											</Button>
+												</Button>
+											</a>
 										</Box>
 									</CardActions>
 								</Card>
@@ -198,15 +201,18 @@ export default function Home() {
 									</CardContent>
 									<CardActions>
 										<Box sx={{ marginLeft: "auto" }}>
-											<Button color="inherit" endIcon={<RiArrowRightUpLine />}>
-												<a
-													href="https://youtube.com/c/pprmint"
-													target="_blank"
-													rel="noopener noreferrer"
+											<a
+												href="https://youtube.com/c/pprmint"
+												target="_blank"
+												rel="noopener noreferrer"
+											>
+												<Button
+													color="inherit"
+													endIcon={<RiArrowRightUpLine />}
 												>
 													{t("section.about.youtube.subscribe")}
-												</a>
-											</Button>
+												</Button>
+											</a>
 										</Box>
 									</CardActions>
 								</Card>
@@ -233,15 +239,18 @@ export default function Home() {
 									</CardContent>
 									<CardActions>
 										<Box sx={{ marginLeft: "auto" }}>
-											<Button color="inherit" endIcon={<RiArrowRightUpLine />}>
-												<a
-													href="https://discord.com/invite/Vw9JXwr"
-													target="_blank"
-													rel="noopener noreferrer"
+											<a
+												href="https://discord.com/invite/Vw9JXwr"
+												target="_blank"
+												rel="noopener noreferrer"
+											>
+												<Button
+													color="inherit"
+													endIcon={<RiArrowRightUpLine />}
 												>
 													{t("section.about.discord.join")}
-												</a>
-											</Button>
+												</Button>
+											</a>
 										</Box>
 									</CardActions>
 								</Card>
@@ -262,7 +271,7 @@ export default function Home() {
 							<br />
 							<ScrollAnimation animateIn="fadeLeft" animateOnce>
 								<Card variant="outlined">
-									<Link to="/projects/2022/wiimenu">
+									<Link to="/projects/2022/book">
 										<Button
 											color="inherit"
 											sx={{
@@ -274,7 +283,7 @@ export default function Home() {
 											}}
 										>
 											<Image
-												src="https://media.pprmint.art/2022/WiiRemake/WiiRemake.jpg"
+												src="https://media.pprmint.art/2022/Book/Book.jpg"
 												alt={t("section.recent.name")}
 												duration={1000}
 												easing="ease-out"

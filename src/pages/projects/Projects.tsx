@@ -33,46 +33,49 @@ import ManjaroWall from "./gallery/2021/manjarowall/assets/nyanjaro-cat-720.png"
 
 const works2022 = [
 	{
+		src: "https://media.pprmint.art/2022/Book/Cover-720.png",
+		link: "/projects/2022/Book",
+		alt: "Book cover I made as a joke.",
+	},
+	{
+		src: "https://media.pprmint.art/2022/MintBanners/MINT_Night-720.png",
+		link: "/projects/2022/MintBanners",
+		alt: "3D renders that have to do with MINT.",
+	},
+	{
 		src: "https://media.pprmint.art/2022/WiiRemake/WiiRemake-720.png",
 		link: "/projects/2022/wiimenu",
 		alt: "Modern remake of the Wii Menu.",
-		ratio: 16 / 9,
 	},
 	{
 		src: "https://media.pprmint.art/2022/Geoices/geoballs-720.png",
 		link: "/projects/2022/geoices",
 		alt: "3D remake of Geoices' logo.",
-		ratio: 16 / 9,
 	},
 	{
 		src: "https://media.pprmint.art/2022/SUSE/suse-720.png",
 		link: "/projects/2022/suserebrand",
 		alt: "Oversimplified/redesigned logo for SUSE.",
-		ratio: 16 / 9,
 	},
 	{
 		src: "https://media.pprmint.art/2022/Statistics/statistics-720.png",
 		link: "/projects/2022/statistics",
 		alt: "Like statistics for the @ProgressBar202_ Twitter account.",
-		ratio: 1 / 1,
 	},
 	{
 		src: "https://media.pprmint.art/2022/iPad/iPad-720.png",
 		link: "/projects/2022/ipad",
 		alt: "An iPad as part of another project.",
-		ratio: 16 / 9,
 	},
 	{
 		src: "https://media.pprmint.art/2022/ArchWall/Arch_Qogir-720.png",
 		link: "/projects/2022/archwall",
 		alt: "Arch Linux desktop background with mountains",
-		ratio: 16 / 9,
 	},
 	{
 		src: "https://media.pprmint.art/2022/Ford/Ford-720.png",
 		link: "/projects/2022/ford",
 		alt: "Ford logo redesign, inspired by Raul Rand.",
-		ratio: 16 / 9,
 	},
 ];
 
@@ -240,7 +243,6 @@ export default function Projects() {
 									}}
 								>
 									<Image
-										aspectRatio={item.ratio}
 										src={item.src}
 										alt={item.alt}
 										duration={1000}

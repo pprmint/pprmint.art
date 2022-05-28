@@ -40,6 +40,8 @@ import MintcraftSplashes from "./pages/projects/mintcraft/Splashes";
 import Win10TilesDL from "./pages/projects/win10tiles/Win10Tiles";
 
 // Works 2022
+import Book from "./pages/projects/gallery/2022/Book";
+import MintBanners from "./pages/projects/gallery/2022/MintBanners";
 import WiiMenu from "./pages/projects/gallery/2022/WiiMenu";
 import Geoices from "./pages/projects/gallery/2022/Geoices";
 import suseRebrand from "./pages/projects/gallery/2022/suseRebrand";
@@ -315,6 +317,8 @@ function App() {
 					<Route path="/projects/win10tiles" component={Win10TilesDL} />
 
 					{/* Works of 2022 */}
+					<Route path="/projects/2022/Book" component={Book} />
+					<Route path="/projects/2022/MintBanners" component={MintBanners} />
 					<Route path="/projects/2022/wiimenu" component={WiiMenu} />
 					<Route path="/projects/2022/geoices" component={Geoices} />
 					<Route path="/projects/2022/suserebrand" component={suseRebrand} />

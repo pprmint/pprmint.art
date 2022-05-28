@@ -177,8 +177,8 @@
 				"title": "Neuigkeiten."
 			},
 			"recent": {
-				"description": "Mein Versuch an einem modernisiertem Wii-Menü. Klicke auf das obige Bild, um zu sehen, was ich bisher fertiggestellt habe.",
-				"name": "Wii-Menü-Remake.",
+				"description": "Einige fragen sich immer noch, wieso ich auf Discord mit Großbuchstaben und Satzzeichen texte. Einer sagte, ich sollte ein Buch über mein System schreiben. Klick auf das obige Bild, um dieses nicht zu lesen.",
+				"name": "Ein Witz.",
 				"title": "Neuste Kreation."
 			}
 		},
@@ -479,6 +479,18 @@
 						"sub": "Ich hatte mal Arch benutzt nebenbei."
 					}
 				},
+				"book": {
+					"captions": {
+						"starboard": "Das brachte mich auf's Starboard eines Discord-Servers. Mein Plan war erfolgreich."
+					},
+					"meta": {
+						"title": "Ein Witz • pprmint.art"
+					},
+					"title": {
+						"main": "Ein Witz.",
+						"sub": "Wie viele kennst du doch, die online mit korrekter Großschreibung und Zeichensetzung schreiben?"
+					}
+				},
 				"ford": {
 					"meta": {
 						"title": "Ford Rebrand-Konzept • pprmint.art"
@@ -521,6 +533,18 @@
 					"title": {
 						"main": "Like-Statistiken für @ProgressBar202_.",
 						"sub": "Vor Silvester war mir sehr langweilig."
+					}
+				},
+				"mintBanners": {
+					"captions": {
+						"music": "Musik: "
+					},
+					"meta": {
+						"title": "3D-MINT-Banner • pprmint.art"
+					},
+					"title": {
+						"main": "3D-MINT-Banner.",
+						"sub": "Ich hab mit Cinema 4D herumgespielt."
 					}
 				},
 				"suseRebrand": {

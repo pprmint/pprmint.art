@@ -177,8 +177,8 @@
 				"title": "News."
 			},
 			"recent": {
-				"description": "My take on a modernized Wii menu. Click on this image to see what I've finished so far.",
-				"name": "Wii Menu Remake",
+				"description": "Some still wonder why I write with capitalization and punctuation on Discord. One said I should write a book about my system. Click on the above image to not read it.",
+				"name": "A joke.",
 				"title": "Latest creation."
 			}
 		},
@@ -479,6 +479,18 @@
 						"sub": "I used Arch btw."
 					}
 				},
+				"book": {
+					"captions": {
+						"starboard": "This got me on the starboard of a Discord server. My plan was successful."
+					},
+					"meta": {
+						"title": "A joke • pprmint.art"
+					},
+					"title": {
+						"main": "A joke.",
+						"sub": "How many do you know who write with proper capitalization and punctuation online?"
+					}
+				},
 				"ford": {
 					"meta": {
 						"title": "Ford rebrand concept • pprmint.art"
@@ -521,6 +533,18 @@
 					"title": {
 						"main": "Like statistics for @ProgressBar202_.",
 						"sub": "I was very bored before New Year's Eve. "
+					}
+				},
+				"mintBanners": {
+					"captions": {
+						"music": "Music: "
+					},
+					"meta": {
+						"title": "3D MINT banners • pprmint.art"
+					},
+					"title": {
+						"main": "3D MINT banners.",
+						"sub": "I played around with Cinema 4D."
 					}
 				},
 				"suseRebrand": {
