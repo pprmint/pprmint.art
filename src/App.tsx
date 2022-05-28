@@ -317,8 +317,8 @@ function App() {
 					<Route path="/projects/win10tiles" component={Win10TilesDL} />
 
 					{/* Works of 2022 */}
-					<Route path="/projects/2022/Book" component={Book} />
-					<Route path="/projects/2022/MintBanners" component={MintBanners} />
+					<Route path="/projects/2022/book" component={Book} />
+					<Route path="/projects/2022/mintbanners" component={MintBanners} />
 					<Route path="/projects/2022/wiimenu" component={WiiMenu} />
 					<Route path="/projects/2022/geoices" component={Geoices} />
 					<Route path="/projects/2022/suserebrand" component={suseRebrand} />
