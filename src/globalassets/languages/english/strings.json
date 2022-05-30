@@ -131,7 +131,7 @@
 				"aboutMePage": "About me page",
 				"discord": {
 					"join": "Join",
-					"text": "Chat with me and like-minded people and be the first to know of new announcements.",
+					"text": "Write with me and like-minded people and be the first to know about new announcements.",
 					"title": "Discord server."
 				},
 				"intro1": "Name's Nick. I like things with mint flavor and to spend my time with design, motion graphics and code. To learn more about me, have a look at the ",
@@ -139,12 +139,12 @@
 				"title": "About me.",
 				"twitter": {
 					"follow": "Follow",
-					"text": "Bad jokes and occasional updates on my projects.",
+					"text": "Bad jokes and occasional updates on my projects. I might also retweet Miku from time to time.",
 					"title": "Twitter."
 				},
 				"youtube": {
 					"subscribe": "Subscribe",
-					"text": "All my animated works, in worse quality than you can find them on my website.",
+					"text": "All my animated works, with extra compression artifacts to stimulate your senses.",
 					"title": "YouTube."
 				}
 			},

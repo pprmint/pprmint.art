@@ -283,41 +283,39 @@ export default function Contact() {
 					<Container>
 						<ScrollAnimation animateIn="fadeBottom" animateOnce>
 							<Typography variant="h1">{t("section.contact.title")}</Typography>
-							<ScrollAnimation animateIn="fadeBottom" animateOnce>
-								<Typography variant="body1">
-									{t("section.contact.text")}
-								</Typography>
-								<br />
-								<Stack spacing={2} direction="row">
-									<Button
-										href="mailto:mail@pprmint.art?subject=I'll%20gladly%20ignore%20any%20ads%20or%20offers%20you%20might%20have%20for%20me."
-										target="_blank"
-										rel="noopener noreferrer"
-										variant="contained"
-										startIcon={<RiMailLine />}
-									>
-										{t("section.contact.button.email")}
-									</Button>
-									<Button
-										href="https://twitter.com/messages/compose?recipient_id=1296863056266502144"
-										target="_blank"
-										rel="noopener noreferrer"
-										variant="outlined"
-										startIcon={<RiTwitterLine />}
-									>
-										{t("section.contact.button.twitter")}
-									</Button>
-									<Button
-										href="https://discord.com/invite/Vw9JXwr"
-										target="_blank"
-										rel="noopener noreferrer"
-										variant="outlined"
-										startIcon={<RiDiscordLine />}
-									>
-										{t("section.contact.button.discord")}
-									</Button>
-								</Stack>
-							</ScrollAnimation>
+							<Typography variant="body1">
+								{t("section.contact.text")}
+							</Typography>
+							<br />
+							<Stack spacing={2} direction="row">
+								<Button
+									href="mailto:mail@pprmint.art?subject=I'll%20gladly%20ignore%20any%20ads%20or%20offers%20you%20might%20have%20for%20me."
+									target="_blank"
+									rel="noopener noreferrer"
+									variant="contained"
+									startIcon={<RiMailLine />}
+								>
+									{t("section.contact.button.email")}
+								</Button>
+								<Button
+									href="https://twitter.com/messages/compose?recipient_id=1296863056266502144"
+									target="_blank"
+									rel="noopener noreferrer"
+									variant="outlined"
+									startIcon={<RiTwitterLine />}
+								>
+									{t("section.contact.button.twitter")}
+								</Button>
+								<Button
+									href="https://discord.com/invite/Vw9JXwr"
+									target="_blank"
+									rel="noopener noreferrer"
+									variant="outlined"
+									startIcon={<RiDiscordLine />}
+								>
+									{t("section.contact.button.discord")}
+								</Button>
+							</Stack>
 						</ScrollAnimation>
 					</Container>
 				</div>

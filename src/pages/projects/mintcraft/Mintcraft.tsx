@@ -124,30 +124,26 @@ export default function MintcraftDL() {
 						<Typography variant="h1">
 							{t("section.changes.headline")}
 						</Typography>
-						<ScrollAnimation animateIn="fadeBottom" animateOnce>
-							<List>
-								{additions.map((addition, index) => (
-									<ListItem key={index}>
-										<ListItemIcon>
-											<RiAddLine />
-										</ListItemIcon>
-										<ListItemText>{t(addition)}</ListItemText>
-									</ListItem>
-								))}
-							</List>
-						</ScrollAnimation>
-						<ScrollAnimation animateIn="fadeBottom" animateOnce>
-							<List>
-								{changes.map((change, index) => (
-									<ListItem key={index}>
-										<ListItemIcon>
-											<RiArrowRightUpLine />
-										</ListItemIcon>
-										<ListItemText>{t(change)}</ListItemText>
-									</ListItem>
-								))}
-							</List>
-						</ScrollAnimation>
+						<List>
+							{additions.map((addition, index) => (
+								<ListItem key={index}>
+									<ListItemIcon>
+										<RiAddLine />
+									</ListItemIcon>
+									<ListItemText>{t(addition)}</ListItemText>
+								</ListItem>
+							))}
+						</List>
+						<List>
+							{changes.map((change, index) => (
+								<ListItem key={index}>
+									<ListItemIcon>
+										<RiArrowRightUpLine />
+									</ListItemIcon>
+									<ListItemText>{t(change)}</ListItemText>
+								</ListItem>
+							))}
+						</List>
 						<List>
 							{removals.map((removal, index) => (
 								<ScrollAnimation animateIn="fadeBottom" animateOnce>
@@ -160,7 +156,6 @@ export default function MintcraftDL() {
 								</ScrollAnimation>
 							))}
 						</List>
-						<br />
 					</ScrollAnimation>
 				</Container>
 			</div>
@@ -224,8 +219,6 @@ export default function MintcraftDL() {
 									<Typography variant="h2" color="#0c6">
 										{t("section.dosAndDonts.do.headline")}
 									</Typography>
-								</ScrollAnimation>
-								<ScrollAnimation animateIn="fadeBottom" animateOnce>
 									<List>
 										<ListItem>
 											<ListItemIcon>
@@ -276,8 +269,6 @@ export default function MintcraftDL() {
 									<Typography variant="h2" color="#f34">
 										{t("section.dosAndDonts.dont.headline")}
 									</Typography>
-								</ScrollAnimation>
-								<ScrollAnimation animateIn="fadeBottom" animateOnce>
 									<List>
 										<ListItem>
 											<ListItemIcon>
@@ -300,191 +291,185 @@ export default function MintcraftDL() {
 						<Typography variant="h1">
 							{t("section.credits.headline")}
 						</Typography>
-						<ScrollAnimation animateIn="fadeBottom" animateOnce>
-							<Typography variant="h2">
-								<a
-									className="external"
-									href="https://vanillatweaks.net"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									{t("section.credits.vanillatweaks.name")}
-								</a>
-							</Typography>
+						<Typography variant="h2">
+							<a
+								className="external"
+								href="https://vanillatweaks.net"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								{t("section.credits.vanillatweaks.name")}
+							</a>
+						</Typography>
 
-							<Typography variant="body1">
-								{t("section.credits.vanillatweaks.description")}
-							</Typography>
-							<br />
-						</ScrollAnimation>
-						<ScrollAnimation animateIn="fadeBottom" animateOnce>
-							<Typography variant="h2">
-								<a
-									className="external"
-									href="https://twitter.com/AfkBlizzy"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									{t("section.credits.blizzy.name")}
-								</a>
-							</Typography>
-
-							<Typography variant="body1">
-								{t("section.credits.blizzy.description")}
-							</Typography>
-						</ScrollAnimation>
+						<Typography variant="body1">
+							{t("section.credits.vanillatweaks.description")}
+						</Typography>
 						<br />
-						<ScrollAnimation animateIn="fadeBottom" animateOnce>
-							<Typography variant="h2">
-								{t("section.credits.twitterFellas.name")}
-							</Typography>
+						<Typography variant="h2">
+							<a
+								className="external"
+								href="https://twitter.com/AfkBlizzy"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								{t("section.credits.blizzy.name")}
+							</a>
+						</Typography>
 
-							<Typography variant="body1">
-								{t("section.credits.twitterFellas.description1")}
-								<a
-									className="external"
-									href="https://twitter.com/Gamer_Kold"
-									target="_blank"
-									rel="noopener norefferer"
-								>
-									@Gamer_Kold
-								</a>{" "}
-								<a
-									className="external"
-									href="https://twitter.com/ScreamRepeat"
-									target="_blank"
-									rel="noopener norefferer"
-								>
-									@ScreamRepeat
-								</a>{" "}
-								<a
-									className="external"
-									href="https://twitter.com/notkoutsie"
-									target="_blank"
-									rel="noopener norefferer"
-								>
-									@notkoutsie
-								</a>{" "}
-								<a
-									className="external"
-									href="https://twitter.com/Voluna_Awoo"
-									target="_blank"
-									rel="noopener norefferer"
-								>
-									@Voluna_Awoo
-								</a>{" "}
-								<a
-									className="external"
-									href="https://twitter.com/TaromaruYuki"
-									target="_blank"
-									rel="noopener norefferer"
-								>
-									@TaromaruYuki
-								</a>{" "}
-								<a
-									className="external"
-									href="https://twitter.com/emplexx"
-									target="_blank"
-									rel="noopener norefferer"
-								>
-									@emplexx
-								</a>{" "}
-								<a
-									className="external"
-									href="https://twitter.com/foxylucklol"
-									target="_blank"
-									rel="noopener norefferer"
-								>
-									@foxylucklol
-								</a>{" "}
-								<a
-									className="external"
-									href="https://twitter.com/novotab51"
-									target="_blank"
-									rel="noopener norefferer"
-								>
-									@novotab51
-								</a>{" "}
-								<a
-									className="external"
-									href="https://twitter.com/fluxe__"
-									target="_blank"
-									rel="noopener norefferer"
-								>
-									@fluxe
-								</a>{" "}
-								<a
-									className="external"
-									href="https://twitter.com/IAmDraconium"
-									target="_blank"
-									rel="noopener norefferer"
-								>
-									@IAmDraconium
-								</a>{" "}
-								<a
-									className="external"
-									href="https://twitter.com/LorAndCompany"
-									target="_blank"
-									rel="noopener norefferer"
-								>
-									@LorAndCompany
-								</a>{" "}
-								<a
-									className="external"
-									href="https://twitter.com/GrabsterTV"
-									target="_blank"
-									rel="noopener norefferer"
-								>
-									@GrabsterTV
-								</a>{" "}
-								<a
-									className="external"
-									href="https://twitter.com/dlphesigns"
-									target="_blank"
-									rel="noopener norefferer"
-								>
-									@dlphesigns
-								</a>{" "}
-								<a
-									className="external"
-									href="https://twitter.com/xparacosm"
-									target="_blank"
-									rel="noopener norefferer"
-								>
-									@xparacosm
-								</a>{" "}
-								<a
-									className="external"
-									href="https://twitter.com/Febbuarie"
-									target="_blank"
-									rel="noopener norefferer"
-								>
-									@Febbuarie
-								</a>{" "}
-								<a
-									className="external"
-									href="https://twitter.com/The_Ruby872"
-									target="_blank"
-									rel="noopener norefferer"
-								>
-									@The_Ruby872
-								</a>
-								{t("section.credits.twitterFellas.description2")}
-								<a
-									className="external"
-									href="https://twitter.com/Iucidcelestial"
-									target="_blank"
-									rel="noopener norefferer"
-								>
-									@Iucidcelestial
-								</a>
-								{t("section.credits.twitterFellas.description3")}
-								<Link to="/projects/mintcraft/splashes">
-									{t("section.credits.twitterFellas.descriptionLink")}
-								</Link>
-								.
-							</Typography>
-						</ScrollAnimation>
+						<Typography variant="body1">
+							{t("section.credits.blizzy.description")}
+						</Typography>
+						<br />
+						<Typography variant="h2">
+							{t("section.credits.twitterFellas.name")}
+						</Typography>
+
+						<Typography variant="body1">
+							{t("section.credits.twitterFellas.description1")}
+							<a
+								className="external"
+								href="https://twitter.com/Gamer_Kold"
+								target="_blank"
+								rel="noopener norefferer"
+							>
+								@Gamer_Kold
+							</a>{" "}
+							<a
+								className="external"
+								href="https://twitter.com/ScreamRepeat"
+								target="_blank"
+								rel="noopener norefferer"
+							>
+								@ScreamRepeat
+							</a>{" "}
+							<a
+								className="external"
+								href="https://twitter.com/notkoutsie"
+								target="_blank"
+								rel="noopener norefferer"
+							>
+								@notkoutsie
+							</a>{" "}
+							<a
+								className="external"
+								href="https://twitter.com/Voluna_Awoo"
+								target="_blank"
+								rel="noopener norefferer"
+							>
+								@Voluna_Awoo
+							</a>{" "}
+							<a
+								className="external"
+								href="https://twitter.com/TaromaruYuki"
+								target="_blank"
+								rel="noopener norefferer"
+							>
+								@TaromaruYuki
+							</a>{" "}
+							<a
+								className="external"
+								href="https://twitter.com/emplexx"
+								target="_blank"
+								rel="noopener norefferer"
+							>
+								@emplexx
+							</a>{" "}
+							<a
+								className="external"
+								href="https://twitter.com/foxylucklol"
+								target="_blank"
+								rel="noopener norefferer"
+							>
+								@foxylucklol
+							</a>{" "}
+							<a
+								className="external"
+								href="https://twitter.com/novotab51"
+								target="_blank"
+								rel="noopener norefferer"
+							>
+								@novotab51
+							</a>{" "}
+							<a
+								className="external"
+								href="https://twitter.com/fluxe__"
+								target="_blank"
+								rel="noopener norefferer"
+							>
+								@fluxe
+							</a>{" "}
+							<a
+								className="external"
+								href="https://twitter.com/IAmDraconium"
+								target="_blank"
+								rel="noopener norefferer"
+							>
+								@IAmDraconium
+							</a>{" "}
+							<a
+								className="external"
+								href="https://twitter.com/LorAndCompany"
+								target="_blank"
+								rel="noopener norefferer"
+							>
+								@LorAndCompany
+							</a>{" "}
+							<a
+								className="external"
+								href="https://twitter.com/GrabsterTV"
+								target="_blank"
+								rel="noopener norefferer"
+							>
+								@GrabsterTV
+							</a>{" "}
+							<a
+								className="external"
+								href="https://twitter.com/dlphesigns"
+								target="_blank"
+								rel="noopener norefferer"
+							>
+								@dlphesigns
+							</a>{" "}
+							<a
+								className="external"
+								href="https://twitter.com/xparacosm"
+								target="_blank"
+								rel="noopener norefferer"
+							>
+								@xparacosm
+							</a>{" "}
+							<a
+								className="external"
+								href="https://twitter.com/Febbuarie"
+								target="_blank"
+								rel="noopener norefferer"
+							>
+								@Febbuarie
+							</a>{" "}
+							<a
+								className="external"
+								href="https://twitter.com/The_Ruby872"
+								target="_blank"
+								rel="noopener norefferer"
+							>
+								@The_Ruby872
+							</a>
+							{t("section.credits.twitterFellas.description2")}
+							<a
+								className="external"
+								href="https://twitter.com/Iucidcelestial"
+								target="_blank"
+								rel="noopener norefferer"
+							>
+								@Iucidcelestial
+							</a>
+							{t("section.credits.twitterFellas.description3")}
+							<Link to="/projects/mintcraft/splashes">
+								{t("section.credits.twitterFellas.descriptionLink")}
+							</Link>
+							.
+						</Typography>
 					</ScrollAnimation>
 				</Container>
 			</div>
@@ -494,69 +479,67 @@ export default function MintcraftDL() {
 						<Typography variant="h1">
 							{t("section.installation.headline")}
 						</Typography>
-						<ScrollAnimation animateIn="fadeBottom" animateOnce>
-							<List>
-								<ListItem>
-									<ListItemIcon>
-										<RiNumber1 />
-									</ListItemIcon>
-									<ListItemText>
-										<Typography variant="body1">
-											{t("section.installation.steps.installOptifine")}
-											<a
-												className="external"
-												href="https://optifine.net/downloads"
-												target="_blank"
-												rel="noopener noreferrer"
-											>
-												Optifine
-											</a>
-											.
-										</Typography>
-									</ListItemText>
-								</ListItem>
-								<ListItem>
-									<ListItemIcon>
-										<RiNumber2 />
-									</ListItemIcon>
-									<ListItemText>
-										<Typography variant="body1">
-											{t("section.installation.steps.downloadPacks")}
-										</Typography>
-									</ListItemText>
-								</ListItem>
-								<ListItem>
-									<ListItemIcon>
-										<RiNumber3 />
-									</ListItemIcon>
-									<ListItemText>
-										<Typography variant="body1">
-											{t("section.installation.steps.placeInFolder")}
-										</Typography>
-									</ListItemText>
-								</ListItem>
-								<ListItem>
-									<ListItemIcon>
-										<RiNumber4 />
-									</ListItemIcon>
-									<ListItemText>
-										<Typography variant="body1">
-											{t("section.installation.steps.moveToTop")}
-										</Typography>
-									</ListItemText>
-								</ListItem>
-								<ListItem>
-									<ListItemIcon>
-										<RiNumber5 />
-									</ListItemIcon>
-									<ListItemText>
-										<Typography variant="body1">
-											{t("section.installation.steps.digDown")}
-										</Typography>
-									</ListItemText>
-								</ListItem>
-							</List>
-						</ScrollAnimation>
+						<List>
+							<ListItem>
+								<ListItemIcon>
+									<RiNumber1 />
+								</ListItemIcon>
+								<ListItemText>
+									<Typography variant="body1">
+										{t("section.installation.steps.installOptifine")}
+										<a
+											className="external"
+											href="https://optifine.net/downloads"
+											target="_blank"
+											rel="noopener noreferrer"
+										>
+											Optifine
+										</a>
+										.
+									</Typography>
+								</ListItemText>
+							</ListItem>
+							<ListItem>
+								<ListItemIcon>
+									<RiNumber2 />
+								</ListItemIcon>
+								<ListItemText>
+									<Typography variant="body1">
+										{t("section.installation.steps.downloadPacks")}
+									</Typography>
+								</ListItemText>
+							</ListItem>
+							<ListItem>
+								<ListItemIcon>
+									<RiNumber3 />
+								</ListItemIcon>
+								<ListItemText>
+									<Typography variant="body1">
+										{t("section.installation.steps.placeInFolder")}
+									</Typography>
+								</ListItemText>
+							</ListItem>
+							<ListItem>
+								<ListItemIcon>
+									<RiNumber4 />
+								</ListItemIcon>
+								<ListItemText>
+									<Typography variant="body1">
+										{t("section.installation.steps.moveToTop")}
+									</Typography>
+								</ListItemText>
+							</ListItem>
+							<ListItem>
+								<ListItemIcon>
+									<RiNumber5 />
+								</ListItemIcon>
+								<ListItemText>
+									<Typography variant="body1">
+										{t("section.installation.steps.digDown")}
+									</Typography>
+								</ListItemText>
+							</ListItem>
+						</List>
 					</ScrollAnimation>
 				</Container>
 			</div>

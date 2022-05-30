@@ -129,8 +129,6 @@ export default function Home() {
 				<Container>
 					<ScrollAnimation animateIn="fadeBottom" animateOnce>
 						<Typography variant="h1">{t("section.about.title")}</Typography>
-					</ScrollAnimation>
-					<ScrollAnimation animateIn="fadeBottom" animateOnce>
 						<Typography variant="body1">
 							{t("section.about.intro1")}
 							<Link to="/about">{t("section.about.aboutMePage")}</Link>
@@ -267,9 +265,7 @@ export default function Home() {
 								<Typography variant="h1">
 									{t("section.recent.title")}
 								</Typography>
-							</ScrollAnimation>
-							<br />
-							<ScrollAnimation animateIn="fadeLeft" animateOnce>
+								<br />
 								<Card variant="outlined">
 									<Link to="/projects/2022/book">
 										<Button
@@ -304,9 +300,7 @@ export default function Home() {
 						<div className="section" id="news">
 							<ScrollAnimation animateIn="fadeRight" animateOnce>
 								<Typography variant="h1">{t("section.news.title")}</Typography>
-							</ScrollAnimation>
-							<br />
-							<ScrollAnimation animateIn="fadeRight" animateOnce>
+								<br />
 								<Box maxWidth="calc(100vw - 32px)">
 									<Card variant="outlined">
 										<Paper

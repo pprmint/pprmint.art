@@ -131,20 +131,20 @@
 				"aboutMePage": "Über-mich-Seite",
 				"discord": {
 					"join": "Beitreten",
-					"text": "Chatte mit mir und Gleichgesinnten und erfahre mit als Erstes von neuen Ankündigungen.",
+					"text": "Schreibe mit mir und Gleichgesinnten und erfahre mit als Erstes von neuen Ankündigungen.",
 					"title": "Discord-Server."
 				},
 				"intro1": "Mein Name ist Nicklas. Ich mag Dinge mit Pfefferminzgeschmack und beschäftige mich in meiner Freizeit mit Design, Motion Graphics und Code. Wenn du mehr über mich erfahren willst, dann schau dir die ",
-				"intro2": " an (sobald es mal eine gibt), oder folge mir auf einen dieser Plattformen:",
+				"intro2": " an (sobald es mal eine gibt), oder folge mir auf einer dieser Plattformen:",
 				"title": "Über mich.",
 				"twitter": {
 					"follow": "Folgen",
-					"text": "Schlechte Witze und gelegentliche Updates zu meinen Projekten.",
+					"text": "Schlechte Witze und gelegentliche Updates zu meinen Projekten. Vielleicht auch mal Miku-Retweets.",
 					"title": "Twitter."
 				},
 				"youtube": {
 					"subscribe": "Abonnieren",
-					"text": "Alle meine animierten Werke, in schlechterer Qualität als auf meiner Website.",
+					"text": "Alle meine animierten Werke, mit extra Kompressionsartefakten, um die Sinne zu stimulieren.",
 					"title": "YouTube."
 				}
 			},
@@ -184,7 +184,7 @@
 		},
 		"title": {
 			"main": "Guten Heute.",
-			"sub": "Ich lasse Dinge mit Vektorpunkten, Keyframes und bunten Monospace-Buchstaben schick aussehen."
+			"sub": "Ich lasse Dinge mit Vektorpunkten, Keyframes und bunten Monospace-Buchstaben hübsch aussehen."
 		}
 	},
 	"privacypolicy": {
