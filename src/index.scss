@@ -6,7 +6,7 @@ body {
 }
 
 :root {
-	/* Main color palette */
+	// Main color palette
 	--greenPrimary: #0c6;
 	--greenSecondary: #095;
 	--redPrimary: #f34;
@@ -21,28 +21,30 @@ body {
 	--backgroundPrimary: #111;
 	--backgroundSecondary: #222;
 	--backgroundTertiary: #333;
-	/* Easing */
+	// Desktop nav
+	--backgroundNavButton: #ffffff12;
+	// Easing
 	--easeOut: cubic-bezier(0, 0, 0.2, 1);
 	--easeInOut: cubic-bezier(0.6, 0, 0.1, 1);
-	/* Inset box shadow offsets */
+	// Inset box shadow offsets
 	--boxInsetBody: -1.3rem;
 	--boxInsetH2: -2.75rem;
 	--boxInsetH3: -2rem;
-	/* Fonts */
+	// Fonts
 	--fontPrimary: Silka, Metropolis, "Clarity City", Monserrat, Roboto,
 		"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica,
 		Arial, Arial, sans-serif;
 	--fontSecondary: "Basier Square", Roboto, "HelveticaNeue-Light",
 		"Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, Arial,
 		sans-serif;
-	/* Top margin */
+	// Top margin
 	--marginTop: 145px;
 	@media only screen and (max-width: 1199px) {
 		--marginTop: 100px;
 	}
 }
 
-/* Scrollbars */
+// Scrollbars
 ::-webkit-scrollbar {
 	width: 16px;
 }
@@ -60,7 +62,7 @@ body {
 	background: var(--backgroundTertiary);
 }
 
-/* Text selection */
+// Text selection
 ::selection {
 	color: var(--backgroundPrimary);
 	background: var(--greenPrimary);
@@ -237,22 +239,28 @@ body {
 }
 
 // Change color of navigation links in desktop app bar
-.desktopNav a {
-	display: inline-block;
-	text-align: right;
-	margin-left: 15px;
-	.MuiButtonBase-root,
-	.MuiListItemIcon-root {
-		color: var(--textPrimary);
-		transition: all 0.375s var(--easeOut);
-	}
-	&.active {
-		.MuiButtonBase-root {
-			color: var(--textSecondary) !important;
-			background-color: var(--backgroundTertiary);
+.desktopNav {
+	a {
+		display: inline-block;
+		text-align: right;
+		margin-left: 15px;
+		.MuiButtonBase-root,
+		.MuiListItemIcon-root {
+			color: var(--textPrimary);
+			transition: all 0.375s var(--easeOut);
 		}
-		.MuiButton-startIcon {
-			color: var(--greenPrimary);
+		&.active {
+			.MuiButtonBase-root {
+				color: var(--textSecondary) !important;
+				background-color: var(--backgroundNavButton);
+				backdrop-filter: blur(5px);
+			}
+			.MuiButton-startIcon {
+				color: var(--greenPrimary);
+			}
+		}
+		&:first-of-type {
+			margin-left: 0;
 		}
 	}
 }
@@ -393,21 +401,21 @@ video {
 	}
 }
 
-/* General styles for links */
+// General styles for links
 a {
 	text-decoration: none !important;
 	outline: none;
 	color: var(--textSecondary);
 	transition: background-color 0.15s;
 }
-/* General styles for links when tabbing through them */
+// General styles for links when tabbing through them
 p a:focus-visible,
 h2 a:focus-visible,
 h3 a:focus-visible {
 	background-color: rgba(255, 255, 255, 0.12);
 }
 
-/* Underline for text links */
+// Underline for text links
 p a,
 h2 a,
 h3 a {
@@ -422,7 +430,7 @@ h3 a {
 		padding: 0 0.35rem;
 	}
 }
-/* Specific inset positions for each text size needed */
+// Specific inset positions for each text size needed
 p a:hover {
 	box-shadow: inset 0 var(--boxInsetBody) 0 var(--greenPrimary);
 }
@@ -432,7 +440,7 @@ h2 a:hover {
 h3 a:hover {
 	box-shadow: inset 0 var(--boxInsetH3) 0 var(--greenPrimary);
 }
-/* Special underline for external links */
+// Special underline for external links
 p a.external {
 	position: relative;
 	margin: 0 0.4rem 0 0.3rem;
@@ -442,7 +450,7 @@ p a.external {
 		padding: 0 0.4rem 0 0.3rem;
 	}
 }
-/* That arrow */
+// That arrow
 a.external::after {
 	content: "↗";
 	font-family: var(--fontPrimary);
@@ -458,7 +466,7 @@ a.external:hover::after {
 	top: 0rem;
 	left: 0.45rem;
 }
-/* Specific inset positions for each text size needed */
+// Specific inset positions for each text size needed
 p a.external:hover {
 	box-shadow: inset 0 var(--boxInsetBody) 0 var(--bluePrimary);
 }
@@ -492,7 +500,7 @@ video {
 	color: var(--textSecondary) !important;
 }
 
-/* Standard paddings on cards suck. */
+// Standard paddings on cards suck.
 .MuiCardContent-root {
 	padding: 16px 24px 16px 24px;
 }
