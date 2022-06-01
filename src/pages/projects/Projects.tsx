@@ -245,7 +245,7 @@ export default function Projects() {
 									<Image
 										src={item.src}
 										alt={item.alt}
-										duration={1000}
+										duration={0}
 										easing="ease-out"
 										showLoading={<CircularProgress />}
 									/>
