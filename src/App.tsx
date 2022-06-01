@@ -27,48 +27,6 @@ import {
 } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
-// Imports of all the pages
-import Home from "./pages/home/Home";
-import About from "./pages/about/About";
-import Projects from "./pages/projects/Projects";
-
-import MintsansDL from "./pages/projects/mintsans/Mintsans";
-import MintBitDL from "./pages/projects/mintbit/MintBit";
-import MintAltDL from "./pages/projects/mintalternative/MintAlt";
-import MintcraftDL from "./pages/projects/mintcraft/Mintcraft";
-import MintcraftSplashes from "./pages/projects/mintcraft/Splashes";
-import Win10TilesDL from "./pages/projects/win10tiles/Win10Tiles";
-
-// Works 2022
-import Book from "./pages/projects/gallery/2022/Book";
-import MintBanners from "./pages/projects/gallery/2022/MintBanners";
-import WiiMenu from "./pages/projects/gallery/2022/WiiMenu";
-import Geoices from "./pages/projects/gallery/2022/Geoices";
-import suseRebrand from "./pages/projects/gallery/2022/suseRebrand";
-import Statistics from "./pages/projects/gallery/2022/LikeStatistics";
-import Ipad from "./pages/projects/gallery/2022/iPad"; // this hurts
-import ArchWall from "./pages/projects/gallery/2022/ArchWall";
-import Ford from "./pages/projects/gallery/2022/Ford";
-
-// Works 2021
-import ManjaroWall from "./pages/projects/gallery/2021/manjarowall/ManjaroWall";
-
-import Contact from "./pages/contact/Contact";
-import PrivacyPolicy from "./pages/privacypolicy/PrivacyPolicy";
-import Error404 from "./pages/404/Error404";
-import UnderConstruction from "./pages/wip/UnderConstruction";
-import HealthSafety from "./pages/wii/HealthSafety";
-import Test from "./pages/test/Test";
-
-import ScrollToTop from "./ScrollToTop";
-import Settings from "./Settings";
-import CookieSnackbar from "./CookieSnackbar";
-
-import Wordmark from "./globalassets/wordmark.svg";
-
-import "./globalassets/fonts/silka.css";
-import "./globalassets/fonts/basier_square.css";
-
 import {
 	RiBehanceLine,
 	RiChat1Line,
@@ -83,6 +41,56 @@ import {
 	RiUserLine,
 	RiYoutubeLine,
 } from "react-icons/ri";
+
+// Imports of all the pages
+import Home from "./pages/home/Home";
+import About from "./pages/about/About";
+import Projects from "./pages/projects/Projects";
+import Contact from "./pages/contact/Contact";
+import PrivacyPolicy from "./pages/privacypolicy/PrivacyPolicy";
+// Project pages
+import MintsansDL from "./pages/projects/mintsans/Mintsans";
+import MintBitDL from "./pages/projects/mintbit/MintBit";
+import MintAltDL from "./pages/projects/mintalternative/MintAlt";
+import MintcraftDL from "./pages/projects/mintcraft/Mintcraft";
+import MintcraftSplashes from "./pages/projects/mintcraft/Splashes";
+import Win10TilesDL from "./pages/projects/win10tiles/Win10Tiles";
+// Info pages
+import Error404 from "./pages/404/Error404";
+import UnderConstruction from "./pages/wip/UnderConstruction";
+// Works 2022
+import Book from "./pages/projects/gallery/2022/Book";
+import MintBanners from "./pages/projects/gallery/2022/MintBanners";
+import WiiMenu from "./pages/projects/gallery/2022/WiiMenu";
+import Geoices from "./pages/projects/gallery/2022/Geoices";
+import suseRebrand from "./pages/projects/gallery/2022/suseRebrand";
+import Statistics from "./pages/projects/gallery/2022/LikeStatistics";
+import Ipad from "./pages/projects/gallery/2022/iPad"; // this hurts
+import ArchWall from "./pages/projects/gallery/2022/ArchWall";
+import Ford from "./pages/projects/gallery/2022/Ford";
+// Works 2021
+import ManjaroWall from "./pages/projects/gallery/2021/manjarowall/ManjaroWall";
+// Easter eggs...? I dunno.
+import HealthSafety from "./pages/wii/HealthSafety";
+import Test from "./pages/test/Test";
+// Control thingies
+import ScrollToTop from "./ScrollToTop";
+import Settings from "./Settings";
+import CookieSnackbar from "./CookieSnackbar";
+
+// ppmint.
+import Wordmark from "./globalassets/wordmark.svg";
+// Fonts
+import "./globalassets/fonts/silka.css";
+import "./globalassets/fonts/basier_square.css";
+// import "./globalassets/fonts/basier_mono.css";
+
+// Flags
+import FlagL from "./globalassets/flags/l.png";
+import FlagG from "./globalassets/flags/g.png";
+import FlagB from "./globalassets/flags/b.png";
+import FlagT from "./globalassets/flags/t.png";
+import Marquee from "react-fast-marquee";
 
 const nav = [
 	{
@@ -128,6 +136,8 @@ function IconLink(props: React.PropsWithChildren<{ href: string }>) {
 interface Props {
 	children: React.ReactElement;
 }
+
+// Transparent app bar when at top of page, backdrop filter + divider line once scrolling down
 function ElevationScroll(props: Props) {
 	const { children } = props;
 	const trigger = useScrollTrigger({
@@ -384,6 +394,16 @@ function App() {
 							<RiDiscordLine />
 						</IconLink>
 					</Stack>
+					<Marquee gradientColor={[17, 17, 17]} gradientWidth="20%" speed={150}>
+						<Typography sx={{ width: "500px", marginBottom: "2px" }}>
+							Happy Pride Month. You have all my respect.{" "}
+							<span style={{ color: "var(--redPrimary)" }}>{"<3"}</span>
+						</Typography>
+						<img src={FlagL} width="500px" height="25px" />
+						<img src={FlagG} width="500px" height="25px" />
+						<img src={FlagB} width="500px" height="25px" />
+						<img src={FlagT} width="500px" height="25px" />
+					</Marquee>
 				</footer>
 			</ScrollToTop>
 		</Router>
