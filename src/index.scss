@@ -37,6 +37,7 @@ body {
 	--fontSecondary: "Basier Square", Roboto, "HelveticaNeue-Light",
 		"Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, Arial,
 		sans-serif;
+	--fontMonospace: "Basier Square Mono", Roboto Mono, monospace;
 	// Top margin
 	--marginTop: 145px;
 	@media only screen and (max-width: 1199px) {
@@ -296,7 +297,6 @@ body {
 .section {
 	margin-top: 10vh;
 	margin-bottom: 10vh;
-	z-index: 1;
 }
 
 footer {
@@ -477,7 +477,17 @@ h3 a.external:hover {
 	box-shadow: inset 0 var(--boxInsetH3) 0 var(--bluePrimary);
 }
 
+code {
+    font-family: var(--fontMonospace);
+    color: var(--greenPrimary);
+    font-size: .9rem;
+    background-color: var(--backgroundSecondary);
+    border-radius: 4px;
+    padding: 3px 5px;
+}
+
 img {
+	// Avoid annoyances with images in React Swipeable Views
 	-webkit-user-drag: none;
 	user-select: none;
 	-moz-user-select: none;
@@ -486,6 +496,7 @@ img {
 }
 
 video {
+	// I have yet to find out why text line-height is applied to videos (and images)...
 	margin-bottom: -0.41rem;
 }
 

@@ -2,7 +2,14 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import ScrollAnimation from "react-animate-on-scroll";
-import { Typography, Container } from "@mui/material";
+import {
+	Typography,
+	Container,
+	List,
+	ListItem,
+	Card,
+	CardContent,
+} from "@mui/material";
 
 export default function PrivacyPolicy() {
 	const { t } = useTranslation("translation", {
@@ -47,21 +54,56 @@ export default function PrivacyPolicy() {
 					<div className="section" id="cookies">
 						<Container>
 							<Typography variant="h1">{t("section.cookies.title")}</Typography>
-							<Typography variant="body1">
-								<strong>TL;DR:</strong> {t("section.cookies.text.tldr")}
-							</Typography>
+							<Card variant="outlined">
+								<CardContent>
+									<Typography variant="button">TL;DR:</Typography>
+									<Typography>{t("section.cookies.text.tldr")}</Typography>
+								</CardContent>
+							</Card>
 							<br />
 							<Typography variant="body1">
-								{t("section.cookies.text.long")}
+								{t("section.cookies.text.long1")}
+							</Typography>
+							<List>
+								<ListItem>
+									<Typography>
+										<code>i18nextLng</code>
+										{": "}
+										{t("section.cookies.text.localStorage.i18nextLng.text1")}
+										<code>en</code>
+										{t("section.cookies.text.localStorage.i18nextLng.text2")}
+										<code>de</code>
+										{t("section.cookies.text.localStorage.i18nextLng.text3")}
+									</Typography>
+								</ListItem>
+								<ListItem>
+									<Typography>
+										<code>cookiesAcknowledged</code>
+										{": "}
+										{t(
+											"section.cookies.text.localStorage.cookiesAcknowledged.text1"
+										)}
+										<code>yup</code>
+										{t(
+											"section.cookies.text.localStorage.cookiesAcknowledged.text2"
+										)}
+									</Typography>
+								</ListItem>
+							</List>
+							<Typography variant="body1">
+								{t("section.cookies.text.long2")}
 							</Typography>
 						</Container>
 					</div>
 					<div className="section" id="logs">
 						<Container>
 							<Typography variant="h1">{t("section.weblogs.title")}</Typography>
-							<Typography variant="body1">
-								<strong>TL;DR:</strong> {t("section.weblogs.text.tldr")}
-							</Typography>
+							<Card variant="outlined">
+								<CardContent>
+									<Typography variant="button">TL;DR:</Typography>
+									<Typography>{t("section.weblogs.text.tldr")}</Typography>
+								</CardContent>
+							</Card>
 							<br />
 							<Typography variant="h2">
 								{t("section.weblogs.text.long.contents.title")}
