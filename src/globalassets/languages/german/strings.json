@@ -198,7 +198,19 @@
 			},
 			"cookies": {
 				"text": {
-					"long": "Bei deinem ersten Besuch wird die bevorzugte Sprache deines Browsers erkannt und in den \"localStorage\" geschrieben. Wenn du die Sprache über die Einstellungen änderst, wird dieser Wert überschrieben. Diese und zukünftige Präferenzen werden bei jedem Besuch dieser Website gelesen, damit du sie nicht immer auf's Neue vornehmen musst.",
+					"localStorage": {
+						"cookiesAcknowledged": {
+							"text1": "Wird verwendet, um festzustellen, ob dir das kleine Cookie-Popup unten links bei deinem ersten Besuch angezeigt wurde, und wird auf ",
+							"text2": " gesetzt, sobald du einmal hier warst."
+						},
+						"i18nextLng": {
+							"text1": "Wird verwendet, um zu bestimmen, welche Sprache auf der Website verwendet werden soll, und wird bei jedem Besuch gelesen. Der Wert ist entweder ",
+							"text2": " für Englisch oder ",
+							"text3": " für Deutsch. Bei deinem ersten Besuch dieser Website wird die bevorzugte Sprache aus deinen Browser-Einstellungen erkannt und im Schlüssel entsprechend vermerkt. Änderst du die Sprache in den Website-Einstellungen oben, wird dieser Wert ersetzt."
+						}
+					},
+					"long1": "Aktuell kannst du folgendes im localStorage deines Browsers für diese Website finden:",
+					"long2": "In Zukunft könnten weitere Schlüssel hinzugefügt werden, sobald mehr Einstellungen auf der Website geändert werden können. Mit diesen kann man dich jedoch nicht eindeutig identifizieren oder tracken, sollte das jetzt eine deiner Sorgen gewesen sein.",
 					"tldr": "Einstellungen wie deine bevorzugte Sprache werden, wie der Name schon ahnen lässt, lokal im \"localStorage\" deines Browsers gespeichert, so dass du sie nicht immer wieder neu einstellen musst. Per Definition müsste das auch als \"Cookie\" zählen."
 				},
 				"title": "Kekse!"

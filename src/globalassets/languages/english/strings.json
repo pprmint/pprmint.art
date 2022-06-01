@@ -198,7 +198,19 @@
 			},
 			"cookies": {
 				"text": {
-					"long": "On your first visit, the preferred language of your browser is detected and written to the \"localStorage\". If you change the language from the Settings menu, this value will be overwritten. These and future preferences are read each time you visit this site, so you don't have to set them up again and again.",
+					"localStorage": {
+						"cookiesAcknowledged": {
+							"text1": "Used to determine whether the small cookie popup in the bottom left was shown to you on your first visit, and is set to ",
+							"text2": " once you've been here."
+						},
+						"i18nextLng": {
+							"text1": "Used to determine which language to use on the website, and is read on each visit. The value is either ",
+							"text2": " for English or ",
+							"text3": " for German. When you first visit this website, the preferred language is detected from your browser settings and written to the key accordingly. If you change the language using the website settings above, this value will be replaced."
+						}
+					},
+					"long1": "Currently, the following can be found in your browser's localStorage for this website:",
+					"long2": "In the future, more keys might be added as more settings can be changed on the website. However, with these, you can't be uniquely identified or tracked, should that have been one of your worries now.",
 					"tldr": "Settings such as your preferred language are, as the name suggests, stored locally in your browser's \"localStorage\" so you don't have to set them up again and again. Per definition, I guess this also counts as a \"cookie\"."
 				},
 				"title": "Cookies!"
