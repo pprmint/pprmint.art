@@ -280,6 +280,7 @@ function App() {
 									autoPlay
 									muted
 									playsInline
+                                    style={{borderRadius: "0 32px 32px 0"}}
 								/>
 							</Link>
 						</Box>
