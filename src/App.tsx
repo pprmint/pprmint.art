@@ -80,17 +80,12 @@ import CookieSnackbar from "./CookieSnackbar";
 
 // ppmint.
 import Wordmark from "./globalassets/wordmark.svg";
+// Pride animation wordmark
+import Animation from "./globalassets/animation.webm";
 // Fonts
 import "./globalassets/fonts/silka.css";
 import "./globalassets/fonts/basier_square.css";
 // import "./globalassets/fonts/basier_mono.css";
-
-// Flags
-import FlagL from "./globalassets/flags/l.png";
-import FlagG from "./globalassets/flags/g.png";
-import FlagB from "./globalassets/flags/b.png";
-import FlagT from "./globalassets/flags/t.png";
-import Marquee from "react-fast-marquee";
 
 const nav = [
 	{
@@ -174,10 +169,16 @@ function App() {
 						transition: "all 0.15s",
 					}}
 				>
-					<Toolbar>
+					<Toolbar
+						sx={{
+							paddingLeft: "0px !important",
+						}}
+					>
 						<Box
-							pl={{ xs: 1, sm: 0 }}
-							pr={{ xs: 1.5, md: 0 }}
+							// pl={{ xs: 1, sm: 0 }} // Setting for static wordmark
+							pl={{ xs: 3, md: 0 }}
+							// pr={{ xs: 1.5, md: 0 }} // Setting for static wordmark
+							pr={0}
 							pt={0.75}
 							pb={0.75}
 						>
@@ -266,13 +267,20 @@ function App() {
 						</Drawer>
 						<Box
 							sx={{
-								marginTop: "9px",
+								// marginTop: "9px", // Setting for static wordmark
 								flexGrow: 1,
 								display: { xs: "flex", md: "block" },
 							}}
 						>
 							<Link to="/">
-								<img src={Wordmark} height="30px" alt="pprmint." />
+								{/* <img src={Wordmark} height="30px" alt="pprmint." /> */}
+								<video
+									src={Animation}
+									height="64px"
+									autoPlay
+									muted
+									playsInline
+								/>
 							</Link>
 						</Box>
 						<Box
@@ -394,16 +402,6 @@ function App() {
 							<RiDiscordLine />
 						</IconLink>
 					</Stack>
-					<Marquee gradientColor={[17, 17, 17]} gradientWidth="20%" speed={150}>
-						<Typography sx={{ width: "500px", marginBottom: "2px" }}>
-							Happy Pride Month. You have all my respect.{" "}
-							<span style={{ color: "var(--redPrimary)" }}>{"<3"}</span>
-						</Typography>
-						<img src={FlagL} width="500px" height="25px" />
-						<img src={FlagG} width="500px" height="25px" />
-						<img src={FlagB} width="500px" height="25px" />
-						<img src={FlagT} width="500px" height="25px" />
-					</Marquee>
 				</footer>
 			</ScrollToTop>
 		</Router>
