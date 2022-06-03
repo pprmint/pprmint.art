@@ -28,7 +28,6 @@ import {
 import { useTranslation } from "react-i18next";
 
 import {
-	RiBehanceLine,
 	RiChat1Line,
 	RiDiscordLine,
 	RiGithubLine,
@@ -37,7 +36,6 @@ import {
 	RiMenu2Line,
 	RiMenu3Line,
 	RiPencilRuler2Line,
-	RiTwitterLine,
 	RiUserLine,
 	RiYoutubeLine,
 } from "react-icons/ri";
@@ -387,14 +385,8 @@ function App() {
 						direction="row"
 						sx={{ justifyContent: "center", alignItems: "center" }}
 					>
-						<IconLink href="https://twitter.com/npprmint">
-							<RiTwitterLine />
-						</IconLink>
 						<IconLink href="https://www.youtube.com/c/pprmint">
 							<RiYoutubeLine />
-						</IconLink>
-						<IconLink href="https://www.behance.net/pprmint">
-							<RiBehanceLine />
 						</IconLink>
 						<IconLink href="https://github.com/pprmint">
 							<RiGithubLine />

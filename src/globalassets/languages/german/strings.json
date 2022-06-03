@@ -54,8 +54,7 @@
 				"button": {
 					"discord": "Discord",
 					"discordTagCopied": "Magie! Mein Discord-Tag wurde in die Zwischenablage kopiert. Sende nun eine Freundschaftsanfrage, um in meinen DMs zu schreiben.",
-					"email": "Email",
-					"twitter": "Twitter"
+					"email": "Email"
 				},
 				"text": "Wenn deine Frage hier nicht beantwortet wurde oder du mich einfach direkt anschreiben willst, dann tu das mit einem von diesen hier:",
 				"title": "Doch nicht?"
@@ -134,14 +133,14 @@
 					"text": "Schreibe mit mir und Gleichgesinnten und erfahre mit als Erstes von neuen Ankündigungen.",
 					"title": "Discord-Server."
 				},
+				"github": {
+					"follow": "Folgen",
+					"text": "Schau dir etwas Quellcode an, zum Beispiel für diese Website, die auf unseren Arbeitsrechnern kaum läuft.",
+					"title": "GitHub."
+				},
 				"intro1": "Mein Name ist Nicklas. Ich mag Dinge mit Pfefferminzgeschmack und beschäftige mich in meiner Freizeit mit Design, Motion Graphics und Code. Wenn du mehr über mich erfahren willst, dann schau dir die ",
 				"intro2": " an (sobald es mal eine gibt), oder folge mir auf einer dieser Plattformen:",
 				"title": "Über mich.",
-				"twitter": {
-					"follow": "Folgen",
-					"text": "Schlechte Witze und gelegentliche Updates zu meinen Projekten. Vielleicht auch mal Miku-Retweets.",
-					"title": "Twitter."
-				},
 				"youtube": {
 					"subscribe": "Abonnieren",
 					"text": "Alle meine animierten Werke, mit extra Kompressionsartefakten, um die Sinne zu stimulieren.",
@@ -170,6 +169,12 @@
 						"fullText": "Es hat mich immer etwas genevt, dass die Top-Level-Domain dieser Website .de lautete, obwohl sie weniger mein Deutsch-sein und mehr meine Kreationen vorstellen soll. Keine Sorge, pprmint.de wird noch für einige Zeit auf diese neue Domain weiterleiten.",
 						"headline": "Eine schicke, neue Domain.",
 						"imageAlt": "Die neue Domain, pprmint.art, ist über einer grünen Mülltonne geschrieben. In der Mülltonne befinden sich die Buchstaben d und e der vorherigen Domain. Neben der Tonne steht eine grüne Weinflasche."
+					},
+					"twitterDelete": {
+						"boldText": "Nach etwa 7 Jahren habe ich mich endlich dazu entschlossen, diese Plattform endgültig zu hinter mir zu lassen.",
+						"fullText": "Eine Entscheidung, die ich zugunsten meiner geistigen Gesundheit und meiner Privatsphäre traf, sowie um beim Arbeiten weniger abgelenkt zu werden, und mehr Zeit zu verbringen, mit meinen Freunden privat im kleineren Kreis zu reden. Möchtest du weiterhin über mich und den Projekten, an denen ich arbeite, informiert bleiben, kannst du gerne meinem (englischen) Discord-Server beitreten, falls du das nicht schon getan hast. Immerhin habe ich jetzt einen noch größeren Anreiz, mehr Leben in die Bude zu bringen.",
+						"headline": "Twitter-Konto gelöscht.",
+						"imageAlt": "Das Mintcraft-Logo mit der Versionsnummer 1.5 links daneben geschrieben. Im Hintergrund befindet sich die verbesserte Textur für das Rezeptbuch, welches nach links hin verschwindet."
 					}
 				},
 				"next": "Weiter",

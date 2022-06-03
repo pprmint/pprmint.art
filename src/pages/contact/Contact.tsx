@@ -298,15 +298,6 @@ export default function Contact() {
 									{t("section.contact.button.email")}
 								</Button>
 								<Button
-									href="https://twitter.com/messages/compose?recipient_id=1296863056266502144"
-									target="_blank"
-									rel="noopener noreferrer"
-									variant="outlined"
-									startIcon={<RiTwitterLine />}
-								>
-									{t("section.contact.button.twitter")}
-								</Button>
-								<Button
 									href="https://discord.com/invite/Vw9JXwr"
 									target="_blank"
 									rel="noopener noreferrer"

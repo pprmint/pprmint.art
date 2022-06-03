@@ -26,13 +26,14 @@ import MintBanner from "./assets/mintBanner";
 import NewsGerman from "./assets/german.svg";
 import NewsDomain from "./assets/newdomain.svg";
 import NewsMintcraft from "./assets/mintcraft.svg";
+import NewsTwitterDelete from "./assets/twitterDelete.svg";
 import {
 	RiArrowDownLine,
 	RiArrowLeftSLine,
 	RiArrowRightSLine,
 	RiArrowRightUpLine,
 	RiDiscordLine,
-	RiTwitterLine,
+	RiGithubLine,
 	RiYoutubeLine,
 } from "react-icons/ri";
 
@@ -61,6 +62,11 @@ function ReadMore(
 }
 
 const announcements = [
+    {
+        id: "twitterDelete",
+        date: "04.06.2022",
+        imageSrc: NewsTwitterDelete,
+    },
 	{
 		id: "mintcraft15",
 		date: "20.04.2022",
@@ -145,44 +151,6 @@ export default function Home() {
 								<Card variant="outlined">
 									<CardContent>
 										<Typography variant="h2">
-											<RiTwitterLine
-												style={{
-													position: "relative",
-													top: "4px",
-													marginRight: "12px",
-													color: "#1da1f2",
-												}}
-											/>
-											{t("section.about.twitter.title")}
-										</Typography>
-										<Typography variant="body2">
-											{t("section.about.twitter.text")}
-										</Typography>
-									</CardContent>
-									<CardActions>
-										<Box sx={{ marginLeft: "auto" }}>
-											<a
-												href="https://twitter.com/npprmint"
-												target="_blank"
-												rel="noopener noreferrer"
-											>
-												<Button
-													color="inherit"
-													endIcon={<RiArrowRightUpLine />}
-												>
-													{t("section.about.twitter.follow")}
-												</Button>
-											</a>
-										</Box>
-									</CardActions>
-								</Card>
-							</ScrollAnimation>
-						</Grid>
-						<Grid item xs={12} sm={4}>
-							<ScrollAnimation animateIn="fadeBottom" animateOnce>
-								<Card variant="outlined">
-									<CardContent>
-										<Typography variant="h2">
 											<RiYoutubeLine
 												style={{
 													position: "relative",
@@ -209,6 +177,44 @@ export default function Home() {
 													endIcon={<RiArrowRightUpLine />}
 												>
 													{t("section.about.youtube.subscribe")}
+												</Button>
+											</a>
+										</Box>
+									</CardActions>
+								</Card>
+							</ScrollAnimation>
+						</Grid>
+						<Grid item xs={12} sm={4}>
+							<ScrollAnimation animateIn="fadeBottom" animateOnce>
+								<Card variant="outlined">
+									<CardContent>
+										<Typography variant="h2">
+											<RiGithubLine
+												style={{
+													position: "relative",
+													top: "4px",
+													marginRight: "12px",
+													color: "#1f6feb",
+												}}
+											/>
+											{t("section.about.github.title")}
+										</Typography>
+										<Typography variant="body2">
+											{t("section.about.github.text")}
+										</Typography>
+									</CardContent>
+									<CardActions>
+										<Box sx={{ marginLeft: "auto" }}>
+											<a
+												href="https://github.com/pprmint"
+												target="_blank"
+												rel="noopener noreferrer"
+											>
+												<Button
+													color="inherit"
+													endIcon={<RiArrowRightUpLine />}
+												>
+													{t("section.about.github.follow")}
 												</Button>
 											</a>
 										</Box>

@@ -54,8 +54,7 @@
 				"button": {
 					"discord": "Discord",
 					"discordTagCopied": "Magic! My Discord tag was copied to your clipboard. Now send me a friend request to write in DMs.",
-					"email": "Email",
-					"twitter": "Twitter"
+					"email": "Email"
 				},
 				"text": "If your question wasn't answered here, or you just want to text to me directly, do so with one of these:",
 				"title": "Still no?"
@@ -134,14 +133,14 @@
 					"text": "Write with me and like-minded people and be the first to know about new announcements.",
 					"title": "Discord server."
 				},
+				"github": {
+					"follow": "Follow",
+					"text": "Have a look at some source code, like for this website that won't run well on the PCs we use at work.",
+					"title": "GitHub."
+				},
 				"intro1": "Name's Nick. I like things with mint flavor and to spend my time with design, motion graphics and code. To learn more about me, have a look at the ",
 				"intro2": " (once there is one) or follow me on some of these platforms:",
 				"title": "About me.",
-				"twitter": {
-					"follow": "Follow",
-					"text": "Bad jokes and occasional updates on my projects. I might also retweet Miku from time to time.",
-					"title": "Twitter."
-				},
 				"youtube": {
 					"subscribe": "Subscribe",
 					"text": "All my animated works, with extra compression artifacts to stimulate your senses.",
@@ -170,6 +169,12 @@
 						"fullText": "It always bothered me a bit that the top-level domain of this website was .de, even though this website is less about me being German and more about the things I create. Don't worry, pprmint.de will redirect you to the new domain for a while.",
 						"headline": "A shiny new domain.",
 						"imageAlt": "The new domain, pprmint.art, is written above a green trash can that contains the letters d and e from the previous top level domain. Right next to it is a small green wine bottle."
+					},
+					"twitterDelete": {
+						"boldText": "After about 7 years, I finally decided to give up this platform for good. ",
+						"fullText": "A decision I made in favor of my mental health and privacy, but also to be less distracted while working, and to spend more time talking privately with my friends in a smaller circle. If you'd like to continue to keep up with me and the projects I'm working on, feel free to join my Discord server if you haven't already. After all, now I have an even bigger incentive to bring more life to the place.",
+						"headline": "Twitter account deleted.",
+						"imageAlt": "The Mintcraft logo with the version number 1.5 written left to it. In the background there's the improved recipe book texture fading away towards the left."
 					}
 				},
 				"next": "Next",
