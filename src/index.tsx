@@ -72,7 +72,6 @@ const darkTheme = createTheme({
 			fontWeight: 500,
 			padding: ".5rem 0",
 			lineHeight: 1.1,
-			hyphens: "auto",
 		},
 		h3: {
 			fontFamily: "var(--fontPrimary)",
