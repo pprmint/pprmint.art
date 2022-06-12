@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import Lottie from "react-lottie";
 import { useState } from "react";
 import {
 	BrowserRouter as Router,
@@ -77,9 +78,9 @@ import Settings from "./Settings";
 import CookieSnackbar from "./CookieSnackbar";
 
 // ppmint.
-import Wordmark from "./globalassets/wordmark.svg";
+import Wordmark from "./globalassets/wordmark.json";
 // Pride animation wordmark
-import Animation from "./globalassets/animation.webm";
+import PrideWordmark from "./globalassets/pride_wordmark.json";
 // Fonts
 import "./globalassets/fonts/silka.css";
 import "./globalassets/fonts/basier_square.css";
@@ -154,6 +155,15 @@ function ElevationScroll(props: Props) {
 	});
 }
 
+const lottieOptions = {
+	loop: false,
+	autoplay: true,
+	animationData: PrideWordmark,
+	rendererSettings: {
+		preserveAspectRatio: "xMidYMid slice",
+	},
+};
+
 function App() {
 	const { t } = useTranslation();
 	const [open, setOpen] = useState<boolean>(false);
@@ -173,10 +183,8 @@ function App() {
 						}}
 					>
 						<Box
-							// pl={{ xs: 1, sm: 0 }} // Setting for static wordmark
 							pl={{ xs: 3, md: 0 }}
-							// pr={{ xs: 1.5, md: 0 }} // Setting for static wordmark
-							pr={0}
+							pr={{ xs: 1.5, md: 2 }}
 							pt={0.75}
 							pb={0.75}
 						>
@@ -265,20 +273,17 @@ function App() {
 						</Drawer>
 						<Box
 							sx={{
-								// marginTop: "9px", // Setting for static wordmark
 								flexGrow: 1,
 								display: { xs: "flex", md: "block" },
 							}}
 						>
 							<Link to="/">
-								{/* <img src={Wordmark} height="30px" alt="pprmint." /> */}
-								<video
-									src={Animation}
-									height="64px"
-									autoPlay
-									muted
-									playsInline
-                                    style={{borderRadius: "0 32px 32px 0"}}
+								<Lottie
+									options={lottieOptions}
+									width={150}
+									height={48}
+                                    isClickToPauseDisabled={true}
+                                    style={{margin: "none", borderRadius: "24px"}}
 								/>
 							</Link>
 						</Box>
