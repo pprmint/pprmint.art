@@ -518,6 +518,12 @@ video {
 .MuiCardActions-root {
 	padding: 0 16px 16px 16px;
 }
+.MuiAccordion-root:first-of-type {
+    border-radius: 8px 8px 0 0;
+}
+.MuiAccordion-root:last-of-type {
+    border-radius: 0 0 8px 8px;
+}
 .MuiAccordionSummary-root {
 	padding: 4px 24px;
 	h3 {
