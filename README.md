@@ -12,6 +12,10 @@ Maybe looking at this code can help people getting started with their own websit
 (Mainly.)
 
 ## *How, but italic?*
+`https://nodejs.org/` to download and install Node.js.
+
+`npm install -g yarn` to install yarn.
+
 `yarn install` to download Node modules. ~~The warnings are a feature.~~
 
 `yarn start` to run a local dev server at [localhost:3000](localhost:3000).
