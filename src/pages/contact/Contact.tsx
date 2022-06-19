@@ -20,7 +20,18 @@ import {
 	RiArrowDownSLine,
 	RiDiscordLine,
 } from "react-icons/ri";
-import Banner from "./assets/banner.svg";
+import Lottie from "react-lottie";
+
+import Banner from "./assets/banner.json";
+
+const lottieOptions = {
+	loop: false,
+	autoplay: true,
+	animationData: Banner,
+	rendererSettings: {
+		preserveAspectRatio: "xMidYMid slice",
+	},
+};
 
 export default function Contact() {
 	const { t } = useTranslation("translation", {
@@ -36,7 +47,15 @@ export default function Contact() {
 					content="Learn more about what software I use to make my thingies, how you may use some of the things I make and click spicy buttons to send me an email or DM on Twitter."
 				/>
 			</Helmet>
-			<img src={Banner} className="hero" />
+			<Lottie
+				options={lottieOptions}
+				isClickToPauseDisabled={true}
+				height="auto"
+				style={{
+					position: "absolute",
+					marginTop: " calc(-1 * var(--marginTop))",
+				}}
+			/>
 			<Container className="title">
 				<Typography variant="h1">{t("title.main")}</Typography>
 				<Typography variant="h2">{t("title.sub")}</Typography>
