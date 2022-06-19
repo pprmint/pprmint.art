@@ -1,10 +1,19 @@
 import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import Lottie from "react-lottie";
 import { Button, Typography, Container, Grid } from "@mui/material";
 import { useTranslation } from "react-i18next";
+import IceCreamCrimeScene from "./assets/ice_crime_scene.json";
 
-import IceCreamCrimeScene from "./assets/ice_crime_scene.svg";
+const lottieOptions = {
+	loop: false,
+	autoplay: true,
+	animationData: IceCreamCrimeScene,
+	rendererSettings: {
+		preserveAspectRatio: "xMidYMid slice",
+	},
+};
 
 function FourOhFour() {
 	const { t } = useTranslation("translation", {
@@ -30,8 +39,13 @@ function FourOhFour() {
 				<meta property="og:title" content="pprmint.art" />
 				<meta property="og:url" content="https://pprmint.art" />
 			</Helmet>
-			<img src={IceCreamCrimeScene} className="hero fullscreen" />
 			<div className="fullscreen">
+				<Lottie
+					options={lottieOptions}
+					isClickToPauseDisabled={true}
+					height="auto"
+					style={{ opacity: 0.25 }}
+				/>
 				<Container className="title">
 					<Typography variant="h1">{t("title.main")}</Typography>
 					<Typography variant="h2">{t("title.sub")}</Typography>
