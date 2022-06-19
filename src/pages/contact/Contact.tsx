@@ -145,7 +145,7 @@ export default function Contact() {
 										>
 											Affinity Designer
 										</a>
-										and{" "}
+										{t("section.faq.3software.and")}
 										<a
 											className="external"
 											href="https://affinity.serif.com/photo/"
