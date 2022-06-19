@@ -20,8 +20,9 @@ import {
 } from "@mui/material";
 import Image from "mui-image";
 import { useTranslation } from "react-i18next";
+import Lottie from "react-lottie";
 
-import MintBanner from "./assets/mintBanner";
+import MintBanner from "./assets/mintBanner.json";
 
 import NewsGerman from "./assets/german.svg";
 import NewsDomain from "./assets/newdomain.svg";
@@ -62,11 +63,11 @@ function ReadMore(
 }
 
 const announcements = [
-    {
-        id: "twitterDelete",
-        date: "04.06.2022",
-        imageSrc: NewsTwitterDelete,
-    },
+	{
+		id: "twitterDelete",
+		date: "04.06.2022",
+		imageSrc: NewsTwitterDelete,
+	},
 	{
 		id: "mintcraft15",
 		date: "20.04.2022",
@@ -84,6 +85,15 @@ const announcements = [
 		imageSrc: NewsDomain,
 	},
 ];
+
+const lottieOptions = {
+	loop: false,
+	autoplay: true,
+	animationData: MintBanner,
+	rendererSettings: {
+		preserveAspectRatio: "xMidYMid slice",
+	},
+};
 
 export default function Home() {
 	const { t } = useTranslation("translation", {
@@ -122,8 +132,12 @@ export default function Home() {
 				<meta property="og:title" content="Good today." />
 				<meta property="og:url" content="https://pprmint.art" />
 			</Helmet>
-			<MintBanner />
 			<div className="fullscreen">
+				<Lottie
+					options={lottieOptions}
+					isClickToPauseDisabled={true}
+                    height="auto"
+				/>
 				<Container className="title">
 					<Typography variant="h1">{t("title.main")}</Typography>
 					<Typography variant="h2">{t("title.sub")}</Typography>
