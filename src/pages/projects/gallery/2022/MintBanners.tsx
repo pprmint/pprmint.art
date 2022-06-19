@@ -52,11 +52,6 @@ export default function MintBanners() {
 						controls
 						playsInline
 					/>
-                    <br />
-                    <br />
-                    <Typography variant="body1" textAlign="center">
-						{t("captions.music")}<a className="external" href="https://www.youtube.com/audiolibrary" rel="noopener noreferrer">ELPHNT - Melting Sands</a>
-					</Typography>
 				</ScrollAnimation>
                 <br />
                 <br />
