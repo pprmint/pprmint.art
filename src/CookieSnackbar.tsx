@@ -31,7 +31,7 @@ export default function CookieSnackbar() {
 					{t("use")}
 					<br />
 					{t("agreement")}
-					<Link to="/privacy">{t("link")}</Link>. {t("noFutureAppear")}
+					<Link to="/privacy">{t("link")}</Link>{t("noFutureAppear")}
 				</Typography>
 			}
 			action={

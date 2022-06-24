@@ -12,10 +12,10 @@
 	"common": {
 		"changeLang": "Sprache ändern",
 		"cookies": {
-			"agreement": "By using this site, you agree to the ",
-			"link": "use of cookies",
-			"noFutureAppear": "This message won't appear again in the future.",
-			"use": "This website uses a \"cookie\" to remember settings and whether you saw this message."
+			"agreement": "Check the",
+			"link": "privacy policy",
+			"noFutureAppear": "for more info. This message won't appear again in the future.",
+			"use": "This website uses the localStorage to remember settings and whether you saw this message."
 		},
 		"footer": {
 			"andCoffee": " and coffee by pprmint.",

@@ -12,10 +12,10 @@
 	"common": {
 		"changeLang": "Change language",
 		"cookies": {
-			"agreement": "Durch Verwendung der Seite akzeptierst du die ",
-			"link": "Nutzung von Cookies",
-			"noFutureAppear": "Diese Meldung wird in Zukunft nicht mehr erscheinen.",
-			"use": "Diese Website verwendet \"Cookies\", um Einstellungen zu speichern und festzustellen, ob du diese Nachricht gesehen hast."
+			"agreement": "Schau in die",
+			"link": "Datenschutzerklärung",
+			"noFutureAppear": "für weitere Infos. Diese Meldung wird nicht nochmal angezeigt.",
+			"use": "Diese Website verwendet den localStorage, um Einstellungen und ob du diese Nachricht gesehen hast zu speichern."
 		},
 		"footer": {
 			"andCoffee": " und Kaffee von pprmint.",
