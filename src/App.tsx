@@ -304,12 +304,6 @@ function App() {
 											<Button
 												color="inherit"
 												startIcon={item.icon}
-												sx={{
-													width: "max-content",
-													borderRadius: "20px",
-													pl: 2,
-													pr: 2,
-												}}
 											>
 												{t(item.name)}
 											</Button>
