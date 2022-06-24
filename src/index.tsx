@@ -96,7 +96,16 @@ const darkTheme = createTheme({
 		MuiButton: {
 			styleOverrides: {
 				root: {
-					borderRadius: 5,
+					borderRadius: 24,
+                    paddingLeft: 16,
+					paddingRight: 16,
+				},
+			},
+		},
+		MuiButtonGroup: {
+			styleOverrides: {
+				root: {
+					borderRadius: 24,
 				},
 			},
 		},
