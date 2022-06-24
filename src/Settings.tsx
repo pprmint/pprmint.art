@@ -32,11 +32,6 @@ const Settings = () => {
 				color="inherit"
 				startIcon={<RiSettings4Line />}
 				onClick={handleClick}
-				sx={{
-					pl: 2,
-					pr: 2,
-					borderRadius: 20,
-				}}
 			>
 				{t("common.settings.title")}
 			</Button>
@@ -50,8 +45,13 @@ const Settings = () => {
 				scroll="body"
 			>
 				<Box sx={{ display: "flex", backgroundColor: "#333" }}>
+					{/* Mobile close button, same placement as menu button */}
 					<Box pl={1.5} pr={1.5} pt={0.75} pb={0.75}>
-						<IconButton onClick={handleClose} size="large">
+						<IconButton
+							onClick={handleClose}
+							size="large"
+							sx={{ display: { xs: "inline-flex", md: "none" } }}
+						>
 							<RiCloseLine />
 						</IconButton>
 					</Box>
@@ -67,9 +67,14 @@ const Settings = () => {
 					>
 						{t("common.settings.title")}
 					</Typography>
+					{/* Desktop close button, opposite side */}
 					<Box pr={1.5} pt={0.75} pb={0.75}>
-						<IconButton size="large" disabled>
-							<RiSettings4Line />
+						<IconButton
+							onClick={handleClose}
+							size="large"
+							sx={{ display: { xs: "none", md: "inline-flex" } }}
+						>
+							<RiCloseLine />
 						</IconButton>
 					</Box>
 				</Box>
