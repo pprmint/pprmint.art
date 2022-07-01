@@ -158,7 +158,7 @@ function ElevationScroll(props: Props) {
 const lottieOptions = {
 	loop: false,
 	autoplay: true,
-	animationData: Wordmark,
+	animationData: PrideWordmark,
 	rendererSettings: {
 		preserveAspectRatio: "xMidYMid slice",
 	},
