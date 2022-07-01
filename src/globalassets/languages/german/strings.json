@@ -278,7 +278,7 @@
 		}
 	},
 	"projects": {
-		"downloadLatest": "Neuste herunterladen",
+		"downloadLatest": "Neuste downloaden",
 		"learnMore": "Mehr erfahren",
 		"meta": {
 			"title": "Meine Projekte • pprmint.art"
@@ -348,7 +348,7 @@
 						"clickMe": "Klick mich",
 						"name": "Sounds-Add-on"
 					},
-					"commonDownloadButton": "Herunterladen für ",
+					"commonDownloadButton": "Download für ",
 					"mintcraft": {
 						"description": "Mein Ressourcenpaket versorgt dich mit Dark-Mode Containern, einer Ego-Farbpalette und vielen anderen Optimierungen. Einige Icons bewegen sich sogar, wenn man mit dem Mauszeiger über sie fährt!",
 						"name": "Mintcraft"
@@ -384,7 +384,7 @@
 			"section": {
 				"download": {
 					"description": "Wenn du den Text auf Folie 3 tatsächlich in einer vernünftigen Reihenfolge lesen konntest, verdienst du einen Download-Button.",
-					"downloadButton": "Herunterladen",
+					"downloadButton": "Download",
 					"headline": "MintSans V2"
 				},
 				"try": {
@@ -434,7 +434,7 @@
 					"text2": "Du wirst in diesem Paket nicht allzu viele Symbole finden, da ich nur Kacheln für die Programme erstellt habe, die ich selbst benutze. Oder in manchen Fällen benutzt habe.\nLeider gehören die Creative-Cloud-Apps nicht zu jenen Programmen."
 				},
 				"download": {
-					"downloadButton": "Herunterladen",
+					"downloadButton": "Download",
 					"headline": "Start-Menü-Kacheln",
 					"text1": "Um das Kachelbild für jede Verknüpfung in deinem Startmenü zu ändern, empfehle ich ",
 					"text2": ". Bist du auf Windows 11 unterwegs, tust du mir leid. Du kannst dir sowas wie ",
