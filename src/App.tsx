@@ -158,7 +158,7 @@ function ElevationScroll(props: Props) {
 const lottieOptions = {
 	loop: false,
 	autoplay: true,
-	animationData: PrideWordmark,
+	animationData: Wordmark,
 	rendererSettings: {
 		preserveAspectRatio: "xMidYMid slice",
 	},
@@ -280,10 +280,10 @@ function App() {
 							<Link to="/">
 								<Lottie
 									options={lottieOptions}
-									width={150}
-									height={48}
+									width={160}
+									height={64}
                                     isClickToPauseDisabled={true}
-                                    style={{margin: "none", borderRadius: "24px"}}
+                                    style={{margin: "none"}}
 								/>
 							</Link>
 						</Box>
