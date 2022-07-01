@@ -84,7 +84,7 @@ import PrideWordmark from "./globalassets/pride_wordmark.json";
 // Fonts
 import "./globalassets/fonts/silka.css";
 import "./globalassets/fonts/basier_square.css";
-// import "./globalassets/fonts/basier_mono.css";
+import "./globalassets/fonts/basier_square_mono.css";
 
 const nav = [
 	{
@@ -158,7 +158,7 @@ function ElevationScroll(props: Props) {
 const lottieOptions = {
 	loop: false,
 	autoplay: true,
-	animationData: PrideWordmark,
+	animationData: Wordmark,
 	rendererSettings: {
 		preserveAspectRatio: "xMidYMid slice",
 	},
