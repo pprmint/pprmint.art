@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="100%" height="100%" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:1.5;">
+<svg width="100%" height="100%" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:1.5;">
     <rect x="0" y="0" width="64" height="64"/>
     <g>
         <g transform="matrix(2.45714,0,0,2.45714,-46.6284,-46.6286)">
@@ -53,7 +53,7 @@
                 </g>
             </g>
         </g>
-        <g id="Mintcraft-icon" serif:id="Mintcraft icon" transform="matrix(0.166638,0,0,0.166638,-222.111,-148.14)">
+        <g id="Mintcraft-icon" transform="matrix(0.166638,0,0,0.166638,-222.111,-148.14)">
             <g transform="matrix(2.91486,0,0,2.91486,-5178.49,-1985.41)">
                 <path d="M2293.56,1040.71L2274,1029.42L2254.44,1040.71L2254.44,1063.29L2274,1074.58L2293.56,1063.29L2293.56,1040.71ZM2274,1036.58L2287.45,1044.35L2287.45,1059.65L2274,1067.42L2260.55,1059.65L2260.55,1044.35L2274,1036.58Z" style="fill:url(#_Linear1);"/>
             </g>
