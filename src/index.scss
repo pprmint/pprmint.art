@@ -236,7 +236,7 @@ body {
 
 .MuiAppBar-root {
 	opacity: 0;
-	animation: fadeTop 0.375s var(--easeOut) 0.1s forwards;
+	animation: fadeTop 0.375s var(--easeOut) forwards;
 	transition: 0.375s;
 }
 .MuiDialog-paper {
