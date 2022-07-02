@@ -16,7 +16,6 @@
 		"i18next": "^21.8.11",
 		"i18next-browser-languagedetector": "^6.1.4",
 		"i18next-http-backend": "^1.4.1",
-		"mui-image": "^1.0.5",
 		"phosphor-icons": "^1.4.2",
 		"prop-types": "15.7.2",
 		"react": "18.0.0",

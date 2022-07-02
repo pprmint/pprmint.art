@@ -15,7 +15,6 @@ specifiers:
   i18next: ^21.8.11
   i18next-browser-languagedetector: ^6.1.4
   i18next-http-backend: ^1.4.1
-  mui-image: ^1.0.5
   phosphor-icons: ^1.4.2
   prop-types: 15.7.2
   react: 18.0.0
@@ -48,7 +47,6 @@ dependencies:
   i18next: 21.8.11
   i18next-browser-languagedetector: 6.1.4
   i18next-http-backend: 1.4.1
-  mui-image: 1.0.5_t3iutnpbfzuetrhma5sfx3vca4
   phosphor-icons: 1.4.2
   prop-types: 15.7.2
   react: 18.0.0
@@ -7170,22 +7168,6 @@ packages:
 
   /ms/2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
-    dev: false
-
-  /mui-image/1.0.5_t3iutnpbfzuetrhma5sfx3vca4:
-    resolution: {integrity: sha512-/dv6rnTMYJ6JFGJoAdvjH0OTFQCDYjNh3Jb5QIhEGMQ1MNDldmeu5mpnVxklcIq/52jDHN9FiWdqAQX38FykPQ==}
-    peerDependencies:
-      '@emotion/react': ^11.4.1
-      '@emotion/styled': ^11.3.0
-      '@mui/material': ^5.0.1
-      prop-types: ^15.7.2
-      react: ^17.0.2 || ^18.0.0
-    dependencies:
-      '@emotion/react': 11.9.3_kzkbdtszp6xs6y2n435rm55zzy
-      '@emotion/styled': 11.9.3_yrtybijtnddjg6xox3nkdzegsm
-      '@mui/material': 5.8.6_hb3gsry54vnvffrkfm2fl6p2n4
-      prop-types: 15.7.2
-      react: 18.0.0
     dev: false
 
   /multicast-dns/7.2.5:
