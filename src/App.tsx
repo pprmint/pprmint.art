@@ -336,16 +336,12 @@ export default function App() {
 					<Route path="/test" element={<Test />} />
 					<Route path="/healthsafety" element={<HealthSafety />} />
 
-					{/* <Redirect from="/works" to="/downloads" />
-					<Redirect from="/downloads" to="/downloads" />
-					<Redirect from="/downloads/2022" exact to="/downloads" />
-					<Redirect from="/downloads/2021" exact to="/downloads" />
-					<Redirect from="/faq" to="/contact" />
-					<Redirect from="/mintcraft" to="/downloads/mintcraft" />
-					<Redirect from="/splashes" exact to="/downloads/mintcraft/splashes" />
-					<Redirect from="/mintsans" to="/downloads/mintsans" />
-					<Redirect from="/mintalt" to="/downloads/mintalt" />
-					<Redirect from="/win10tiles" to="/downloads/win10tiles" /> */}
+					<Route path="/faq" element={<Navigate replace to="/contact" />} />
+					<Route path="/mintcraft" element={<Navigate replace to="/downloads/mintcraft" />} />
+					<Route path="/splashes" element={<Navigate replace to="/downloads/mintcraft/splashes" />} />
+					<Route path="/mintsans" element={<Navigate replace to="/downloads/mintsans" />} />
+					<Route path="/mintalt" element={<Navigate replace to="/downloads/mintalt" />} />
+					<Route path="/win10tiles" element={<Navigate replace to="/downloads/win10tiles" />} />
 
 					<Route path="*" element={<Error404 />} />
 				</Routes>
