@@ -19,7 +19,7 @@ export default function HealthSafety() {
 	let click = new Audio(ClickSound);
 	let error = new Audio(ErrorSound);
 	return (
-		<>
+		<React.Fragment>
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>Mintendo - Health and Safety Precautions</title>
@@ -44,6 +44,6 @@ export default function HealthSafety() {
 					</Grid>
 				</div>
 			</Container>
-		</>
+		</React.Fragment>
 	);
 }

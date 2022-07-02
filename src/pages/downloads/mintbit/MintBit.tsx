@@ -17,7 +17,7 @@ import Ofl from "./images/ofl.svg";
 
 function MintSansDL() {
     return (
-        <>
+        <React.Fragment>
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>pprmint.de – MintSans.</title>
@@ -84,7 +84,7 @@ function MintSansDL() {
                     </a>
                 </div>
             </Container>
-        </>
+        </React.Fragment>
     );
 }
 

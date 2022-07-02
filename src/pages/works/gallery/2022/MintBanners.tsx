@@ -1,15 +1,16 @@
+import React from "react";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import ScrollAnimation from "react-animate-on-scroll";
-import { Typography, Container, CircularProgress, } from "@mui/material";
-import Image from "mui-image";
+import { Typography, Container, Skeleton } from "@mui/material";
+import Image from "@jy95/material-ui-image";
 
 export default function MintBanners() {
 	const { t } = useTranslation("translation", {
-		keyPrefix: "projects.works.2022.mintBanners",
+		keyPrefix: "works.2022.mintBanners",
 	});
 	return (
-		<>
+		<React.Fragment>
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>{t("meta.title")}</title>
@@ -31,7 +32,7 @@ export default function MintBanners() {
 				<meta property="og:title" content="Mint banners." />
 				<meta
 					property="og:url"
-					content="https://pprmint.art/projects/2022/wiimenu"
+					content="https://pprmint.art/works/2022/wiimenu"
 				/>
 			</Helmet>
 			<Container className="title">
@@ -41,9 +42,7 @@ export default function MintBanners() {
 			<div className="section">
 				<ScrollAnimation animateIn="fadeBottom" animateOnce>
 					<video
-						src={
-							"https://media.pprmint.art/2022/MintBanners/Scene1_0000_1.mp4"
-						}
+						src={"https://media.pprmint.art/2022/MintBanners/Scene1_0000_1.mp4"}
 						width="100%"
 						height="100%"
 						poster={
@@ -53,48 +52,69 @@ export default function MintBanners() {
 						playsInline
 					/>
 				</ScrollAnimation>
-                <br />
-                <br />
-                <ScrollAnimation animateIn="fadeBottom" animateOnce>
+				<br />
+				<br />
+				<ScrollAnimation animateIn="fadeBottom" animateOnce>
 					<a
 						href="https://media.pprmint.art/2022/MintBanners/MINT_Night.png"
 						target="_blank"
 					>
 						<Image
 							src="https://media.pprmint.art/2022/MintBanners/MINT_Night.png"
-							duration={1000}
-							easing="ease-out"
-							showLoading={<CircularProgress />}
+							aspectRatio={16 / 9}
+							color="transparent"
+							loading={
+								<Skeleton
+									variant="rectangular"
+									width="100%"
+									height="100%"
+									animation="wave"
+								/>
+							}
 						/>
 					</a>
 				</ScrollAnimation>
-                <ScrollAnimation animateIn="fadeBottom" animateOnce>
+				<ScrollAnimation animateIn="fadeBottom" animateOnce>
 					<a
 						href="https://media.pprmint.art/2022/MintBanners/MINT_Night_2.png"
 						target="_blank"
 					>
 						<Image
 							src="https://media.pprmint.art/2022/MintBanners/MINT_Night_2.png"
-							duration={1000}
-							easing="ease-out"
-							showLoading={<CircularProgress />}
+							aspectRatio={16 / 9}
+							color="transparent"
+							loading={
+								<Skeleton
+									variant="rectangular"
+									width="100%"
+									height="100%"
+									animation="wave"
+								/>
+							}
 						/>
 					</a>
 				</ScrollAnimation>
-                <ScrollAnimation animateIn="fadeBottom" animateOnce>
+				<ScrollAnimation animateIn="fadeBottom" animateOnce>
 					<a
 						href="https://media.pprmint.art/2022/MintBanners/MINT_Night_3.png"
 						target="_blank"
 					>
 						<Image
 							src="https://media.pprmint.art/2022/MintBanners/MINT_Night_3.png"
-							duration={1000}
-							easing="ease-out"
-							showLoading={<CircularProgress />}
+							aspectRatio={16 / 9}
+							color="transparent"
+							loading={
+								<Skeleton
+									variant="rectangular"
+									width="100%"
+									height="100%"
+									animation="wave"
+								/>
+							}
 						/>
 					</a>
 				</ScrollAnimation>
 			</div>
-		</>
+		</React.Fragment>
 	);
 }

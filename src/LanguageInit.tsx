@@ -39,7 +39,7 @@ export default function LanguageSetting() {
 		document.body.dir = languageMap[selected].dir;
 	}, [selected]);
 	return (
-		<>
+		<React.Fragment>
 			<DialogContent>
 				<Typography variant="h3">
 					{t("title")}
@@ -60,7 +60,7 @@ export default function LanguageSetting() {
 					))}
 				</ButtonGroup>
 			</DialogContent>
-		</>
+		</React.Fragment>
 	);
 };
 

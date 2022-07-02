@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import {
@@ -12,7 +13,7 @@ import {
 	Stack,
 	Card,
 } from "@mui/material";
-import Image from "mui-image";
+import Image from "@jy95/material-ui-image";
 import { useTranslation } from "react-i18next";
 import ScrollAnimation from "react-animate-on-scroll";
 
@@ -20,19 +21,14 @@ import "./assets/mintbit/mintbit.css";
 import "./assets/buttonStyles.scss";
 
 import {
-	RiDownload2Line,
-	RiArrowRightUpLine,
-	RiAddLine,
-	RiSubtractLine,
-	RiCheckboxCircleLine,
-	RiCloseCircleLine,
-	RiArrowDownLine,
-	RiNumber1,
-	RiNumber2,
-	RiNumber3,
-	RiNumber4,
-	RiNumber5,
-} from "react-icons/ri";
+    FiArrowDown,
+	FiArrowUpRight,
+	FiPlus,
+	FiMinus,
+	FiDownload,
+	FiThumbsUp,
+	FiThumbsDown,
+} from "react-icons/fi";
 
 import Marquee from "react-fast-marquee";
 
@@ -83,11 +79,11 @@ function ContainerImage(props: { imageSrc: string; imageAlt: string }) {
 
 export default function MintcraftDL() {
 	const { t } = useTranslation("translation", {
-		keyPrefix: "projects.mintcraft",
+		keyPrefix: "downloads.mintcraft",
 	});
 	let click = new Audio(ClickSound);
 	return (
-		<>
+		<React.Fragment>
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>{t("meta.title")}</title>
@@ -115,7 +111,7 @@ export default function MintcraftDL() {
 					<img src={MintcraftLogo} />
 					<Typography variant="h2">{t("title.sub")}</Typography>
 					<br />
-					<RiArrowDownLine size={25} color="#fb2" />
+					<FiArrowDown size={25} color="#fb2" />
 				</Container>
 			</div>
 			<div className="section" id="changes">
@@ -128,7 +124,7 @@ export default function MintcraftDL() {
 							{additions.map((addition, index) => (
 								<ListItem key={index}>
 									<ListItemIcon>
-										<RiAddLine />
+										<FiPlus />
 									</ListItemIcon>
 									<ListItemText>{t(addition)}</ListItemText>
 								</ListItem>
@@ -138,7 +134,7 @@ export default function MintcraftDL() {
 							{changes.map((change, index) => (
 								<ListItem key={index}>
 									<ListItemIcon>
-										<RiArrowRightUpLine />
+										<FiArrowUpRight />
 									</ListItemIcon>
 									<ListItemText>{t(change)}</ListItemText>
 								</ListItem>
@@ -149,7 +145,7 @@ export default function MintcraftDL() {
 								<ScrollAnimation animateIn="fadeBottom" animateOnce>
 									<ListItem key={index}>
 										<ListItemIcon>
-											<RiSubtractLine />
+											<FiMinus />
 										</ListItemIcon>
 										<ListItemText>{t(removal)}</ListItemText>
 									</ListItem>
@@ -222,7 +218,7 @@ export default function MintcraftDL() {
 									<List>
 										<ListItem>
 											<ListItemIcon>
-												<RiCheckboxCircleLine />
+												<FiThumbsUp />
 											</ListItemIcon>
 											<ListItemText>
 												{t("section.dosAndDonts.do.modifyPersonalUse")}
@@ -230,7 +226,7 @@ export default function MintcraftDL() {
 										</ListItem>
 										<ListItem>
 											<ListItemIcon>
-												<RiCheckboxCircleLine />
+												<FiThumbsUp />
 											</ListItemIcon>
 											<ListItemText>
 												{t("section.dosAndDonts.do.modifyOnlineContent")}
@@ -238,7 +234,7 @@ export default function MintcraftDL() {
 										</ListItem>
 										<ListItem>
 											<ListItemIcon>
-												<RiCheckboxCircleLine />
+												<FiThumbsUp />
 											</ListItemIcon>
 											<ListItemText>
 												{t("section.dosAndDonts.do.sharePrivate")}
@@ -246,7 +242,7 @@ export default function MintcraftDL() {
 										</ListItem>
 										<ListItem>
 											<ListItemIcon>
-												<RiCheckboxCircleLine />
+												<FiThumbsUp />
 											</ListItemIcon>
 											<ListItemText>
 												{t("section.dosAndDonts.do.serverPacks")}
@@ -254,7 +250,7 @@ export default function MintcraftDL() {
 										</ListItem>
 										<ListItem>
 											<ListItemIcon>
-												<RiCheckboxCircleLine />
+												<FiThumbsUp />
 											</ListItemIcon>
 											<ListItemText>
 												<i>Optional:</i>{" "}
@@ -272,7 +268,7 @@ export default function MintcraftDL() {
 									<List>
 										<ListItem>
 											<ListItemIcon>
-												<RiCloseCircleLine />
+												<FiThumbsDown />
 											</ListItemIcon>
 											<ListItemText>
 												{t("section.dosAndDonts.dont.redistribute")}
@@ -465,7 +461,7 @@ export default function MintcraftDL() {
 								@Iucidcelestial
 							</a>
 							{t("section.credits.twitterFellas.description3")}
-							<Link to="/projects/mintcraft/splashes">
+							<Link to="/downloads/mintcraft/splashes">
 								{t("section.credits.twitterFellas.descriptionLink")}
 							</Link>
 							.
@@ -482,7 +478,7 @@ export default function MintcraftDL() {
 						<List>
 							<ListItem>
 								<ListItemIcon>
-									<RiNumber1 />
+									1
 								</ListItemIcon>
 								<ListItemText>
 									<Typography variant="body1">
@@ -501,7 +497,7 @@ export default function MintcraftDL() {
 							</ListItem>
 							<ListItem>
 								<ListItemIcon>
-									<RiNumber2 />
+									2
 								</ListItemIcon>
 								<ListItemText>
 									<Typography variant="body1">
@@ -511,7 +507,7 @@ export default function MintcraftDL() {
 							</ListItem>
 							<ListItem>
 								<ListItemIcon>
-									<RiNumber3 />
+									3
 								</ListItemIcon>
 								<ListItemText>
 									<Typography variant="body1">
@@ -521,7 +517,7 @@ export default function MintcraftDL() {
 							</ListItem>
 							<ListItem>
 								<ListItemIcon>
-									<RiNumber4 />
+									4
 								</ListItemIcon>
 								<ListItemText>
 									<Typography variant="body1">
@@ -531,7 +527,7 @@ export default function MintcraftDL() {
 							</ListItem>
 							<ListItem>
 								<ListItemIcon>
-									<RiNumber5 />
+									5
 								</ListItemIcon>
 								<ListItemText>
 									<Typography variant="body1">
@@ -568,7 +564,7 @@ export default function MintcraftDL() {
 										href="https://download.pprmint.art/mintcraft/1.18/Mintcraft_1.5.1_(FullSauce).zip"
 										download
 										color="warning"
-										startIcon={<RiDownload2Line />}
+										startIcon={<FiDownload />}
 									>
 										{t("section.download.commonDownloadButton")}1.18
 									</Button>
@@ -603,7 +599,7 @@ export default function MintcraftDL() {
 										href="https://download.pprmint.art/mintcraft/1.18/Mintcraft_1.5.zip"
 										download
 										color="warning"
-										startIcon={<RiDownload2Line />}
+										startIcon={<FiDownload />}
 									>
 										{t("section.download.commonDownloadButton")}1.18
 									</Button>
@@ -654,7 +650,7 @@ export default function MintcraftDL() {
 										href="https://download.pprmint.art/mintcraft/1.18/MintBit_Add-on_1.0.zip"
 										download
 										color="warning"
-										startIcon={<RiDownload2Line />}
+										startIcon={<FiDownload />}
 									>
 										{t("section.download.commonDownloadButton")}1.18
 									</Button>
@@ -706,7 +702,7 @@ export default function MintcraftDL() {
 										href="https://download.pprmint.art/mintcraft/1.18/Sounds_Add-on_1.1.zip"
 										download
 										color="warning"
-										startIcon={<RiDownload2Line />}
+										startIcon={<FiDownload />}
 									>
 										{t("section.download.commonDownloadButton")}1.18
 									</Button>
@@ -732,6 +728,6 @@ export default function MintcraftDL() {
 					</ScrollAnimation>
 				</Container>
 			</div>
-		</>
+		</React.Fragment>
 	);
 }

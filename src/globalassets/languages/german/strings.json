@@ -23,10 +23,10 @@
 			"privacyPolicy": "Datenschutzerklärung"
 		},
 		"nav": {
-			"about": "Über mich",
 			"contact": "Kontakt & FAQ",
+			"downloads": "Downloads",
 			"home": "Start",
-			"projects": "Projekte"
+			"works": "Werke"
 		},
 		"settings": {
 			"close": "Schließen",
@@ -66,37 +66,38 @@
 					"tldr": "Höchstwahrscheinlich nicht. "
 				},
 				"2terms": {
+					"downloads": {
+						"downloadsPage": "Downloads-Seite",
+						"text1": "Wie der Name schon andeuten lässt, möchte ich dich dazu ermutigen, Dinge auf der",
+						"text2": "selbst herunterzuladen und zu verwenden. Du darfst auch selbst Veränderungen vornehmen und sie privat mit deinen Freunden teilen. Ich gestatte dir jedoch nicht, meine Projekte ohne Erlaubnis weiterzuverkaufen oder anderweitig zu verbreiten.",
+						"title": "Schriftarten, Hintergründe und andere Downloads."
+					},
 					"fonts": {
-						"text1": "Meine Schriftarten sind unter der ",
+						"text1": "Meine Schriftarten sind unter der",
 						"text2": "lizenziert. Das bedeutet, dass du die Schriftarten für persönliche und kommerzielle Projekte frei verwenden darfst. Allerdings darfst du die Schriftarten und/oder Derivate davon nicht verkaufen.",
 						"title": "Schriftarten"
 					},
-					"illustrations": {
-						"text": "Bei dieser Art von Werken ist es mir lieber, wenn du einfach deine Sinne auf sie richtest und sie dir ansiehst. Betrachte meine Website und meinen YouTube-Kanal als meine kleine Kunstgalerie, in der du dir meine Werke einfach angucken kannst. Nix kaufen, nix mieten, nix gar nix. Nur gucken.",
-						"title": "Animationen, Illustrationen und andere Werke."
-					},
 					"long": "Es gibt einige Ausnahmen, wie unten erwähnt. Wenn du dir mal nicht sicher bist, was du mit einem von mir gemachtem Ding tun darfst, zöger nicht, mich zu kontaktieren und mich zu fragen.",
 					"reminder": "Sollten diese Bedingungen für dich irgendwo unklar sein, zögere nicht, dich mit mir in Verbindung zu setzen.",
-					"stuff": {
-						"text1": "Du darfst gerne Projekte wie ",
-						"text2": "und meine ",
-						"text3": " sowie meine gelegentlichen Desktop-Hintergründe für dich selbst herunterladen und verwenden. Du darfst auch selbst Veränderungen vornehmen und sie privat mit Freunden teilen. Allgemein gilt: Wenn es einen eigenen Download-Knopf hat, kannst du es herunterladen und selbst verwenden. Wiederverkauf und -verbreitung natürlich ausgeschlossen.",
-						"title": "Desktop- und Handy-Hintergrundbilder sowie andere Projekte.",
-						"win10tiles": "Windows-10-Kacheln"
-					},
 					"title": "Wie sind die Nutzungsbedingungen für deine Kreationen?",
-					"tldr": "Grundsätzlich ist es dir nicht erlaubt, meine Werke weiterzuverwenden, zu verkaufen oder anderweitig zu verbreiten, sofern nicht anders angegeben. "
+					"tldr": "Grundsätzlich ist es dir nicht erlaubt, meine Werke weiterzuverwenden, zu verkaufen oder anderweitig zu verbreiten, sofern nicht anders angegeben. ",
+					"works": {
+						"text1": "Bei den Dingen auf der",
+						"text2": "wäre es mir lieber, wenn du einfach deine Sinne auf sie richtest und sie nur anschaust. Betrachte die Seite und meinen YouTube-Kanal als meine kleine Kunstgalerie, in der du dir meine Werke ansehen kannst. Nix kaufen, nix mieten, nix gar nichts. Nur gucken.",
+						"title": "Animationen, Illustrationen und andere Werke.",
+						"worksPage": "Werke-Seite"
+					}
 				},
 				"3software": {
-					"and": " und ",
-					"audio": "Audioaufnahme und -bearbeitung: ",
-					"graphics": "Grafiken: ",
-					"mograph": "Motion Graphics: ",
-					"music": "\"Musik\": ",
+					"and": "und",
+					"audio": "Audioaufnahme und -bearbeitung:",
+					"graphics": "Grafik:",
+					"mograph": "Motion Graphics:",
+					"music": "\"Musik\":",
 					"title": "Welche Programme verwendest du?",
-					"video": "Videobearbeitung: ",
-					"withExtensions": " mit den Erweiterungen ",
-					"withVSTs": " mit den VSTs "
+					"video": "Videobearbeitung:",
+					"withExtensions": "mit den Erweiterungen",
+					"withVSTs": "mit den VSTs"
 				},
 				"4gamecube": {
 					"long": "da ich in den letzten Jahren nur eine Wii U benutzt habe. Mach daraus, was du willst. Wenn du keine Ahnung hast, worum es bei dieser Frage geht, wirf einen Blick in die Kommentare unter ",
@@ -106,7 +107,7 @@
 				},
 				"5support": {
 					"long": "Wenn du denkst, dass die sich auch für das interessieren, was ich so mache, könntest du auch deinen Freunden von mir erzählen. Sollte es je eine größere Nachfrage geben, mich auch finanziell zu unterstützen, überlege ich mir vielleicht nochmal, ein Profil auf Patreon oder Ko-fi einzurichten.",
-					"title": "Gibt es Möglichkeiten, dich zu unterstützen?",
+					"title": "Wie kann ich dich unterstützen?",
 					"tldr": "Nette Worte kommen schon weit. "
 				},
 				"6actually": {
@@ -121,167 +122,11 @@
 			"sub": "Vielleicht kann ich deine Frage auch gleich hier beantworten."
 		}
 	},
-	"home": {
-		"meta": {
-			"title": "pprmint.art"
-		},
-		"section": {
-			"about": {
-				"aboutMePage": "Über-mich-Seite",
-				"discord": {
-					"join": "Beitreten",
-					"text": "Schreibe mit mir und Gleichgesinnten und erfahre mit als Erstes von neuen Ankündigungen.",
-					"title": "Discord-Server."
-				},
-				"github": {
-					"follow": "Folgen",
-					"text": "Schau dir etwas Quellcode an, zum Beispiel für diese Website, die auf unseren Arbeitsrechnern kaum läuft.",
-					"title": "GitHub."
-				},
-				"intro1": "Mein Name ist Nicklas. Ich mag Dinge mit Pfefferminzgeschmack und beschäftige mich in meiner Freizeit mit Design, Motion Graphics und Code. Wenn du mehr über mich erfahren willst, dann schau dir die ",
-				"intro2": " an (sobald es mal eine gibt), oder folge mir auf einer dieser Plattformen:",
-				"title": "Über mich.",
-				"youtube": {
-					"subscribe": "Abonnieren",
-					"text": "Alle meine animierten Werke, mit extra Kompressionsartefakten, um die Sinne zu stimulieren.",
-					"title": "YouTube."
-				}
-			},
-			"news": {
-				"announcement": {
-					"common": {
-						"tellMore": "Erzähl mir mehr"
-					},
-					"german": {
-						"boldText": "Genau nachdem ich eine Domain gekauft habe, weil es hier kein Deutsch gab.",
-						"fullText": "Da es mir immer mehr Spaß gemacht hat, mit meiner Website herumzuspielen (und weil meine Mom meine Seite ansehen wollte), habe ich beschlossen, Übersetzungen einzuführen. Du kannst die Sprache jederzeit über die Einstellungen in der Fußzeile ändern, wenn du auf einem Desktop unterwegs bist, oder über das Seitenmenü auf dem Handy.",
-						"headline": "Deutsche Übersetzungen!",
-						"imageAlt": "Flagge Deutschlands mit dem Text \"Jetzt auch auf Deutsch!\" links daneben."
-					},
-					"mintcraft15": {
-						"boldText": "Anpassen von Farben und Hinzufügen übersehener Texturen.",
-						"fullText": "Ich habe nicht nur fragwürdige Splash-Texte einiger meiner Twitter-Follower, sondern auch fehlende Texturen (gefrorene Herzen, Schmiedetisch...) hinzugefügt, sowie Bestehende (Widgets, Ping-Anzeigen, Rezeptbuch...) verbessert. Schau's dir definitv an, denn habe ich dir erstmal erzählt, dass Texte auf Buttons immer einen Schatten warfen, der nur ein bisschen heller war als der Hintergrund, wirst du es nie wieder übersehen.",
-						"headline": "Mintcraft Version 1.5 verfügbar.",
-						"imageAlt": "Das Mintcraft-Logo mit der Versionsnummer 1.5 links daneben geschrieben. Im Hintergrund befindet sich die verbesserte Textur für das Rezeptbuch, welches nach links hin verschwindet."
-					},
-					"newDomain": {
-						"boldText": "Hast du hier vorher ein einziges Wort auf Deutsch gesehen? Eben.",
-						"fullText": "Es hat mich immer etwas genevt, dass die Top-Level-Domain dieser Website .de lautete, obwohl sie weniger mein Deutsch-sein und mehr meine Kreationen vorstellen soll. Keine Sorge, pprmint.de wird noch für einige Zeit auf diese neue Domain weiterleiten.",
-						"headline": "Eine schicke, neue Domain.",
-						"imageAlt": "Die neue Domain, pprmint.art, ist über einer grünen Mülltonne geschrieben. In der Mülltonne befinden sich die Buchstaben d und e der vorherigen Domain. Neben der Tonne steht eine grüne Weinflasche."
-					},
-					"twitterDelete": {
-						"boldText": "Nach etwa 7 Jahren habe ich mich endlich dazu entschlossen, diese Plattform endgültig zu hinter mir zu lassen.",
-						"fullText": "Eine Entscheidung, die ich zugunsten meiner geistigen Gesundheit und meiner Privatsphäre traf, sowie um beim Arbeiten weniger abgelenkt zu werden, und mehr Zeit zu verbringen, mit meinen Freunden privat im kleineren Kreis zu reden. Möchtest du weiterhin über mich und die Projekte, an denen ich arbeite, informiert bleiben, kannst du gerne meinem (englischen) Discord-Server beitreten, falls du das nicht schon getan hast. Immerhin habe ich jetzt einen noch größeren Anreiz, mehr Leben in die Bude zu bringen.",
-						"headline": "Twitter-Konto gelöscht.",
-						"imageAlt": "Das Mintcraft-Logo mit der Versionsnummer 1.5 links daneben geschrieben. Im Hintergrund befindet sich die verbesserte Textur für das Rezeptbuch, welches nach links hin verschwindet."
-					}
-				},
-				"next": "Weiter",
-				"previous": "Zurück",
-				"title": "Neuigkeiten."
-			},
-			"recent": {
-				"description": "Einige fragen sich immer noch, wieso ich auf Discord mit Großbuchstaben und Satzzeichen texte. Einer sagte, ich sollte ein Buch über mein System schreiben. Klick auf das obige Bild, um dieses nicht zu lesen.",
-				"name": "Ein Witz.",
-				"title": "Neuste Kreation."
-			}
-		},
-		"title": {
-			"main": "Guten Heute.",
-			"sub": "Ich lasse Dinge mit Vektorpunkten, Keyframes und bunten Monospace-Buchstaben hübsch aussehen."
-		}
-	},
-	"privacypolicy": {
-		"meta": {
-			"title": "Datenschutzerklärung • pprmint.art"
-		},
-		"section": {
-			"contact": {
-				"text": "Schicke bei Fragen zum Thema Datenschutz einfach eine E-Mail an privacy[at]pprmint.art.",
-				"title": "Noch Fragen?"
-			},
-			"cookies": {
-				"text": {
-					"localStorage": {
-						"cookiesAcknowledged": {
-							"text1": "Wird verwendet, um festzustellen, ob dir das kleine Cookie-Popup unten links bei deinem ersten Besuch angezeigt wurde, und wird auf ",
-							"text2": " gesetzt, sobald du einmal hier warst."
-						},
-						"i18nextLng": {
-							"text1": "Wird verwendet, um zu bestimmen, welche Sprache auf der Website verwendet werden soll, und wird bei jedem Besuch gelesen. Der Wert ist entweder ",
-							"text2": " für Englisch oder ",
-							"text3": " für Deutsch. Bei deinem ersten Besuch dieser Website wird die bevorzugte Sprache aus deinen Browser-Einstellungen erkannt und im Schlüssel entsprechend vermerkt. Änderst du die Sprache in den Website-Einstellungen oben, wird dieser Wert ersetzt."
-						}
-					},
-					"long1": "Aktuell kannst du folgendes im localStorage deines Browsers für diese Website finden:",
-					"long2": "In Zukunft könnten weitere Schlüssel hinzugefügt werden, sobald mehr Einstellungen auf der Website geändert werden können. Mit diesen kann man dich jedoch nicht eindeutig identifizieren oder tracken, sollte das jetzt eine deiner Sorgen gewesen sein.",
-					"tldr": "Einstellungen wie deine bevorzugte Sprache werden, wie der Name schon ahnen lässt, lokal im \"localStorage\" deines Browsers gespeichert, so dass du sie nicht immer wieder neu einstellen musst. Per Definition müsste das auch als \"Cookie\" zählen."
-				},
-				"title": "Kekse!"
-			},
-			"externalLinks": {
-				"text": "Einige Seiten können Links zu externen Websites enthalten. Jeder Link, der dich zu einer anderen Website führt, ist mit einem blauen Pfeil und, wenn du den Mauszeiger darüber bewegst, mit einem blauen Hintergrund versehen. Sobald du solche externen Websites besuchst, unterliegst du deren jeweiligen Datenschutzrichtlinien. Für die Inhalte und Praktiken der Websites Dritter übernehme ich keinerlei Verantwortung.",
-				"title": "Externe Links."
-			},
-			"responsible": {
-				"text": "Verantwortlich für den Inhalt dieser Website bin ich, Nicklas Scharp. Bei Fragen zum Datenschutz kannst du gerne eine E-Mail an privacy[at]pprmint.art schicken.",
-				"title": "Verantwortlicher."
-			},
-			"weblogs": {
-				"text": {
-					"long": {
-						"contents": {
-							"accessTime": {
-								"description": "Der Zeitpunkt, zu dem ein Client eine Datei vom Server erhalten hat. Falls es dich interessiert: Das Format ist DD/MMMM/YYYY: HH:MM:SS +GMT.",
-								"title": "Zugriffszeit."
-							},
-							"agent": {
-								"description": "Darin wird dem Server mitgeteilt, welcher Browser, welches Betriebssystem und welche Rendering-Engine verwendet wird. Ich kann dir außerdem sagen, dass Windows 11 dort immer noch als \"(Windows NT 10.0; Win64; x64)\" bezeichnet wird. Für mehr Infos darüber, was sich im User-Agent-Header befindet, lies:",
-								"title": "User-Agent."
-							},
-							"domain": {
-								"description": "Stell dir vor: Es ist alles pprmint.art. Wer hätte das gedacht.",
-								"title": "Domain."
-							},
-							"file": {
-								"description": "Pfad und Name der Datei, die der Client erhalten hat, wie z. B. das Favicon, Schriftarten und andere Assets.",
-								"title": "Erhaltene Datei."
-							},
-							"httpCodes": {
-								"description": "Normalerweise ist das \"200 OK\", weil hier alles super ist. Wenn du mehr über all die verschiedenen Codes erfahren willst, die die HTTP-Welt zu bieten hat, lies:",
-								"title": "HTTP-Code."
-							},
-							"ip": {
-								"description": "Nö, ich habe keine Ahnung, wo du wohnst, aber das ist mir sowieso recht egal. Das Gesetz verlangt von meinem Hosting-Anbieter, dass dieser sämtliche IP-Adressen anonymisiert. Daher wird das letzte Oktett jeder IP-Adresse durch einen zufälligen Wert ersetzt. Das kann ich bestätigen: Die IP-Adresse, die in den Logs erscheint, stimmt nicht mit meiner tatsächlichen Adresse überein, also passt das.",
-								"title": "IP-Adresse."
-							},
-							"title": "Inhalte eines Log-Eintrags."
-						},
-						"storagePeriod": {
-							"description": "Einträge werden in den Logs für bis zu 7 Tage gespeichert.",
-							"title": "Speicherdauer."
-						},
-						"usage": {
-							"description": "Vorhin hab ich erwähnt, dass mit diesen Daten Statistiken generiert werden. Das war's auch. Für einen Statistik-Fanboy wie meine Wenigkeit ist das natürlich ein wahrgewordener Traum und höchst interessant zu sehen, dass 0.3 % versucht haben, die Seite auf Windows XP aufzurufen. Ungefähr da hört die Nützlichkeit für mich auch auf. Die Statistiken sind (für mich zumindest) nett anzusehen, aber ich verticke die Logs nicht auf eBay oder so.",
-							"title": "Mein Nutzen."
-						}
-					},
-					"tldr": "Wie die meisten anderen Webserver sammelt auch dieser einige Daten über deinen Browser, wenn du diese Website besuchst. Mein Hosting-Provider erstellt mit diesen Daten einige nette Statistiken, aber das war's auch schon mit meinem Nutzen dieser Daten."
-				},
-				"title": "Server-Logs."
-			}
-		},
-		"title": {
-			"main": "Datenschutzerklärung.",
-			"sub": "Sehr spannend."
-		}
-	},
-	"projects": {
+	"downloads": {
 		"downloadLatest": "Neuste downloaden",
 		"learnMore": "Mehr erfahren",
 		"meta": {
-			"title": "Meine Projekte • pprmint.art"
+			"title": "Downloads • pprmint.art"
 		},
 		"mintcraft": {
 			"meta": {
@@ -419,8 +264,8 @@
 			}
 		},
 		"title": {
-			"main": "Meine Projekte.",
-			"sub": "Schau dir einige meiner Werke an, oder lade dir Zeug runter."
+			"main": "Downloads.",
+			"sub": "Lade einige Dinge herunter, die ich gemacht habe, und verwende sie selbst."
 		},
 		"win10tiles": {
 			"meta": {
@@ -462,124 +307,170 @@
 				"sub": "Vorausgesetzt du hast die noch."
 			}
 		},
-		"works": {
-			"2021": {
-				"manjaroWall": {
-					"captions": {
-						"theme1": "Dieses Bild wurde gemacht, um es zusammen mit dem ",
-						"theme2": "- oder ",
-						"theme3": "-Design zu verwenden.",
-						"wallpaper": "Das Hintergrundbild. Klick drauf und speicher es."
-					},
-					"meta": {
-						"title": "Arch Hintergrundbild • pprmint.art"
-					},
-					"title": {
-						"main": "Arch Hintergrundbild.",
-						"sub": "Ich hatte nebenbei Arch benutzt."
-					}
+		"worksPage": "Suchst du nach meinen anderen Werken? Klicke hier, um auf deren neue Seite zu gelangen."
+	},
+	"home": {
+		"meta": {
+			"title": "pprmint.art"
+		},
+		"section": {
+			"about": {
+				"anilist": {
+					"follow": "Folgen",
+					"text": "Finde heraus, was meine Lieblingsshows sind, und dass ich mir Nichijou 4 Mal angesehen habe.",
+					"title": "AniList."
+				},
+				"discord": {
+					"join": "Beitreten",
+					"text": "Schreibe mit mir und Gleichgesinnten und erfahre mit als Erstes von neuen Ankündigungen.",
+					"title": "Discord-Server."
+				},
+				"github": {
+					"follow": "Folgen",
+					"text": "Schau dir etwas Quellcode an, zum Beispiel für diese Website, die auf unseren Arbeitsrechnern kaum läuft.",
+					"title": "GitHub."
+				},
+				"lastfm": {
+					"follow": "Folgen",
+					"text": "Sei verwirrt, wie ich J-Pop direkt nach deutschem Hip-Hop und Ambient hören kann.",
+					"title": "Last.fm."
+				},
+				"text": "Mein Name ist Nicklas. Ich bin ein 17-jähriger Deutscher, der Dinge mit Minzgeschmack mag und seine Zeit mit Design, Motion Graphics oder Code verbringt. Oder mit Büchern. Oder Anime.",
+				"title": "Über mich.",
+				"youtube": {
+					"subscribe": "Abonnieren",
+					"text": "Alle meine animierten Werke, mit extra Kompressionsartefakten, um die Sinne zu stimulieren.",
+					"title": "YouTube."
 				}
 			},
-			"2022": {
-				"archWall": {
-					"captions": {
-						"theme1": "Dieses Bild wurde gemacht, um es zusammen mit dem ",
-						"theme2": "- oder ",
-						"theme3": "-Design zu verwenden.",
-						"wallpaper": "Das Hintergrundbild. Klick drauf und speicher es."
+			"news": {
+				"announcement": {
+					"common": {
+						"tellMore": "Erzähl mir mehr"
 					},
-					"meta": {
-						"title": "Arch Hintergrundbild • pprmint.art"
+					"german": {
+						"boldText": "Genau nachdem ich eine Domain gekauft habe, weil es hier kein Deutsch gab.",
+						"fullText": "Da es mir immer mehr Spaß gemacht hat, mit meiner Website herumzuspielen (und weil meine Mom meine Seite ansehen wollte), habe ich beschlossen, Übersetzungen einzuführen. Du kannst die Sprache jederzeit über die Einstellungen in der Fußzeile ändern, wenn du auf einem Desktop unterwegs bist, oder über das Seitenmenü auf dem Handy.",
+						"headline": "Deutsche Übersetzungen!",
+						"imageAlt": "Flagge Deutschlands mit dem Text \"Jetzt auch auf Deutsch!\" links daneben."
 					},
-					"title": {
-						"main": "Arch Hintergrundbild.",
-						"sub": "Ich hatte mal Arch benutzt nebenbei."
+					"mintcraft15": {
+						"boldText": "Anpassen von Farben und Hinzufügen übersehener Texturen.",
+						"fullText": "Ich habe nicht nur fragwürdige Splash-Texte einiger meiner Twitter-Follower, sondern auch fehlende Texturen (gefrorene Herzen, Schmiedetisch...) hinzugefügt, sowie Bestehende (Widgets, Ping-Anzeigen, Rezeptbuch...) verbessert. Schau's dir definitv an, denn habe ich dir erstmal erzählt, dass Texte auf Buttons immer einen Schatten warfen, der nur ein bisschen heller war als der Hintergrund, wirst du es nie wieder übersehen.",
+						"headline": "Mintcraft Version 1.5 verfügbar.",
+						"imageAlt": "Das Mintcraft-Logo mit der Versionsnummer 1.5 links daneben geschrieben. Im Hintergrund befindet sich die verbesserte Textur für das Rezeptbuch, welches nach links hin verschwindet."
+					},
+					"newDomain": {
+						"boldText": "Hast du hier vorher ein einziges Wort auf Deutsch gesehen? Eben.",
+						"fullText": "Es hat mich immer etwas genevt, dass die Top-Level-Domain dieser Website .de lautete, obwohl sie weniger mein Deutsch-sein und mehr meine Kreationen vorstellen soll. Keine Sorge, pprmint.de wird noch für einige Zeit auf diese neue Domain weiterleiten.",
+						"headline": "Eine schicke, neue Domain.",
+						"imageAlt": "Die neue Domain, pprmint.art, ist über einer grünen Mülltonne geschrieben. In der Mülltonne befinden sich die Buchstaben d und e der vorherigen Domain. Neben der Tonne steht eine grüne Weinflasche."
+					},
+					"twitterDelete": {
+						"boldText": "Nach etwa 7 Jahren habe ich mich endlich dazu entschlossen, diese Plattform endgültig zu hinter mir zu lassen.",
+						"fullText": "Eine Entscheidung, die ich zugunsten meiner geistigen Gesundheit und meiner Privatsphäre traf, sowie um beim Arbeiten weniger abgelenkt zu werden, und mehr Zeit zu verbringen, mit meinen Freunden privat im kleineren Kreis zu reden. Möchtest du weiterhin über mich und die Projekte, an denen ich arbeite, informiert bleiben, kannst du gerne meinem (englischen) Discord-Server beitreten, falls du das nicht schon getan hast. Immerhin habe ich jetzt einen noch größeren Anreiz, mehr Leben in die Bude zu bringen.",
+						"headline": "Twitter-Konto gelöscht.",
+						"imageAlt": "Das Mintcraft-Logo mit der Versionsnummer 1.5 links daneben geschrieben. Im Hintergrund befindet sich die verbesserte Textur für das Rezeptbuch, welches nach links hin verschwindet."
 					}
 				},
-				"book": {
-					"captions": {
-						"starboard": "Das brachte mich auf's Starboard eines Discord-Servers. Mein Plan war erfolgreich."
-					},
-					"meta": {
-						"title": "Ein Witz • pprmint.art"
-					},
-					"title": {
-						"main": "Ein Witz.",
-						"sub": "Wie viele kennst du doch, die online mit korrekter Großschreibung und Zeichensetzung schreiben?"
-					}
-				},
-				"ford": {
-					"meta": {
-						"title": "Ford Rebrand-Konzept • pprmint.art"
-					},
-					"title": {
-						"main": "Ford Rebrand-Konzept.",
-						"sub": "Konzept inspiriert von einem Design von Paul Rand in 1966."
-					}
-				},
-				"geoices": {
-					"meta": {
-						"title": "3D-Nachbau des Logos von Geoices • pprmint.art"
-					},
-					"title": {
-						"main": "3D-Nachbau des Logos von Geoices.",
-						"sub": "Hier ist ein Twitter-Profil."
-					}
-				},
-				"iPad": {
-					"captions": {
-						"leTablet": "Eigentlich ist das Teil eines komplett anderen Projekts."
-					},
-					"meta": {
-						"title": "iPad • pprmint.art"
-					},
-					"title": {
-						"main": "iPad.",
-						"smallSub": "Das ist ne Lüge.",
-						"sub": "Das i steht für isometrisch."
-					}
-				},
-				"likeStatistics": {
-					"captions": {
-						"graphs1": "Mein ursprünglicher Plan war es, mit der Fertigstellung noch bis ein oder zwei Wochen nach Neujahr zu warten.",
-						"graphs2": "Der Plan hat Pinguine gesehen, so weit ging der abwärts."
-					},
-					"meta": {
-						"title": "Like-Statistiken für @ProgressBar202_ • pprmint.art"
-					},
-					"title": {
-						"main": "Like-Statistiken für @ProgressBar202_.",
-						"sub": "Vor Silvester war mir sehr langweilig."
-					}
-				},
-				"mintBanners": {
-					"meta": {
-						"title": "3D-MINT-Banner • pprmint.art"
-					},
-					"title": {
-						"main": "3D-MINT-Banner.",
-						"sub": "Ich hab mit Cinema 4D herumgespielt."
-					}
-				},
-				"suseRebrand": {
-					"meta": {
-						"title": "SUSE Rebrand-Konzept • pprmint.art"
-					},
-					"title": {
-						"main": "SUSE Rebrand-Konzept.",
-						"sub": "Oder: Übertrieben vereinfachtes Chamäleon."
-					}
-				},
-				"wiiRemake": {
-					"meta": {
-						"title": "Wii-Menü-Remake • pprmint.art"
-					},
-					"title": {
-						"main": "Wii-Menü-Remake.",
-						"sub": "Hier sind die Kanal-Banner, die ich bisher fertiggestellt habe."
-					}
-				}
+				"next": "Weiter",
+				"previous": "Zurück",
+				"title": "Neuigkeiten."
+			},
+			"recent": {
+				"description": "Einige fragen sich immer noch, wieso ich auf Discord mit Großbuchstaben und Satzzeichen texte. Einer sagte, ich sollte ein Buch über mein System schreiben. Klick auf das obige Bild, um dieses nicht zu lesen.",
+				"name": "Ein Witz.",
+				"title": "Neuste Kreation."
 			}
+		},
+		"title": {
+			"main": "Guten Heute.",
+			"sub": "Ich lasse Dinge mit Vektorpunkten, Keyframes und bunten Monospace-Buchstaben hübsch aussehen."
+		}
+	},
+	"privacypolicy": {
+		"meta": {
+			"title": "Datenschutzerklärung • pprmint.art"
+		},
+		"section": {
+			"contact": {
+				"text": "Schicke bei Fragen zum Thema Datenschutz einfach eine E-Mail an privacy[at]pprmint.art.",
+				"title": "Noch Fragen?"
+			},
+			"cookies": {
+				"text": {
+					"localStorage": {
+						"cookiesAcknowledged": {
+							"text1": "Wird verwendet, um festzustellen, ob dir das kleine Cookie-Popup unten links bei deinem ersten Besuch angezeigt wurde, und wird auf ",
+							"text2": " gesetzt, sobald du einmal hier warst."
+						},
+						"i18nextLng": {
+							"text1": "Wird verwendet, um zu bestimmen, welche Sprache auf der Website verwendet werden soll, und wird bei jedem Besuch gelesen. Der Wert ist entweder ",
+							"text2": " für Englisch oder ",
+							"text3": " für Deutsch. Bei deinem ersten Besuch dieser Website wird die bevorzugte Sprache aus deinen Browser-Einstellungen erkannt und im Schlüssel entsprechend vermerkt. Änderst du die Sprache in den Website-Einstellungen oben, wird dieser Wert ersetzt."
+						}
+					},
+					"long1": "Aktuell kannst du folgendes im localStorage deines Browsers für diese Website finden:",
+					"long2": "In Zukunft könnten weitere Schlüssel hinzugefügt werden, sobald mehr Einstellungen auf der Website geändert werden können. Mit diesen kann man dich jedoch nicht eindeutig identifizieren oder tracken, sollte das jetzt eine deiner Sorgen gewesen sein.",
+					"tldr": "Einstellungen wie deine bevorzugte Sprache werden, wie der Name schon ahnen lässt, lokal im \"localStorage\" deines Browsers gespeichert, so dass du sie nicht immer wieder neu einstellen musst. Per Definition müsste das auch als \"Cookie\" zählen."
+				},
+				"title": "Kekse!"
+			},
+			"externalLinks": {
+				"text": "Einige Seiten können Links zu externen Websites enthalten. Jeder Link, der dich zu einer anderen Website führt, ist mit einem blauen Pfeil und, wenn du den Mauszeiger darüber bewegst, mit einem blauen Hintergrund versehen. Sobald du solche externen Websites besuchst, unterliegst du deren jeweiligen Datenschutzrichtlinien. Für die Inhalte und Praktiken der Websites Dritter übernehme ich keinerlei Verantwortung.",
+				"title": "Externe Links."
+			},
+			"responsible": {
+				"text": "Verantwortlich für den Inhalt dieser Website bin ich, Nicklas Scharp. Bei Fragen zum Datenschutz kannst du gerne eine E-Mail an privacy[at]pprmint.art schicken.",
+				"title": "Verantwortlicher."
+			},
+			"weblogs": {
+				"text": {
+					"long": {
+						"contents": {
+							"accessTime": {
+								"description": "Der Zeitpunkt, zu dem ein Client eine Datei vom Server erhalten hat. Falls es dich interessiert: Das Format ist DD/MMMM/YYYY: HH:MM:SS +GMT.",
+								"title": "Zugriffszeit."
+							},
+							"agent": {
+								"description": "Darin wird dem Server mitgeteilt, welcher Browser, welches Betriebssystem und welche Rendering-Engine verwendet wird. Ich kann dir außerdem sagen, dass Windows 11 dort immer noch als \"(Windows NT 10.0; Win64; x64)\" bezeichnet wird. Für mehr Infos darüber, was sich im User-Agent-Header befindet, lies:",
+								"title": "User-Agent."
+							},
+							"domain": {
+								"description": "Stell dir vor: Es ist alles pprmint.art. Wer hätte das gedacht.",
+								"title": "Domain."
+							},
+							"file": {
+								"description": "Pfad und Name der Datei, die der Client erhalten hat, wie z. B. das Favicon, Schriftarten und andere Assets.",
+								"title": "Erhaltene Datei."
+							},
+							"httpCodes": {
+								"description": "Meist ist das \"200 OK\", denn hier ist alles super. Wenn du mehr über all die verschiedenen Codes erfahren willst, die die HTTP-Welt zu bieten hat, lies:",
+								"title": "HTTP-Code."
+							},
+							"ip": {
+								"description": "Nö, ich habe keine Ahnung, wo du wohnst. Das Gesetz verlangt von meinem Hosting-Anbieter, dass dieser sämtliche IP-Adressen anonymisiert, indem das letzte Oktett jeder IP-Adresse durch einen zufälligen Wert ersetzt wird. Ich kann bestätigen: Die IP-Adresse, die in den Logs erscheint, stimmt nicht mit meiner tatsächlichen Adresse überein, also passt das.",
+								"title": "IP-Adresse."
+							},
+							"title": "Inhalte eines Log-Eintrags."
+						},
+						"storagePeriod": {
+							"description": "Einträge werden in den Logs für bis zu 7 Tage gespeichert.",
+							"title": "Speicherdauer."
+						},
+						"usage": {
+							"description": "Vorhin hab ich erwähnt, dass mit diesen Daten Statistiken generiert werden. Das war's. Für einen Statistik-Fanboy wie meine Wenigkeit ist das natürlich ein feuchter Traum und höchst interessant zu sehen, dass mal 0.3 % der Besucher versucht haben, die Website auf Windows XP aufzurufen. Nicht, dass ich glaube, dass sie etwas wert wären, aber diese Protokolle werden nicht an andere weitergegeben.",
+							"title": "Mein Nutzen."
+						}
+					},
+					"tldr": "Wie die meisten anderen Webserver sammelt auch dieser einige Daten über deinen Browser, wenn du diese Website besuchst, und mein Hosting-Provider erstellt mit diesen Daten einige nette Statistiken. Das war's auch schon."
+				},
+				"title": "Server-Logs."
+			}
+		},
+		"title": {
+			"main": "Datenschutzerklärung.",
+			"sub": "Sehr spannend."
 		}
 	},
 	"wip": {
@@ -589,6 +480,132 @@
 		"title": {
 			"main": "Du bist zu früh.",
 			"sub": "Hier gibt's noch nix zu sehen."
+		}
+	},
+	"works": {
+		"2021": {
+			"manjaroWall": {
+				"captions": {
+					"theme1": "Dieses Bild wurde gemacht, um es zusammen mit dem ",
+					"theme2": "- oder ",
+					"theme3": "-Design zu verwenden.",
+					"wallpaper": "Das Hintergrundbild. Klick drauf und speicher es."
+				},
+				"meta": {
+					"title": "Arch Hintergrundbild • pprmint.art"
+				},
+				"title": {
+					"main": "Arch Hintergrundbild.",
+					"sub": "Ich hatte nebenbei Arch benutzt."
+				}
+			}
+		},
+		"2022": {
+			"archWall": {
+				"captions": {
+					"theme1": "Dieses Bild wurde gemacht, um es zusammen mit dem ",
+					"theme2": "- oder ",
+					"theme3": "-Design zu verwenden.",
+					"wallpaper": "Das Hintergrundbild. Klick drauf und speicher es."
+				},
+				"meta": {
+					"title": "Arch Hintergrundbild • pprmint.art"
+				},
+				"title": {
+					"main": "Arch Hintergrundbild.",
+					"sub": "Ich hatte mal Arch benutzt nebenbei."
+				}
+			},
+			"book": {
+				"captions": {
+					"starboard": "Das brachte mich auf's Starboard eines Discord-Servers. Mein Plan war erfolgreich."
+				},
+				"meta": {
+					"title": "Ein Witz • pprmint.art"
+				},
+				"title": {
+					"main": "Ein Witz.",
+					"sub": "Wie viele kennst du doch, die online mit korrekter Großschreibung und Zeichensetzung schreiben?"
+				}
+			},
+			"ford": {
+				"meta": {
+					"title": "Ford Rebrand-Konzept • pprmint.art"
+				},
+				"title": {
+					"main": "Ford Rebrand-Konzept.",
+					"sub": "Konzept inspiriert von einem Design von Paul Rand in 1966."
+				}
+			},
+			"geoices": {
+				"meta": {
+					"title": "3D-Nachbau des Logos von Geoices • pprmint.art"
+				},
+				"title": {
+					"main": "3D-Nachbau des Logos von Geoices.",
+					"sub": "Hier ist ein Twitter-Profil."
+				}
+			},
+			"iPad": {
+				"captions": {
+					"leTablet": "Eigentlich ist das Teil eines komplett anderen Projekts."
+				},
+				"meta": {
+					"title": "iPad • pprmint.art"
+				},
+				"title": {
+					"main": "iPad.",
+					"smallSub": "Das ist ne Lüge.",
+					"sub": "Das i steht für isometrisch."
+				}
+			},
+			"likeStatistics": {
+				"captions": {
+					"graphs1": "Mein ursprünglicher Plan war es, mit der Fertigstellung noch bis ein oder zwei Wochen nach Neujahr zu warten.",
+					"graphs2": "Der Plan hat Pinguine gesehen, so weit ging der abwärts."
+				},
+				"meta": {
+					"title": "Like-Statistiken für @ProgressBar202_ • pprmint.art"
+				},
+				"title": {
+					"main": "Like-Statistiken für @ProgressBar202_.",
+					"sub": "Vor Silvester war mir sehr langweilig."
+				}
+			},
+			"mintBanners": {
+				"meta": {
+					"title": "3D-MINT-Banner • pprmint.art"
+				},
+				"title": {
+					"main": "3D-MINT-Banner.",
+					"sub": "Ich hab mit Cinema 4D herumgespielt."
+				}
+			},
+			"suseRebrand": {
+				"meta": {
+					"title": "SUSE Rebrand-Konzept • pprmint.art"
+				},
+				"title": {
+					"main": "SUSE Rebrand-Konzept.",
+					"sub": "Oder: Übertrieben vereinfachtes Chamäleon."
+				}
+			},
+			"wiiRemake": {
+				"meta": {
+					"title": "Wii-Menü-Remake • pprmint.art"
+				},
+				"title": {
+					"main": "Wii-Menü-Remake.",
+					"sub": "Hier sind die Kanal-Banner, die ich bisher fertiggestellt habe."
+				}
+			}
+		},
+		"meta": {
+			"title": "Werke • pprmint.art"
+		},
+		"title": {
+			"main": "Werke.",
+			"sub": "Schau dir einige meiner Werke an."
 		}
 	}
 }

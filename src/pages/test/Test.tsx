@@ -1,3 +1,4 @@
+import React from "react";
 import { Helmet } from "react-helmet";
 import {
 	Button,
@@ -9,15 +10,15 @@ import {
 	Grid,
 } from "@mui/material";
 import {
-	RiTestTubeFill,
-} from "react-icons/ri";
+	FiAlertTriangle,
+} from "react-icons/fi";
 
 import "./assets/buttonStyles.scss";
 import transparentWordmarkAnimation from "./assets/wordmark.webm";
 
 function Test() {
 	return (
-		<>
+		<React.Fragment>
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>Playground • pprmint.art</title>
@@ -32,7 +33,7 @@ function Test() {
 					<wbr />
 					ground.
 				</Typography>
-				<Alert variant="outlined" severity="warning" icon={<RiTestTubeFill />}>
+				<Alert variant="outlined" severity="warning" icon={<FiAlertTriangle />}>
 					<AlertTitle color="var(--textSecondary)">
 						Experimental things ahead!
 					</AlertTitle>
@@ -220,7 +221,7 @@ function Test() {
 					</Container>
 				</div>
 			</div>
-		</>
+		</React.Fragment>
 	);
 }
 

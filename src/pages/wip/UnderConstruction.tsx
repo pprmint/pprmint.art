@@ -11,7 +11,7 @@ function Wip() {
 		keyPrefix: "wip",
 	});
 	return (
-		<>
+		<React.Fragment>
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>{t("meta.title")}</title>
@@ -37,7 +37,7 @@ function Wip() {
 					<Typography variant="h2">{t("title.sub")}</Typography>
 				</Container>
 			</div>
-		</>
+		</React.Fragment>
 	);
 }
 

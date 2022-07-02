@@ -19,7 +19,7 @@ import Cardinal from "./images/cardinal.svg";
 
 function MintAltDL() {
     return (
-        <>
+        <React.Fragment>
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>A mistake • pprmint.art</title>
@@ -70,7 +70,7 @@ function MintAltDL() {
                     </a>
                 </div>
             </Container>
-        </>
+        </React.Fragment>
     );
 }
 

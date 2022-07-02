@@ -135,55 +135,6 @@ body {
 	}
 }
 
-@keyframes mintBanner_M {
-	from {
-		transform: translateY(0);
-		opacity: 0;
-	}
-	to {
-		transform: translateY(calc(-14.3% * 1));
-		opacity: 0.5;
-	}
-}
-@keyframes mintBanner_I {
-	from {
-		transform: translateY(0);
-		opacity: 0;
-	}
-	to {
-		transform: translateY(calc(-14.3% * 2));
-		opacity: 0.5;
-	}
-}
-@keyframes mintBanner_N {
-	from {
-		transform: translateY(0);
-		opacity: 0;
-	}
-	to {
-		transform: translateY(calc(-14.3% * 3));
-		opacity: 0.5;
-	}
-}
-@keyframes mintBanner_T {
-	from {
-		transform: translateY(0);
-		opacity: 0;
-	}
-	to {
-		transform: translateY(calc(-14.3% * 4));
-		opacity: 0.5;
-	}
-}
-@keyframes mintBanner_grad {
-	from {
-		transform: translateY(0);
-	}
-	to {
-		transform: translateY(calc(-14.3% * 4));
-	}
-}
-
 .mintBanner {
 	height: auto;
 	img {
@@ -420,13 +371,13 @@ h2 a,
 h3 a {
 	transition: all 0.2s var(--easeOut);
 	box-shadow: inset 0 -1px 0 #ffffff55;
-	margin: 0 0.35rem;
+	margin: 0 0.4rem;
 	padding: 0;
 	&:hover {
 		color: var(--backgroundPrimary);
 		border-radius: 4px;
 		margin: 0;
-		padding: 0 0.35rem;
+		padding: 0 0.4rem;
 	}
 }
 // Specific inset positions for each text size needed
@@ -442,11 +393,11 @@ h3 a:hover {
 // Special underline for external links
 p a.external {
 	position: relative;
-	margin: 0 0.4rem 0 0.3rem;
+	margin: 0 0.4rem 0 0.4rem;
 	padding: 0;
 	&:hover {
 		margin: 0;
-		padding: 0 0.4rem 0 0.3rem;
+		padding: 0 0.4rem 0 0.4rem;
 	}
 }
 // That arrow
@@ -477,12 +428,12 @@ h3 a.external:hover {
 }
 
 code {
-    font-family: var(--fontMonospace);
-    color: var(--greenPrimary);
-    font-size: .9rem;
-    background-color: var(--backgroundSecondary);
-    border-radius: 4px;
-    padding: 3px 5px;
+	font-family: var(--fontMonospace);
+	color: var(--greenPrimary);
+	font-size: 0.9rem;
+	background-color: var(--backgroundSecondary);
+	border-radius: 4px;
+	padding: 3px 5px;
 }
 
 img {
@@ -506,10 +457,6 @@ video {
 	color: var(--textPrimary);
 }
 
-.MuiCircularProgress-root {
-	color: var(--textSecondary) !important;
-}
-
 // Standard paddings on cards suck.
 .MuiCardContent-root {
 	padding: 16px 24px 16px 24px;
@@ -518,10 +465,10 @@ video {
 	padding: 0 9px 16px 9px;
 }
 .MuiAccordion-root:first-of-type {
-    border-radius: 8px 8px 0 0;
+	border-radius: 8px 8px 0 0;
 }
 .MuiAccordion-root:last-of-type {
-    border-radius: 0 0 8px 8px;
+	border-radius: 0 0 8px 8px;
 }
 .MuiAccordionSummary-root {
 	padding: 4px 24px;

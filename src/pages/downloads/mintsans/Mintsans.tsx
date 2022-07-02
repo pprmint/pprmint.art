@@ -7,7 +7,7 @@ import {
 	Typography,
 	Container,
 	Card,
-	CardContent,
+	Skeleton,
 	Slider,
 	Grid,
 	Box,
@@ -15,14 +15,14 @@ import {
 	Alert,
 } from "@mui/material";
 
-import Image from "mui-image";
+import Image from "@jy95/material-ui-image";
 
 import "./assets/mintsans/mintsans.css";
 import {
-	RiArrowDownLine,
-	RiDownload2Line,
-	RiInformationLine,
-} from "react-icons/ri";
+	FiArrowDown,
+	FiDownload,
+	FiInfo,
+} from "react-icons/fi";
 
 import MintsansBanner from "./assets/mintsans_banner.svg";
 import MintsansLogo from "./assets/mintsans_logo.svg";
@@ -60,7 +60,7 @@ const tracking = [
 
 export default function MintsansDL() {
 	const { t } = useTranslation("translation", {
-		keyPrefix: "projects.mintsans",
+		keyPrefix: "downloads.mintsans",
 	});
 
 	const [fontSize, setFontSize] = React.useState<
@@ -85,7 +85,7 @@ export default function MintsansDL() {
 	};
 
 	return (
-		<>
+		<React.Fragment>
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>{t("meta.title")}</title>
@@ -113,49 +113,61 @@ export default function MintsansDL() {
 					<img src={MintsansLogo} />
 					<Typography variant="h2">{t("title.sub")}</Typography>
 					<br />
-					<RiArrowDownLine size={25} color="#19f" />
+					<FiArrowDown size={25} color="#19f" />
 				</Container>
 			</div>
 			<div className="section">
 				<ScrollAnimation animateIn="fadeBottom" animateOnce>
 					<Image
 						src={SlideOne}
-						width="100%"
+						color="transparent"
+						aspectRatio={16 / 9}
+						loading={<Skeleton variant="rectangular" />}
 						alt="Aboslutely censored hideous."
 					/>
 				</ScrollAnimation>
 				<ScrollAnimation animateIn="fadeBottom" animateOnce>
 					<Image
 						src={SlideTwo}
-						width="100%"
+						color="transparent"
+						aspectRatio={16 / 9}
+						loading={<Skeleton variant="rectangular" />}
 						alt="Geometrical inconsistency, feat. A Quick Brown Fox."
 					/>
 				</ScrollAnimation>
 				<ScrollAnimation animateIn="fadeBottom" animateOnce>
 					<Image
 						src={SlideThree}
-						width="100%"
+						color="transparent"
+						aspectRatio={16 / 9}
+						loading={<Skeleton variant="rectangular" />}
 						alt="If you look up the definition for"
 					/>
 				</ScrollAnimation>
 				<ScrollAnimation animateIn="fadeBottom" animateOnce>
 					<Image
 						src={SlideFour}
-						width="100%"
+						color="transparent"
+						aspectRatio={16 / 9}
+						loading={<Skeleton variant="rectangular" />}
 						alt="mistake, it'll be set in MintSans."
 					/>
 				</ScrollAnimation>
 				<ScrollAnimation animateIn="fadeBottom" animateOnce>
 					<Image
 						src={SlideFive}
-						width="100%"
+						color="transparent"
+						aspectRatio={16 / 9}
+						loading={<Skeleton variant="rectangular" />}
 						alt="The quick brown fox jumps over the lazy dog."
 					/>
 				</ScrollAnimation>
 				<ScrollAnimation animateIn="fadeBottom" animateOnce>
 					<Image
 						src={SlideSix}
-						width="100%"
+						color="transparent"
+						aspectRatio={16 / 9}
+						loading={<Skeleton variant="rectangular" />}
 						alt="Some tips for using MintSans!"
 					/>
 				</ScrollAnimation>
@@ -242,7 +254,7 @@ export default function MintsansDL() {
 									<Alert
 										variant="filled"
 										severity="info"
-										icon={<RiInformationLine />}
+										icon={<FiInfo />}
 									>
 										{t("section.try.info")}
 									</Alert>
@@ -254,7 +266,7 @@ export default function MintsansDL() {
 										display: "flex",
 										alignItems: "center",
 										justifyContent: "center",
-                                        textAlign: "center",
+										textAlign: "center",
 									}}
 								>
 									<Typography
@@ -292,13 +304,13 @@ export default function MintsansDL() {
 							href="https://download.pprmint.art/mintsans_2.0.zip"
 							download
 							color="info"
-							startIcon={<RiDownload2Line />}
+							startIcon={<FiDownload />}
 						>
 							{t("section.download.downloadButton")}
 						</Button>
 					</ScrollAnimation>
 				</Container>
 			</div>
-		</>
+		</React.Fragment>
 	);
 }

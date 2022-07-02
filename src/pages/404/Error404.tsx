@@ -20,7 +20,7 @@ function FourOhFour() {
 		keyPrefix: "404",
 	});
 	return (
-		<>
+		<React.Fragment>
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>{t("meta.title")}</title>
@@ -57,7 +57,7 @@ function FourOhFour() {
 					</Link>
 				</Container>
 			</div>
-		</>
+		</React.Fragment>
 	);
 }
 

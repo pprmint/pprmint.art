@@ -13,13 +13,8 @@ import {
 	Container,
 	Stack,
 } from "@mui/material";
-import {
-	RiInformationLine,
-	RiMailLine,
-	RiTwitterLine,
-	RiArrowDownSLine,
-	RiDiscordLine,
-} from "react-icons/ri";
+import { FiInfo, FiMail, FiChevronDown } from "react-icons/fi";
+import { SiDiscord } from "react-icons/si";
 import Lottie from "react-lottie";
 
 import Banner from "./assets/banner.json";
@@ -38,7 +33,7 @@ export default function Contact() {
 		keyPrefix: "contact",
 	});
 	return (
-		<>
+		<React.Fragment>
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>{t("meta.title")}</title>
@@ -65,7 +60,7 @@ export default function Contact() {
 					<Container>
 						<ScrollAnimation animateIn="fadeBottom" animateOnce>
 							<Accordion variant="outlined">
-								<AccordionSummary expandIcon={<RiArrowDownSLine />}>
+								<AccordionSummary expandIcon={<FiChevronDown />}>
 									<Typography variant="h3">
 										{t("section.faq.1commission.title")}
 									</Typography>
@@ -78,7 +73,7 @@ export default function Contact() {
 								</AccordionDetails>
 							</Accordion>
 							<Accordion variant="outlined">
-								<AccordionSummary expandIcon={<RiArrowDownSLine />}>
+								<AccordionSummary expandIcon={<FiChevronDown />}>
 									<Typography variant="h3">
 										{t("section.faq.2terms.title")}
 									</Typography>
@@ -90,21 +85,23 @@ export default function Contact() {
 									</Typography>
 									<br />
 									<Typography variant="body1">
-										<b>{t("section.faq.2terms.illustrations.title")}</b>
+										<b>{t("section.faq.2terms.works.title")}</b>
 										<br />
-										{t("section.faq.2terms.illustrations.text")}
+										{t("section.faq.2terms.works.text1")}
+										<Link to="/works">
+											{t("section.faq.2terms.works.worksPage")}
+										</Link>
+										{t("section.faq.2terms.works.text2")}
 									</Typography>
 									<br />
 									<Typography variant="body1">
-										<b>{t("section.faq.2terms.stuff.title")}</b>
+										<b>{t("section.faq.2terms.downloads.title")}</b>
 										<br />
-										{t("section.faq.2terms.stuff.text1")}
-										<Link to="/projects/mintcraft">Mintcraft</Link>{" "}
-										{t("section.faq.2terms.stuff.text2")}
-										<Link to="/projects/win10tiles">
-											{t("section.faq.2terms.stuff.win10tiles")}
+										{t("section.faq.2terms.downloads.text1")}
+										<Link to="/downloads/mintcraft">
+											{t("section.faq.2terms.downloads.downloadsPage")}
 										</Link>
-										{t("section.faq.2terms.stuff.text3")}
+										{t("section.faq.2terms.downloads.text2")}
 										<br />
 										<br />
 										<b>{t("section.faq.2terms.fonts.title")}</b>
@@ -123,13 +120,13 @@ export default function Contact() {
 										<br />
 										<br />
 									</Typography>
-									<Alert variant="filled" icon={<RiInformationLine />}>
+									<Alert variant="filled" icon={<FiInfo />}>
 										{t("section.faq.2terms.reminder")}
 									</Alert>
 								</AccordionDetails>
 							</Accordion>
 							<Accordion variant="outlined">
-								<AccordionSummary expandIcon={<RiArrowDownSLine />}>
+								<AccordionSummary expandIcon={<FiChevronDown />}>
 									<Typography variant="h3">
 										{t("section.faq.3software.title")}
 									</Typography>
@@ -249,7 +246,7 @@ export default function Contact() {
 								</AccordionDetails>
 							</Accordion>
 							<Accordion variant="outlined">
-								<AccordionSummary expandIcon={<RiArrowDownSLine />}>
+								<AccordionSummary expandIcon={<FiChevronDown />}>
 									<Typography variant="h3">
 										{t("section.faq.4gamecube.title")}
 									</Typography>
@@ -271,7 +268,7 @@ export default function Contact() {
 								</AccordionDetails>
 							</Accordion>
 							<Accordion variant="outlined">
-								<AccordionSummary expandIcon={<RiArrowDownSLine />}>
+								<AccordionSummary expandIcon={<FiChevronDown />}>
 									<Typography variant="h3">
 										{t("section.faq.5support.title")}
 									</Typography>
@@ -284,7 +281,7 @@ export default function Contact() {
 								</AccordionDetails>
 							</Accordion>
 							<Accordion variant="outlined">
-								<AccordionSummary expandIcon={<RiArrowDownSLine />}>
+								<AccordionSummary expandIcon={<FiChevronDown />}>
 									<Typography variant="h3">
 										{t("section.faq.6actually.title")}
 									</Typography>
@@ -312,7 +309,7 @@ export default function Contact() {
 									target="_blank"
 									rel="noopener noreferrer"
 									variant="contained"
-									startIcon={<RiMailLine />}
+									startIcon={<FiMail />}
 								>
 									{t("section.contact.button.email")}
 								</Button>
@@ -321,7 +318,7 @@ export default function Contact() {
 									target="_blank"
 									rel="noopener noreferrer"
 									variant="outlined"
-									startIcon={<RiDiscordLine />}
+									startIcon={<SiDiscord />}
 								>
 									{t("section.contact.button.discord")}
 								</Button>
@@ -330,6 +327,6 @@ export default function Contact() {
 					</Container>
 				</div>
 			</div>
-		</>
+		</React.Fragment>
 	);
 }

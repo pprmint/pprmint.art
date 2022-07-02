@@ -1,3 +1,4 @@
+import React from "react";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -7,11 +8,10 @@ import {
 	Grid,
 	Container,
 	Skeleton,
-	CircularProgress,
 } from "@mui/material";
-import Image from "mui-image";
+import Image from "@jy95/material-ui-image";
 
-import { RiArrowDownLine, RiDownload2Line } from "react-icons/ri";
+import { FiArrowDown, FiDownload } from "react-icons/fi";
 
 import TilesLogo from "./assets/tiles_logo.svg";
 import TilesBanner from "./assets/tiles_banner.svg";
@@ -94,10 +94,10 @@ const tilesOther2 = [
 
 export default function Win10TilesDL() {
 	const { t } = useTranslation("translation", {
-		keyPrefix: "projects.win10tiles",
+		keyPrefix: "downloads.win10tiles",
 	});
 	return (
-		<>
+		<React.Fragment>
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>{t("meta.title")}</title>
@@ -125,7 +125,7 @@ export default function Win10TilesDL() {
 					<img src={TilesLogo} />
 					<Typography variant="h2">{t("title.sub")}</Typography>
 					<br />
-					<RiArrowDownLine size={25} color="#0c3" />
+					<FiArrowDown size={25} color="#0c3" />
 				</Container>
 			</div>
 			<div className="section" id="creative">
@@ -138,12 +138,16 @@ export default function Win10TilesDL() {
 										<Grid item xs={3} key={item.alt}>
 											<Image
 												src={item.src}
-												width="100%"
-												bgColor="#222222"
 												alt={item.alt}
-												duration={1000}
-												easing="ease-out"
-												showLoading={<CircularProgress />}
+												color="#222"
+												loading={
+													<Skeleton
+														variant="rectangular"
+														width="100%"
+														height="100%"
+														animation="wave"
+													/>
+												}
 											/>
 										</Grid>
 									))}
@@ -179,12 +183,16 @@ export default function Win10TilesDL() {
 										<Grid item xs={3} key={item.alt}>
 											<Image
 												src={item.src}
-												width="100%"
-												bgColor="#222222"
 												alt={item.alt}
-												duration={1000}
-												easing="ease-out"
-												showLoading={<CircularProgress />}
+												color="#222"
+												loading={
+													<Skeleton
+														variant="rectangular"
+														width="100%"
+														height="100%"
+														animation="wave"
+													/>
+												}
 											/>
 										</Grid>
 									))}
@@ -217,11 +225,16 @@ export default function Win10TilesDL() {
 										<Grid item xs={3} key={item.alt}>
 											<Image
 												src={item.src}
-												width="100%"
-												bgColor="#222222"
-												duration={1000}
-												easing="ease-out"
-												showLoading={<CircularProgress />}
+												alt={item.alt}
+												color="#222"
+												loading={
+													<Skeleton
+														variant="rectangular"
+														width="100%"
+														height="100%"
+														animation="wave"
+													/>
+												}
 											/>
 										</Grid>
 									))}
@@ -258,11 +271,16 @@ export default function Win10TilesDL() {
 											<Grid item xs={3} key={item.alt}>
 												<Image
 													src={item.src}
-													bgColor="#222222"
 													alt={item.alt}
-													duration={1000}
-													easing="ease-out"
-													showLoading={<CircularProgress />}
+													color="#222"
+													loading={
+														<Skeleton
+															variant="rectangular"
+															width="100%"
+															height="100%"
+															animation="wave"
+														/>
+													}
 												/>
 											</Grid>
 										))}
@@ -276,11 +294,16 @@ export default function Win10TilesDL() {
 											<Grid item xs={3} key={item.alt}>
 												<Image
 													src={item.src}
-													bgColor="#222222"
 													alt={item.alt}
-													duration={1000}
-													easing="ease-out"
-													showLoading={<CircularProgress />}
+													color="#222"
+													loading={
+														<Skeleton
+															variant="rectangular"
+															width="100%"
+															height="100%"
+															animation="wave"
+														/>
+													}
 												/>
 											</Grid>
 										))}
@@ -324,13 +347,13 @@ export default function Win10TilesDL() {
 							href="https://download.pprmint.art/win10tiles.zip"
 							download
 							color="primary"
-							startIcon={<RiDownload2Line />}
+							startIcon={<FiDownload />}
 						>
 							{t("section.download.downloadButton")}
 						</Button>
 					</ScrollAnimation>
 				</Container>
 			</div>
-		</>
+		</React.Fragment>
 	);
 }

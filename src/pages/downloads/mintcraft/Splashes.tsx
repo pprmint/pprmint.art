@@ -934,10 +934,10 @@ const splashes = [
 
 function MintcraftSplashes() {
 	const { t } = useTranslation("translation", {
-		keyPrefix: "projects.mintcraft",
+		keyPrefix: "downloads.mintcraft",
 	});
 	return (
-		<>
+		<React.Fragment>
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>splashes.txt • pprmint.art</title>
@@ -976,7 +976,7 @@ function MintcraftSplashes() {
 					</ScrollAnimation>
 				</Container>
 			</div>
-		</>
+		</React.Fragment>
 	);
 }
 

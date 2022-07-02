@@ -1,3 +1,4 @@
+import React from "react";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -5,16 +6,15 @@ import {
 	Typography,
 	Skeleton,
 	Container,
-	CircularProgress,
 } from "@mui/material";
-import Image from "mui-image";
+import Image from "@jy95/material-ui-image";
 
 export default function suseRebrand() {
 	const { t } = useTranslation("translation", {
-		keyPrefix: "projects.works.2022.suseRebrand",
+		keyPrefix: "works.2022.suseRebrand",
 	});
 	return (
-		<>
+		<React.Fragment>
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>{t("meta.title")}</title>
@@ -33,7 +33,7 @@ export default function suseRebrand() {
 				<meta property="og:title" content="Arch wallpaper." />
 				<meta
 					property="og:url"
-					content="https://pprmint.art/projects/2022/suserebrand"
+					content="https://pprmint.art/works/2022/suserebrand"
 				/>
 			</Helmet>
 			<Container className="title">
@@ -48,11 +48,17 @@ export default function suseRebrand() {
 					>
 						<Image
 							src="https://media.pprmint.art/2022/SUSE/slide1.svg"
-							width="100%"
 							alt="Slogan, literally translated from the German one currently in use... I think."
-							duration={1000}
-							easing="ease-out"
-							showLoading={<CircularProgress />}
+							aspectRatio={16 / 9}
+							color="transparent"
+							loading={
+								<Skeleton
+									variant="rectangular"
+									width="100%"
+									height="100%"
+									animation="wave"
+								/>
+							}
 						/>
 					</a>
 				</ScrollAnimation>
@@ -63,15 +69,21 @@ export default function suseRebrand() {
 					>
 						<Image
 							src="https://media.pprmint.art/2022/SUSE/slide2.svg"
-							width="100%"
 							alt="Slogan, literally translated from the German one currently in use... I think."
-							duration={1000}
-							easing="ease-out"
-							showLoading={<CircularProgress />}
+							aspectRatio={16 / 9}
+							color="transparent"
+							loading={
+								<Skeleton
+									variant="rectangular"
+									width="100%"
+									height="100%"
+									animation="wave"
+								/>
+							}
 						/>
 					</a>
 				</ScrollAnimation>
 			</div>
-		</>
+		</React.Fragment>
 	);
 }

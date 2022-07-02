@@ -23,10 +23,10 @@
 			"privacyPolicy": "Privacy policy"
 		},
 		"nav": {
-			"about": "About me",
 			"contact": "Contact & FAQ",
+			"downloads": "Downloads",
 			"home": "Home",
-			"projects": "Projects"
+			"works": "Works"
 		},
 		"settings": {
 			"close": "Close",
@@ -66,37 +66,38 @@
 					"tldr": "Most likely not. "
 				},
 				"2terms": {
+					"downloads": {
+						"downloadsPage": "Downloads page",
+						"text1": "As the name might suggest, I encourage you to download and use things on the",
+						"text2": "for yourself. You are also free to make your own changes and share them privately with your friends. However, I do not allow you to resell or otherwise redistribute my projects without my permission.",
+						"title": "Fonts, wallpapers and other downloads."
+					},
 					"fonts": {
-						"text1": "My fonts are licensed under the ",
+						"text1": "My fonts are licensed under the",
 						"text2": ". This means that you may freely use the fonts for personal and commercial projects. However, you may not sell the fonts and/or derivatives thereof.",
 						"title": "Fonts"
 					},
-					"illustrations": {
-						"text": "For these kinds of works, I'd rather you simply focus your senses on them and just look at them. Think of my website and YouTube channel as my little art gallery where you can have a look at my works. No buy, no rent, no nothing. Only look.",
-						"title": "Animations, illustrations and other works."
-					},
 					"long": "There are some exceptions to this as mentioned below. If you're ever not sure about what you may do with a thing I made, please don't hesitate to get in touch with me and ask me.",
 					"reminder": "If these terms are unclear to you in any way, don't hesitate to get in touch with me.",
-					"stuff": {
-						"text1": "I encourage you to download and use projects like ",
-						"text2": "and my ",
-						"text3": "as well as my occasional desktop backgrounds for yourself. You are also free to make your own changes and share them privately with your friends.\nGenerally, if it has its own download button, you can go download and use it for yourself. Except for reselling and redistributing of course.",
-						"title": "Desktop and phone wallpapers and other projects.",
-						"win10tiles": "Windows 10 tiles"
-					},
 					"title": "What are the terms of use for your creations?",
-					"tldr": "Generally, you are not allowed to re-use, sell or otherwise redistribute my works in any way unless stated otherwise. "
+					"tldr": "Generally, you are not allowed to re-use, sell or otherwise redistribute my works in any way unless stated otherwise. ",
+					"works": {
+						"text1": "For things on the",
+						"text2": "I'd rather you simply focus your senses on them and just look at them. Think of that and my YouTube channel as my little art gallery where you can have a look at my works. No buy, no rent, no nothing. Only look.",
+						"title": "Animations, illustrations and other works.",
+						"worksPage": "Works page"
+					}
 				},
 				"3software": {
-					"and": " and ",
-					"audio": "Audio recording and editing: ",
-					"graphics": "Graphics: ",
-					"mograph": "Motion graphics: ",
-					"music": "\"Music\": ",
+					"and": "and",
+					"audio": "Audio recording and editing:",
+					"graphics": "Graphics:",
+					"mograph": "Motion graphics:",
+					"music": "\"Music\":",
 					"title": "What software do you use?",
-					"video": "Video editing: ",
-					"withExtensions": " with the extensions ",
-					"withVSTs": " with the VSTs "
+					"video": "Video editing:",
+					"withExtensions": "with the extensions",
+					"withVSTs": "with the VSTs"
 				},
 				"4gamecube": {
 					"long": "since I had only used a Wii U in recent years. Make of that what you will.\nIf you don't know what this question is about, have a look at the comments below ",
@@ -106,7 +107,7 @@
 				},
 				"5support": {
 					"long": "If you think they would be interested in what I make as well, you could also tell your friends about me. If there's ever growing demand to support me financially as well, I might reconsider setting up a profile on Patreon or Ko-fi.",
-					"title": "Are there ways for me to support you?",
+					"title": "How can I support you?",
 					"tldr": "Kind words go a long way. "
 				},
 				"6actually": {
@@ -121,167 +122,11 @@
 			"sub": "Maybe I can already answer your question here."
 		}
 	},
-	"home": {
-		"meta": {
-			"title": "pprmint.art"
-		},
-		"section": {
-			"about": {
-				"aboutMePage": "About me page",
-				"discord": {
-					"join": "Join",
-					"text": "Write with me and like-minded people and be the first to know about new announcements.",
-					"title": "Discord server."
-				},
-				"github": {
-					"follow": "Follow",
-					"text": "Have a look at some source code, like for this website that won't run well on the PCs we use at work.",
-					"title": "GitHub."
-				},
-				"intro1": "Name's Nick. I like things with mint flavor and to spend my time with design, motion graphics and code. To learn more about me, have a look at the ",
-				"intro2": " (once there is one) or follow me on some of these platforms:",
-				"title": "About me.",
-				"youtube": {
-					"subscribe": "Subscribe",
-					"text": "All my animated works, with extra compression artifacts to stimulate your senses.",
-					"title": "YouTube."
-				}
-			},
-			"news": {
-				"announcement": {
-					"common": {
-						"tellMore": "Tell me more"
-					},
-					"german": {
-						"boldText": "Right after I bought a domain because there was no German around here.",
-						"fullText": "Since I grew to like playing around with my website (and because my mom wanted to have a look at my site), I decided to finally implement translations. You can always change the language from the settings found in the footer if you're on a desktop, or in the drawer on mobile.",
-						"headline": "Now also in German!",
-						"imageAlt": "German flag with German text left to it that translates to \"Now also in German!\""
-					},
-					"mintcraft15": {
-						"boldText": "Optimizing colors and adding overlooked textures.",
-						"fullText": "Not only have I added some questionable quotes by some of my Twitter followers, I also added some missing textures (frozen hearts, smithing table...) and improved existing ones (widgets, ping indicators, recipe book...). Definitely check it out, because once I told you that texts on buttons in the previous version had a drop shadow that was ever so slightly lighter than the background, you won't unsee it.",
-						"headline": "Mintcraft version 1.5 available.",
-						"imageAlt": "The Mintcraft logo with the version number 1.5 written left to it. In the background there's the improved recipe book texture fading away towards the left."
-					},
-					"newDomain": {
-						"boldText": "Have you ever seen a single word of German around here? Ganz genau.",
-						"fullText": "It always bothered me a bit that the top-level domain of this website was .de, even though this website is less about me being German and more about the things I create. Don't worry, pprmint.de will redirect you to the new domain for a while.",
-						"headline": "A shiny new domain.",
-						"imageAlt": "The new domain, pprmint.art, is written above a green trash can that contains the letters d and e from the previous top level domain. Right next to it is a small green wine bottle."
-					},
-					"twitterDelete": {
-						"boldText": "After about 7 years, I finally decided to give up this platform for good. ",
-						"fullText": "A decision I made in favor of my mental health and privacy, but also to be less distracted while working, and to spend more time talking privately with my friends in a smaller circle. If you'd like to continue to keep up with me and the projects I'm working on, feel free to join my Discord server if you haven't already. After all, now I have an even bigger incentive to bring more life to the place.",
-						"headline": "Twitter account deleted.",
-						"imageAlt": "The Mintcraft logo with the version number 1.5 written left to it. In the background there's the improved recipe book texture fading away towards the left."
-					}
-				},
-				"next": "Next",
-				"previous": "Previous",
-				"title": "News."
-			},
-			"recent": {
-				"description": "Some still wonder why I write with capitalization and punctuation on Discord. One said I should write a book about my system. Click on the above image to not read it.",
-				"name": "A joke.",
-				"title": "Latest creation."
-			}
-		},
-		"title": {
-			"main": "Good today.",
-			"sub": "I make things look neat with vector points, keyframes and colorful monospace letters."
-		}
-	},
-	"privacypolicy": {
-		"meta": {
-			"title": "Privacy policy • pprmint.art"
-		},
-		"section": {
-			"contact": {
-				"text": "If you have any other privacy-related questions just send an email to privacy[at]pprmint.art.",
-				"title": "Any questions?"
-			},
-			"cookies": {
-				"text": {
-					"localStorage": {
-						"cookiesAcknowledged": {
-							"text1": "Used to determine whether the small cookie popup in the bottom left was shown to you on your first visit, and is set to ",
-							"text2": " once you've been here."
-						},
-						"i18nextLng": {
-							"text1": "Used to determine which language to use on the website, and is read on each visit. The value is either ",
-							"text2": " for English or ",
-							"text3": " for German. When you first visit this website, the preferred language is detected from your browser settings and written to the key accordingly. If you change the language using the website settings above, this value will be replaced."
-						}
-					},
-					"long1": "Currently, the following can be found in your browser's localStorage for this website:",
-					"long2": "In the future, more keys might be added as more settings can be changed on the website. However, with these, you can't be uniquely identified or tracked, should that have been one of your worries now.",
-					"tldr": "Settings such as your preferred language are, as the name suggests, stored locally in your browser's \"localStorage\" so you don't have to set them up again and again. Per definition, I guess this also counts as a \"cookie\"."
-				},
-				"title": "Cookies!"
-			},
-			"externalLinks": {
-				"text": "Some pages may contain links to external websites. Any link that takes you to another website will have a blue arrow and, when you hover over it, a blue background. Once you visit such external websites, you are subject to their respective privacy policies. I take no responsibility for the practices of nor content on said websites.",
-				"title": "External links."
-			},
-			"responsible": {
-				"text": "Responsible for content on this website is me, Nicklas Scharp. For privacy-related questions, feel free to send an email to privacy[at]pprmint.art.",
-				"title": "Person responsible."
-			},
-			"weblogs": {
-				"text": {
-					"long": {
-						"contents": {
-							"accessTime": {
-								"description": "The time when a client got a file from the server. If you care: The format's DD/MMMM/YYYY: HH:MM:SS +GMT.",
-								"title": "Access time."
-							},
-							"agent": {
-								"description": "This thing tells the server infos like what browser, operating system and rendering engine is used. I can also tell you that Windows 11 is still referred to as \"(Windows NT 10.0; Win64; x64)\" in there. For more info on what's in the User-Agent header, see:",
-								"title": "User-Agent."
-							},
-							"domain": {
-								"description": "Imagine that: It's all pprmint.art. Who knew.",
-								"title": "Domain."
-							},
-							"file": {
-								"description": "The path and name of the file that the client received, like the favicon, fonts and other assets.",
-								"title": "Received file."
-							},
-							"httpCodes": {
-								"description": "Usually that's \"200 OK\", because everything's awesome. If you wanna learn more about all the different codes that the HTTP world has to offer, see:",
-								"title": "HTTP code."
-							},
-							"ip": {
-								"description": "Nope, I got no clue where you live. Not that I give a damn anyway. The law requires my hosting provider to anonymize IP addresses, so the last octet of every IP address is replaced by a random value. I can confirm: The IP address that appears in the logs doesn't match my actual address, so that's cool.",
-								"title": "IP address."
-							},
-							"title": "Contents of a log entry."
-						},
-						"storagePeriod": {
-							"description": "Each log entry is stored for up to 7 days.",
-							"title": "Storage period."
-						},
-						"usage": {
-							"description": "Earlier I mentioned that statistics are created with this data. That's it. For a statistics fanboy like yours truly, this is of course a dream come true and most interesting to see that 0.3% (tried to) access the site on Windows XP. That's about as useful as it gets for me. The statistics are interesting to look at (to me at least), but I'm not selling the logs on eBay or anything.",
-							"title": "Usage for me."
-						}
-					},
-					"tldr": "Like most other web servers, this one collects some data about your browser when you visit this site. My hosting provider creates some nice statistics with this data, but that's about it for my usefulness of this data."
-				},
-				"title": "Server logs."
-			}
-		},
-		"title": {
-			"main": "Privacy policy.",
-			"sub": "Very exciting."
-		}
-	},
-	"projects": {
+	"downloads": {
 		"downloadLatest": "Download latest",
 		"learnMore": "Learn more",
 		"meta": {
-			"title": "My projects • pprmint.art"
+			"title": "Downloads • pprmint.art"
 		},
 		"mintcraft": {
 			"meta": {
@@ -419,8 +264,8 @@
 			}
 		},
 		"title": {
-			"main": "My projects.",
-			"sub": "Look at some of my works or download stuff."
+			"main": "Downloads.",
+			"sub": "Download and use some things I made."
 		},
 		"win10tiles": {
 			"meta": {
@@ -462,124 +307,170 @@
 				"sub": "Provided you still have them."
 			}
 		},
-		"works": {
-			"2021": {
-				"manjaroWall": {
-					"captions": {
-						"theme1": "This picture was made to be used together with the ",
-						"theme2": " or ",
-						"theme3": " theme.",
-						"wallpaper": "The wallpaper. Feel free to right-click and save."
-					},
-					"meta": {
-						"title": "Arch wallpaper • pprmint.art"
-					},
-					"title": {
-						"main": "Arch wallpaper.",
-						"sub": "I used Arch btw."
-					}
+		"worksPage": "Looking for my other works? Click here to get to their new page."
+	},
+	"home": {
+		"meta": {
+			"title": "pprmint.art"
+		},
+		"section": {
+			"about": {
+				"anilist": {
+					"follow": "Follow",
+					"text": "Find out what my favorite shows are, and that I rewatched Nichijou 4 times.",
+					"title": "AniList."
+				},
+				"discord": {
+					"join": "Join",
+					"text": "Write with me and like-minded people and be the first to know about new announcements.",
+					"title": "Discord server."
+				},
+				"github": {
+					"follow": "Follow",
+					"text": "Have a look at some source code, like for this website that won't run well on the PCs we use at work.",
+					"title": "GitHub."
+				},
+				"lastfm": {
+					"follow": "Follow",
+					"text": "Get confused about how I can listen to J-Pop right after German hip-hop and Ambient.",
+					"title": "Last.fm."
+				},
+				"text": "Name's Nick. I'm a 17 year old German guy that like things with mint flavor and spending time with design, motion graphics or code. Or with books. Or anime.",
+				"title": "About me.",
+				"youtube": {
+					"subscribe": "Subscribe",
+					"text": "All my animated works, with extra compression artifacts to stimulate your senses.",
+					"title": "YouTube."
 				}
 			},
-			"2022": {
-				"archWall": {
-					"captions": {
-						"theme1": "This picture was made to be used together with the ",
-						"theme2": " or ",
-						"theme3": " theme.",
-						"wallpaper": "The wallpaper. Feel free to right-click and save."
+			"news": {
+				"announcement": {
+					"common": {
+						"tellMore": "Tell me more"
 					},
-					"meta": {
-						"title": "Arch wallpaper • pprmint.art"
+					"german": {
+						"boldText": "Right after I bought a domain because there was no German around here.",
+						"fullText": "Since I grew to like playing around with my website (and because my mom wanted to have a look at my site), I decided to finally implement translations. You can always change the language from the settings found in the footer if you're on a desktop, or in the drawer on mobile.",
+						"headline": "Now also in German!",
+						"imageAlt": "German flag with German text left to it that translates to \"Now also in German!\""
 					},
-					"title": {
-						"main": "Arch wallpaper.",
-						"sub": "I used Arch btw."
+					"mintcraft15": {
+						"boldText": "Optimizing colors and adding overlooked textures.",
+						"fullText": "Not only have I added some questionable quotes by some of my Twitter followers, I also added some missing textures (frozen hearts, smithing table...) and improved existing ones (widgets, ping indicators, recipe book...). Definitely check it out, because once I told you that texts on buttons in the previous version had a drop shadow that was ever so slightly lighter than the background, you won't unsee it.",
+						"headline": "Mintcraft version 1.5 available.",
+						"imageAlt": "The Mintcraft logo with the version number 1.5 written left to it. In the background there's the improved recipe book texture fading away towards the left."
+					},
+					"newDomain": {
+						"boldText": "Have you ever seen a single word of German around here? Ganz genau.",
+						"fullText": "It always bothered me a bit that the top-level domain of this website was .de, even though this website is less about me being German and more about the things I create. Don't worry, pprmint.de will redirect you to the new domain for a while.",
+						"headline": "A shiny new domain.",
+						"imageAlt": "The new domain, pprmint.art, is written above a green trash can that contains the letters d and e from the previous top level domain. Right next to it is a small green wine bottle."
+					},
+					"twitterDelete": {
+						"boldText": "After about 7 years, I finally decided to give up this platform for good. ",
+						"fullText": "A decision I made in favor of my mental health and privacy, but also to be less distracted while working, and to spend more time talking privately with my friends in a smaller circle. If you'd like to continue to keep up with me and the projects I'm working on, feel free to join my Discord server if you haven't already. After all, now I have an even bigger incentive to bring more life to the place.",
+						"headline": "Twitter account deleted.",
+						"imageAlt": "The Mintcraft logo with the version number 1.5 written left to it. In the background there's the improved recipe book texture fading away towards the left."
 					}
 				},
-				"book": {
-					"captions": {
-						"starboard": "This got me on the starboard of a Discord server. My plan was successful."
-					},
-					"meta": {
-						"title": "A joke • pprmint.art"
-					},
-					"title": {
-						"main": "A joke.",
-						"sub": "How many do you know who write with proper capitalization and punctuation online?"
-					}
-				},
-				"ford": {
-					"meta": {
-						"title": "Ford rebrand concept • pprmint.art"
-					},
-					"title": {
-						"main": "Ford rebrand concept.",
-						"sub": "Concept inspired by a design by Paul Rand in 1966."
-					}
-				},
-				"geoices": {
-					"meta": {
-						"title": "3D remake of Geoices' logo • pprmint.art"
-					},
-					"title": {
-						"main": "3D remake of Geoices' logo.",
-						"sub": "Here's a Twitter profile."
-					}
-				},
-				"iPad": {
-					"captions": {
-						"leTablet": "Originally made as part of a completely different project."
-					},
-					"meta": {
-						"title": "iPad • pprmint.art"
-					},
-					"title": {
-						"main": "iPad.",
-						"smallSub": "That's a lie.",
-						"sub": "The i stands for isometric."
-					}
-				},
-				"likeStatistics": {
-					"captions": {
-						"graphs1": "My original plan was to wait maybe a week or two after New Year's before I finish this thing.",
-						"graphs2": "That plan saw Penguins, that's how far south it went."
-					},
-					"meta": {
-						"title": "Like statistics for @ProgressBar202_ • pprmint.art"
-					},
-					"title": {
-						"main": "Like statistics for @ProgressBar202_.",
-						"sub": "I was very bored before New Year's Eve. "
-					}
-				},
-				"mintBanners": {
-					"meta": {
-						"title": "3D MINT banners • pprmint.art"
-					},
-					"title": {
-						"main": "3D MINT banners.",
-						"sub": "I played around with Cinema 4D."
-					}
-				},
-				"suseRebrand": {
-					"meta": {
-						"title": "SUSE rebrand concept • pprmint.art"
-					},
-					"title": {
-						"main": "SUSE rebrand concept.",
-						"sub": "Or: Oversimplified chameleon."
-					}
-				},
-				"wiiRemake": {
-					"meta": {
-						"title": "Wii Menu remake • pprmint.art"
-					},
-					"title": {
-						"main": "Wii Menu remake.",
-						"sub": "Here are the channel banners I've finished so far."
-					}
-				}
+				"next": "Next",
+				"previous": "Previous",
+				"title": "News."
+			},
+			"recent": {
+				"description": "Some still wonder why I write with capitalization and punctuation on Discord. One said I should write a book about my system. Click on the above image to not read it.",
+				"name": "A joke.",
+				"title": "Latest creation."
 			}
+		},
+		"title": {
+			"main": "Good today.",
+			"sub": "I make things look neat with vector points, keyframes and colorful monospace letters."
+		}
+	},
+	"privacypolicy": {
+		"meta": {
+			"title": "Privacy policy • pprmint.art"
+		},
+		"section": {
+			"contact": {
+				"text": "If you have any other privacy-related questions just send an email to privacy[at]pprmint.art.",
+				"title": "Any questions?"
+			},
+			"cookies": {
+				"text": {
+					"localStorage": {
+						"cookiesAcknowledged": {
+							"text1": "Used to determine whether the small cookie popup in the bottom left was shown to you on your first visit, and is set to ",
+							"text2": " once you've been here."
+						},
+						"i18nextLng": {
+							"text1": "Used to determine which language to use on the website, and is read on each visit. The value is either ",
+							"text2": " for English or ",
+							"text3": " for German. When you first visit this website, the preferred language is detected from your browser settings and written to the key accordingly. If you change the language using the website settings above, this value will be replaced."
+						}
+					},
+					"long1": "Currently, the following can be found in your browser's localStorage for this website:",
+					"long2": "In the future, more keys might be added as more settings can be changed on the website. However, with these, you can't be uniquely identified or tracked, should that have been one of your worries now.",
+					"tldr": "Settings such as your preferred language are, as the name suggests, stored locally in your browser's \"localStorage\" so you don't have to set them up again and again. Per definition, I guess this also counts as a \"cookie\"."
+				},
+				"title": "Cookies!"
+			},
+			"externalLinks": {
+				"text": "Some pages may contain links to external websites. Any link that takes you to another website will have a blue arrow and, when you hover over it, a blue background. Once you visit such external websites, you are subject to their respective privacy policies. I take no responsibility for the practices of nor content on said websites.",
+				"title": "External links."
+			},
+			"responsible": {
+				"text": "Responsible for content on this website is me, Nicklas Scharp. For privacy-related questions, feel free to send an email to privacy[at]pprmint.art.",
+				"title": "Person responsible."
+			},
+			"weblogs": {
+				"text": {
+					"long": {
+						"contents": {
+							"accessTime": {
+								"description": "The time when a client got a file from the server. If you care: The format's DD/MMMM/YYYY: HH:MM:SS +GMT.",
+								"title": "Access time."
+							},
+							"agent": {
+								"description": "This thing tells the server infos like what browser, operating system and rendering engine is used. I can also tell you that Windows 11 is still referred to as \"(Windows NT 10.0; Win64; x64)\" in there. For more info on what's in the User-Agent header, see:",
+								"title": "User-Agent."
+							},
+							"domain": {
+								"description": "Imagine that: It's all pprmint.art. Who knew.",
+								"title": "Domain."
+							},
+							"file": {
+								"description": "The path and name of the file that the client received, like the favicon, fonts and other assets.",
+								"title": "Received file."
+							},
+							"httpCodes": {
+								"description": "Usually that's \"200 OK\", because everything is awesome. If you wanna learn more about all the different codes that the HTTP world has to offer, see:",
+								"title": "HTTP code."
+							},
+							"ip": {
+								"description": "Nope, I got no clue where you live. The law requires my hosting provider to anonymize IP addresses, so the last octet of every IP address is replaced by a random value. I can confirm: The IP address that appears in the logs doesn't match my actual address, so that's cool.",
+								"title": "IP address."
+							},
+							"title": "Contents of a log entry."
+						},
+						"storagePeriod": {
+							"description": "Each log entry is stored for up to 7 days.",
+							"title": "Storage period."
+						},
+						"usage": {
+							"description": "Earlier I mentioned that statistics are created with this data. That's it. For a statistics fanboy like yours truly, this is of course a dream come true and most interesting to see that once 0.3% (tried to) access the site on Windows XP. Not that I think they'd be worth anything, but these logs aren't shared with anyone.",
+							"title": "My use."
+						}
+					},
+					"tldr": "Like most other web servers, this one collects some data about your browser when you visit this site and my hosting provider creates some nice statistics with this data. That's about it."
+				},
+				"title": "Server logs."
+			}
+		},
+		"title": {
+			"main": "Privacy policy.",
+			"sub": "Very exciting."
 		}
 	},
 	"wip": {
@@ -589,6 +480,132 @@
 		"title": {
 			"main": "You're too early.",
 			"sub": "There's nothing to see here yet."
+		}
+	},
+	"works": {
+		"2021": {
+			"manjaroWall": {
+				"captions": {
+					"theme1": "This picture was made to be used together with the ",
+					"theme2": " or ",
+					"theme3": " theme.",
+					"wallpaper": "The wallpaper. Feel free to right-click and save."
+				},
+				"meta": {
+					"title": "Arch wallpaper • pprmint.art"
+				},
+				"title": {
+					"main": "Arch wallpaper.",
+					"sub": "I used Arch btw."
+				}
+			}
+		},
+		"2022": {
+			"archWall": {
+				"captions": {
+					"theme1": "This picture was made to be used together with the ",
+					"theme2": " or ",
+					"theme3": " theme.",
+					"wallpaper": "The wallpaper. Feel free to right-click and save."
+				},
+				"meta": {
+					"title": "Arch wallpaper • pprmint.art"
+				},
+				"title": {
+					"main": "Arch wallpaper.",
+					"sub": "I used Arch btw."
+				}
+			},
+			"book": {
+				"captions": {
+					"starboard": "This got me on the starboard of a Discord server. My plan was successful."
+				},
+				"meta": {
+					"title": "A joke • pprmint.art"
+				},
+				"title": {
+					"main": "A joke.",
+					"sub": "How many do you know who write with proper capitalization and punctuation online?"
+				}
+			},
+			"ford": {
+				"meta": {
+					"title": "Ford rebrand concept • pprmint.art"
+				},
+				"title": {
+					"main": "Ford rebrand concept.",
+					"sub": "Concept inspired by a design by Paul Rand in 1966."
+				}
+			},
+			"geoices": {
+				"meta": {
+					"title": "3D remake of Geoices' logo • pprmint.art"
+				},
+				"title": {
+					"main": "3D remake of Geoices' logo.",
+					"sub": "Here's a Twitter profile."
+				}
+			},
+			"iPad": {
+				"captions": {
+					"leTablet": "Originally made as part of a completely different project."
+				},
+				"meta": {
+					"title": "iPad • pprmint.art"
+				},
+				"title": {
+					"main": "iPad.",
+					"smallSub": "That's a lie.",
+					"sub": "The i stands for isometric."
+				}
+			},
+			"likeStatistics": {
+				"captions": {
+					"graphs1": "My original plan was to wait maybe a week or two after New Year's before I finish this thing.",
+					"graphs2": "That plan saw Penguins, that's how far south it went."
+				},
+				"meta": {
+					"title": "Like statistics for @ProgressBar202_ • pprmint.art"
+				},
+				"title": {
+					"main": "Like statistics for @ProgressBar202_.",
+					"sub": "I was very bored before New Year's Eve. "
+				}
+			},
+			"mintBanners": {
+				"meta": {
+					"title": "3D MINT banners • pprmint.art"
+				},
+				"title": {
+					"main": "3D MINT banners.",
+					"sub": "I played around with Cinema 4D."
+				}
+			},
+			"suseRebrand": {
+				"meta": {
+					"title": "SUSE rebrand concept • pprmint.art"
+				},
+				"title": {
+					"main": "SUSE rebrand concept.",
+					"sub": "Or: Oversimplified chameleon."
+				}
+			},
+			"wiiRemake": {
+				"meta": {
+					"title": "Wii Menu remake • pprmint.art"
+				},
+				"title": {
+					"main": "Wii Menu remake.",
+					"sub": "Here are the channel banners I've finished so far."
+				}
+			}
+		},
+		"meta": {
+			"title": "Works • pprmint.art"
+		},
+		"title": {
+			"main": "Works.",
+			"sub": "Have a look at some of my works."
 		}
 	}
 }

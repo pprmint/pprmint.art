@@ -1,3 +1,4 @@
+import React from "react";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -5,16 +6,15 @@ import {
 	Typography,
 	Skeleton,
 	Container,
-	CircularProgress,
 } from "@mui/material";
-import Image from "mui-image";
+import Image from "@jy95/material-ui-image";
 
 export default function ArchWall() {
 	const { t } = useTranslation("translation", {
-		keyPrefix: "projects.works.2022.archWall",
+		keyPrefix: "works.2022.archWall",
 	});
 	return (
-		<>
+		<React.Fragment>
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>{t("meta.title")}</title>
@@ -36,7 +36,7 @@ export default function ArchWall() {
 				<meta property="og:title" content="Arch wallpaper." />
 				<meta
 					property="og:url"
-					content="https://pprmint.art/projects/2022/archwall"
+					content="https://pprmint.art/works/2022/archwall"
 				/>
 			</Helmet>
 			<Container className="title">
@@ -51,11 +51,17 @@ export default function ArchWall() {
 					>
 						<Image
 							src="https://media.pprmint.art/2022/ArchWall/Arch_Qogir.png"
-							width="100%"
 							alt="The wallpaper in all its glory."
-							duration={1000}
-							easing="ease-out"
-							showLoading={<CircularProgress />}
+							color="transparent"
+							aspectRatio={16 / 9}
+							loading={
+								<Skeleton
+									variant="rectangular"
+									width="100%"
+									height="100%"
+									animation="wave"
+								/>
+							}
 						/>
 					</a>
 					<br />
@@ -72,11 +78,17 @@ export default function ArchWall() {
 					>
 						<Image
 							src="https://media.pprmint.art/2022/ArchWall/screenshot.png"
-							width="100%"
 							alt="A screenshot showing this wallpaper applied to KDE Plasma with the Qogir theme enabled."
-							duration={1000}
-							easing="ease-out"
-							showLoading={<CircularProgress />}
+							color="transparent"
+							aspectRatio={16 / 9}
+							loading={
+								<Skeleton
+									variant="rectangular"
+									width="100%"
+									height="100%"
+									animation="wave"
+								/>
+							}
 						/>
 					</a>
 					<br />
@@ -103,6 +115,6 @@ export default function ArchWall() {
 					</Typography>
 				</ScrollAnimation>
 			</div>
-		</>
+		</React.Fragment>
 	);
 }

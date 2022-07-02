@@ -1,15 +1,16 @@
+import React from "react";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import ScrollAnimation from "react-animate-on-scroll";
-import { Typography, Container, CircularProgress } from "@mui/material";
-import Image from "mui-image";
+import { Typography, Container, Skeleton } from "@mui/material";
+import Image from "@jy95/material-ui-image";
 
 export default function Book() {
 	const { t } = useTranslation("translation", {
-		keyPrefix: "projects.works.2022.book",
+		keyPrefix: "works.2022.book",
 	});
 	return (
-		<>
+		<React.Fragment>
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>{t("meta.title")}</title>
@@ -31,7 +32,7 @@ export default function Book() {
 				<meta property="og:title" content="Mint banners." />
 				<meta
 					property="og:url"
-					content="https://pprmint.art/projects/2022/wiimenu"
+					content="https://pprmint.art/works/2022/wiimenu"
 				/>
 			</Helmet>
 			<Container className="title">
@@ -46,9 +47,16 @@ export default function Book() {
 					>
 						<Image
 							src="https://media.pprmint.art/2022/Book/Book.png"
-							duration={1000}
-							easing="ease-out"
-							showLoading={<CircularProgress />}
+							color="transparent"
+							aspectRatio={16 / 9}
+							loading={
+								<Skeleton
+									variant="rectangular"
+									width="100%"
+									height="100%"
+									animation="wave"
+								/>
+							}
 						/>
 					</a>
 				</ScrollAnimation>
@@ -59,9 +67,15 @@ export default function Book() {
 					>
 						<Image
 							src="https://media.pprmint.art/2022/Book/Book_alt.png"
-							duration={1000}
-							easing="ease-out"
-							showLoading={<CircularProgress />}
+							color="transparent"
+							loading={
+								<Skeleton
+									variant="rectangular"
+									width="100%"
+									height="100%"
+									animation="wave"
+								/>
+							}
 						/>
 					</a>
 				</ScrollAnimation>
@@ -72,17 +86,24 @@ export default function Book() {
 					>
 						<Image
 							src="https://media.pprmint.art/2022/Book/Cover.png"
-							duration={1000}
-							easing="ease-out"
-							showLoading={<CircularProgress />}
+							color="transparent"
+							aspectRatio={2481 / 3508}
+							loading={
+								<Skeleton
+									variant="rectangular"
+									width="100%"
+									height="100%"
+									animation="wave"
+								/>
+							}
 						/>
 					</a>
 				</ScrollAnimation>
-                <br />
+				<br />
 				<Typography variant="body1" textAlign="center">
 					{t("captions.starboard")}
 				</Typography>
 			</div>
-		</>
+		</React.Fragment>
 	);
 }

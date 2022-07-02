@@ -16,7 +16,7 @@ export default function PrivacyPolicy() {
 		keyPrefix: "privacypolicy",
 	});
 	return (
-		<>
+		<React.Fragment>
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>{t("meta.title")}</title>
@@ -204,6 +204,6 @@ export default function PrivacyPolicy() {
 					</div>
 				</div>
 			</ScrollAnimation>
-		</>
+		</React.Fragment>
 	);
 }

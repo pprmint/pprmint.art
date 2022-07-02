@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.scss";
 import { useTranslation } from "react-i18next";
-import Image from "mui-image";
+import Image from "@jy95/material-ui-image";
 import {
 	createTheme,
 	Button,
@@ -35,7 +35,7 @@ const ThemeSetting = () => {
 	});
 
 	return (
-		<>
+		<React.Fragment>
 			<DialogContent>
 				<Typography variant="h3">{t("title")}</Typography>
 				<Typography variant="body1">{t("description")}</Typography>
@@ -59,7 +59,7 @@ const ThemeSetting = () => {
 					</Grid>
 				</Grid>
 			</DialogContent>
-		</>
+		</React.Fragment>
 	);
 };
 export default ThemeSetting;

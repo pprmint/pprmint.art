@@ -2,14 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Lottie from "react-lottie";
 import { useState } from "react";
-import {
-	BrowserRouter as Router,
-	Switch,
-	Route,
-	Link,
-	Redirect,
-	NavLink,
-} from "react-router-dom";
+import { Routes, Route, Link, Navigate, NavLink } from "react-router-dom";
 import {
 	Typography,
 	IconButton,
@@ -29,46 +22,45 @@ import {
 import { useTranslation } from "react-i18next";
 
 import {
-	RiChat1Line,
-	RiDiscordLine,
-	RiGithubLine,
-	RiHeartFill,
-	RiHomeLine,
-	RiMenu2Line,
-	RiMenu3Line,
-	RiPencilRuler2Line,
-	RiUserLine,
-	RiYoutubeLine,
-} from "react-icons/ri";
+	FiMessageSquare,
+	FiHeart,
+	FiHome,
+	FiMenu,
+	FiX,
+	FiDownload,
+	FiImage,
+} from "react-icons/fi";
+
+import { SiYoutube, SiGithub, SiDiscord } from "react-icons/si";
 
 // Imports of all the pages
 import Home from "./pages/home/Home";
-import About from "./pages/about/About";
-import Projects from "./pages/projects/Projects";
+import Downloads from "./pages/downloads/Downloads";
 import Contact from "./pages/contact/Contact";
 import PrivacyPolicy from "./pages/privacypolicy/PrivacyPolicy";
 // Project pages
-import MintsansDL from "./pages/projects/mintsans/Mintsans";
-import MintBitDL from "./pages/projects/mintbit/MintBit";
-import MintAltDL from "./pages/projects/mintalternative/MintAlt";
-import MintcraftDL from "./pages/projects/mintcraft/Mintcraft";
-import MintcraftSplashes from "./pages/projects/mintcraft/Splashes";
-import Win10TilesDL from "./pages/projects/win10tiles/Win10Tiles";
+import MintsansDL from "./pages/downloads/mintsans/Mintsans";
+import MintBitDL from "./pages/downloads/mintbit/MintBit";
+import MintAltDL from "./pages/downloads/mintalternative/MintAlt";
+import MintcraftDL from "./pages/downloads/mintcraft/Mintcraft";
+import MintcraftSplashes from "./pages/downloads/mintcraft/Splashes";
+import Win10TilesDL from "./pages/downloads/win10tiles/Win10Tiles";
 // Info pages
 import Error404 from "./pages/404/Error404";
 import UnderConstruction from "./pages/wip/UnderConstruction";
 // Works 2022
-import Book from "./pages/projects/gallery/2022/Book";
-import MintBanners from "./pages/projects/gallery/2022/MintBanners";
-import WiiMenu from "./pages/projects/gallery/2022/WiiMenu";
-import Geoices from "./pages/projects/gallery/2022/Geoices";
-import suseRebrand from "./pages/projects/gallery/2022/suseRebrand";
-import Statistics from "./pages/projects/gallery/2022/LikeStatistics";
-import Ipad from "./pages/projects/gallery/2022/iPad"; // this hurts
-import ArchWall from "./pages/projects/gallery/2022/ArchWall";
-import Ford from "./pages/projects/gallery/2022/Ford";
+import Works from "./pages/works/Works";
+import Book from "./pages/works/gallery/2022/Book";
+import MintBanners from "./pages/works/gallery/2022/MintBanners";
+import WiiMenu from "./pages/works/gallery/2022/WiiMenu";
+import Geoices from "./pages/works/gallery/2022/Geoices";
+import SuseRebrand from "./pages/works/gallery/2022/suseRebrand";
+import Statistics from "./pages/works/gallery/2022/LikeStatistics";
+import Ipad from "./pages/works/gallery/2022/iPad"; // this hurts
+import ArchWall from "./pages/works/gallery/2022/ArchWall";
+import Ford from "./pages/works/gallery/2022/Ford";
 // Works 2021
-import ManjaroWall from "./pages/projects/gallery/2021/manjarowall/ManjaroWall";
+import ManjaroWall from "./pages/works/gallery/2021/manjarowall/ManjaroWall";
 // Easter eggs...? I dunno.
 import HealthSafety from "./pages/wii/HealthSafety";
 import Test from "./pages/test/Test";
@@ -92,25 +84,25 @@ const nav = [
 		key: "home",
 		link: "/",
 		exact: true,
-		icon: <RiHomeLine />,
+		icon: <FiHome />,
 	},
 	{
-		name: "common.nav.about",
-		key: "about",
-		link: "/about",
-		icon: <RiUserLine />,
+		name: "common.nav.works",
+		key: "works",
+		link: "/works",
+		icon: <FiImage />,
 	},
 	{
-		name: "common.nav.projects",
-		key: "projects",
-		link: "/projects",
-		icon: <RiPencilRuler2Line />,
+		name: "common.nav.downloads",
+		key: "downloads",
+		link: "/downloads",
+		icon: <FiDownload />,
 	},
 	{
 		name: "common.nav.contact",
 		key: "contact",
 		link: "/contact",
-		icon: <RiChat1Line />,
+		icon: <FiMessageSquare />,
 	},
 ];
 
@@ -164,11 +156,11 @@ const lottieOptions = {
 	},
 };
 
-function App() {
+export default function App() {
 	const { t } = useTranslation();
 	const [open, setOpen] = useState<boolean>(false);
 	return (
-		<Router>
+		<React.Fragment>
 			<ElevationScroll>
 				<AppBar
 					position="fixed"
@@ -196,7 +188,7 @@ function App() {
 								onClick={() => setOpen(true)}
 								sx={{ display: { xs: "inline-flex", md: "none" } }}
 							>
-								<RiMenu2Line color="var(--textSecondary)" />
+								<FiMenu color="var(--textSecondary)" />
 							</IconButton>
 						</Box>
 						<Drawer
@@ -227,7 +219,7 @@ function App() {
 									onClick={() => setOpen(false)}
 									sx={{ mr: 2 }}
 								>
-									<RiMenu3Line />
+									<FiX />
 								</IconButton>
 							</Box>
 							<Divider />
@@ -237,8 +229,8 @@ function App() {
 									return (
 										<NavLink
 											onClick={() => setOpen(false)}
-											exact={item.exact}
-											activeClassName="active"
+											// exact={item.exact}
+											// activeClassName="active"
 											to={item.link}
 											key={item.key}
 										>
@@ -282,8 +274,8 @@ function App() {
 									options={lottieOptions}
 									width={160}
 									height={64}
-                                    isClickToPauseDisabled={true}
-                                    style={{margin: "none"}}
+									isClickToPauseDisabled={true}
+									style={{ margin: "none" }}
 								/>
 							</Link>
 						</Box>
@@ -293,18 +285,9 @@ function App() {
 						>
 							<Stack spacing={1} direction="row">
 								{nav.map((item) => {
-									const exact = item.exact ? true : false;
 									return (
-										<NavLink
-											exact={item.exact}
-											activeClassName="active"
-											to={item.link}
-											key={item.key}
-										>
-											<Button
-												color="inherit"
-												startIcon={item.icon}
-											>
+										<NavLink to={item.link} key={item.key}>
+											<Button color="inherit" startIcon={item.icon}>
 												{t(item.name)}
 											</Button>
 										</NavLink>
@@ -317,87 +300,87 @@ function App() {
 				</AppBar>
 			</ElevationScroll>
 			<CookieSnackbar />
+
 			<ScrollToTop>
 				{/* All the different pages that exist here, pretty much. */}
-				<Switch>
-					<Route path="/" exact component={Home} />
-					<Route path="/about" exact component={UnderConstruction} />
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/about" element={<UnderConstruction />} />
 
-					<Route path="/projects" exact component={Projects} />
-					<Route path="/projects/mintsans" component={MintsansDL} />
-					<Route path="/projects/mintcraft" exact component={MintcraftDL} />
+					<Route path="/downloads" element={<Downloads />} />
+					<Route path="/downloads/mintsans" element={<MintsansDL />} />
+					<Route path="/downloads/mintcraft" element={<MintcraftDL />} />
 					<Route
-						path="/projects/mintcraft/splashes"
-						component={MintcraftSplashes}
+						path="/downloads/mintcraft/splashes"
+						element={<MintcraftSplashes />}
 					/>
-					<Route path="/projects/win10tiles" component={Win10TilesDL} />
+					<Route path="/downloads/win10tiles" element={<Win10TilesDL />} />
 
 					{/* Works of 2022 */}
-					<Route path="/projects/2022/book" component={Book} />
-					<Route path="/projects/2022/mintbanners" component={MintBanners} />
-					<Route path="/projects/2022/wiimenu" component={WiiMenu} />
-					<Route path="/projects/2022/geoices" component={Geoices} />
-					<Route path="/projects/2022/suserebrand" component={suseRebrand} />
-					<Route path="/projects/2022/statistics" component={Statistics} />
-					<Route path="/projects/2022/ipad" component={Ipad} />
-					<Route path="/projects/2022/ford" component={Ford} />
-					<Route path="/projects/2022/archwall" component={ArchWall} />
+					<Route path="/works" element={<Works />} />
+					<Route path="/works/2022/book" element={<Book />} />
+					<Route path="/works/2022/mintbanners" element={<MintBanners />} />
+					<Route path="/works/2022/wiimenu" element={<WiiMenu />} />
+					<Route path="/works/2022/geoices" element={<Geoices />} />
+					<Route path="/works/2022/suserebrand" element={<SuseRebrand />} />
+					<Route path="/works/2022/statistics" element={<Statistics />} />
+					<Route path="/works/2022/ipad" element={<Ipad />} />
+					<Route path="/works/2022/ford" element={<Ford />} />
+					<Route path="/works/2022/archwall" element={<ArchWall />} />
 
 					{/* Works of 2021 */}
-					<Route path="/projects/2021/manjarowall" component={ManjaroWall} />
+					<Route path="/works/2021/manjarowall" element={<ManjaroWall />} />
 
-					<Route path="/contact" exact component={Contact} />
-					<Route path="/privacy" exact component={PrivacyPolicy} />
-					<Route path="/test" exact component={Test} />
-					<Route path="/healthsafety" exact component={HealthSafety} />
+					<Route path="/contact" element={<Contact />} />
+					<Route path="/privacy" element={<PrivacyPolicy />} />
+					<Route path="/test" element={<Test />} />
+					<Route path="/healthsafety" element={<HealthSafety />} />
 
-					<Redirect from="/works" to="/projects" />
-					<Redirect from="/downloads" to="/projects" />
-					<Redirect from="/projects/2022" exact to="/projects" />
-					<Redirect from="/projects/2021" exact to="/projects" />
+					{/* <Redirect from="/works" to="/downloads" />
+					<Redirect from="/downloads" to="/downloads" />
+					<Redirect from="/downloads/2022" exact to="/downloads" />
+					<Redirect from="/downloads/2021" exact to="/downloads" />
 					<Redirect from="/faq" to="/contact" />
-					<Redirect from="/mintcraft" to="/projects/mintcraft" />
-					<Redirect from="/splashes" exact to="/projects/mintcraft/splashes" />
-					<Redirect from="/mintsans" to="/projects/mintsans" />
-					<Redirect from="/mintalt" to="/projects/mintalt" />
-					<Redirect from="/win10tiles" to="/projects/win10tiles" />
+					<Redirect from="/mintcraft" to="/downloads/mintcraft" />
+					<Redirect from="/splashes" exact to="/downloads/mintcraft/splashes" />
+					<Redirect from="/mintsans" to="/downloads/mintsans" />
+					<Redirect from="/mintalt" to="/downloads/mintalt" />
+					<Redirect from="/win10tiles" to="/downloads/win10tiles" /> */}
 
-					<Route component={Error404} />
-				</Switch>
-
-				<footer>
-					<Divider />
-					<div className="copyright">
-						<Typography variant="body2">
-							{t("common.footer.madeWith")}
-							<RiHeartFill color="var(--redSecondary)" />
-							{t("common.footer.andCoffee")}
-						</Typography>
-						<Typography>
-							<Link to="/privacy">{t("common.footer.privacyPolicy")}</Link>
-						</Typography>
-					</div>
-					<br />
-					<Stack
-						id="footerButtons"
-						spacing={2}
-						direction="row"
-						sx={{ justifyContent: "center", alignItems: "center" }}
-					>
-						<IconLink href="https://www.youtube.com/c/pprmint">
-							<RiYoutubeLine />
-						</IconLink>
-						<IconLink href="https://github.com/pprmint">
-							<RiGithubLine />
-						</IconLink>
-						<IconLink href="https://discord.com/invite/Vw9JXwr">
-							<RiDiscordLine />
-						</IconLink>
-					</Stack>
-				</footer>
+					<Route path="*" element={<Error404 />} />
+				</Routes>
 			</ScrollToTop>
-		</Router>
+
+			<footer>
+				<Divider />
+				<div className="copyright">
+					<Typography variant="body2">
+						{t("common.footer.madeWith")}
+						<FiHeart color="var(--redSecondary)" />
+						{t("common.footer.andCoffee")}
+					</Typography>
+					<Typography>
+						<Link to="/privacy">{t("common.footer.privacyPolicy")}</Link>
+					</Typography>
+				</div>
+				<br />
+				<Stack
+					id="footerButtons"
+					spacing={2}
+					direction="row"
+					sx={{ justifyContent: "center", alignItems: "center" }}
+				>
+					<IconLink href="https://www.youtube.com/c/pprmint">
+						<SiYoutube />
+					</IconLink>
+					<IconLink href="https://github.com/pprmint">
+						<SiGithub />
+					</IconLink>
+					<IconLink href="https://discord.com/invite/Vw9JXwr">
+						<SiDiscord />
+					</IconLink>
+				</Stack>
+			</footer>
+		</React.Fragment>
 	);
 }
-
-export default App;

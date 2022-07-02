@@ -16,9 +16,8 @@ import {
 	Divider,
 	Skeleton,
 	CardActions,
-	CircularProgress,
 } from "@mui/material";
-import Image from "mui-image";
+import Image from "@jy95/material-ui-image";
 import { useTranslation } from "react-i18next";
 import Lottie from "react-lottie";
 
@@ -29,14 +28,18 @@ import NewsDomain from "./assets/newdomain.svg";
 import NewsMintcraft from "./assets/mintcraft.svg";
 import NewsTwitterDelete from "./assets/twitterDelete.svg";
 import {
-	RiArrowDownLine,
-	RiArrowLeftSLine,
-	RiArrowRightSLine,
-	RiArrowRightUpLine,
-	RiDiscordLine,
-	RiGithubLine,
-	RiYoutubeLine,
-} from "react-icons/ri";
+	FiArrowDown,
+	FiArrowLeft,
+	FiArrowRight,
+	FiArrowUpRight,
+} from "react-icons/fi";
+import {
+	SiDiscord,
+	SiGithub,
+	SiYoutube,
+	SiAnilist,
+	SiLastdotfm,
+} from "react-icons/si";
 
 function ReadMore(
 	props: React.PropsWithChildren<{
@@ -47,7 +50,7 @@ function ReadMore(
 		keyPrefix: "home.section.news.announcement.common",
 	});
 	return (
-		<>
+		<React.Fragment>
 			<Box
 				p={2}
 				sx={{
@@ -58,7 +61,7 @@ function ReadMore(
 					<Button size="small">{t("tellMore")}</Button>
 				</Link>
 			</Box>
-		</>
+		</React.Fragment>
 	);
 }
 
@@ -72,7 +75,7 @@ const announcements = [
 		id: "mintcraft15",
 		date: "20.04.2022",
 		imageSrc: NewsMintcraft,
-		actions: <ReadMore link="/projects/mintcraft" />,
+		actions: <ReadMore link="/downloads/mintcraft" />,
 	},
 	{
 		id: "german",
@@ -113,7 +116,7 @@ export default function Home() {
 	};
 
 	return (
-		<>
+		<React.Fragment>
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>{t("meta.title")}</title>
@@ -136,24 +139,20 @@ export default function Home() {
 				<Lottie
 					options={lottieOptions}
 					isClickToPauseDisabled={true}
-                    height="auto"
+					height="auto"
 				/>
 				<Container className="title">
 					<Typography variant="h1">{t("title.main")}</Typography>
 					<Typography variant="h2">{t("title.sub")}</Typography>
 					<br />
-					<RiArrowDownLine size={25} color="#0c6" />
+					<FiArrowDown size={25} color="#0c6" />
 				</Container>
 			</div>
 			<div className="section" id="about">
 				<Container>
 					<ScrollAnimation animateIn="fadeBottom" animateOnce>
 						<Typography variant="h1">{t("section.about.title")}</Typography>
-						<Typography variant="body1">
-							{t("section.about.intro1")}
-							<Link to="/about">{t("section.about.aboutMePage")}</Link>
-							{t("section.about.intro2")}
-						</Typography>
+						<Typography variant="body1">{t("section.about.text")}</Typography>
 					</ScrollAnimation>
 				</Container>
 				<br />
@@ -165,12 +164,12 @@ export default function Home() {
 								<Card variant="outlined">
 									<CardContent>
 										<Typography variant="h2">
-											<RiYoutubeLine
+											<SiYoutube
 												style={{
 													position: "relative",
 													top: "4px",
 													marginRight: "12px",
-													color: "#ff0000",
+													color: "#fc2323",
 												}}
 											/>
 											{t("section.about.youtube.title")}
@@ -188,7 +187,7 @@ export default function Home() {
 											>
 												<Button
 													color="inherit"
-													endIcon={<RiArrowRightUpLine />}
+													endIcon={<FiArrowUpRight />}
 												>
 													{t("section.about.youtube.subscribe")}
 												</Button>
@@ -203,12 +202,12 @@ export default function Home() {
 								<Card variant="outlined">
 									<CardContent>
 										<Typography variant="h2">
-											<RiGithubLine
+											<SiGithub
 												style={{
 													position: "relative",
 													top: "4px",
 													marginRight: "12px",
-													color: "#1f6feb",
+													color: "#fcfcfc",
 												}}
 											/>
 											{t("section.about.github.title")}
@@ -226,7 +225,7 @@ export default function Home() {
 											>
 												<Button
 													color="inherit"
-													endIcon={<RiArrowRightUpLine />}
+													endIcon={<FiArrowUpRight />}
 												>
 													{t("section.about.github.follow")}
 												</Button>
@@ -241,12 +240,12 @@ export default function Home() {
 								<Card variant="outlined">
 									<CardContent>
 										<Typography variant="h2">
-											<RiDiscordLine
+											<SiDiscord
 												style={{
 													position: "relative",
 													top: "4px",
 													marginRight: "12px",
-													color: "#5865F2",
+													color: "#6e7af1",
 												}}
 											/>
 											{t("section.about.discord.title")}
@@ -264,9 +263,85 @@ export default function Home() {
 											>
 												<Button
 													color="inherit"
-													endIcon={<RiArrowRightUpLine />}
+													endIcon={<FiArrowUpRight />}
 												>
 													{t("section.about.discord.join")}
+												</Button>
+											</a>
+										</Box>
+									</CardActions>
+								</Card>
+							</ScrollAnimation>
+						</Grid>
+						<Grid item xs={12} sm={4}>
+							<ScrollAnimation animateIn="fadeBottom" animateOnce>
+								<Card variant="outlined">
+									<CardContent>
+										<Typography variant="h2">
+											<SiAnilist
+												style={{
+													position: "relative",
+													top: "4px",
+													marginRight: "12px",
+													color: "#25b3fc",
+												}}
+											/>
+											{t("section.about.anilist.title")}
+										</Typography>
+										<Typography variant="body2">
+											{t("section.about.anilist.text")}
+										</Typography>
+									</CardContent>
+									<CardActions>
+										<Box sx={{ marginLeft: "auto" }}>
+											<a
+												href="https://anilist.co/user/pprmint/"
+												target="_blank"
+												rel="noopener noreferrer"
+											>
+												<Button
+													color="inherit"
+													endIcon={<FiArrowUpRight />}
+												>
+													{t("section.about.anilist.follow")}
+												</Button>
+											</a>
+										</Box>
+									</CardActions>
+								</Card>
+							</ScrollAnimation>
+						</Grid>
+						<Grid item xs={12} sm={4}>
+							<ScrollAnimation animateIn="fadeBottom" animateOnce>
+								<Card variant="outlined">
+									<CardContent>
+										<Typography variant="h2">
+											<SiLastdotfm
+												style={{
+													position: "relative",
+													top: "4px",
+													marginRight: "12px",
+													color: "#d93129",
+												}}
+											/>
+											{t("section.about.lastfm.title")}
+										</Typography>
+										<Typography variant="body2">
+											{t("section.about.lastfm.text")}
+										</Typography>
+									</CardContent>
+									<CardActions>
+										<Box sx={{ marginLeft: "auto" }}>
+											<a
+												href="https://www.last.fm/user/npprmint"
+												target="_blank"
+												rel="noopener noreferrer"
+											>
+												<Button
+													color="inherit"
+													endIcon={<FiArrowUpRight />}
+												>
+													{t("section.about.lastfm.follow")}
 												</Button>
 											</a>
 										</Box>
@@ -287,7 +362,7 @@ export default function Home() {
 								</Typography>
 								<br />
 								<Card variant="outlined">
-									<Link to="/projects/2022/book">
+									<Link to="/works/2022/book">
 										<Button
 											color="inherit"
 											sx={{
@@ -301,9 +376,16 @@ export default function Home() {
 											<Image
 												src="https://media.pprmint.art/2022/Book/Book.jpg"
 												alt={t("section.recent.name")}
-												duration={1000}
-												easing="ease-out"
-												showLoading={<CircularProgress />}
+												color="transparent"
+												aspectRatio={16 / 9}
+												loading={
+													<Skeleton
+														variant="rectangular"
+														width="100%"
+														height="100%"
+														animation="wave"
+													/>
+												}
 											/>
 										</Button>
 									</Link>
@@ -366,9 +448,16 @@ export default function Home() {
 																			item.id +
 																			".imageAlt"
 																	)}
-																	duration={1000}
-																	easing="ease-out"
-																	showLoading={<CircularProgress />}
+																	color="transparent"
+																	aspectRatio={16 / 9}
+																	loading={
+																		<Skeleton
+																			variant="rectangular"
+																			width="100%"
+																			height="100%"
+																			animation="wave"
+																		/>
+																	}
 																/>
 															</Box>
 															<Box p={1}>
@@ -379,6 +468,7 @@ export default function Home() {
 																			".boldText"
 																	)}
 																</Typography>
+                                                                <br />
 																<Typography variant="body1">
 																	{t(
 																		"section.news.announcement." +
@@ -404,7 +494,7 @@ export default function Home() {
 													size="small"
 													onClick={handleNext}
 													disabled={activeStep === maxSteps - 1}
-													endIcon={<RiArrowRightSLine />}
+													endIcon={<FiArrowRight />}
 												>
 													{t("section.news.next")}
 												</Button>
@@ -414,7 +504,7 @@ export default function Home() {
 													size="small"
 													onClick={handleBack}
 													disabled={activeStep === 0}
-													startIcon={<RiArrowLeftSLine />}
+													startIcon={<FiArrowLeft />}
 												>
 													{t("section.news.previous")}
 												</Button>
@@ -427,6 +517,6 @@ export default function Home() {
 					</Grid>
 				</Grid>
 			</Container>
-		</>
+		</React.Fragment>
 	);
 }

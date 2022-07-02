@@ -1,3 +1,4 @@
+import React from "react";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -7,16 +8,15 @@ import {
 	Skeleton,
 	Container,
 	Box,
-	CircularProgress,
 } from "@mui/material";
-import Image from "mui-image";
+import Image from "@jy95/material-ui-image";
 
 export default function iPad() {
 	const { t } = useTranslation("translation", {
-		keyPrefix: "projects.works.2022.iPad",
+		keyPrefix: "works.2022.iPad",
 	});
 	return (
-		<>
+		<React.Fragment>
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>{t("meta.title")}</title>
@@ -30,10 +30,7 @@ export default function iPad() {
 				<meta property="og:image:width" content="1280" />
 				<meta property="og:image:height" content="720" />
 				<meta property="og:title" content="iPad." />
-				<meta
-					property="og:url"
-					content="https://pprmint.art/projects/2022/ipad"
-				/>
+				<meta property="og:url" content="https://pprmint.art/works/2022/ipad" />
 			</Helmet>
 			<Container className="title">
 				<Typography variant="h1">{t("title.main")}</Typography>
@@ -51,9 +48,9 @@ export default function iPad() {
 						<Image
 							src="https://media.pprmint.art/2022/iPad/iPad.png"
 							alt="An iPad made as part of a completely differnet project."
-							duration={1000}
-							easing="ease-out"
-							showLoading={<CircularProgress />}
+							color="transparent"
+							aspectRatio={16/9}
+							loading={<Skeleton variant="rectangular" width="100%" height="100%" animation="wave" />}
 						/>
 					</a>
 					<br />
@@ -62,6 +59,6 @@ export default function iPad() {
 					</Typography>
 				</ScrollAnimation>
 			</div>
-		</>
+		</React.Fragment>
 	);
 }

@@ -1,3 +1,4 @@
+import React from "react";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -5,16 +6,15 @@ import {
 	Typography,
 	Skeleton,
 	Container,
-	CircularProgress,
 } from "@mui/material";
-import Image from "mui-image";
+import Image from "@jy95/material-ui-image";
 
 export default function Ford() {
 	const { t } = useTranslation("translation", {
-		keyPrefix: "projects.works.2022.ford",
+		keyPrefix: "works.2022.ford",
 	});
 	return (
-		<>
+		<React.Fragment>
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>{t("meta.title")}</title>
@@ -34,10 +34,7 @@ export default function Ford() {
 				<meta property="og:image:width" content="1280" />
 				<meta property="og:image:height" content="720" />
 				<meta property="og:title" content="Arch wallpaper." />
-				<meta
-					property="og:url"
-					content="https://pprmint.art/projects/2022/Ford"
-				/>
+				<meta property="og:url" content="https://pprmint.art/works/2022/Ford" />
 			</Helmet>
 			<Container className="title">
 				<Typography variant="h1">{t("title.main")}</Typography>
@@ -62,11 +59,17 @@ export default function Ford() {
 					>
 						<Image
 							src="https://media.pprmint.art/2022/Ford/Ford-b.svg"
-							width="100%"
 							alt="Ford logo outline on a blue background."
-							duration={1000}
-							easing="ease-out"
-							showLoading={<CircularProgress />}
+							aspectRatio={16 / 9}
+							color="transparent"
+							loading={
+								<Skeleton
+									variant="rectangular"
+									width="100%"
+									height="100%"
+									animation="wave"
+								/>
+							}
 						/>
 					</a>
 				</ScrollAnimation>
@@ -77,15 +80,21 @@ export default function Ford() {
 					>
 						<Image
 							src="https://media.pprmint.art/2022/Ford/Ford-slogan.svg"
-							width="100%"
 							alt="Slogan, literally translated from the German one currently in use... I think."
-							duration={1000}
-							easing="ease-out"
-							showLoading={<CircularProgress />}
+							aspectRatio={16 / 9}
+							color="transparent"
+							loading={
+								<Skeleton
+									variant="rectangular"
+									width="100%"
+									height="100%"
+									animation="wave"
+								/>
+							}
 						/>
 					</a>
 				</ScrollAnimation>
 			</div>
-		</>
+		</React.Fragment>
 	);
 }

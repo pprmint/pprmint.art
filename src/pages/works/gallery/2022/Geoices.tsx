@@ -1,3 +1,4 @@
+import React from "react";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -5,16 +6,15 @@ import {
 	Typography,
 	Skeleton,
 	Container,
-	CircularProgress,
 } from "@mui/material";
-import Image from "mui-image";
+import Image from "@jy95/material-ui-image";
 
 export default function Geoices() {
 	const { t } = useTranslation("translation", {
-		keyPrefix: "projects.works.2022.geoices",
+		keyPrefix: "works.2022.geoices",
 	});
 	return (
-		<>
+		<React.Fragment>
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>{t("meta.title")}</title>
@@ -36,7 +36,7 @@ export default function Geoices() {
 				<meta property="og:title" content="3D remake of Geoices' logo." />
 				<meta
 					property="og:url"
-					content="https://pprmint.art/projects/works/2022/geoices"
+					content="https://pprmint.art/works/works/2022/geoices"
 				/>
 			</Helmet>
 			<Container className="title">
@@ -62,13 +62,20 @@ export default function Geoices() {
 							src="https://media.pprmint.art/2022/Geoices/geoballs.png"
 							width="100%"
 							alt="A 3D remake of Geoices' logo made with Cinema 4D and Octane."
-							duration={1000}
-							easing="ease-out"
-							showLoading={<CircularProgress />}
+							color="transparent"
+							aspectRatio={16 / 9}
+							loading={
+								<Skeleton
+									variant="rectangular"
+									width="100%"
+									height="100%"
+									animation="wave"
+								/>
+							}
 						/>
 					</a>
 				</ScrollAnimation>
 			</div>
-		</>
+		</React.Fragment>
 	);
 }

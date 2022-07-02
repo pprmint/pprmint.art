@@ -1,6 +1,6 @@
-import React, { Suspense } from "react";
-import ReactDOM from "react-dom";
-import * as serviceWorker from "./serviceWorker";
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./index.scss";
 
@@ -89,7 +89,7 @@ const darkTheme = createTheme({
 		MuiSkeleton: {
 			styleOverrides: {
 				root: {
-					backgroundColor: "transparent",
+                    backgroundColor: "transparent",
 				},
 			},
 		},
@@ -97,7 +97,7 @@ const darkTheme = createTheme({
 			styleOverrides: {
 				root: {
 					borderRadius: 24,
-                    paddingLeft: 16,
+					paddingLeft: 16,
 					paddingRight: 16,
 				},
 			},
@@ -188,18 +188,14 @@ import {
 	LinearProgress,
 } from "@mui/material";
 
-ReactDOM.render(
-	<Suspense fallback={<LinearProgress color="inherit" />}>
-		<StyledEngineProvider injectFirst>
-			<ThemeProvider theme={darkTheme}>
-				<CssBaseline />
-				<React.StrictMode>
-					<App />
-				</React.StrictMode>
-			</ThemeProvider>
-		</StyledEngineProvider>
-	</Suspense>,
-	document.getElementById("root")
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+	<StyledEngineProvider injectFirst>
+		<ThemeProvider theme={darkTheme}>
+			<CssBaseline />
+			<BrowserRouter>
+				<App />
+			</BrowserRouter>
+		</ThemeProvider>
+	</StyledEngineProvider>
 );
-
-serviceWorker.unregister();

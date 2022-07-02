@@ -7,7 +7,7 @@ import {
 	Typography,
 	Slide,
 } from "@mui/material";
-import { RiCloseLine } from "react-icons/ri";
+import { FiX } from "react-icons/fi";
 
 export default function CookieSnackbar() {
     const { t } = useTranslation("translation", {
@@ -36,7 +36,7 @@ export default function CookieSnackbar() {
 			}
 			action={
 				<IconButton onClick={() => setVisible(false)}>
-					<RiCloseLine />
+					<FiX />
 				</IconButton>
 			}
 		></Snackbar>

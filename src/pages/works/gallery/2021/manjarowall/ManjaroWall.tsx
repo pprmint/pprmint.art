@@ -3,19 +3,17 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import {
 	Typography,
-	Card,
 	Skeleton,
 	Container,
-	CircularProgress,
 } from "@mui/material";
 
-import Image from "mui-image";
+import Image from "@jy95/material-ui-image";
 
 import SlideOne from "./assets/nyanjaro-cat.png";
 
 function ManjaroWall() {
 	return (
-		<>
+		<React.Fragment>
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>Manjaro wallpaper • pprmint.art</title>
@@ -35,11 +33,16 @@ function ManjaroWall() {
 					<a href={SlideOne} target="_blank">
 						<Image
 							src={SlideOne}
-							width="100%"
-							alt="The wallpaper in all its glory."
-							duration={1000}
-							easing="ease-out"
-							showLoading={<CircularProgress />}
+							color="transparent"
+							aspectRatio={16 / 9}
+							loading={
+								<Skeleton
+									variant="rectangular"
+									width="100%"
+									height="100%"
+									animation="wave"
+								/>
+							}
 						/>
 					</a>
 					<br />
@@ -48,7 +51,7 @@ function ManjaroWall() {
 					</Typography>
 				</div>
 			</div>
-		</>
+		</React.Fragment>
 	);
 }
 

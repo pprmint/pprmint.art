@@ -10,7 +10,7 @@ import {
 	Divider,
 	Box,
 } from "@mui/material";
-import { RiCloseLine, RiSettings4Line } from "react-icons/ri";
+import { FiX, FiSettings } from "react-icons/fi";
 import LanguageSetting from "./LanguageInit";
 import ThemeSetting from "./ThemeInit";
 
@@ -27,10 +27,10 @@ const Settings = () => {
 		setAnchorEl(null);
 	};
 	return (
-		<>
+		<React.Fragment>
 			<Button
 				color="inherit"
-				startIcon={<RiSettings4Line />}
+				startIcon={<FiSettings />}
 				onClick={handleClick}
 			>
 				{t("common.settings.title")}
@@ -52,7 +52,7 @@ const Settings = () => {
 							size="large"
 							sx={{ display: { xs: "inline-flex", md: "none" } }}
 						>
-							<RiCloseLine />
+							<FiX />
 						</IconButton>
 					</Box>
 					<Typography
@@ -74,7 +74,7 @@ const Settings = () => {
 							size="large"
 							sx={{ display: { xs: "none", md: "inline-flex" } }}
 						>
-							<RiCloseLine />
+							<FiX />
 						</IconButton>
 					</Box>
 				</Box>
@@ -83,7 +83,7 @@ const Settings = () => {
 				{/* <Divider />
                 <ThemeSetting /> */}
 			</Dialog>
-		</>
+		</React.Fragment>
 	);
 };
 export default Settings;

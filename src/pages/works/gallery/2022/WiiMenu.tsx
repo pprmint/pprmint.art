@@ -1,3 +1,4 @@
+import React from "react";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -24,10 +25,10 @@ const channels = [
 
 export default function WiiMenu() {
 	const { t } = useTranslation("translation", {
-		keyPrefix: "projects.works.2022.wiiRemake",
+		keyPrefix: "works.2022.wiiRemake",
 	});
 	return (
-		<>
+		<React.Fragment>
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>{t("meta.title")}</title>
@@ -46,7 +47,7 @@ export default function WiiMenu() {
 				<meta property="og:title" content="Wii Menu remake." />
 				<meta
 					property="og:url"
-					content="https://pprmint.art/projects/2022/wiimenu"
+					content="https://pprmint.art/works/2022/wiimenu"
 				/>
 			</Helmet>
 			<img src={Banner} className="hero" />
@@ -73,6 +74,6 @@ export default function WiiMenu() {
 					</ScrollAnimation>
 				))}
 			</div>
-		</>
+		</React.Fragment>
 	);
 }

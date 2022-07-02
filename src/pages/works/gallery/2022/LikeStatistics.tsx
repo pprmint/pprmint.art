@@ -1,3 +1,4 @@
+import React from "react";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -5,16 +6,15 @@ import {
 	Typography,
 	Skeleton,
 	Container,
-	CircularProgress,
 } from "@mui/material";
-import Image from "mui-image";
+import Image from "@jy95/material-ui-image";
 
 export default function LikeStatistics() {
 	const { t } = useTranslation("translation", {
-		keyPrefix: "projects.works.2022.likeStatistics",
+		keyPrefix: "works.2022.likeStatistics",
 	});
 	return (
-		<>
+		<React.Fragment>
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>{t("meta.title")}</title>
@@ -36,7 +36,7 @@ export default function LikeStatistics() {
 				<meta property="og:title" content="iPad." />
 				<meta
 					property="og:url"
-					content="https://pprmint.art/projects/works/2022/statistics"
+					content="https://pprmint.art/works/works/2022/statistics"
 				/>
 			</Helmet>
 			<Container className="title">
@@ -51,11 +51,17 @@ export default function LikeStatistics() {
 					>
 						<Image
 							src="https://media.pprmint.art/2022/Statistics/statistics.png"
-							width="100%"
 							alt="A nice dark statistic showing the likes for every percent from 2020 and 2021."
-							duration={1000}
-							easing="ease-out"
-							showLoading={<CircularProgress />}
+							aspectRatio={16 / 9}
+							color="transparent"
+							loading={
+								<Skeleton
+									variant="rectangular"
+									width="100%"
+									height="100%"
+									animation="wave"
+								/>
+							}
 						/>
 					</a>
 					<br />
@@ -66,6 +72,6 @@ export default function LikeStatistics() {
 					</Typography>
 				</ScrollAnimation>
 			</div>
-		</>
+		</React.Fragment>
 	);
 }
