@@ -52,7 +52,6 @@ export default function LikeStatistics() {
 						<Image
 							src="https://media.pprmint.art/2022/Statistics/statistics.png"
 							alt="A nice dark statistic showing the likes for every percent from 2020 and 2021."
-							aspectRatio={16 / 9}
 							color="transparent"
 							loading={
 								<Skeleton

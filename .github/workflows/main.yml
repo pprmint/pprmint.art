@@ -16,8 +16,9 @@ jobs:
       
       - name: Build.
         run: |
-          yarn install
-          yarn build
+          npm install -g pnpm
+          pnpm install
+          pnpm build
 
       - name: Deploy.
         uses: sebastianpopp/ftp-action@v2.0.0
