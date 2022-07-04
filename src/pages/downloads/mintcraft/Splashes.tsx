@@ -930,6 +930,15 @@ const splashes = [
 			</span>
 		),
 	},
+	{
+		text: <span>Me? On Twitter? I'd never!</span>,
+	},
+	{
+		text: <span>L + ratio!</span>,
+	},
+	{
+		text: <span>Like + RT to literally breathe air!</span>,
+	},
 ];
 
 function MintcraftSplashes() {

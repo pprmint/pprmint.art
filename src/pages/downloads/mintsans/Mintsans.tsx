@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import { Link as ScrollLink } from "react-scroll";
 import { useTranslation } from "react-i18next";
 import ScrollAnimation from "react-animate-on-scroll";
 import {
@@ -110,9 +111,33 @@ export default function MintsansDL() {
 			<img src={MintsansBanner} className="hero fullscreen" />
 			<div className="fullscreen">
 				<Container className="title">
+                <Grid container>
+						<Grid item sm={12} md={8}>
 					<img src={MintsansLogo} />
 					<Typography variant="h2">{t("title.sub")}</Typography>
-					<br />
+					</Grid>
+						<Grid
+							item
+							sm={12}
+							md={4}
+							sx={{
+								display: "flex",
+								alignItems: "center",
+								justifyContent: "center",
+							}}
+						>
+							<ScrollLink to="downloads" smooth>
+								<Button
+									variant="outlined"
+									size="large"
+									color="info"
+								>
+									{t("title.skipToDownloads")}
+								</Button>
+							</ScrollLink>
+						</Grid>
+					</Grid>
+                    <br />
 					<FiArrowDown size={25} color="#19f" />
 				</Container>
 			</div>
@@ -289,7 +314,7 @@ export default function MintsansDL() {
 					</ScrollAnimation>
 				</Container>
 			</div>
-			<div className="section" id="download">
+			<div className="section" id="downloads">
 				<Container>
 					<ScrollAnimation animateIn="fadeBottom" animateOnce>
 						<Typography variant="h1">

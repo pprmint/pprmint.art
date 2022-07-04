@@ -28,6 +28,7 @@ specifiers:
   react-router-dom: ^6.3.0
   react-router-transition: ^2.1.0
   react-scripts: ^5.0.1
+  react-scroll: ^1.8.7
   react-swipeable-views: ^0.14.0
   react-transition-group: ^4.4.2
   sass: ^1.53.0
@@ -60,6 +61,7 @@ dependencies:
   react-router-dom: 6.3.0_zpnidt7m3osuk7shl3s4oenomq
   react-router-transition: 2.1.0_lziecpw5dfhsvxdt6gbtolru54
   react-scripts: 5.0.1_4taioistqycyoittysnhtuj4va
+  react-scroll: 1.8.7_zpnidt7m3osuk7shl3s4oenomq
   react-swipeable-views: 0.14.0_react@18.0.0
   react-transition-group: 4.4.2_zpnidt7m3osuk7shl3s4oenomq
   sass: 1.53.0
@@ -8809,6 +8811,18 @@ packages:
       - webpack-cli
       - webpack-hot-middleware
       - webpack-plugin-serve
+    dev: false
+
+  /react-scroll/1.8.7_zpnidt7m3osuk7shl3s4oenomq:
+    resolution: {integrity: sha512-fBOIwweAlhicx8RqP9tQXn/Uhd+DTtVRjw+0VBsIn1Z+MjRYLhTZ0tMoTAU1vOD3dce8mI6copexI4yWII+Luw==}
+    peerDependencies:
+      react: ^15.5.4 || ^16.0.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^15.5.4 || ^16.0.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      lodash.throttle: 4.1.1
+      prop-types: 15.8.1
+      react: 18.0.0
+      react-dom: 18.0.0_react@18.0.0
     dev: false
 
   /react-side-effect/2.1.2_react@18.0.0:

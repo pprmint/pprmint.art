@@ -14,7 +14,8 @@ import {
 import { useTranslation } from "react-i18next";
 import ScrollAnimation from "react-animate-on-scroll";
 
-import MintcraftCardHeader from "./mintcraft/assets/mintcraft.svg";
+import MintcraftCardLogo from "./mintcraft/assets/mintcraft_card_logo.svg";
+import MintcraftCardBG from "./mintcraft/assets/mintcraft_card_bg.svg";
 import MintSansCardHeader from "./mintsans/assets/mintsans.svg";
 import MintAltCardHeader from "./mintalternative/assets/mintalt.svg";
 import Win10TilesCardHeader from "./win10tiles/assets/win10tiles.svg";
@@ -54,11 +55,15 @@ export default function Downloads() {
 						<Grid container spacing={3}>
 							<Grid item xs={12} md={6}>
 								<Card variant="outlined">
-									<CardMedia
-										component="img"
-										image={MintcraftCardHeader}
-										alt="Mintcraft logo"
-									/>
+									<Link to="/downloads/mintcraft">
+										<div className="cardHeader">
+                                            <div className="splash">
+                                                {t("section.project.mintcraft.splash")}
+                                            </div>
+											<img className="logo" src={MintcraftCardLogo} />
+											<img className="bg" src={MintcraftCardBG} />
+										</div>
+									</Link>
 									<CardContent>
 										<Typography variant="body1">
 											{t("section.project.mintcraft.cardText")}
@@ -66,7 +71,7 @@ export default function Downloads() {
 									</CardContent>
 									<CardActions>
 										<Button
-											href="https://download.pprmint.art/mintcraft/1.18/Mintcraft_1.5.1_(FullSauce).zip"
+											href="https://download.pprmint.art/mintcraft/1.19/Mintcraft_1.6_(FullSauce_1.19).zip"
 											download
 											color="warning"
 										>

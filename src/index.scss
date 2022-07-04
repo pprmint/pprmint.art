@@ -134,30 +134,12 @@ body {
 		transform: translateY(10px);
 	}
 }
-
-.mintBanner {
-	height: auto;
-	img {
-		position: absolute;
+@keyframes splash {
+	0% {
+		transform: scale(1) rotate(-10deg);
 	}
-	.M {
-		opacity: 0;
-		animation: mintBanner_M 1.86s cubic-bezier(0, 1, 0.5, 1) 0.2s forwards;
-	}
-	.I {
-		opacity: 0;
-		animation: mintBanner_I 1.84s cubic-bezier(0, 1, 0.5, 1) 0.22s forwards;
-	}
-	.N {
-		opacity: 0;
-		animation: mintBanner_N 1.82s cubic-bezier(0, 1, 0.5, 1) 0.24s forwards;
-	}
-	.T {
-		opacity: 0;
-		animation: mintBanner_T 1.8s cubic-bezier(0, 1, 0.5, 1) 0.26s forwards;
-	}
-	.gradient {
-		animation: mintBanner_grad 1.8s cubic-bezier(0, 1, 0.5, 1) 0.26s forwards;
+	100% {
+		transform: scale(1.05) rotate(-10deg);
 	}
 }
 
@@ -246,11 +228,11 @@ body {
 }
 
 .section {
-	margin-top: 10vh;
-	margin-bottom: 10vh;
+	padding-top: 10vh;
 }
 
 footer {
+    padding-top: 10vh;
 	text-align: center;
 	hr {
 		opacity: 0;
@@ -478,4 +460,53 @@ video {
 }
 .MuiAccordionDetails-root {
 	padding: 8px 24px 24px;
+}
+
+.MuiCard-root {
+	.cardHeader {
+		position: relative;
+		cursor: pointer;
+		.splash {
+			z-index: 3;
+			animation: splash 0.25s ease-out alternate infinite;
+			font-family: "MintBit", monospace;
+			font-size: 1.5rem;
+            line-height: 1;
+			position: absolute;
+			color: var(--yellowPrimary);
+			top: 60%;
+			left: 65%;
+			text-shadow: 2.4px 2.4px var(--backgroundSecondary);
+		}
+		img {
+			transition: all 0.375s var(--easeOut);
+			&.bg {
+				z-index: 1;
+				transform-origin: top;
+			}
+			&.logo {
+				z-index: 2;
+				position: absolute;
+			}
+		}
+		&:hover {
+			img {
+				&.bg {
+					transform: scale(1.05);
+				}
+			}
+		}
+		&:active {
+			img {
+				transition-duration: 0.2s;
+				&.bg {
+					transform: scale(1.025);
+				}
+				&.logo {
+					opacity: 0.75;
+					transform: scale(0.98);
+				}
+			}
+		}
+	}
 }

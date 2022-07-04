@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 import { Helmet } from "react-helmet";
 import {
 	Button,
@@ -21,13 +22,14 @@ import "./assets/mintbit/mintbit.css";
 import "./assets/buttonStyles.scss";
 
 import {
-    FiArrowDown,
+	FiArrowDown,
 	FiArrowUpRight,
 	FiPlus,
 	FiMinus,
 	FiDownload,
 	FiThumbsUp,
 	FiThumbsDown,
+    FiChevronsDown,
 } from "react-icons/fi";
 
 import Marquee from "react-fast-marquee";
@@ -49,20 +51,12 @@ import SaucyPack from "./assets/mintcraft_fullsauce_pack.svg";
 import MintbitPack from "./assets/mintbit_pack.svg";
 import SoundsPack from "./assets/sounds_pack.svg";
 
-const additions = [
-	"section.changes.addition.1",
-	"section.changes.addition.2",
-	"section.changes.addition.3",
-];
+const additions = [];
 
 const changes = [
 	"section.changes.update.1",
 	"section.changes.update.2",
 	"section.changes.update.3",
-	"section.changes.update.4",
-	"section.changes.update.5",
-	"section.changes.update.6",
-	"section.changes.update.7",
 ];
 
 const removals = [];
@@ -108,51 +102,34 @@ export default function MintcraftDL() {
 			<img src={MintcraftBanner} className="hero fullscreen" />
 			<div className="fullscreen">
 				<Container className="title">
-					<img src={MintcraftLogo} />
-					<Typography variant="h2">{t("title.sub")}</Typography>
+					<Grid container>
+						<Grid item sm={12} md={8}>
+							<img src={MintcraftLogo} />
+							<Typography variant="h2">{t("title.sub")}</Typography>
+						</Grid>
+						<Grid
+							item
+							sm={12}
+							md={4}
+							sx={{
+								display: "flex",
+								alignItems: "center",
+								justifyContent: "center",
+							}}
+						>
+							<ScrollLink to="downloads" smooth>
+								<Button
+									variant="outlined"
+									size="large"
+									color="warning"
+								>
+									{t("title.skipToDownloads")}
+								</Button>
+							</ScrollLink>
+						</Grid>
+					</Grid>
 					<br />
 					<FiArrowDown size={25} color="#fb2" />
-				</Container>
-			</div>
-			<div className="section" id="changes">
-				<Container>
-					<ScrollAnimation animateIn="fadeBottom" animateOnce>
-						<Typography variant="h1">
-							{t("section.changes.headline")}
-						</Typography>
-						<List>
-							{additions.map((addition, index) => (
-								<ListItem key={index}>
-									<ListItemIcon>
-										<FiPlus />
-									</ListItemIcon>
-									<ListItemText>{t(addition)}</ListItemText>
-								</ListItem>
-							))}
-						</List>
-						<List>
-							{changes.map((change, index) => (
-								<ListItem key={index}>
-									<ListItemIcon>
-										<FiArrowUpRight />
-									</ListItemIcon>
-									<ListItemText>{t(change)}</ListItemText>
-								</ListItem>
-							))}
-						</List>
-						<List>
-							{removals.map((removal, index) => (
-								<ScrollAnimation animateIn="fadeBottom" animateOnce>
-									<ListItem key={index}>
-										<ListItemIcon>
-											<FiMinus />
-										</ListItemIcon>
-										<ListItemText>{t(removal)}</ListItemText>
-									</ListItem>
-								</ScrollAnimation>
-							))}
-						</List>
-					</ScrollAnimation>
 				</Container>
 			</div>
 			<div className="section" id="screenshots">
@@ -202,6 +179,47 @@ export default function MintcraftDL() {
 						/>
 					</Marquee>
 				</ScrollAnimation>
+			</div>
+			<div className="section" id="changes">
+				<Container>
+					<ScrollAnimation animateIn="fadeBottom" animateOnce>
+						<Typography variant="h1">
+							{t("section.changes.headline")}
+						</Typography>
+						<List>
+							{additions.map((addition, index) => (
+								<ListItem key={index}>
+									<ListItemIcon>
+										<FiPlus />
+									</ListItemIcon>
+									<ListItemText>{t(addition)}</ListItemText>
+								</ListItem>
+							))}
+						</List>
+						<List>
+							{changes.map((change, index) => (
+								<ListItem key={index}>
+									<ListItemIcon>
+										<FiArrowUpRight />
+									</ListItemIcon>
+									<ListItemText>{t(change)}</ListItemText>
+								</ListItem>
+							))}
+						</List>
+						<List>
+							{removals.map((removal, index) => (
+								<ScrollAnimation animateIn="fadeBottom" animateOnce>
+									<ListItem key={index}>
+										<ListItemIcon>
+											<FiMinus />
+										</ListItemIcon>
+										<ListItemText>{t(removal)}</ListItemText>
+									</ListItem>
+								</ScrollAnimation>
+							))}
+						</List>
+					</ScrollAnimation>
+				</Container>
 			</div>
 			<div className="section" id="dontdothedo">
 				<Container>
@@ -477,9 +495,7 @@ export default function MintcraftDL() {
 						</Typography>
 						<List>
 							<ListItem>
-								<ListItemIcon>
-									1
-								</ListItemIcon>
+								<ListItemIcon>1</ListItemIcon>
 								<ListItemText>
 									<Typography variant="body1">
 										{t("section.installation.steps.installOptifine")}
@@ -496,9 +512,7 @@ export default function MintcraftDL() {
 								</ListItemText>
 							</ListItem>
 							<ListItem>
-								<ListItemIcon>
-									2
-								</ListItemIcon>
+								<ListItemIcon>2</ListItemIcon>
 								<ListItemText>
 									<Typography variant="body1">
 										{t("section.installation.steps.downloadPacks")}
@@ -506,9 +520,7 @@ export default function MintcraftDL() {
 								</ListItemText>
 							</ListItem>
 							<ListItem>
-								<ListItemIcon>
-									3
-								</ListItemIcon>
+								<ListItemIcon>3</ListItemIcon>
 								<ListItemText>
 									<Typography variant="body1">
 										{t("section.installation.steps.placeInFolder")}
@@ -516,9 +528,7 @@ export default function MintcraftDL() {
 								</ListItemText>
 							</ListItem>
 							<ListItem>
-								<ListItemIcon>
-									4
-								</ListItemIcon>
+								<ListItemIcon>4</ListItemIcon>
 								<ListItemText>
 									<Typography variant="body1">
 										{t("section.installation.steps.moveToTop")}
@@ -526,9 +536,7 @@ export default function MintcraftDL() {
 								</ListItemText>
 							</ListItem>
 							<ListItem>
-								<ListItemIcon>
-									5
-								</ListItemIcon>
+								<ListItemIcon>5</ListItemIcon>
 								<ListItemText>
 									<Typography variant="body1">
 										{t("section.installation.steps.digDown")}
@@ -539,9 +547,12 @@ export default function MintcraftDL() {
 					</ScrollAnimation>
 				</Container>
 			</div>
-			<div className="section">
+			<div className="section" id="downloads">
 				<Container>
 					<ScrollAnimation animateIn="fadeBottom" animateOnce>
+						<Typography variant="h1">
+							{t("section.download.headline")}
+						</Typography>
 						<Card variant="outlined" sx={{ p: 3 }}>
 							<Grid container spacing={4}>
 								<Grid item xs={4} md={2.4}>
@@ -561,12 +572,12 @@ export default function MintcraftDL() {
 									<br />
 									<Button
 										variant="contained"
-										href="https://download.pprmint.art/mintcraft/1.18/Mintcraft_1.5.1_(FullSauce).zip"
+										href="https://download.pprmint.art/mintcraft/1.19/Mintcraft_1.6_(FullSauce_1.19).zip"
 										download
 										color="warning"
 										startIcon={<FiDownload />}
 									>
-										{t("section.download.commonDownloadButton")}1.18
+										{t("section.download.commonDownloadButton")}1.19
 									</Button>
 								</Grid>
 							</Grid>
@@ -596,16 +607,24 @@ export default function MintcraftDL() {
 								<Stack spacing={2} direction="row">
 									<Button
 										variant="contained"
-										href="https://download.pprmint.art/mintcraft/1.18/Mintcraft_1.5.zip"
+										href="https://download.pprmint.art/mintcraft/1.19/Mintcraft_1.6_(1.19).zip"
 										download
 										color="warning"
 										startIcon={<FiDownload />}
 									>
-										{t("section.download.commonDownloadButton")}1.18
+										{t("section.download.commonDownloadButton")}1.19
 									</Button>
 									<Button
 										variant="outlined"
-										href="https://download.pprmint.art/mintcraft/1.17/Mintcraft_1.3.zip"
+										href="https://download.pprmint.art/mintcraft/1.18/Mintcraft_1.5_(1.18).zip"
+										download
+										color="inherit"
+									>
+										1.18
+									</Button>
+									<Button
+										variant="outlined"
+										href="https://download.pprmint.art/mintcraft/1.17/Mintcraft_1.3_(1.17).zip"
 										download
 										color="inherit"
 									>
@@ -613,7 +632,7 @@ export default function MintcraftDL() {
 									</Button>
 									<Button
 										variant="outlined"
-										href="https://download.pprmint.art/mintcraft/1.16/Mintcraft_1.1.zip"
+										href="https://download.pprmint.art/mintcraft/1.16/Mintcraft_1.1_(1.16).zip"
 										download
 										color="inherit"
 									>
@@ -647,16 +666,24 @@ export default function MintcraftDL() {
 								<Stack spacing={2} direction="row">
 									<Button
 										variant="contained"
-										href="https://download.pprmint.art/mintcraft/1.18/MintBit_Add-on_1.0.zip"
+										href="https://download.pprmint.art/mintcraft/1.19/MintBit_Add-on_1.0_(1.19).zip"
 										download
 										color="warning"
 										startIcon={<FiDownload />}
 									>
-										{t("section.download.commonDownloadButton")}1.18
+										{t("section.download.commonDownloadButton")}1.19
 									</Button>
 									<Button
 										variant="outlined"
-										href="https://download.pprmint.art/mintcraft/1.17/MintBit_Add-on_1.0.zip"
+										href="https://download.pprmint.art/mintcraft/1.18/MintBit_Add-on_1.0_(1.18).zip"
+										download
+										color="inherit"
+									>
+										1.18
+									</Button>
+									<Button
+										variant="outlined"
+										href="https://download.pprmint.art/mintcraft/1.17/MintBit_Add-on_1.0_(1.17).zip"
 										download
 										color="inherit"
 									>
@@ -664,7 +691,7 @@ export default function MintcraftDL() {
 									</Button>
 									<Button
 										variant="outlined"
-										href="https://download.pprmint.art/mintcraft/1.16/MintBit_Add-on_1.0.zip"
+										href="https://download.pprmint.art/mintcraft/1.16/MintBit_Add-on_1.0_(1.16).zip"
 										download
 										color="inherit"
 									>
@@ -699,16 +726,24 @@ export default function MintcraftDL() {
 								<Stack spacing={2} direction="row">
 									<Button
 										variant="contained"
-										href="https://download.pprmint.art/mintcraft/1.18/Sounds_Add-on_1.1.zip"
+										href="https://download.pprmint.art/mintcraft/1.19/Sounds_Add-on_1.1_(1.19).zip"
 										download
 										color="warning"
 										startIcon={<FiDownload />}
 									>
-										{t("section.download.commonDownloadButton")}1.18
+										{t("section.download.commonDownloadButton")}1.19
 									</Button>
 									<Button
 										variant="outlined"
-										href="https://download.pprmint.art/mintcraft/1.17/Sounds_Add-on_1.0.zip"
+										href="https://download.pprmint.art/mintcraft/1.18/Sounds_Add-on_1.1_(1.18).zip"
+										download
+										color="inherit"
+									>
+										1.18
+									</Button>
+									<Button
+										variant="outlined"
+										href="https://download.pprmint.art/mintcraft/1.17/Sounds_Add-on_1.0_(1.17).zip"
 										download
 										color="inherit"
 									>
@@ -716,7 +751,7 @@ export default function MintcraftDL() {
 									</Button>
 									<Button
 										variant="outlined"
-										href="https://download.pprmint.art/mintcraft/1.16/Sounds_Add-on_1.0.zip"
+										href="https://download.pprmint.art/mintcraft/1.16/Sounds_Add-on_1.0_(1.16).zip"
 										download
 										color="inherit"
 									>

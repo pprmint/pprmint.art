@@ -135,20 +135,13 @@
 			"section": {
 				"changes": {
 					"addition": {
-						"1": "Weitere Splash-Texte meiner Twitter-Follower hinzugefügt.",
-						"2": "Fehlende Texturen für gefrorene Herzen, Bündel, Spielmodi-Wechsler, Schmiedetisch, Texthintergründe für Fortschritte und andere Teile von Texturen hinzugefügt, die es in früheren Spielversionen nicht gab.",
-						"3": "Dunklere Blocktexturen für Fortschritte-Hintergründe hinzugefügt.",
-						"1more": "Vollständige Liste der Splash-Texte"
+						"1": ""
 					},
-					"headline": "Änderungen in Version 1.5",
+					"headline": "Änderungen in Version 1.6.",
 					"update": {
-						"1": "Uneinheitliche Farben aller Buttons und Container verbessert.",
-						"2": "Tabs im Fortschritte-Fenster verbessert.",
-						"3": "Ankreuzfeld welches beim ersten Öffnen des Mehrspieler-Bildschirms angezeigt wird verbessert.",
-						"4": "Texturen für Zaubertisch, Rezeptbuch, Ping-Anzeigen und Pfeile zur Welt-/Server-/Ressourcenpaket-Auswahl verbessert.",
-						"5": "Verschiedene Icons und Buttons für Realms angepasst.",
-						"6": "Buttons mit Symbolen angepasst, sodass sie jetzt wie solche mit Text einen Schatten werfen, wenn mit der Maus darübergefahren wird.",
-						"7": "Sprach-Dateien mit den Aktuellsten aus dem Vanilla Tweaks Dark-UI-Pack ersetzt. Nur für den Fall."
+						"1": "Versionsnummern für Kompatibilität mit 1.19-Update erhöht.",
+						"2": "Symbol für Sounds-Add-On überarbeitet.",
+						"3": "Pack-Dateien umbenannt, damit du nichts weiter tun musst, um ältere Spielversionen zu spielen."
 					}
 				},
 				"credits": {
@@ -156,7 +149,7 @@
 						"description": "Für seine eigenen Songs im Sounds-Add-on. Weitere Titel werden folgen.",
 						"name": "Blizzy?"
 					},
-					"headline": "Mitwirkende",
+					"headline": "Mitwirkende.",
 					"twitterFellas": {
 						"description1": "Ein herzliches Danke an ",
 						"description2": " und ",
@@ -165,7 +158,7 @@
 						"name": "Ein paar Leute auf Twitter"
 					},
 					"vanillatweaks": {
-						"description": "JSON-Dateien, um einige Textfarben zu korrigieren. Erinnerst du dich noch, wie ich sagte, dass dieses Paket nur mit 3 Sprachen kompatibel war? Ja, das wurde hiermit behoben.",
+						"description": "Korrekturen von Textfarben für dunkle Hintergründe.",
 						"name": "Vanilla Tweaks"
 					}
 				},
@@ -182,7 +175,7 @@
 						"headline": "Das darfst du nicht:",
 						"redistribute": "Hoste, verkaufe oder verbreite anderweitig Versionen, Teile und/oder Modifikationen von Mintcraft und/oder seinen Add-ons irgendwo öffentlich zum Download für andere."
 					},
-					"headline": "Dos and Don'ts"
+					"headline": "Dos and Don'ts."
 				},
 				"download": {
 					"addonFont": {
@@ -194,6 +187,7 @@
 						"name": "Sounds-Add-on"
 					},
 					"commonDownloadButton": "Download für ",
+					"headline": "Downloads.",
 					"mintcraft": {
 						"description": "Mein Ressourcenpaket versorgt dich mit Dark-Mode Containern, einer Ego-Farbpalette und vielen anderen Optimierungen. Einige Icons bewegen sich sogar, wenn man mit dem Mauszeiger über sie fährt!",
 						"name": "Mintcraft"
@@ -204,7 +198,7 @@
 					}
 				},
 				"installation": {
-					"headline": "Installation",
+					"headline": "Installation.",
 					"steps": {
 						"digDown": "Grabe gerade nach unten.",
 						"downloadPacks": "Scrolle runter und klicke auf einen Download-Knopf.",
@@ -215,6 +209,7 @@
 				}
 			},
 			"title": {
+				"skipToDownloads": "Zu Downloads springen",
 				"splashes": {
 					"main": "splashes.txt",
 					"sub": "Alle Splash-Texte in Mintcraft."
@@ -243,6 +238,7 @@
 				}
 			},
 			"title": {
+				"skipToDownloads": "Zu Downloads springen",
 				"sub": "Eine serifenlose Schriftart."
 			}
 		},
@@ -252,7 +248,8 @@
 					"cardText": "Ich habe mir die Material-Icons von Google angesehen und bemerkt, dass einige davon Text enthalten. Das Gute: Die Zahlen. Das Schlechte: Dieser dumme Name. Und die Seite für diese Schriftart. Die ist noch in Arbeit."
 				},
 				"mintcraft": {
-					"cardText": "Was als ein einfaches \"Ich mag die Farben der normalen Minecraft-Oberfläche nicht so\" anfing, endete als ein mit drei Spielversionen kompatibles Ressourcenpaket mit zwei Add-ons zum Ändern der Schriftart und des Sounds für Buttons."
+					"cardText": "Was als ein einfaches \"Ich mag die Farben der normalen Minecraft-Oberfläche nicht so\" anfing, endete als ein mit drei Spielversionen kompatibles Ressourcenpaket mit zwei Add-ons zum Ändern der Schriftart und des Sounds für Buttons.",
+					"splash": "Jetzt für 1.19!"
 				},
 				"mintsans": {
 					"cardText": "Mein erster Versuch, eine geometrische Schriftfamilie zu erstellen. Eine optimierte Version ist in Entwicklung und wird mindestens dreimal so lange dauern, wie ich für die Erstellung der folgenden Seite gebraucht habe."
@@ -300,6 +297,7 @@
 				}
 			},
 			"title": {
+				"skipToDownloads": "Zu Downloads springen",
 				"splashes": {
 					"main": "splashes.txt",
 					"sub": "Alle Splash-Texte in Mintcraft."
