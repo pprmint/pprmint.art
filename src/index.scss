@@ -493,19 +493,22 @@ video {
 		&:hover {
 			img {
 				&.bg {
-					transform: scale(1.05);
+					transform: scale(1.04);
 				}
+                &.logo {
+                    transform: scale(1.04);
+                }
 			}
 		}
 		&:active {
 			img {
-				transition-duration: 0.2s;
+				transition-duration: 0.15s;
 				&.bg {
-					transform: scale(1.025);
+					transform: scale(1.02);
 				}
 				&.logo {
-					opacity: 0.75;
-					transform: scale(0.98);
+					filter: brightness(0.8);
+					transform: scale(1.02);
 				}
 			}
 		}

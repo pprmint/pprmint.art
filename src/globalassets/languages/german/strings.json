@@ -140,8 +140,9 @@
 					"headline": "Änderungen in Version 1.6.",
 					"update": {
 						"1": "Versionsnummern für Kompatibilität mit 1.19-Update erhöht.",
-						"2": "Symbol für Sounds-Add-On überarbeitet.",
-						"3": "Pack-Dateien umbenannt, damit du nichts weiter tun musst, um ältere Spielversionen zu spielen."
+						"2": "Text-Shader von Vanilla Tweaks importiert, um JSON-Sprachdateien zu ersetzen.",
+						"3": "Pack-Dateien umbenannt, damit du nichts weiter tun musst, um ältere Spielversionen zu spielen.",
+						"4": "Symbol für Sounds-Add-On überarbeitet."
 					}
 				},
 				"credits": {
@@ -357,6 +358,12 @@
 						"fullText": "Ich habe nicht nur fragwürdige Splash-Texte einiger meiner Twitter-Follower, sondern auch fehlende Texturen (gefrorene Herzen, Schmiedetisch...) hinzugefügt, sowie Bestehende (Widgets, Ping-Anzeigen, Rezeptbuch...) verbessert. Schau's dir definitv an, denn habe ich dir erstmal erzählt, dass Texte auf Buttons immer einen Schatten warfen, der nur ein bisschen heller war als der Hintergrund, wirst du es nie wieder übersehen.",
 						"headline": "Mintcraft Version 1.5 verfügbar.",
 						"imageAlt": "Das Mintcraft-Logo mit der Versionsnummer 1.5 links daneben geschrieben. Im Hintergrund befindet sich die verbesserte Textur für das Rezeptbuch, welches nach links hin verschwindet."
+					},
+					"mintcraft16": {
+						"boldText": "Support für Minecraft 1.19.",
+						"fullText": "Dies ist ein kleineres Update, welches die Version erhöht, um mit dem neuesten Update des Spiels kompatibel zu sein, sowie ändert, wie Texte auf dunklen Oberflächen eingefärbt werden (Gruß an Vanilla Tweaks). Ich habe mir auch etwas Zeit genommen, um die Dateinamen einiger Packs zu verbessern, und die jeweilige Spielversion ans Ende geschrieben.",
+						"headline": "Mintcraft Version 1.6 verfügbar.",
+						"imageAlt": "Das Mintcraft-Logo mit der Versionsnummer 1.6 links daneben geschrieben. Dahinter befindet sich ein Steinblock, welcher nach unten hin verwischt."
 					},
 					"newDomain": {
 						"boldText": "Hast du hier vorher ein einziges Wort auf Deutsch gesehen? Eben.",

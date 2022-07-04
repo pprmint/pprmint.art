@@ -25,7 +25,8 @@ import MintBanner from "./assets/mintBanner.json";
 
 import NewsGerman from "./assets/german.svg";
 import NewsDomain from "./assets/newdomain.svg";
-import NewsMintcraft from "./assets/mintcraft.svg";
+import NewsMintcraft15 from "./assets/mintcraft15.svg";
+import NewsMintcraft16 from "./assets/mintcraft16.svg";
 import NewsTwitterDelete from "./assets/twitterDelete.svg";
 import {
 	FiArrowDown,
@@ -67,6 +68,12 @@ function ReadMore(
 
 const announcements = [
 	{
+		id: "mintcraft16",
+		date: "05.07.2022",
+		imageSrc: NewsMintcraft16,
+		actions: <ReadMore link="/downloads/mintcraft" />,
+	},
+	{
 		id: "twitterDelete",
 		date: "04.06.2022",
 		imageSrc: NewsTwitterDelete,
@@ -74,18 +81,8 @@ const announcements = [
 	{
 		id: "mintcraft15",
 		date: "20.04.2022",
-		imageSrc: NewsMintcraft,
+		imageSrc: NewsMintcraft15,
 		actions: <ReadMore link="/downloads/mintcraft" />,
-	},
-	{
-		id: "german",
-		date: "18.04.2022",
-		imageSrc: NewsGerman,
-	},
-	{
-		id: "newDomain",
-		date: "01.02.2022",
-		imageSrc: NewsDomain,
 	},
 ];
 
@@ -185,10 +182,7 @@ export default function Home() {
 												target="_blank"
 												rel="noopener noreferrer"
 											>
-												<Button
-													color="inherit"
-													endIcon={<FiArrowUpRight />}
-												>
+												<Button color="inherit" endIcon={<FiArrowUpRight />}>
 													{t("section.about.youtube.subscribe")}
 												</Button>
 											</a>
@@ -223,10 +217,7 @@ export default function Home() {
 												target="_blank"
 												rel="noopener noreferrer"
 											>
-												<Button
-													color="inherit"
-													endIcon={<FiArrowUpRight />}
-												>
+												<Button color="inherit" endIcon={<FiArrowUpRight />}>
 													{t("section.about.github.follow")}
 												</Button>
 											</a>
@@ -261,10 +252,7 @@ export default function Home() {
 												target="_blank"
 												rel="noopener noreferrer"
 											>
-												<Button
-													color="inherit"
-													endIcon={<FiArrowUpRight />}
-												>
+												<Button color="inherit" endIcon={<FiArrowUpRight />}>
 													{t("section.about.discord.join")}
 												</Button>
 											</a>
@@ -299,10 +287,7 @@ export default function Home() {
 												target="_blank"
 												rel="noopener noreferrer"
 											>
-												<Button
-													color="inherit"
-													endIcon={<FiArrowUpRight />}
-												>
+												<Button color="inherit" endIcon={<FiArrowUpRight />}>
 													{t("section.about.anilist.follow")}
 												</Button>
 											</a>
@@ -337,10 +322,7 @@ export default function Home() {
 												target="_blank"
 												rel="noopener noreferrer"
 											>
-												<Button
-													color="inherit"
-													endIcon={<FiArrowUpRight />}
-												>
+												<Button color="inherit" endIcon={<FiArrowUpRight />}>
 													{t("section.about.lastfm.follow")}
 												</Button>
 											</a>
@@ -407,12 +389,14 @@ export default function Home() {
 									<Card variant="outlined">
 										<Paper
 											square
-											elevation={2}
+											elevation={3}
 											sx={{
 												display: "flex",
 												alignItems: "center",
 												height: 64,
 												p: 3,
+												zIndex: 2,
+												position: "relative",
 											}}
 										>
 											<Typography
@@ -439,8 +423,8 @@ export default function Home() {
 											{announcements.map((item, index) => (
 												<div key={item.id}>
 													{Math.abs(activeStep - index) <= 2 ? (
-														<Container>
-															<Box p={3}>
+														<Box>
+															<Box sx={{ zIndex: 1 }}>
 																<Image
 																	src={item.imageSrc}
 																	alt={t(
@@ -460,7 +444,7 @@ export default function Home() {
 																	}
 																/>
 															</Box>
-															<Box p={1}>
+															<Box pl={4} pr={4} pb={3}>
 																<Typography variant="h3">
 																	{t(
 																		"section.news.announcement." +
@@ -468,7 +452,7 @@ export default function Home() {
 																			".boldText"
 																	)}
 																</Typography>
-                                                                <br />
+																<br />
 																<Typography variant="body1">
 																	{t(
 																		"section.news.announcement." +
@@ -478,7 +462,7 @@ export default function Home() {
 																</Typography>
 																{item.actions}
 															</Box>
-														</Container>
+														</Box>
 													) : null}
 												</div>
 											))}

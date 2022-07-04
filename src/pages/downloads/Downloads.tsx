@@ -16,9 +16,15 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 import MintcraftCardLogo from "./mintcraft/assets/mintcraft_card_logo.svg";
 import MintcraftCardBG from "./mintcraft/assets/mintcraft_card_bg.svg";
-import MintSansCardHeader from "./mintsans/assets/mintsans.svg";
-import MintAltCardHeader from "./mintalternative/assets/mintalt.svg";
-import Win10TilesCardHeader from "./win10tiles/assets/win10tiles.svg";
+
+import MintsansCardLogo from "./mintsans/assets/mintsans_card_logo.svg";
+import MintsansCardBG from "./mintsans/assets/mintsans_card_bg.svg";
+
+import MintAltCardLogo from "./mintalternative/assets/mintalt_card_logo.svg";
+import MintAltCardBG from "./mintalternative/assets/mintalt_card_bg.svg";
+
+import Win10TilesCardLogo from "./win10tiles/assets/tiles_card_logo.svg";
+import Win10TilesCardBG from "./win10tiles/assets/tiles_card_bg.svg";
 
 export default function Downloads() {
 	const { t } = useTranslation("translation", {
@@ -57,9 +63,9 @@ export default function Downloads() {
 								<Card variant="outlined">
 									<Link to="/downloads/mintcraft">
 										<div className="cardHeader">
-                                            <div className="splash">
-                                                {t("section.project.mintcraft.splash")}
-                                            </div>
+											<div className="splash">
+												{t("section.project.mintcraft.splash")}
+											</div>
 											<img className="logo" src={MintcraftCardLogo} />
 											<img className="bg" src={MintcraftCardBG} />
 										</div>
@@ -85,11 +91,12 @@ export default function Downloads() {
 							</Grid>
 							<Grid item xs={12} md={6}>
 								<Card variant="outlined">
-									<CardMedia
-										component="img"
-										image={MintSansCardHeader}
-										alt="MintSans- well, it's hardly a logo, more like just the name of the font set in MintSans itself."
-									/>
+									<Link to="/downloads/mintsans">
+										<div className="cardHeader">
+											<img className="logo" src={MintsansCardLogo} />
+											<img className="bg" src={MintsansCardBG} />
+										</div>
+									</Link>
 									<CardContent>
 										<Typography variant="body1">
 											{t("section.project.mintsans.cardText")}
@@ -111,11 +118,10 @@ export default function Downloads() {
 							</Grid>
 							<Grid item xs={12} md={6}>
 								<Card variant="outlined">
-									<CardMedia
-										component="img"
-										image={MintAltCardHeader}
-										alt="The MintAlternative 'logo' with a 2K Material icon behind it. Get it? It's funny because the want was inspired by Material icons."
-									/>
+									<div className="cardHeader">
+										<img className="logo" src={MintAltCardLogo} />
+										<img className="bg" src={MintAltCardBG} />
+									</div>
 									<CardContent>
 										<Typography variant="body1">
 											{t("section.project.mintalt.cardText")}
@@ -139,11 +145,12 @@ export default function Downloads() {
 							</Grid>
 							<Grid item xs={12} md={6}>
 								<Card variant="outlined">
-									<CardMedia
-										component="img"
-										image={Win10TilesCardHeader}
-										alt="Some Windows 10 tiles. With 'Windows 10 tiles' being written above them."
-									/>
+									<Link to="/downloads/win10tiles">
+										<div className="cardHeader">
+											<img className="logo" src={Win10TilesCardLogo} />
+											<img className="bg" src={Win10TilesCardBG} />
+										</div>
+									</Link>
 									<CardContent>
 										<Typography variant="body1">
 											{t("section.project.startmenutiles.cardText")}

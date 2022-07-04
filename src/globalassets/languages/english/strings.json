@@ -140,8 +140,9 @@
 					"headline": "Changes in version 1.6.",
 					"update": {
 						"1": "Bumped version numbers for compatibility with 1.19 update.",
-						"2": "Tweaked icon for Sounds add-on.",
-						"3": "Renamed pack files so you don't have to do anything else to play older game versions."
+						"2": "Implemented text color shaders from Vanilla Tweaks, replacing the JSON language files.",
+						"3": "Renamed pack files so you don't have to do anything else to play older game versions.",
+						"4": "Tweaked icon for Sounds add-on."
 					}
 				},
 				"credits": {
@@ -357,6 +358,12 @@
 						"fullText": "Not only have I added some questionable quotes by some of my Twitter followers, I also added some missing textures (frozen hearts, smithing table...) and improved existing ones (widgets, ping indicators, recipe book...). Definitely check it out, because once I told you that texts on buttons in the previous version had a drop shadow that was ever so slightly lighter than the background, you won't unsee it.",
 						"headline": "Mintcraft version 1.5 available.",
 						"imageAlt": "The Mintcraft logo with the version number 1.5 written left to it. In the background there's the improved recipe book texture fading away towards the left."
+					},
+					"mintcraft16": {
+						"boldText": "Support for Minecraft 1.19.",
+						"fullText": "This is a smaller update that bumps up the version to be compatible with the latest update of the game, as well as changes to how texts on dark surfaces are recolored (courtesy of Vanilla Tweaks). I also took some time to fix the file names for some packs and also added the respective game version at the end.",
+						"headline": "Mintcraft version 1.6 available.",
+						"imageAlt": "The Mintcraft logo with the version number 1.6 written left to it. In the background there's a stone block fading away downwards."
 					},
 					"newDomain": {
 						"boldText": "Have you ever seen a single word of German around here? Ganz genau.",

@@ -29,7 +29,6 @@ import {
 	FiDownload,
 	FiThumbsUp,
 	FiThumbsDown,
-    FiChevronsDown,
 } from "react-icons/fi";
 
 import Marquee from "react-fast-marquee";
@@ -57,6 +56,7 @@ const changes = [
 	"section.changes.update.1",
 	"section.changes.update.2",
 	"section.changes.update.3",
+	"section.changes.update.4",
 ];
 
 const removals = [];
