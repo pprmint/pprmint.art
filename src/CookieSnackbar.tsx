@@ -1,16 +1,11 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import {
-	Snackbar,
-	IconButton,
-	Typography,
-	Slide,
-} from "@mui/material";
-import { FiX } from "react-icons/fi";
+import { Snackbar, IconButton, Typography, Slide } from "@mui/material";
+import { FiCheck } from "react-icons/fi";
 
 export default function CookieSnackbar() {
-    const { t } = useTranslation("translation", {
+	const { t } = useTranslation("translation", {
 		keyPrefix: "common.cookies",
 	});
 	const [visible, setVisible] = React.useState(false);
@@ -18,7 +13,6 @@ export default function CookieSnackbar() {
 		let cookiesAcknowledged = localStorage.getItem("cookiesAcknowledged");
 		if (!cookiesAcknowledged) {
 			setVisible(true);
-			localStorage.setItem("cookiesAcknowledged", "yup");
 		}
 	}, []);
 	if (!visible) return null;
@@ -28,17 +22,24 @@ export default function CookieSnackbar() {
 			TransitionComponent={Slide}
 			message={
 				<Typography>
-					{t("use")}
+					{t("agreement1")}
 					<br />
-					{t("agreement")}
-					<Link to="/privacy">{t("link")}</Link>{t("noFutureAppear")}
+					<br />
+					{t("agreement2")}
+					<Link to="/privacy">{t("link")}</Link>.
 				</Typography>
 			}
 			action={
-				<IconButton onClick={() => setVisible(false)}>
-					<FiX />
+				<IconButton
+					onClick={() => {
+						setVisible(false);
+						localStorage.setItem("cookiesAcknowledged", "yup");
+					}}
+				>
+					<FiCheck />
 				</IconButton>
 			}
+			sx={{ maxWidth: "750px" }}
 		></Snackbar>
 	);
 }

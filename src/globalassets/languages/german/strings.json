@@ -12,10 +12,9 @@
 	"common": {
 		"changeLang": "Change language",
 		"cookies": {
-			"agreement": "Schau in die",
-			"link": "Datenschutzerklärung",
-			"noFutureAppear": "für weitere Infos. Diese Meldung wird nicht nochmal angezeigt.",
-			"use": "Diese Website verwendet den localStorage, um Einstellungen und ob du diese Nachricht gesehen hast zu speichern."
+			"agreement1": "Durch Benutzung der Website stimmt du zu, dass der localStorage deines Browsers verwendet wird, um Einstellungen und ob du diese Nachricht hasst zu speichern. Wenn ja, klicke auf den Haken, um sie nie wiederzusehen.",
+			"agreement2": "Schau für weitere Details in die",
+			"link": "Datenschutzerklärung"
 		},
 		"footer": {
 			"andCoffee": " und Kaffee von pprmint.",
@@ -406,8 +405,8 @@
 				"text": {
 					"localStorage": {
 						"cookiesAcknowledged": {
-							"text1": "Wird verwendet, um festzustellen, ob dir das kleine Cookie-Popup unten links bei deinem ersten Besuch angezeigt wurde, und wird auf ",
-							"text2": " gesetzt, sobald du einmal hier warst."
+							"text1": "Wird verwendet, um festzustellen, ob die Cookie-Meldung unten links weggeklickt wurde. Wenn ja, wird dieser Schlüssel mit dem Wert ",
+							"text2": " gesetzt."
 						},
 						"i18nextLng": {
 							"text1": "Wird verwendet, um zu bestimmen, welche Sprache auf der Website verwendet werden soll, und wird bei jedem Besuch gelesen. Der Wert ist entweder ",
