@@ -23,9 +23,7 @@ import Lottie from "react-lottie";
 
 import MintBanner from "./assets/mintBanner.json";
 
-import NewsGerman from "./assets/german.svg";
-import NewsDomain from "./assets/newdomain.svg";
-import NewsMintcraft15 from "./assets/mintcraft15.svg";
+import NewsPatreon from "./assets/patreon.svg";
 import NewsMintcraft16 from "./assets/mintcraft16.svg";
 import NewsTwitterDelete from "./assets/twitterDelete.svg";
 import {
@@ -40,6 +38,7 @@ import {
 	SiYoutube,
 	SiAnilist,
 	SiLastdotfm,
+	SiPatreon,
 } from "react-icons/si";
 
 function ReadMore(
@@ -65,8 +64,39 @@ function ReadMore(
 		</React.Fragment>
 	);
 }
+function ReadMoreExternal(
+	props: React.PropsWithChildren<{
+		link: string;
+	}>
+) {
+	const { t } = useTranslation("translation", {
+		keyPrefix: "home.section.news.announcement.common",
+	});
+	return (
+		<React.Fragment>
+			<Box
+				p={2}
+				sx={{
+					textAlign: "center",
+				}}
+			>
+				<a href={props.link} target="_blank" rel="noopener noreferrer">
+					<Button size="small" endIcon={<FiArrowUpRight />} color="info">
+						{t("tellMore")}
+					</Button>
+				</a>
+			</Box>
+		</React.Fragment>
+	);
+}
 
 const announcements = [
+	{
+		id: "patreon",
+		date: "17.07.2022",
+		imageSrc: NewsPatreon,
+		actions: <ReadMoreExternal link="https://patreon.com/pprmint" />,
+	},
 	{
 		id: "mintcraft16",
 		date: "05.07.2022",
@@ -77,12 +107,6 @@ const announcements = [
 		id: "twitterDelete",
 		date: "04.06.2022",
 		imageSrc: NewsTwitterDelete,
-	},
-	{
-		id: "mintcraft15",
-		date: "20.04.2022",
-		imageSrc: NewsMintcraft15,
-		actions: <ReadMore link="/downloads/mintcraft" />,
 	},
 ];
 
@@ -254,6 +278,41 @@ export default function Home() {
 											>
 												<Button color="inherit" endIcon={<FiArrowUpRight />}>
 													{t("section.about.discord.join")}
+												</Button>
+											</a>
+										</Box>
+									</CardActions>
+								</Card>
+							</ScrollAnimation>
+						</Grid>
+						<Grid item xs={12} sm={4}>
+							<ScrollAnimation animateIn="fadeBottom" animateOnce>
+								<Card variant="outlined">
+									<CardContent>
+										<Typography variant="h2">
+											<SiPatreon
+												style={{
+													position: "relative",
+													top: "4px",
+													marginRight: "12px",
+													color: "#ff424d",
+												}}
+											/>
+											{t("section.about.patreon.title")}
+										</Typography>
+										<Typography variant="body2">
+											{t("section.about.patreon.text")}
+										</Typography>
+									</CardContent>
+									<CardActions>
+										<Box sx={{ marginLeft: "auto" }}>
+											<a
+												href="https://www.patreon.com/pprmint/"
+												target="_blank"
+												rel="noopener noreferrer"
+											>
+												<Button color="inherit" endIcon={<FiArrowUpRight />}>
+													{t("section.about.patreon.join")}
 												</Button>
 											</a>
 										</Box>

@@ -105,7 +105,8 @@
 					"tldr": "I forgot the original Wii had that backwards compatibility, "
 				},
 				"5support": {
-					"long": "If you think they would be interested in what I make as well, you could also tell your friends about me. If there's ever growing demand to support me financially as well, I might reconsider setting up a profile on Patreon or Ko-fi.",
+					"long": "Also feel free to give me some feedback to help me improve. If you think your friends might like what I make as well, tell them about me. If you want to help me afford licenses needed to make my stuff, have a look at my fancy",
+					"patreonPage": "Patreon page",
 					"title": "How can I support you?",
 					"tldr": "Kind words go a long way. "
 				},
@@ -333,6 +334,11 @@
 					"text": "Get confused about how I can listen to J-Pop right after German hip-hop and Ambient.",
 					"title": "Last.fm."
 				},
+				"patreon": {
+					"join": "Join",
+					"text": "Join a level and support me financially, so I can afford licenses and assets.",
+					"title": "Patreon."
+				},
 				"text": "Name's Nick. I'm an 18 year old German guy that like things with mint flavor and spending time with design, motion graphics or code. Or with books. Or anime.",
 				"title": "About me.",
 				"youtube": {
@@ -346,29 +352,17 @@
 					"common": {
 						"tellMore": "Tell me more"
 					},
-					"german": {
-						"boldText": "Right after I bought a domain because there was no German around here.",
-						"fullText": "Since I grew to like playing around with my website (and because my mom wanted to have a look at my site), I decided to finally implement translations. You can always change the language from the settings found in the footer if you're on a desktop, or in the drawer on mobile.",
-						"headline": "Now also in German!",
-						"imageAlt": "German flag with German text left to it that translates to \"Now also in German!\""
-					},
-					"mintcraft15": {
-						"boldText": "Optimizing colors and adding overlooked textures.",
-						"fullText": "Not only have I added some questionable quotes by some of my Twitter followers, I also added some missing textures (frozen hearts, smithing table...) and improved existing ones (widgets, ping indicators, recipe book...). Definitely check it out, because once I told you that texts on buttons in the previous version had a drop shadow that was ever so slightly lighter than the background, you won't unsee it.",
-						"headline": "Mintcraft version 1.5 available.",
-						"imageAlt": "The Mintcraft logo with the version number 1.5 written left to it. In the background there's the improved recipe book texture fading away towards the left."
-					},
 					"mintcraft16": {
 						"boldText": "Support for Minecraft 1.19.",
 						"fullText": "This is a smaller update that bumps up the version to be compatible with the latest update of the game, as well as changes to how texts on dark surfaces are recolored (courtesy of Vanilla Tweaks). I also took some time to fix the file names for some packs and also added the respective game version at the end.",
 						"headline": "Mintcraft version 1.6 available.",
 						"imageAlt": "The Mintcraft logo with the version number 1.6 written left to it. In the background there's a stone block fading away downwards."
 					},
-					"newDomain": {
-						"boldText": "Have you ever seen a single word of German around here? Ganz genau.",
-						"fullText": "It always bothered me a bit that the top-level domain of this website was .de, even though this website is less about me being German and more about the things I create. Don't worry, pprmint.de will redirect you to the new domain for a while.",
-						"headline": "A shiny new domain.",
-						"imageAlt": "The new domain, pprmint.art, is written above a green trash can that contains the letters d and e from the previous top level domain. Right next to it is a small green wine bottle."
+					"patreon": {
+						"boldText": "You can now support me financially as well.",
+						"fullText": "The stress is on can. I won't keep entire works of mine behind a paywall. However, depending on which level you join, you will get a quick look at the things I'm working on, and will be able to give feedback as well. Some works I might alter to make them work as wallpapers, depending on how well that can be done.",
+						"headline": "I opened up a Patreon.",
+						"imageAlt": "The icons of the different levels, from left to right: A seed, a white flower bud, a flower with thin leaves and a yellow core, and an apple hanging from a branch with a couple of leaves."
 					},
 					"twitterDelete": {
 						"boldText": "After about 7 years, I finally decided to give up this platform for good. ",
@@ -421,7 +415,7 @@
 				"title": "Cookies!"
 			},
 			"externalLinks": {
-				"text": "Some pages may contain links to external websites. Any link that takes you to another website will have a blue arrow and, when you hover over it, a blue background. Once you visit such external websites, you are subject to their respective privacy policies. I take no responsibility for the practices of nor content on said websites.",
+				"text": "Some pages may contain links to external websites. Any link that takes you to another website will have a top-right facing arrow and tends to be blue. Once you visit such external websites, you are subject to their respective privacy policies. I take no responsibility for the practices of nor content on said websites.",
 				"title": "External links."
 			},
 			"responsible": {

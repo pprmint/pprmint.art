@@ -105,7 +105,8 @@
 					"tldr": "Ich habe vergessen, dass die originale Wii überhaupt diese Abwärtskompatibilität besaß, "
 				},
 				"5support": {
-					"long": "Wenn du denkst, dass die sich auch für das interessieren, was ich so mache, könntest du auch deinen Freunden von mir erzählen. Sollte es je eine größere Nachfrage geben, mich auch finanziell zu unterstützen, überlege ich mir vielleicht nochmal, ein Profil auf Patreon oder Ko-fi einzurichten.",
+					"long": "Gib mir auch gerne Verbesserungsvorschläge. Wenn du denkst, dass mein Zeug auch deinen Freunden gefallen könnte, erzähl ihnen von mir. Wenn du mir helfen möchtest, für die zur Erstellung meines Werke benötigten Lizenzen aufzukommen, schau auf meine",
+					"patreonPage": "Patreon-Seite",
 					"title": "Wie kann ich dich unterstützen?",
 					"tldr": "Nette Worte kommen schon weit. "
 				},
@@ -333,6 +334,11 @@
 					"text": "Sei verwirrt, wie ich J-Pop direkt nach deutschem Hip-Hop und Ambient hören kann.",
 					"title": "Last.fm."
 				},
+				"patreon": {
+					"join": "Level sichern",
+					"text": "Tritt einem Level bei und unterstütze mich finanziell, damit ich für Lizenzen und Assets aufkommen kann.",
+					"title": "Patreon."
+				},
 				"text": "Mein Name ist Nicklas. Ich bin ein 18-jähriger aus Deutschland, der Dinge mit Minzgeschmack mag und seine Zeit mit Design, Motion Graphics oder Code verbringt. Oder mit Büchern. Oder Anime.",
 				"title": "Über mich.",
 				"youtube": {
@@ -346,29 +352,17 @@
 					"common": {
 						"tellMore": "Erzähl mir mehr"
 					},
-					"german": {
-						"boldText": "Genau nachdem ich eine Domain gekauft habe, weil es hier kein Deutsch gab.",
-						"fullText": "Da es mir immer mehr Spaß gemacht hat, mit meiner Website herumzuspielen (und weil meine Mom meine Seite ansehen wollte), habe ich beschlossen, Übersetzungen einzuführen. Du kannst die Sprache jederzeit über die Einstellungen in der Fußzeile ändern, wenn du auf einem Desktop unterwegs bist, oder über das Seitenmenü auf dem Handy.",
-						"headline": "Deutsche Übersetzungen!",
-						"imageAlt": "Flagge Deutschlands mit dem Text \"Jetzt auch auf Deutsch!\" links daneben."
-					},
-					"mintcraft15": {
-						"boldText": "Anpassen von Farben und Hinzufügen übersehener Texturen.",
-						"fullText": "Ich habe nicht nur fragwürdige Splash-Texte einiger meiner Twitter-Follower, sondern auch fehlende Texturen (gefrorene Herzen, Schmiedetisch...) hinzugefügt, sowie Bestehende (Widgets, Ping-Anzeigen, Rezeptbuch...) verbessert. Schau's dir definitv an, denn habe ich dir erstmal erzählt, dass Texte auf Buttons immer einen Schatten warfen, der nur ein bisschen heller war als der Hintergrund, wirst du es nie wieder übersehen.",
-						"headline": "Mintcraft Version 1.5 verfügbar.",
-						"imageAlt": "Das Mintcraft-Logo mit der Versionsnummer 1.5 links daneben geschrieben. Im Hintergrund befindet sich die verbesserte Textur für das Rezeptbuch, welches nach links hin verschwindet."
-					},
 					"mintcraft16": {
 						"boldText": "Support für Minecraft 1.19.",
 						"fullText": "Dies ist ein kleineres Update, welches die Version erhöht, um mit dem neuesten Update des Spiels kompatibel zu sein, sowie ändert, wie Texte auf dunklen Oberflächen eingefärbt werden (Gruß an Vanilla Tweaks). Ich habe mir auch etwas Zeit genommen, um die Dateinamen einiger Packs zu verbessern, und die jeweilige Spielversion ans Ende geschrieben.",
 						"headline": "Mintcraft Version 1.6 verfügbar.",
 						"imageAlt": "Das Mintcraft-Logo mit der Versionsnummer 1.6 links daneben geschrieben. Dahinter befindet sich ein Steinblock, welcher nach unten hin verwischt."
 					},
-					"newDomain": {
-						"boldText": "Hast du hier vorher ein einziges Wort auf Deutsch gesehen? Eben.",
-						"fullText": "Es hat mich immer etwas genevt, dass die Top-Level-Domain dieser Website .de lautete, obwohl sie weniger mein Deutsch-sein und mehr meine Kreationen vorstellen soll. Keine Sorge, pprmint.de wird noch für einige Zeit auf diese neue Domain weiterleiten.",
-						"headline": "Eine schicke, neue Domain.",
-						"imageAlt": "Die neue Domain, pprmint.art, ist über einer grünen Mülltonne geschrieben. In der Mülltonne befinden sich die Buchstaben d und e der vorherigen Domain. Neben der Tonne steht eine grüne Weinflasche."
+					"patreon": {
+						"boldText": "Du kannst mich nun auch finanziell unterstützen.",
+						"fullText": "Die Betonung liegt auf kann. Ich werde nicht komplette Werke hinter einer Paywall verstecken. Aber je nachdem, welchem Level du beitrittst, bekommst du einen kleinen Einblick in Projekte, an denen ich arbeite, und kannst auch Feedback abgeben. Einige Werke werde ich auch etwas abändern, sodass sie als Hintergrundbilder verwendet werden können, je nachdem, wie gut das passt.",
+						"headline": "Ich habe einen Patreon eröffnet.",
+						"imageAlt": "Die Symbole der verschiedenen Ebenen, von links nach rechts: Ein Samen, eine weiße Blütenknospe, eine Blume mit dünnen Blättern und einem gelben Kern, und ein Apfel, der an einem Zweig mit ein paar Blättern hängt."
 					},
 					"twitterDelete": {
 						"boldText": "Nach etwa 7 Jahren habe ich mich endlich dazu entschlossen, diese Plattform endgültig zu hinter mir zu lassen.",
@@ -421,7 +415,7 @@
 				"title": "Kekse!"
 			},
 			"externalLinks": {
-				"text": "Einige Seiten können Links zu externen Websites enthalten. Jeder Link, der dich zu einer anderen Website führt, ist mit einem blauen Pfeil und, wenn du den Mauszeiger darüber bewegst, mit einem blauen Hintergrund versehen. Sobald du solche externen Websites besuchst, unterliegst du deren jeweiligen Datenschutzrichtlinien. Für die Inhalte und Praktiken der Websites Dritter übernehme ich keinerlei Verantwortung.",
+				"text": "Einige Seiten können Links zu externen Websites enthalten. Jeder Link, der dich zu einer anderen Website führt, ist mit einem nach oben rechts zeigenden Pfeil versehen, und ist häufig blau. Sobald du solche externen Websites besuchst, unterliegst du deren jeweiligen Datenschutzrichtlinien. Für die Inhalte und Praktiken der Websites Dritter übernehme ich keinerlei Verantwortung.",
 				"title": "Externe Links."
 			},
 			"responsible": {

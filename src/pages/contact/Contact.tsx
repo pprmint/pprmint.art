@@ -277,6 +277,15 @@ export default function Contact() {
 									<Typography variant="body1">
 										<b>{t("section.faq.5support.tldr")}</b>
 										{t("section.faq.5support.long")}
+										<a
+                                            className="external"
+											href="https://patreon.com/pprmint"
+											target="_blank"
+											rel="noopener noreferrer"
+										>
+											{t("section.faq.5support.patreonPage")}
+										</a>
+										.
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
