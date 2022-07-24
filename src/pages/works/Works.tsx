@@ -1,12 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import {
-	Button,
-	Typography,
-	Skeleton,
-	Container,
-} from "@mui/material";
+import { Button, Typography, Skeleton, Container } from "@mui/material";
 import { Masonry } from "@mui/lab";
 import { useTranslation } from "react-i18next";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -15,57 +10,53 @@ import Image from "@jy95/material-ui-image";
 
 const works2022 = [
 	{
+		src: "https://media.pprmint.art/2022/Lights/N-720.png",
+		link: "/works/2022/lights",
+		aspect: 16 / 9,
+	},
+	{
 		src: "https://media.pprmint.art/2022/Book/Cover-720.png",
-		link: "/works/2022/Book",
-		alt: "Book cover I made as a joke.",
+		link: "/works/2022/book",
 		aspect: 2481 / 3508,
 	},
 	{
 		src: "https://media.pprmint.art/2022/MintBanners/MINT_Night-720.png",
 		link: "/works/2022/MintBanners",
-		alt: "3D renders that have to do with MINT.",
 		aspect: 16 / 9,
 	},
 	{
 		src: "https://media.pprmint.art/2022/WiiRemake/WiiRemake-720.png",
 		link: "/works/2022/wiimenu",
-		alt: "Modern remake of the Wii Menu.",
 		aspect: 16 / 9,
 	},
 	{
 		src: "https://media.pprmint.art/2022/Geoices/geoballs-720.png",
 		link: "/works/2022/geoices",
-		alt: "3D remake of Geoices' logo.",
 		aspect: 16 / 9,
 	},
 	{
 		src: "https://media.pprmint.art/2022/SUSE/suse-720.png",
 		link: "/works/2022/suserebrand",
-		alt: "Oversimplified/redesigned logo for SUSE.",
 		aspect: 16 / 9,
 	},
 	{
 		src: "https://media.pprmint.art/2022/Statistics/statistics-720.png",
 		link: "/works/2022/statistics",
-		alt: "Like statistics for the @ProgressBar202_ Twitter account.",
 		aspect: 1 / 1,
 	},
 	{
 		src: "https://media.pprmint.art/2022/iPad/iPad-720.png",
 		link: "/works/2022/ipad",
-		alt: "An iPad as part of another project.",
 		aspect: 16 / 9,
 	},
 	{
 		src: "https://media.pprmint.art/2022/ArchWall/Arch_Qogir-720.png",
 		link: "/works/2022/archwall",
-		alt: "Arch Linux desktop background with mountains",
 		aspect: 16 / 9,
 	},
 	{
 		src: "https://media.pprmint.art/2022/Ford/Ford-720.png",
 		link: "/works/2022/ford",
-		alt: "Ford logo redesign, inspired by Raul Rand.",
 		aspect: 16 / 9,
 	},
 ];
@@ -79,10 +70,7 @@ export default function Works() {
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>{t("meta.title")}</title>
-				<meta
-					name="description"
-					content="Have a look at some of my works."
-				/>
+				<meta name="description" content="Have a look at some of my works." />
 				<meta name="theme-color" content="#00cc66" />
 				<meta
 					property="og:description"
@@ -99,7 +87,7 @@ export default function Works() {
 				<Typography variant="h2">{t("title.sub")}</Typography>
 			</Container>
 
-			<div className="section" id="works2022">
+			<div className="section" id="2022">
 				<Container maxWidth="xl">
 					<ScrollAnimation animateIn="fadeBottom" animateOnce>
 						<Typography variant="h1">2022</Typography>
@@ -121,7 +109,6 @@ export default function Works() {
 								>
 									<Image
 										src={item.src}
-										alt={item.alt}
 										color="transparent"
 										aspectRatio={item.aspect}
 										loading={<Skeleton variant="rectangular" />}

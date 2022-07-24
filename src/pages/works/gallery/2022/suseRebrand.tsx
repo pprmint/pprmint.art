@@ -2,11 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import ScrollAnimation from "react-animate-on-scroll";
-import {
-	Typography,
-	Skeleton,
-	Container,
-} from "@mui/material";
+import { Typography, Skeleton, Container } from "@mui/material";
 import Image from "@jy95/material-ui-image";
 
 export default function suseRebrand() {
@@ -48,7 +44,6 @@ export default function suseRebrand() {
 					>
 						<Image
 							src="https://media.pprmint.art/2022/SUSE/slide1.svg"
-							alt="Slogan, literally translated from the German one currently in use... I think."
 							aspectRatio={16 / 9}
 							color="transparent"
 							loading={
@@ -61,15 +56,48 @@ export default function suseRebrand() {
 							}
 						/>
 					</a>
-				</ScrollAnimation>
-				<ScrollAnimation animateIn="fadeBottom" animateOnce>
 					<a
 						href="https://media.pprmint.art/2022/SUSE/slide2.svg"
 						target="_blank"
 					>
 						<Image
 							src="https://media.pprmint.art/2022/SUSE/slide2.svg"
-							alt="Slogan, literally translated from the German one currently in use... I think."
+							aspectRatio={16 / 9}
+							color="transparent"
+							loading={
+								<Skeleton
+									variant="rectangular"
+									width="100%"
+									height="100%"
+									animation="wave"
+								/>
+							}
+						/>
+					</a>
+					<a
+						href="https://media.pprmint.art/2022/SUSE/slide2.svg"
+						target="_blank"
+					>
+						<Image
+							src="https://media.pprmint.art/2022/SUSE/slide3.svg"
+							aspectRatio={16 / 9}
+							color="transparent"
+							loading={
+								<Skeleton
+									variant="rectangular"
+									width="100%"
+									height="100%"
+									animation="wave"
+								/>
+							}
+						/>
+					</a>
+					<a
+						href="https://media.pprmint.art/2022/SUSE/slide2.svg"
+						target="_blank"
+					>
+						<Image
+							src="https://media.pprmint.art/2022/SUSE/slide4.svg"
 							aspectRatio={16 / 9}
 							color="transparent"
 							loading={

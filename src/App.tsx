@@ -31,7 +31,7 @@ import {
 	FiImage,
 } from "react-icons/fi";
 
-import { SiYoutube, SiGithub, SiDiscord } from "react-icons/si";
+import { SiYoutube, SiGithub, SiDiscord, SiPatreon } from "react-icons/si";
 
 // Imports of all the pages
 import Home from "./pages/home/Home";
@@ -48,8 +48,9 @@ import Win10TilesDL from "./pages/downloads/win10tiles/Win10Tiles";
 // Info pages
 import Error404 from "./pages/404/Error404";
 import UnderConstruction from "./pages/wip/UnderConstruction";
-// Works 2022
 import Works from "./pages/works/Works";
+// Works 2022
+import Lights from "./pages/works/gallery/2022/Lights";
 import Book from "./pages/works/gallery/2022/Book";
 import MintBanners from "./pages/works/gallery/2022/MintBanners";
 import WiiMenu from "./pages/works/gallery/2022/WiiMenu";
@@ -312,8 +313,9 @@ export default function App() {
 					/>
 					<Route path="/downloads/win10tiles" element={<Win10TilesDL />} />
 
-					{/* Works of 2022 */}
 					<Route path="/works" element={<Works />} />
+					{/* Works of 2022 */}
+					<Route path="/works/2022/lights" element={<Lights />} />
 					<Route path="/works/2022/book" element={<Book />} />
 					<Route path="/works/2022/mintbanners" element={<MintBanners />} />
 					<Route path="/works/2022/wiimenu" element={<WiiMenu />} />
@@ -367,6 +369,9 @@ export default function App() {
 					</IconLink>
 					<IconLink href="https://github.com/pprmint">
 						<SiGithub />
+					</IconLink>
+					<IconLink href="https://patreon.com/pprmint/">
+						<SiPatreon />
 					</IconLink>
 					<IconLink href="https://discord.com/invite/Vw9JXwr">
 						<SiDiscord />

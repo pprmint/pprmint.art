@@ -376,8 +376,8 @@
 				"title": "Neuigkeiten."
 			},
 			"recent": {
-				"description": "Einige fragen sich immer noch, wieso ich auf Discord mit Großbuchstaben und Satzzeichen texte. Einer sagte, ich sollte ein Buch über mein System schreiben. Klick auf das obige Bild, um dieses nicht zu lesen.",
-				"name": "Ein Witz.",
+				"description": "Nur ein paar Platten mit einem lichtausstrahlendem Material.",
+				"name": "Lichtspiele.",
 				"title": "Neuste Kreation."
 			}
 		},
@@ -484,17 +484,14 @@
 		"2021": {
 			"manjaroWall": {
 				"captions": {
-					"theme1": "Dieses Bild wurde gemacht, um es zusammen mit dem ",
-					"theme2": "- oder ",
-					"theme3": "-Design zu verwenden.",
 					"wallpaper": "Das Hintergrundbild. Klick drauf und speicher es."
 				},
 				"meta": {
-					"title": "Arch Hintergrundbild • pprmint.art"
+					"title": "Manjaro Hintergrundbild • pprmint.art"
 				},
 				"title": {
-					"main": "Arch Hintergrundbild.",
-					"sub": "Ich hatte nebenbei Arch benutzt."
+					"main": "Manjaro Hintergrundbild.",
+					"sub": "Inspiriert vom SWAY-Standardhintergrund."
 				}
 			}
 		},
@@ -555,6 +552,18 @@
 					"main": "iPad.",
 					"smallSub": "Das ist ne Lüge.",
 					"sub": "Das i steht für isometrisch."
+				}
+			},
+			"lights": {
+				"captions": {
+					"soothing": "Ich finde die Kombination aus geraden Linien und sanften Farbmischungen so beruhigend."
+				},
+				"meta": {
+					"title": "Lichter • pprmint.art"
+				},
+				"title": {
+					"main": "Lichter.",
+					"sub": "Platten mit Schwarzkörper-Lichtemissionsmaterial."
 				}
 			},
 			"likeStatistics": {

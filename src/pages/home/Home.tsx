@@ -403,7 +403,7 @@ export default function Home() {
 								</Typography>
 								<br />
 								<Card variant="outlined">
-									<Link to="/works/2022/book">
+									<Link to="/works/2022/lights">
 										<Button
 											color="inherit"
 											sx={{
@@ -415,7 +415,7 @@ export default function Home() {
 											}}
 										>
 											<Image
-												src="https://media.pprmint.art/2022/Book/Book.jpg"
+												src="https://media.pprmint.art/2022/Lights/N-720.png"
 												alt={t("section.recent.name")}
 												color="transparent"
 												aspectRatio={16 / 9}

@@ -376,8 +376,8 @@
 				"title": "News."
 			},
 			"recent": {
-				"description": "Some still wonder why I write with capitalization and punctuation on Discord. One said I should write a book about my system. Click on the above image to not read it.",
-				"name": "A joke.",
+				"description": "Just a few panes with a black-body emission material.",
+				"name": "Playing with light.",
 				"title": "Latest creation."
 			}
 		},
@@ -484,17 +484,14 @@
 		"2021": {
 			"manjaroWall": {
 				"captions": {
-					"theme1": "This picture was made to be used together with the ",
-					"theme2": " or ",
-					"theme3": " theme.",
 					"wallpaper": "The wallpaper. Feel free to right-click and save."
 				},
 				"meta": {
-					"title": "Arch wallpaper • pprmint.art"
+					"title": "Manjaro wallpaper • pprmint.art"
 				},
 				"title": {
-					"main": "Arch wallpaper.",
-					"sub": "I used Arch btw."
+					"main": "Manjaro wallpaper.",
+					"sub": "Inspired by the SWAY default background."
 				}
 			}
 		},
@@ -555,6 +552,18 @@
 					"main": "iPad.",
 					"smallSub": "That's a lie.",
 					"sub": "The i stands for isometric."
+				}
+			},
+			"lights": {
+				"captions": {
+					"soothing": "I find the combination of straight lines and soft color mixing so soothing."
+				},
+				"meta": {
+					"title": "Lights • pprmint.art"
+				},
+				"title": {
+					"main": "Lights.",
+					"sub": "Panes with black-body emission material."
 				}
 			},
 			"likeStatistics": {
