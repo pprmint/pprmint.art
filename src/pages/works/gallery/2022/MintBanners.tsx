@@ -51,10 +51,6 @@ export default function MintBanners() {
 						controls
 						playsInline
 					/>
-				</ScrollAnimation>
-				<br />
-				<br />
-				<ScrollAnimation animateIn="fadeBottom" animateOnce>
 					<a
 						href="https://media.pprmint.art/2022/MintBanners/MINT_Night.png"
 						target="_blank"
@@ -73,8 +69,6 @@ export default function MintBanners() {
 							}
 						/>
 					</a>
-				</ScrollAnimation>
-				<ScrollAnimation animateIn="fadeBottom" animateOnce>
 					<a
 						href="https://media.pprmint.art/2022/MintBanners/MINT_Night_2.png"
 						target="_blank"
@@ -93,8 +87,6 @@ export default function MintBanners() {
 							}
 						/>
 					</a>
-				</ScrollAnimation>
-				<ScrollAnimation animateIn="fadeBottom" animateOnce>
 					<a
 						href="https://media.pprmint.art/2022/MintBanners/MINT_Night_3.png"
 						target="_blank"

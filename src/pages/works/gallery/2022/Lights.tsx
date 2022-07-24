@@ -56,8 +56,6 @@ export default function Lights() {
 							}
 						/>
 					</a>
-				</ScrollAnimation>
-				<ScrollAnimation animateIn="fadeBottom" animateOnce>
 					<video
 						src="https://media.pprmint.art/2022/Lights/X.mp4"
 						width="100%"
@@ -65,8 +63,6 @@ export default function Lights() {
 						playsInline
 						controls
 					/>
-				</ScrollAnimation>
-				<ScrollAnimation animateIn="fadeBottom" animateOnce>
 					<a href="https://media.pprmint.art/2022/Lights/X.png" target="_blank">
 						<Image
 							src="https://media.pprmint.art/2022/Lights/X.png"
@@ -82,11 +78,11 @@ export default function Lights() {
 							}
 						/>
 					</a>
-				</ScrollAnimation>
 				<br />
 				<Typography variant="body1" textAlign="center">
 					{t("captions.soothing")}
 				</Typography>
+				</ScrollAnimation>
 			</div>
 		</React.Fragment>
 	);

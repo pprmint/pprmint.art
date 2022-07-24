@@ -61,7 +61,9 @@ import Ipad from "./pages/works/gallery/2022/iPad"; // this hurts
 import ArchWall from "./pages/works/gallery/2022/ArchWall";
 import Ford from "./pages/works/gallery/2022/Ford";
 // Works 2021
-import ManjaroWall from "./pages/works/gallery/2021/manjarowall/ManjaroWall";
+import ManjaroWall from "./pages/works/gallery/2021/ManjaroWall";
+import GS from "./pages/works/gallery/2021/GS";
+import NotVLC from "./pages/works/gallery/2021/NotVLC";
 // Easter eggs...? I dunno.
 import HealthSafety from "./pages/wii/HealthSafety";
 import Test from "./pages/test/Test";
@@ -328,6 +330,8 @@ export default function App() {
 
 					{/* Works of 2021 */}
 					<Route path="/works/2021/manjarowall" element={<ManjaroWall />} />
+					<Route path="/works/2021/gs" element={<GS />} />
+					<Route path="/works/2021/notvlc" element={<NotVLC />} />
 
 					<Route path="/contact" element={<Contact />} />
 					<Route path="/privacy" element={<PrivacyPolicy />} />

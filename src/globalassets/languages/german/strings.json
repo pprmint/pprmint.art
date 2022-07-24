@@ -482,6 +482,18 @@
 	},
 	"works": {
 		"2021": {
+			"gepruefteSicherheit": {
+				"captions": {
+					"shit": "Man, hast du dir das richtige Siegel mal genauer angesehen? Meine Fresse..."
+				},
+				"meta": {
+					"title": "Geprüfte-Sicherheit-Siegel • pprmint.art"
+				},
+				"title": {
+					"main": "Geprüfte-Sicherheit-Siegel.",
+					"sub": "Formen, die auch Sinn ergeben."
+				}
+			},
 			"manjaroWall": {
 				"captions": {
 					"wallpaper": "Das Hintergrundbild. Klick drauf und speicher es."
@@ -492,6 +504,18 @@
 				"title": {
 					"main": "Manjaro Hintergrundbild.",
 					"sub": "Inspiriert vom SWAY-Standardhintergrund."
+				}
+			},
+			"notVlc": {
+				"captions": {
+					"shit": "Es ist nicht, wonach es aussieht."
+				},
+				"meta": {
+					"title": "Nicht VLC • pprmint.art"
+				},
+				"title": {
+					"main": "Nicht VLC.",
+					"sub": "Niemals."
 				}
 			}
 		},

@@ -37,6 +37,9 @@ body {
 	--fontSecondary: "Basier Square", Roboto, "HelveticaNeue-Light",
 		"Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, Arial,
 		sans-serif;
+	--fontTertiary: "CHANEY Extended", Metropolis, "Clarity City", Monserrat, Roboto,
+		"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica,
+		Arial, Arial, sans-serif;
 	--fontMonospace: "Basier Square Mono", Roboto Mono, monospace;
 	// Top margin
 	--marginTop: 145px;
@@ -228,11 +231,27 @@ body {
 }
 
 .section {
-	padding-top: 10vh;
+	padding-top: 12vh;
+	h1.prominent {
+        text-anchor: end;
+        line-height: 0.5;
+        color: transparent;
+        text-align: right;
+        font-size: 12rem;
+		font-family: var(--fontTertiary);
+		font-weight: 400;
+        -webkit-text-stroke: 2px var(--backgroundSecondary);
+	}
+    @media only screen and (max-width: 1199px) {
+		h1.prominent {
+			font-size: 6rem !important;
+            line-height: 0.34;
+		}
+	}
 }
 
 footer {
-    padding-top: 10vh;
+	padding-top: 10vh;
 	text-align: center;
 	hr {
 		opacity: 0;
@@ -471,8 +490,8 @@ video {
 			animation: splash 0.25s ease-out alternate infinite;
 			font-family: "MintBit", monospace;
 			font-size: 1.5rem;
-                        text-align: center;
-            line-height: 1;
+			text-align: center;
+			line-height: 1;
 			position: absolute;
 			color: var(--yellowPrimary);
 			top: 60%;
@@ -495,9 +514,9 @@ video {
 				&.bg {
 					transform: scale(1.04);
 				}
-                &.logo {
-                    transform: scale(1.04);
-                }
+				&.logo {
+					transform: scale(1.04);
+				}
 			}
 		}
 		&:active {

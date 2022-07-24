@@ -482,6 +482,18 @@
 	},
 	"works": {
 		"2021": {
+			"gepruefteSicherheit": {
+				"captions": {
+					"shit": "Hell, have you looked at the actual seal up close? Fucking hell..."
+				},
+				"meta": {
+					"title": "Geprüfte Sicherheit seal • pprmint.art"
+				},
+				"title": {
+					"main": "\"Geprüfte Sicherheit\" seal.",
+					"sub": "Shapes that actually make sense."
+				}
+			},
 			"manjaroWall": {
 				"captions": {
 					"wallpaper": "The wallpaper. Feel free to right-click and save."
@@ -492,6 +504,18 @@
 				"title": {
 					"main": "Manjaro wallpaper.",
 					"sub": "Inspired by the SWAY default background."
+				}
+			},
+			"notVlc": {
+				"captions": {
+					"shit": "It's not what it looks like."
+				},
+				"meta": {
+					"title": "Not VLC • pprmint.art"
+				},
+				"title": {
+					"main": "Not VLC.",
+					"sub": "Never."
 				}
 			}
 		},
