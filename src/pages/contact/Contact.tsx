@@ -306,8 +306,8 @@ export default function Contact() {
 				</div>
 				<div className="section" id="contact">
 					<Container>
-						<ScrollAnimation animateIn="fadeBottom" animateOnce>
 							<Typography variant="h1">{t("section.contact.title")}</Typography>
+						<ScrollAnimation animateIn="fadeBottom" animateOnce>
 							<Typography variant="body1">
 								{t("section.contact.text")}
 							</Typography>

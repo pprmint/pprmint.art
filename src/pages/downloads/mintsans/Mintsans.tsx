@@ -316,10 +316,10 @@ export default function MintsansDL() {
 			</div>
 			<div className="section" id="downloads">
 				<Container>
-					<ScrollAnimation animateIn="fadeBottom" animateOnce>
 						<Typography variant="h1">
 							{t("section.download.headline")}
 						</Typography>
+					<ScrollAnimation animateIn="fadeBottom" animateOnce>
 						<Typography variant="body1">
 							{t("section.download.description")}
 						</Typography>

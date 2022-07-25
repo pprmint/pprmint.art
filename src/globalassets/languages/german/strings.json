@@ -494,6 +494,18 @@
 					"sub": "Formen, die auch Sinn ergeben."
 				}
 			},
+			"lightStudy": {
+				"captions": {
+					"affinity": "Gemacht mit Affinity Designer und Photo."
+				},
+				"meta": {
+					"title": "Lichtstudie • pprmint.art"
+				},
+				"title": {
+					"main": "Lichtstudie.",
+					"sub": "Ein Versuch, überzeugende Schattierungen zu erzeugen."
+				}
+			},
 			"manjaroWall": {
 				"captions": {
 					"wallpaper": "Das Hintergrundbild. Klick drauf und speicher es."

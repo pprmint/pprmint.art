@@ -494,6 +494,18 @@
 					"sub": "Shapes that actually make sense."
 				}
 			},
+			"lightStudy": {
+				"captions": {
+					"affinity": "Made with Affinity Designer and Photo."
+				},
+				"meta": {
+					"title": "Light study • pprmint.art"
+				},
+				"title": {
+					"main": "Light study.",
+					"sub": "An attempt at making convincing casts of shade."
+				}
+			},
 			"manjaroWall": {
 				"captions": {
 					"wallpaper": "The wallpaper. Feel free to right-click and save."

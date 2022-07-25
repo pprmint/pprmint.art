@@ -1,12 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import {
-	Button,
-	Typography,
-	Skeleton,
-	Container,
-} from "@mui/material";
+import { Button, Typography, Skeleton, Container } from "@mui/material";
 import { Masonry } from "@mui/lab";
 import { useTranslation } from "react-i18next";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -82,6 +77,11 @@ const works2021 = [
 		link: "/works/2021/notvlc",
 		aspect: 16 / 9,
 	},
+	{
+		src: "https://media.pprmint.art/2021/LightStudy/Light_study-720.png",
+		link: "/works/2021/lightstudy",
+		aspect: 1 / 1,
+	},
 ];
 
 export default function Works() {
@@ -93,10 +93,7 @@ export default function Works() {
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>{t("meta.title")}</title>
-				<meta
-					name="description"
-					content="Have a look at some of my works."
-				/>
+				<meta name="description" content="Have a look at some of my works." />
 				<meta name="theme-color" content="#00cc66" />
 				<meta
 					property="og:description"
@@ -115,11 +112,11 @@ export default function Works() {
 
 			<div className="section" id="2022">
 				<Container maxWidth="xl">
-					<ScrollAnimation animateIn="fadeBottom" animateOnce>
-						<Typography variant="h1" className="prominent">2022</Typography>
-					</ScrollAnimation>
+					<Typography variant="h1" className="prominent">
+						2022
+					</Typography>
 				</Container>
-				<Masonry columns={{ xs: 1, sm: 2, md: 3 }} spacing={0}>
+				<Masonry columns={{ xs: 2, md: 3 }} spacing={0}>
 					{works2022.map((item, index) => (
 						<ScrollAnimation key={index} animateIn="fadeBottom" animateOnce>
 							<Link to={item.link}>
@@ -147,11 +144,11 @@ export default function Works() {
 			</div>
 			<div className="section" id="2021">
 				<Container maxWidth="xl">
-					<ScrollAnimation animateIn="fadeBottom" animateOnce>
-						<Typography variant="h1" className="prominent">2021</Typography>
-					</ScrollAnimation>
+					<Typography variant="h1" className="prominent">
+						2021
+					</Typography>
 				</Container>
-				<Masonry columns={{ xs: 1, sm: 2, md: 3 }} spacing={0}>
+				<Masonry columns={{ xs: 2, md: 3 }} spacing={0}>
 					{works2021.map((item, index) => (
 						<ScrollAnimation key={index} animateIn="fadeBottom" animateOnce>
 							<Link to={item.link}>

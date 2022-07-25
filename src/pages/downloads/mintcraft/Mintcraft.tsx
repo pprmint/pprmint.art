@@ -118,11 +118,7 @@ export default function MintcraftDL() {
 							}}
 						>
 							<ScrollLink to="downloads" smooth>
-								<Button
-									variant="outlined"
-									size="large"
-									color="warning"
-								>
+								<Button variant="outlined" size="large" color="warning">
 									{t("title.skipToDownloads")}
 								</Button>
 							</ScrollLink>
@@ -182,10 +178,8 @@ export default function MintcraftDL() {
 			</div>
 			<div className="section" id="changes">
 				<Container>
+					<Typography variant="h1">{t("section.changes.headline")}</Typography>
 					<ScrollAnimation animateIn="fadeBottom" animateOnce>
-						<Typography variant="h1">
-							{t("section.changes.headline")}
-						</Typography>
 						<List>
 							{additions.map((addition, index) => (
 								<ListItem key={index}>
@@ -223,10 +217,10 @@ export default function MintcraftDL() {
 			</div>
 			<div className="section" id="dontdothedo">
 				<Container>
+					<Typography variant="h1">
+						{t("section.dosAndDonts.headline")}
+					</Typography>
 					<ScrollAnimation animateIn="fadeBottom" animateOnce>
-						<Typography variant="h1">
-							{t("section.dosAndDonts.headline")}
-						</Typography>
 						<Grid container spacing={4}>
 							<Grid item xs={12} md={6}>
 								<ScrollAnimation animateIn="fadeBottom" animateOnce>
@@ -301,10 +295,8 @@ export default function MintcraftDL() {
 			</div>
 			<div className="section" id="credits">
 				<Container>
+					<Typography variant="h1">{t("section.credits.headline")}</Typography>
 					<ScrollAnimation animateIn="fadeBottom" animateOnce>
-						<Typography variant="h1">
-							{t("section.credits.headline")}
-						</Typography>
 						<Typography variant="h2">
 							<a
 								className="external"
@@ -489,10 +481,10 @@ export default function MintcraftDL() {
 			</div>
 			<div className="section" id="howto">
 				<Container>
+					<Typography variant="h1">
+						{t("section.installation.headline")}
+					</Typography>
 					<ScrollAnimation animateIn="fadeBottom" animateOnce>
-						<Typography variant="h1">
-							{t("section.installation.headline")}
-						</Typography>
 						<List>
 							<ListItem>
 								<ListItemIcon>1</ListItemIcon>
@@ -547,9 +539,9 @@ export default function MintcraftDL() {
 					</ScrollAnimation>
 				</Container>
 			</div>
-			<div className="section" id="downloads">
-				<Container>
-					<ScrollAnimation animateIn="fadeBottom" animateOnce>
+			<ScrollAnimation animateIn="fadeBottom" animateOnce>
+				<div className="section" id="downloads">
+					<Container>
 						<Typography variant="h1">
 							{t("section.download.headline")}
 						</Typography>
@@ -582,12 +574,10 @@ export default function MintcraftDL() {
 								</Grid>
 							</Grid>
 						</Card>
-					</ScrollAnimation>
-				</Container>
-			</div>
-			<div className="section">
-				<Container>
-					<ScrollAnimation animateIn="fadeBottom" animateOnce>
+					</Container>
+				</div>
+				<div className="section">
+					<Container>
 						<Grid container spacing={4}>
 							<Grid item xs={4} md={2.4}>
 								<Image
@@ -641,12 +631,10 @@ export default function MintcraftDL() {
 								</Stack>
 							</Grid>
 						</Grid>
-					</ScrollAnimation>
-				</Container>
-			</div>
-			<div className="section">
-				<Container>
-					<ScrollAnimation animateIn="fadeBottom" animateOnce>
+					</Container>
+				</div>
+				<div className="section">
+					<Container>
 						<Grid container spacing={4}>
 							<Grid item xs={4} md={2.4}>
 								<Image
@@ -700,12 +688,10 @@ export default function MintcraftDL() {
 								</Stack>
 							</Grid>
 						</Grid>
-					</ScrollAnimation>
-				</Container>
-			</div>
-			<div className="section">
-				<Container>
-					<ScrollAnimation animateIn="fadeBottom" animateOnce>
+					</Container>
+				</div>
+				<div className="section">
+					<Container>
 						<Grid container spacing={4}>
 							<Grid item xs={4} md={2.4}>
 								<Image
@@ -760,9 +746,9 @@ export default function MintcraftDL() {
 								</Stack>
 							</Grid>
 						</Grid>
-					</ScrollAnimation>
-				</Container>
-			</div>
+					</Container>
+				</div>
+			</ScrollAnimation>
 		</React.Fragment>
 	);
 }

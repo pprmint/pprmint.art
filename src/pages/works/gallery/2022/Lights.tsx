@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import ScrollAnimation from "react-animate-on-scroll";
-import { Typography, Container, Skeleton } from "@mui/material";
+import { Typography, Container, Skeleton, Grid } from "@mui/material";
 import Image from "@jy95/material-ui-image";
 
 export default function Lights() {
@@ -56,18 +56,42 @@ export default function Lights() {
 							}
 						/>
 					</a>
-					<video
-						src="https://media.pprmint.art/2022/Lights/X.mp4"
-						width="100%"
-						height="100%"
-						playsInline
-						controls
-					/>
-					<a href="https://media.pprmint.art/2022/Lights/X.png" target="_blank">
+					<Grid container spacing={0}>
+						<Grid item xs={12} md={6}>
+							<video
+								src="https://media.pprmint.art/2022/Lights/X.mp4"
+								width="100%"
+								height="100%"
+								playsInline
+								controls
+							/>
+						</Grid>
+						<Grid item xs={12} md={6}>
+							<a
+								href="https://media.pprmint.art/2022/Lights/X.png"
+								target="_blank"
+							>
+								<Image
+									src="https://media.pprmint.art/2022/Lights/X.png"
+									color="transparent"
+									aspectRatio={16 / 9}
+									loading={
+										<Skeleton
+											variant="rectangular"
+											width="100%"
+											height="100%"
+											animation="wave"
+										/>
+									}
+								/>
+							</a>
+						</Grid>
+					</Grid>
+                    <a href="https://media.pprmint.art/2022/Lights/screenshot.png" target="_blank">
 						<Image
-							src="https://media.pprmint.art/2022/Lights/X.png"
+							src="https://media.pprmint.art/2022/Lights/screenshot.png"
 							color="transparent"
-							aspectRatio={16 / 9}
+							aspectRatio={2 / 1}
 							loading={
 								<Skeleton
 									variant="rectangular"
@@ -78,10 +102,10 @@ export default function Lights() {
 							}
 						/>
 					</a>
-				<br />
-				<Typography variant="body1" textAlign="center">
-					{t("captions.soothing")}
-				</Typography>
+					<br />
+					<Typography variant="body1" textAlign="center">
+						{t("captions.soothing")}
+					</Typography>
 				</ScrollAnimation>
 			</div>
 		</React.Fragment>

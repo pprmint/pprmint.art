@@ -171,8 +171,8 @@ export default function Home() {
 			</div>
 			<div className="section" id="about">
 				<Container>
+					<Typography variant="h1">{t("section.about.title")}</Typography>
 					<ScrollAnimation animateIn="fadeBottom" animateOnce>
-						<Typography variant="h1">{t("section.about.title")}</Typography>
 						<Typography variant="body1">{t("section.about.text")}</Typography>
 					</ScrollAnimation>
 				</Container>
@@ -397,11 +397,11 @@ export default function Home() {
 				<Grid container spacing={7}>
 					<Grid item md={12} lg={7}>
 						<div className="section" id="latestWork">
-							<ScrollAnimation animateIn="fadeLeft" animateOnce>
 								<Typography variant="h1">
 									{t("section.recent.title")}
 								</Typography>
 								<br />
+							<ScrollAnimation animateIn="fadeLeft" animateOnce>
 								<Card variant="outlined">
 									<Link to="/works/2022/lights">
 										<Button
@@ -441,9 +441,9 @@ export default function Home() {
 					</Grid>
 					<Grid item md={12} lg={5}>
 						<div className="section" id="news">
-							<ScrollAnimation animateIn="fadeRight" animateOnce>
 								<Typography variant="h1">{t("section.news.title")}</Typography>
 								<br />
+							<ScrollAnimation animateIn="fadeRight" animateOnce>
 								<Box maxWidth="calc(100vw - 32px)">
 									<Card variant="outlined">
 										<Paper

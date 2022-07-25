@@ -2,12 +2,12 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import ScrollAnimation from "react-animate-on-scroll";
-import { Typography, Container, Skeleton, Grid } from "@mui/material";
+import { Typography, Skeleton, Container, Grid } from "@mui/material";
 import Image from "@jy95/material-ui-image";
 
-export default function MintBanners() {
+export default function GS() {
 	const { t } = useTranslation("translation", {
-		keyPrefix: "works.2022.mintBanners",
+		keyPrefix: "works.2021.lightStudy",
 	});
 	return (
 		<React.Fragment>
@@ -16,23 +16,19 @@ export default function MintBanners() {
 				<title>{t("meta.title")}</title>
 				<meta
 					name="description"
-					content="I played around a bit in Cinema 4D."
+					content="Trying to make convincing shades with vector graphics."
 				/>
 				<meta name="theme-color" content="#00cc66" />
 				<meta
 					property="og:description"
-					content="I played around a bit in Cinema 4D."
-				/>
-				<meta
-					property="og:image"
-					content="https://pprmint.art/og/works/wiimenuremake.jpg"
+					content="Trying to make convincing shades with vector graphics."
 				/>
 				<meta property="og:image:width" content="1280" />
 				<meta property="og:image:height" content="720" />
-				<meta property="og:title" content="Mint banners." />
+				<meta property="og:title" content="Light study." />
 				<meta
 					property="og:url"
-					content="https://pprmint.art/works/2022/wiimenu"
+					content="https://pprmint.art/works/2021/lightstudy"
 				/>
 			</Helmet>
 			<Container className="title">
@@ -43,23 +39,34 @@ export default function MintBanners() {
 				<ScrollAnimation animateIn="fadeBottom" animateOnce>
 					<Grid container spacing={0}>
 						<Grid item xs={12} md={6}>
-							<video
-								src="https://media.pprmint.art/2022/MintBanners/Scene1_0000_1.mp4"
-								width="100%"
-								height="100%"
-								controls
-								playsInline
-							/>
-						</Grid>
-						<Grid item xs={12} md={6}>
 							<a
-								href="https://media.pprmint.art/2022/MintBanners/screenshot1.png"
+								href="https://media.pprmint.art/2021/LightStudy/light1.png"
 								target="_blank"
 							>
 								<Image
-									src="https://media.pprmint.art/2022/MintBanners/screenshot1.png"
+									src="https://media.pprmint.art/2021/LightStudy/light1.png"
 									color="transparent"
-									aspectRatio={16 / 9}
+									aspectRatio={1 / 1}
+									loading={
+										<Skeleton
+											variant="rectangular"
+											width="100%"
+											height="100%"
+											animation="wave"
+										/>
+									}
+								/>
+							</a>
+						</Grid>
+						<Grid item xs={12} md={6}>
+							<a
+								href="https://media.pprmint.art/2021/LightStudy/dark1.png"
+								target="_blank"
+							>
+								<Image
+									src="https://media.pprmint.art/2021/LightStudy/dark1.png"
+									color="transparent"
+									aspectRatio={1 / 1}
 									loading={
 										<Skeleton
 											variant="rectangular"
@@ -73,13 +80,13 @@ export default function MintBanners() {
 						</Grid>
 					</Grid>
 					<a
-						href="https://media.pprmint.art/2022/MintBanners/MINT_Night_2.png"
+						href="https://media.pprmint.art/2021/LightStudy/light2.png"
 						target="_blank"
 					>
 						<Image
-							src="https://media.pprmint.art/2022/MintBanners/MINT_Night_2.png"
-							aspectRatio={16 / 9}
+							src="https://media.pprmint.art/2021/LightStudy/light2.png"
 							color="transparent"
+							aspectRatio={16 / 9}
 							loading={
 								<Skeleton
 									variant="rectangular"
@@ -91,13 +98,13 @@ export default function MintBanners() {
 						/>
 					</a>
 					<a
-						href="https://media.pprmint.art/2022/MintBanners/MINT_Night.png"
+						href="https://media.pprmint.art/2021/LightStudy/dark2.png"
 						target="_blank"
 					>
 						<Image
-							src="https://media.pprmint.art/2022/MintBanners/MINT_Night.png"
+							src="https://media.pprmint.art/2021/LightStudy/dark2.png"
+							color="transparent"
 							aspectRatio={16 / 9}
-							color="transparent"
 							loading={
 								<Skeleton
 									variant="rectangular"
@@ -108,14 +115,11 @@ export default function MintBanners() {
 							}
 						/>
 					</a>
-					<a
-						href="https://media.pprmint.art/2022/MintBanners/MINT_Night_3.png"
-						target="_blank"
-					>
+                    <a href="https://media.pprmint.art/2021/LightStudy/screenshot.png" target="_blank">
 						<Image
-							src="https://media.pprmint.art/2022/MintBanners/MINT_Night_3.png"
-							aspectRatio={16 / 9}
+							src="https://media.pprmint.art/2021/LightStudy/screenshot.png"
 							color="transparent"
+							aspectRatio={1900 / 956}
 							loading={
 								<Skeleton
 									variant="rectangular"
@@ -126,24 +130,10 @@ export default function MintBanners() {
 							}
 						/>
 					</a>
-					<a
-						href="https://media.pprmint.art/2022/MintBanners/screenshot2.png"
-						target="_blank"
-					>
-						<Image
-							src="https://media.pprmint.art/2022/MintBanners/screenshot2.png"
-							color="transparent"
-							aspectRatio={2 / 1}
-							loading={
-								<Skeleton
-									variant="rectangular"
-									width="100%"
-									height="100%"
-									animation="wave"
-								/>
-							}
-						/>
-					</a>
+					<br />
+					<Typography variant="body1" textAlign="center">
+						{t("captions.affinity")}
+					</Typography>
 				</ScrollAnimation>
 			</div>
 		</React.Fragment>

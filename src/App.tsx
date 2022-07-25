@@ -64,6 +64,7 @@ import Ford from "./pages/works/gallery/2022/Ford";
 import ManjaroWall from "./pages/works/gallery/2021/ManjaroWall";
 import GS from "./pages/works/gallery/2021/GS";
 import NotVLC from "./pages/works/gallery/2021/NotVLC";
+import LightStudy from "./pages/works/gallery/2021/LightStudy";
 // Easter eggs...? I dunno.
 import HealthSafety from "./pages/wii/HealthSafety";
 import Test from "./pages/test/Test";
@@ -332,6 +333,7 @@ export default function App() {
 					<Route path="/works/2021/manjarowall" element={<ManjaroWall />} />
 					<Route path="/works/2021/gs" element={<GS />} />
 					<Route path="/works/2021/notvlc" element={<NotVLC />} />
+					<Route path="/works/2021/lightstudy" element={<LightStudy />} />
 
 					<Route path="/contact" element={<Contact />} />
 					<Route path="/privacy" element={<PrivacyPolicy />} />
