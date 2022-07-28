@@ -116,9 +116,13 @@ export default function Works() {
 						2022
 					</Typography>
 				</Container>
-				<Masonry columns={{ xs: 2, md: 3 }} spacing={0}>
+				<Masonry
+					columns={{ xs: 2, md: 3, xl: 4 }}
+					spacing={0}
+					className="galleryContainer"
+				>
 					{works2022.map((item, index) => (
-						<ScrollAnimation key={index} animateIn="fadeBottom" animateOnce>
+						<div className="galleryItem" key={index}>
 							<Link to={item.link}>
 								<Button
 									color="inherit"
@@ -127,7 +131,7 @@ export default function Works() {
 										display: "block",
 										padding: 0,
 										margin: 0,
-										borderRadius: 0,
+										borderRadius: "5px",
 									}}
 								>
 									<Image
@@ -138,19 +142,23 @@ export default function Works() {
 									/>
 								</Button>
 							</Link>
-						</ScrollAnimation>
+						</div>
 					))}
 				</Masonry>
 			</div>
-			<div className="section" id="2021">
+			<div className="section" id="2022">
 				<Container maxWidth="xl">
 					<Typography variant="h1" className="prominent">
 						2021
 					</Typography>
 				</Container>
-				<Masonry columns={{ xs: 2, md: 3 }} spacing={0}>
+				<Masonry
+					columns={{ xs: 2, md: 3, xl: 4 }}
+					spacing={0}
+					className="galleryContainer"
+				>
 					{works2021.map((item, index) => (
-						<ScrollAnimation key={index} animateIn="fadeBottom" animateOnce>
+						<div className="galleryItem" key={index}>
 							<Link to={item.link}>
 								<Button
 									color="inherit"
@@ -159,7 +167,7 @@ export default function Works() {
 										display: "block",
 										padding: 0,
 										margin: 0,
-										borderRadius: 0,
+										borderRadius: "5px",
 									}}
 								>
 									<Image
@@ -170,7 +178,7 @@ export default function Works() {
 									/>
 								</Button>
 							</Link>
-						</ScrollAnimation>
+						</div>
 					))}
 				</Masonry>
 			</div>
