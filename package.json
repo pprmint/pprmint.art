@@ -13,6 +13,7 @@
 		"@mui/lab": "5.0.0-alpha.88",
 		"@mui/material": "^5.8.6",
 		"classnames": "2.2.5",
+		"framer-motion": "^6.5.1",
 		"i18next": "^21.8.11",
 		"i18next-browser-languagedetector": "^6.1.4",
 		"i18next-http-backend": "^1.4.1",
