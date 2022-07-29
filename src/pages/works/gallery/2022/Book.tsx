@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 import ScrollAnimation from "react-animate-on-scroll";
 import { Typography, Container, Skeleton } from "@mui/material";
 import Image from "@jy95/material-ui-image";
@@ -10,7 +11,11 @@ export default function Book() {
 		keyPrefix: "works.2022.book",
 	});
 	return (
-		<React.Fragment>
+		<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
+		>
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>{t("meta.title")}</title>
@@ -104,6 +109,6 @@ export default function Book() {
 					{t("captions.starboard")}
 				</Typography>
 			</div>
-		</React.Fragment>
+		</motion.div>
 	);
 }

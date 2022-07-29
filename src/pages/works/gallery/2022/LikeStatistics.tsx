@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 import ScrollAnimation from "react-animate-on-scroll";
 import {
 	Typography,
@@ -14,7 +15,11 @@ export default function LikeStatistics() {
 		keyPrefix: "works.2022.likeStatistics",
 	});
 	return (
-		<React.Fragment>
+		<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
+		>
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>{t("meta.title")}</title>
@@ -71,6 +76,6 @@ export default function LikeStatistics() {
 					</Typography>
 				</ScrollAnimation>
 			</div>
-		</React.Fragment>
+		</motion.div>
 	);
 }

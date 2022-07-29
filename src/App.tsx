@@ -2,24 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
-import {
-	Typography,
-	IconButton,
-	Stack,
-	Divider,
-} from "@mui/material";
+import { Typography, IconButton, Stack, Divider } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
-import {
-	FiHeart,
-} from "react-icons/fi";
+import { FiHeart } from "react-icons/fi";
 
 import { SiYoutube, SiGithub, SiDiscord, SiPatreon } from "react-icons/si";
 
 // Control thingies
 import NavBar from "./NavBar";
 import AnimatedRoutes from "./AnimatedRoutes";
-import ScrollToTop from "./ScrollToTop";
 import CookieSnackbar from "./CookieSnackbar";
 
 function IconLink(props: React.PropsWithChildren<{ href: string }>) {
@@ -41,11 +33,7 @@ export default function App() {
 		<React.Fragment>
 			<NavBar />
 			<CookieSnackbar />
-
-			<ScrollToTop>
-                <AnimatedRoutes />
-			</ScrollToTop>
-
+			<AnimatedRoutes />
 			<footer>
 				<Divider />
 				<div className="copyright">

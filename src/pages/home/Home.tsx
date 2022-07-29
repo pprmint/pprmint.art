@@ -21,6 +21,8 @@ import Image from "@jy95/material-ui-image";
 import { useTranslation } from "react-i18next";
 import Lottie from "react-lottie";
 
+import { motion } from "framer-motion";
+
 import MintBanner from "./assets/mintBanner.json";
 
 import NewsPatreon from "./assets/patreon.svg";
@@ -137,7 +139,10 @@ export default function Home() {
 	};
 
 	return (
-		<React.Fragment>
+		<motion.div
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
+		>
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>{t("meta.title")}</title>
@@ -397,10 +402,8 @@ export default function Home() {
 				<Grid container spacing={7}>
 					<Grid item md={12} lg={7}>
 						<div className="section" id="latestWork">
-								<Typography variant="h1">
-									{t("section.recent.title")}
-								</Typography>
-								<br />
+							<Typography variant="h1">{t("section.recent.title")}</Typography>
+							<br />
 							<ScrollAnimation animateIn="fadeLeft" animateOnce>
 								<Card variant="outlined">
 									<Link to="/works/2022/lights">
@@ -441,8 +444,8 @@ export default function Home() {
 					</Grid>
 					<Grid item md={12} lg={5}>
 						<div className="section" id="news">
-								<Typography variant="h1">{t("section.news.title")}</Typography>
-								<br />
+							<Typography variant="h1">{t("section.news.title")}</Typography>
+							<br />
 							<ScrollAnimation animateIn="fadeRight" animateOnce>
 								<Box maxWidth="calc(100vw - 32px)">
 									<Card variant="outlined">
@@ -560,6 +563,6 @@ export default function Home() {
 					</Grid>
 				</Grid>
 			</Container>
-		</React.Fragment>
+		</motion.div>
 	);
 }

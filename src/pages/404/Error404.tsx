@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { motion } from "framer-motion";
 import Lottie from "react-lottie";
 import { Button, Typography, Container, Grid } from "@mui/material";
 import { useTranslation } from "react-i18next";
@@ -20,7 +21,11 @@ function FourOhFour() {
 		keyPrefix: "404",
 	});
 	return (
-		<React.Fragment>
+		<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
+		>
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>{t("meta.title")}</title>
@@ -57,7 +62,7 @@ function FourOhFour() {
 					</Link>
 				</Container>
 			</div>
-		</React.Fragment>
+		</motion.div>
 	);
 }
 

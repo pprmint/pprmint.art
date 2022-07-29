@@ -1,6 +1,8 @@
 import React from "react";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 
+import { AnimatePresence } from "framer-motion";
+
 // Imports of all the pages
 import Home from "./pages/home/Home";
 import Downloads from "./pages/downloads/Downloads";
@@ -40,66 +42,71 @@ import Test from "./pages/test/Test";
 export default function AnimatedRoutes() {
 	const location = useLocation();
 	return (
-		<Routes location={location} key={location.pathname}>
-			<Route path="/" element={<Home />} />
-			<Route path="/about" element={<UnderConstruction />} />
+		<AnimatePresence
+			exitBeforeEnter
+			onExitComplete={() => window.scrollTo(0, 0)}
+		>
+			<Routes location={location} key={location.pathname}>
+				<Route path="/" element={<Home />} />
+				<Route path="/about" element={<UnderConstruction />} />
 
-			<Route path="/downloads" element={<Downloads />} />
-			<Route path="/downloads/mintsans" element={<MintsansDL />} />
-			<Route path="/downloads/mintcraft" element={<MintcraftDL />} />
-			<Route
-				path="/downloads/mintcraft/splashes"
-				element={<MintcraftSplashes />}
-			/>
-			<Route path="/downloads/win10tiles" element={<Win10TilesDL />} />
+				<Route path="/downloads" element={<Downloads />} />
+				<Route path="/downloads/mintsans" element={<MintsansDL />} />
+				<Route path="/downloads/mintcraft" element={<MintcraftDL />} />
+				<Route
+					path="/downloads/mintcraft/splashes"
+					element={<MintcraftSplashes />}
+				/>
+				<Route path="/downloads/win10tiles" element={<Win10TilesDL />} />
 
-			<Route path="/works" element={<Works />} />
-			{/* Works of 2022 */}
-			<Route path="/works/2022/lights" element={<Lights />} />
-			<Route path="/works/2022/book" element={<Book />} />
-			<Route path="/works/2022/mintbanners" element={<MintBanners />} />
-			<Route path="/works/2022/wiimenu" element={<WiiMenu />} />
-			<Route path="/works/2022/geoices" element={<Geoices />} />
-			<Route path="/works/2022/suserebrand" element={<SuseRebrand />} />
-			<Route path="/works/2022/statistics" element={<Statistics />} />
-			<Route path="/works/2022/ipad" element={<Ipad />} />
-			<Route path="/works/2022/ford" element={<Ford />} />
-			<Route path="/works/2022/archwall" element={<ArchWall />} />
+				<Route path="/works" element={<Works />} />
+				{/* Works of 2022 */}
+				<Route path="/works/2022/lights" element={<Lights />} />
+				<Route path="/works/2022/book" element={<Book />} />
+				<Route path="/works/2022/mintbanners" element={<MintBanners />} />
+				<Route path="/works/2022/wiimenu" element={<WiiMenu />} />
+				<Route path="/works/2022/geoices" element={<Geoices />} />
+				<Route path="/works/2022/suserebrand" element={<SuseRebrand />} />
+				<Route path="/works/2022/statistics" element={<Statistics />} />
+				<Route path="/works/2022/ipad" element={<Ipad />} />
+				<Route path="/works/2022/ford" element={<Ford />} />
+				<Route path="/works/2022/archwall" element={<ArchWall />} />
 
-			{/* Works of 2021 */}
-			<Route path="/works/2021/manjarowall" element={<ManjaroWall />} />
-			<Route path="/works/2021/gs" element={<GS />} />
-			<Route path="/works/2021/notvlc" element={<NotVLC />} />
-			<Route path="/works/2021/lightstudy" element={<LightStudy />} />
+				{/* Works of 2021 */}
+				<Route path="/works/2021/manjarowall" element={<ManjaroWall />} />
+				<Route path="/works/2021/gs" element={<GS />} />
+				<Route path="/works/2021/notvlc" element={<NotVLC />} />
+				<Route path="/works/2021/lightstudy" element={<LightStudy />} />
 
-			<Route path="/contact" element={<Contact />} />
-			<Route path="/privacy" element={<PrivacyPolicy />} />
-			<Route path="/test" element={<Test />} />
-			<Route path="/healthsafety" element={<HealthSafety />} />
+				<Route path="/contact" element={<Contact />} />
+				<Route path="/privacy" element={<PrivacyPolicy />} />
+				<Route path="/test" element={<Test />} />
+				<Route path="/healthsafety" element={<HealthSafety />} />
 
-			<Route path="/faq" element={<Navigate replace to="/contact" />} />
-			<Route
-				path="/mintcraft"
-				element={<Navigate replace to="/downloads/mintcraft" />}
-			/>
-			<Route
-				path="/splashes"
-				element={<Navigate replace to="/downloads/mintcraft/splashes" />}
-			/>
-			<Route
-				path="/mintsans"
-				element={<Navigate replace to="/downloads/mintsans" />}
-			/>
-			<Route
-				path="/mintalt"
-				element={<Navigate replace to="/downloads/mintalt" />}
-			/>
-			<Route
-				path="/win10tiles"
-				element={<Navigate replace to="/downloads/win10tiles" />}
-			/>
+				<Route path="/faq" element={<Navigate replace to="/contact" />} />
+				<Route
+					path="/mintcraft"
+					element={<Navigate replace to="/downloads/mintcraft" />}
+				/>
+				<Route
+					path="/splashes"
+					element={<Navigate replace to="/downloads/mintcraft/splashes" />}
+				/>
+				<Route
+					path="/mintsans"
+					element={<Navigate replace to="/downloads/mintsans" />}
+				/>
+				<Route
+					path="/mintalt"
+					element={<Navigate replace to="/downloads/mintalt" />}
+				/>
+				<Route
+					path="/win10tiles"
+					element={<Navigate replace to="/downloads/win10tiles" />}
+				/>
 
-			<Route path="*" element={<Error404 />} />
-		</Routes>
+				<Route path="*" element={<Error404 />} />
+			</Routes>
+		</AnimatePresence>
 	);
 }

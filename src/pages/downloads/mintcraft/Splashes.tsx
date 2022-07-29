@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import ScrollAnimation from "react-animate-on-scroll";
 import { Typography, List, ListItem, Container } from "@mui/material";
+import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
 const splashes = [
@@ -946,7 +947,11 @@ function MintcraftSplashes() {
 		keyPrefix: "downloads.mintcraft",
 	});
 	return (
-		<React.Fragment>
+		<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
+		>
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>splashes.txt • pprmint.art</title>
@@ -985,7 +990,7 @@ function MintcraftSplashes() {
 					</ScrollAnimation>
 				</Container>
 			</div>
-		</React.Fragment>
+		</motion.div>
 	);
 }
 

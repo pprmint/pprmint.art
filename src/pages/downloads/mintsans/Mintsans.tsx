@@ -2,6 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { Link as ScrollLink } from "react-scroll";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 import ScrollAnimation from "react-animate-on-scroll";
 import {
 	Button,
@@ -86,7 +87,11 @@ export default function MintsansDL() {
 	};
 
 	return (
-		<React.Fragment>
+		<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
+		>
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>{t("meta.title")}</title>
@@ -336,6 +341,6 @@ export default function MintsansDL() {
 					</ScrollAnimation>
 				</Container>
 			</div>
-		</React.Fragment>
+		</motion.div>
 	);
 }

@@ -12,6 +12,7 @@ import {
 	Container,
 } from "@mui/material";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 import ScrollAnimation from "react-animate-on-scroll";
 
 import MintcraftCardLogo from "./mintcraft/assets/mintcraft_card_logo.svg";
@@ -31,7 +32,11 @@ export default function Downloads() {
 		keyPrefix: "downloads",
 	});
 	return (
-		<React.Fragment>
+		<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
+		>
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>{t("meta.title")}</title>
@@ -174,6 +179,6 @@ export default function Downloads() {
 					</ScrollAnimation>
 				</Container>
 			</div>
-		</React.Fragment>
+		</motion.div>
 	);
 }

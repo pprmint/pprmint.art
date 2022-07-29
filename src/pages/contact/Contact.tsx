@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 import ScrollAnimation from "react-animate-on-scroll";
 import {
 	Button,
@@ -33,7 +34,11 @@ export default function Contact() {
 		keyPrefix: "contact",
 	});
 	return (
-		<React.Fragment>
+		<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
+		>
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>{t("meta.title")}</title>
@@ -278,7 +283,7 @@ export default function Contact() {
 										<b>{t("section.faq.5support.tldr")}</b>
 										{t("section.faq.5support.long")}
 										<a
-                                            className="external"
+											className="external"
 											href="https://patreon.com/pprmint"
 											target="_blank"
 											rel="noopener noreferrer"
@@ -306,36 +311,32 @@ export default function Contact() {
 				</div>
 				<div className="section" id="contact">
 					<Container>
-							<Typography variant="h1">{t("section.contact.title")}</Typography>
-						<ScrollAnimation animateIn="fadeBottom" animateOnce>
-							<Typography variant="body1">
-								{t("section.contact.text")}
-							</Typography>
-							<br />
-							<Stack spacing={2} direction="row">
-								<Button
-									href="mailto:mail@pprmint.art?subject=I'll%20gladly%20ignore%20any%20ads%20or%20offers%20you%20might%20have%20for%20me."
-									target="_blank"
-									rel="noopener noreferrer"
-									variant="contained"
-									startIcon={<FiMail />}
-								>
-									{t("section.contact.button.email")}
-								</Button>
-								<Button
-									href="https://discord.com/invite/Vw9JXwr"
-									target="_blank"
-									rel="noopener noreferrer"
-									variant="outlined"
-									startIcon={<SiDiscord />}
-								>
-									{t("section.contact.button.discord")}
-								</Button>
-							</Stack>
-						</ScrollAnimation>
+						<Typography variant="h1">{t("section.contact.title")}</Typography>
+						<Typography variant="body1">{t("section.contact.text")}</Typography>
+						<br />
+						<Stack spacing={2} direction="row">
+							<Button
+								href="mailto:mail@pprmint.art?subject=I'll%20gladly%20ignore%20any%20ads%20or%20offers%20you%20might%20have%20for%20me."
+								target="_blank"
+								rel="noopener noreferrer"
+								variant="contained"
+								startIcon={<FiMail />}
+							>
+								{t("section.contact.button.email")}
+							</Button>
+							<Button
+								href="https://discord.com/invite/Vw9JXwr"
+								target="_blank"
+								rel="noopener noreferrer"
+								variant="outlined"
+								startIcon={<SiDiscord />}
+							>
+								{t("section.contact.button.discord")}
+							</Button>
+						</Stack>
 					</Container>
 				</div>
 			</div>
-		</React.Fragment>
+		</motion.div>
 	);
 }

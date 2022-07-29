@@ -16,6 +16,7 @@ import {
 } from "@mui/material";
 import Image from "@jy95/material-ui-image";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 import ScrollAnimation from "react-animate-on-scroll";
 
 import "./assets/mintbit/mintbit.css";
@@ -77,7 +78,11 @@ export default function MintcraftDL() {
 	});
 	let click = new Audio(ClickSound);
 	return (
-		<React.Fragment>
+		<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
+		>
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>{t("meta.title")}</title>
@@ -749,6 +754,6 @@ export default function MintcraftDL() {
 					</Container>
 				</div>
 			</ScrollAnimation>
-		</React.Fragment>
+		</motion.div>
 	);
 }

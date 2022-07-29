@@ -1,6 +1,5 @@
 html {
 	overflow-x: hidden;
-        overflow-y: scroll;
 }
 body {
 	padding-right: 0px !important; // can't quite figure out why MUI likes to change the padding when opening a menu or dialog
@@ -73,6 +72,25 @@ body {
 	background: var(--greenPrimary);
 }
 
+@keyframes lettersExtend {
+	0% {
+        
+		letter-spacing: -10px;
+	}
+	100% {
+        
+		letter-spacing: 0px;
+	}
+}
+@keyframes moveBottom {
+	0% {
+		transform: translateY(30px);
+	}
+
+	100% {
+		transform: translateY(0px);
+	}
+}
 @keyframes fadeBottom {
 	0% {
 		opacity: 0;
@@ -234,11 +252,9 @@ body {
 .section {
 	padding-top: 12vh;
 	h1 {
-		animation: fadeBottom 0.5s var(--easeOut) 0.08s forwards;
-		opacity: 0;
+		animation: moveBottom 0.5s var(--easeOut) forwards;
 		&.prominent {
-			animation: fadeRight 0.5s var(--easeOut) 0.08s forwards;
-			opacity: 0;
+			animation: lettersExtend 1.25s var(--easeOut) forwards;
 			text-anchor: end;
 			line-height: 0.5;
 			color: transparent;
@@ -259,11 +275,11 @@ body {
 
 .galleryContainer {
 	opacity: 0;
-	animation: fadeBottom 0.5s var(--easeOut) 0.24s forwards;
-    background-color: var(--backgroundPrimary);
+	animation: fadeBottom 1s var(--easeOut) 0.25s forwards;
+	background-color: var(--backgroundPrimary);
 	.galleryItem {
 		transition: all 0.375s var(--easeOut);
-        z-index: 0;
+		z-index: 0;
 		&:hover {
 			filter: none !important;
 			transform: scale(1.02);

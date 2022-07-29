@@ -2,6 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { Link as ScrollLink } from "react-scroll";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 import ScrollAnimation from "react-animate-on-scroll";
 import { Button, Typography, Grid, Container, Skeleton } from "@mui/material";
 import Image from "@jy95/material-ui-image";
@@ -92,7 +93,11 @@ export default function Win10TilesDL() {
 		keyPrefix: "downloads.win10tiles",
 	});
 	return (
-		<React.Fragment>
+		<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
+		>
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>{t("meta.title")}</title>
@@ -365,6 +370,6 @@ export default function Win10TilesDL() {
 					</ScrollAnimation>
 				</Container>
 			</div>
-		</React.Fragment>
+		</motion.div>
 	);
 }
