@@ -7,7 +7,7 @@ import Tester from "./tester";
 
 import Title from "src/components/layout/Title";
 import TitleBackground from "public/assets/mintbit/title.svg";
-import FadingImage from "src/components/ui/FadingImage";
+import Image from "next/image";
 import Button from "src/components/ui/Button";
 
 export async function generateMetadata({ params: { locale } }: Props) {
@@ -28,7 +28,7 @@ export default function Page({ params: { locale } }: Props) {
 	return (
 		<>
 			<Title title={t("MINTBIT.Head.title")} description={t("MINTBIT.Head.description")}>
-				<FadingImage src={TitleBackground} alt="" fill className="object-cover" />
+				<Image src={TitleBackground} alt="" fill className="object-cover" />
 			</Title>
 			<main>
 				<Glyphs />

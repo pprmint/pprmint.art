@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import FadingImage from "src/components/ui/FadingImage";
+import Image from "next/image";
 import Title from "src/components/layout/Title";
 
 import TitleBackground1 from "public/assets/contact/chat_left.svg";
@@ -9,7 +9,6 @@ import PixelMina from "public/assets/mina64.gif";
 import Letter from "public/assets/contact/letter.svg";
 import Bubbles from "public/assets/contact/bubbles.svg";
 import PaperPlane from "public/assets/contact/paperplane.svg";
-import Image from "next/image";
 import { Link } from "src/navigation";
 import Button from "src/components/ui/Button";
 import Chatbox from "./chatbox";
@@ -33,8 +32,8 @@ export default function Page({ params: { locale } }: Props) {
 	return (
 		<>
 			<Title title={t("Head.title")} description={t("Head.description")}>
-				<FadingImage src={TitleBackground1} alt="" fill className="object-cover" />
-				<FadingImage src={TitleBackground2} alt="" fill className="object-cover" />
+				<Image src={TitleBackground1} alt="" fill className="object-cover" />
+				<Image src={TitleBackground2} alt="" fill className="object-cover" />
 			</Title>
 			<main>
 				<section className="max-w-7xl mx-auto my-24 px-6 md:px-9 flex flex-col items-center justify-center">
@@ -64,7 +63,7 @@ export default function Page({ params: { locale } }: Props) {
 					<Image
 						src={Letter}
 						alt=""
-						className="absolute -z-10 w-1/2 md:w-1/3 h-auto bottom-0 md:top-1/2 md:-translate-y-1/2 right-0 xl:right-12 2xl:right-40 scale-90 group-hover:scale-100 opacity-25 group-hover:opacity-50 origin-bottom-right duration-500 ease-in-out"
+						className="absolute -z-10 w-1/2 md:w-1/3 h-auto bottom-0 md:top-1/2 md:-translate-y-1/2 right-0 xl:right-12 2xl:right-40 opacity-50"
 					/>
 				</section>
 				<section className="group relative w-full overflow-clip border-b border-b-neutral-900">
@@ -87,7 +86,7 @@ export default function Page({ params: { locale } }: Props) {
 					<Image
 						src={PaperPlane}
 						alt=""
-						className="absolute -z-10 w-1/2 md:w-1/4 h-auto bottom-0 md:top-1/2 md:-translate-y-1/2 right-0 xl:right-16 2xl:right-48 scale-90 group-hover:scale-100 opacity-25 group-hover:opacity-50 origin-bottom-right duration-500 ease-in-out"
+						className="absolute -z-10 w-1/2 md:w-1/4 h-auto bottom-0 md:top-1/2 md:-translate-y-1/2 right-0 xl:right-16 2xl:right-48 opacity-50"
 					/>
 				</section>
 				<section className="group relative w-full overflow-clip border-b border-b-neutral-900">
@@ -114,7 +113,7 @@ export default function Page({ params: { locale } }: Props) {
 					<Image
 						src={Bubbles}
 						alt=""
-						className="absolute -z-10 w-1/2 md:w-1/4 h-auto bottom-0 md:top-1/2 md:-translate-y-1/2 right-0 xl:right-16 2xl:right-48 scale-90 group-hover:scale-100 opacity-25 group-hover:opacity-50 origin-bottom-right duration-500 ease-in-out"
+						className="absolute -z-10 w-1/2 md:w-1/4 h-auto bottom-0 md:top-1/2 md:-translate-y-1/2 right-0 xl:right-16 2xl:right-48 opacity-50"
 					/>
 				</section>
 			</main>

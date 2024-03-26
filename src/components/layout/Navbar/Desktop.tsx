@@ -26,11 +26,11 @@ export default function DesktopNavigation() {
 
 	// Styles
 	const NavMenuTrigger =
-		"group/root flex items-center gap-3 h-10 px-4 text-neutral-50/80 hover:text-neutral-50 data-[state='open']:text-neutral-50 data-[state='open']:backdrop-blur-md duration-250 font-medium rounded-lg";
+		"group/root flex items-center gap-3 h-10 px-4 text-neutral-50/80 hover:text-neutral-50 data-[state='open']:text-neutral-50 data-[state='open']:duration-250 font-medium rounded-lg";
 	const NavMenuContent =
 		"absolute top-0 left-0 p-3 duration-250 data-[motion='from-start']:animate-enter-from-l data-[motion='from-end']:animate-enter-from-r data-[motion='to-start']:animate-exit-to-l data-[motion='to-end']:animate-exit-to-r";
 	const NavMenuViewport =
-		"relative origin-top-left w-[--radix-navigation-menu-viewport-width] overflow-hidden backdrop-blur-xl bg-gradient-to-b from-[#282828bb] to-[#222222aa] border border-neutral-950 ring-1 ring-inset ring-neutral-50/10 text-neutral rounded-xl shadow-[0_6px_22px_#11111166] h-[--radix-navigation-menu-viewport-height] duration-250 ease-out data-[state='open']:animate-enter-from-t data-[state='closed']:animate-exit-to-t";
+		"relative origin-top-left w-[--radix-navigation-menu-viewport-width] overflow-hidden bg-neutral-900 border border-neutral-950 ring-1 ring-inset ring-neutral-50/10 text-neutral rounded-xl shadow-[0_6px_22px_#11111166] h-[--radix-navigation-menu-viewport-height] duration-250 ease-out data-[state='open']:animate-enter-from-t data-[state='closed']:animate-exit-to-t";
 
 	return (
 		<>
@@ -38,7 +38,7 @@ export default function DesktopNavigation() {
 				<NavigationMenu.List className="flex py-3 pr-6">
 					<NavigationMenu.Item>
 						<NavigationMenu.Trigger className={NavMenuTrigger}>
-							<span className="inline-flex items-center gap-3 drop-shadow-[0px_2px_12px_#111a]">
+							<span className="inline-flex items-center gap-3">
 								{t("Path.General.title")}
 								{Caret}
 							</span>
@@ -50,9 +50,9 @@ export default function DesktopNavigation() {
 									<li key={Page.link}>
 										<NavigationMenu.Link
 											asChild
-											className={`group block px-3 py-2.5 rounded-lg hover:bg-neutral-50/10 active:shadow-inner duration-250 ease-out active:duration-75 ${
+											className={`group block px-3 py-2.5 rounded-lg hover:bg-neutral-800 active:opacity-75 duration-250 ease-out active:duration-75 ${
 												pathname === Page.link &&
-												"bg-gradient-to-b from-neutral-950/30 to-neutral-950/15 shadow-inner pointer-events-none"
+												"bg-neutral-800 pointer-events-none"
 											}`}
 										>
 											<Link href={Page.link}>
@@ -70,7 +70,7 @@ export default function DesktopNavigation() {
 
 					<NavigationMenu.Item>
 						<NavigationMenu.Trigger className={NavMenuTrigger}>
-							<span className="inline-flex items-center gap-3 drop-shadow-[0px_2px_12px_#111a]">
+							<span className="inline-flex items-center gap-3">
 								{t("Path.Works.title")}
 								{Caret}
 							</span>
@@ -82,9 +82,9 @@ export default function DesktopNavigation() {
 									<li key={Work.link}>
 										<NavigationMenu.Link
 											asChild
-											className={`group block px-3 py-2.5 rounded-lg hover:bg-neutral-50/10 active:shadow-inner duration-250 ease-out active:duration-75 ${
+											className={`group block px-3 py-2.5 rounded-lg hover:bg-neutral-800 active:opacity-75 duration-250 ease-out active:duration-75 ${
 												pathname === Work.link &&
-												"bg-gradient-to-b from-neutral-950/30 to-neutral-950/15 shadow-inner pointer-events-none"
+												"bg-neutral-800 pointer-events-none"
 											}`}
 										>
 											<Link href={Work.link}>
@@ -101,7 +101,7 @@ export default function DesktopNavigation() {
 					</NavigationMenu.Item>
 					<NavigationMenu.Item>
 						<NavigationMenu.Trigger className={NavMenuTrigger}>
-							<span className="inline-flex items-center gap-3 drop-shadow-[0px_2px_12px_#111a]">
+							<span className="inline-flex items-center gap-3">
 								{t("Path.Other.title")}
 								{Caret}
 							</span>
@@ -111,9 +111,9 @@ export default function DesktopNavigation() {
 								<li>
 									<NavigationMenu.Link
 										asChild
-										className={`group block px-3 py-2.5 rounded-lg hover:bg-neutral-50/10 active:shadow-inner duration-250 ease-out active:duration-75 ${
+										className={`group block px-3 py-2.5 rounded-lg hover:bg-neutral-800 active:opacity-75 duration-250 ease-out active:duration-75 ${
 											pathname === "/privacy" &&
-											"bg-gradient-to-b from-neutral-950/30 to-neutral-950/15 shadow-inner pointer-events-none"
+											"bg-neutral-800 pointer-events-none"
 										}`}
 									>
 										<Link href="/privacy">

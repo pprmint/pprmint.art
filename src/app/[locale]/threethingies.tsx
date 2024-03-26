@@ -5,7 +5,7 @@ import { useTransition, a } from "@react-spring/web";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 
-import FadingImage from "src/components/ui/FadingImage";
+import Image from "next/image";
 
 export default function ThreeThingies() {
 	const t = useTranslations("HOME");
@@ -31,7 +31,7 @@ export default function ThreeThingies() {
 				onFocus={() => setFocused("vectors")}
 				onMouseEnter={() => setFocused("vectors")}
 				href="/gallery?dimension=2d"
-				className="z-20 group relative flex p-6 md:p-9 pb-20 size-full lg:items-center lg:justify-center bg-neutral-950/90 hover:bg-neutral-950/75 active:hover:bg-neutral-950/90 focus-visible:bg-neutral-950/75 backdrop-blur-lg hover:backdrop-blur-none focus-visible:backdrop-blur-none duration-300 active:duration-100"
+				className="z-20 group relative flex p-6 md:p-9 pb-20 size-full lg:items-center lg:justify-center bg-neutral-950/90 hover:bg-neutral-950/75 active:hover:bg-neutral-950/90 focus-visible:bg-neutral-950/75 hover:backdrop-blur-none focus-visible:backdrop-blur-none duration-300 active:duration-100"
 			>
 				<div className="lg:text-center lg:translate-y-1/3 lg:group-hover:translate-y-0 lg:group-focus-visible:translate-y-0 duration-500 ease-out-quint xl:h-64 2xl:h-52">
 					<h1 className="lg:text-center">
@@ -52,7 +52,7 @@ export default function ThreeThingies() {
 				onFocus={() => setFocused("polygons")}
 				onMouseEnter={() => setFocused("polygons")}
 				href="/gallery?dimension=3d"
-				className="z-20 group relative flex p-6 md:p-9 pb-20 size-full lg:items-center lg:justify-center bg-neutral-950/90 hover:bg-neutral-950/75 active:hover:bg-neutral-950/90 focus-visible:bg-neutral-950/75 backdrop-blur-lg hover:backdrop-blur-none focus-visible:backdrop-blur-none duration-300 active:duration-100"
+				className="z-20 group relative flex p-6 md:p-9 pb-20 size-full lg:items-center lg:justify-center bg-neutral-950/90 hover:bg-neutral-950/75 active:hover:bg-neutral-950/90 focus-visible:bg-neutral-950/75 hover:backdrop-blur-none focus-visible:backdrop-blur-none duration-300 active:duration-100"
 			>
 				<div className="lg:text-center lg:translate-y-1/3 lg:group-hover:translate-y-0 lg:group-focus-visible:translate-y-0 duration-500 ease-out-quint xl:h-64 2xl:h-52">
 					<h1 className="lg:text-center">
@@ -75,7 +75,7 @@ export default function ThreeThingies() {
 				href="https://github.com/pprmint"
 				target="_blank"
 				rel="noopener noreferrer"
-				className="z-20 group relative flex p-6 md:p-9 pb-20 size-full lg:items-center lg:justify-center bg-neutral-950/90 hover:bg-neutral-950/75 active:hover:bg-neutral-950/90 focus-visible:bg-neutral-950/75 backdrop-blur-lg hover:backdrop-blur-none focus-visible:backdrop-blur-none duration-300 active:duration-100"
+				className="z-20 group relative flex p-6 md:p-9 pb-20 size-full lg:items-center lg:justify-center bg-neutral-950/90 hover:bg-neutral-950/75 active:hover:bg-neutral-950/90 focus-visible:bg-neutral-950/75 hover:backdrop-blur-none focus-visible:backdrop-blur-none duration-300 active:duration-100"
 			>
 				<div className="lg:text-center lg:translate-y-1/3 lg:group-hover:translate-y-0 lg:group-focus-visible:translate-y-0 duration-500 ease-out-quint xl:h-64 2xl:h-52">
 					<h1 className="lg:text-center">
@@ -98,7 +98,7 @@ export default function ThreeThingies() {
 					item ? (
 						item == "vectors" ? (
 							<a.div style={style}>
-								<FadingImage
+								<Image
 									src="https://static.pprmint.art/uploads/dark2_80a3e41e9f.png"
 									fill
 									className="object-cover"
@@ -107,7 +107,7 @@ export default function ThreeThingies() {
 							</a.div>
 						) : item == "polygons" ? (
 							<a.div style={style}>
-								<FadingImage
+								<Image
 									src="https://static.pprmint.art/uploads/Crystal_Cave_light_c60ed75104.png"
 									fill
 									className="object-cover"
@@ -116,7 +116,7 @@ export default function ThreeThingies() {
 							</a.div>
 						) : item == "code" ? (
 							<a.div style={style}>
-								<FadingImage
+								<Image
 									src="https://static.pprmint.art/uploads/Zoompaper_aecb0eee13.png"
 									fill
 									className="object-cover"

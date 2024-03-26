@@ -2,7 +2,7 @@ import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import { Suspense } from "react";
 
 import Title from "src/components/layout/Title";
-import FadingImage from "src/components/ui/FadingImage";
+import Image from "next/image";
 
 import Gallery from "./gallery";
 import GallerySkeleton from "./gallerySkeleton";
@@ -43,7 +43,7 @@ export default async function Page({ searchParams, params: { locale } }: Props) 
 	return (
 		<>
 			<Title title={t("Head.title")} description={t("Head.description")}>
-				<FadingImage
+				<Image
 					src={`https://static.pprmint.art${Latest.data[0].attributes.cover.data.attributes.url}`}
 					alt=""
 					fill

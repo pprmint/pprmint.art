@@ -5,7 +5,7 @@ import Tester from "./tester";
 import { Download } from "lucide-react";
 
 import Title from "src/components/layout/Title";
-import FadingImage from "src/components/ui/FadingImage";
+import Image from "next/image";
 import Button from "src/components/ui/Button";
 
 import TitleImage from "public/assets/mintsans/MintSans_V2.jpg";
@@ -34,16 +34,16 @@ export default function Page({ params: { locale } }: Props) {
 	return (
 		<>
 			<Title title={t("MINTSANS.Head.title")} description={t("MINTSANS.Head.description")}>
-				<FadingImage src={TitleImage} alt="" fill className="object-contain" />
+				<Image src={TitleImage} alt="" fill className="object-contain" />
 			</Title>
 			<main>
 				<section className="my-20">
-					<FadingImage src={Slide1} alt="Slide 1" className="w-full" />
-					<FadingImage src={Slide2} alt="Slide 2" className="w-full" />
-					<FadingImage src={Slide3} alt="Slide 3" className="w-full" />
-					<FadingImage src={Slide4} alt="Slide 4" className="w-full" />
-					<FadingImage src={Slide5} alt="Slide 5" className="w-full" />
-					<FadingImage src={Slide6} alt="Slide 6" className="w-full" />
+					<Image src={Slide1} alt="Slide 1" className="w-full" />
+					<Image src={Slide2} alt="Slide 2" className="w-full" />
+					<Image src={Slide3} alt="Slide 3" className="w-full" />
+					<Image src={Slide4} alt="Slide 4" className="w-full" />
+					<Image src={Slide5} alt="Slide 5" className="w-full" />
+					<Image src={Slide6} alt="Slide 6" className="w-full" />
 				</section>
 				<section className="my-20 px-6 md:px-9 py-5">
 					<h2 className="max-w-7xl mx-auto">

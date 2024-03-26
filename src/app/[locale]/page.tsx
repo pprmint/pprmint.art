@@ -6,7 +6,7 @@ import Button from "src/components/ui/Button";
 import Title from "src/components/layout/Title";
 
 import { Announcements } from "src/types/announcement";
-import FadingImage from "src/components/ui/FadingImage";
+import Image from "next/image";
 import { useLocale } from "next-intl";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import ThreeThingies from "./threethingies";
@@ -35,7 +35,7 @@ export default async function Page({ params: { locale } }: Props) {
 				<ThreeThingies />
 				<section className="relative overflow-hidden">
 					<div className="relative w-full h-full -z-10">
-						<FadingImage
+						<Image
 							src={`https://static.pprmint.art${Announcements.data[0].attributes.media.data.attributes.formats.thumbnail.url}`}
 							alt={Announcements.data[0].attributes.media.data.attributes.alternativeText}
 							quality={90}
@@ -52,7 +52,7 @@ export default async function Page({ params: { locale } }: Props) {
 							}}
 						/>
 					</div>
-					<FadingImage
+					<Image
 						src={`https://static.pprmint.art${Announcements.data[0].attributes.media.data.attributes.url}`}
 						alt={Announcements.data[0].attributes.media.data.attributes.alternativeText}
 						quality={90}
@@ -96,7 +96,7 @@ export default async function Page({ params: { locale } }: Props) {
 							(announcement, index) =>
 								index > 0 && (
 									<div key={announcement.id} className="flex flex-col gap-3">
-										<FadingImage
+										<Image
 											src={`https://static.pprmint.art${announcement.attributes.media.data.attributes.url}`}
 											alt={announcement.attributes.media.data.attributes.alternativeText}
 											quality={90}

@@ -237,7 +237,7 @@ function Chatbox() {
 							/>
 							<a.div style={styles} className="relative w-full max-w-lg">
 								<div className="relative flex flex-col bg-neutral-950 sm:border border-neutral-900 ring-neutral-950/75 sm:rounded-xl overflow-hidden h-svh md:h-2/3-screen">
-									<div className="absolute top-0 left-0 right-0 flex gap-6 items-center justify-between py-2 backdrop-blur-xl bg-gradient-to-b from-[#282828bb] to-[#222222aa] shadow-lg shadow-neutral-950/50 z-10">
+									<div className="absolute top-0 left-0 right-0 flex gap-6 items-center justify-between py-2 bg-gradient-to-b from-[#282828bb] to-[#222222aa] shadow-lg shadow-neutral-950/50 z-10">
 										<div className="w-1/5">
 											<button
 												className="flex items-center text-neutral-50 hover:opacity-75 duration-100"

@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { useState } from "react";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import FadingImage from "src/components/ui/FadingImage";
+import Image from "next/image";
 import { Works } from "src/types/work";
 
 export default function Gallery(works: { works: Works }) {
@@ -17,7 +17,7 @@ export default function Gallery(works: { works: Works }) {
 				<Dialog.Root key={work.id}>
 					<Dialog.Trigger asChild>
 						<button className="relative group overflow-hidden rounded-lg hover:contrast-75 active:contrast-100 active:opacity-75 duration-200 active:duration-75 cursor-pointer aspect-video focus-visible:animate-pulse">
-							<FadingImage
+							<Image
 								src={`https://static.pprmint.art${work.attributes.cover.data.attributes.url}`}
 								width={work.attributes.cover.data.attributes.width}
 								height={work.attributes.cover.data.attributes.height}
@@ -51,7 +51,7 @@ export default function Gallery(works: { works: Works }) {
 								{fullscreen ? <Minimize /> : <Maximize />}
 							</button>
 							<div className="relative overflow-hidden h-80 md:h-1/3-screen">
-								<FadingImage
+								<Image
 									src={`https://static.pprmint.art${work.attributes.cover.data.attributes.formats.thumbnail.url}`}
 									alt={work.attributes.title}
 									fill
@@ -89,7 +89,7 @@ export default function Gallery(works: { works: Works }) {
 							<hr className="m-6 lg:m-9 border-neutral-900" />
 							{work.attributes.gallery.data.map((media) =>
 								media.attributes.mime.startsWith("image") ? (
-									<FadingImage
+									<Image
 										key={media.id.toString()}
 										src={`https://static.pprmint.art${media.attributes.url}`}
 										alt={media.attributes.alternativeText}

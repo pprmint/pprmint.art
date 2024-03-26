@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Link } from "src/navigation";
 import { useTranslations } from "next-intl";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
@@ -6,7 +5,7 @@ import { Check, ExternalLink } from "lucide-react";
 
 import Title from "src/components/layout/Title";
 import Hero from "public/assets/ytdg/hero.png";
-import FadingImage from "src/components/ui/FadingImage";
+import Image from "next/image";
 import Button from "src/components/ui/Button";
 
 import IsometricScreenshot from "public/assets/ytdg/screenshot_dark_iso.webp";
@@ -29,7 +28,7 @@ export default function Page({ params: { locale } }: Props) {
 	return (
 		<>
 			<Title title={t("YTDG.Head.title")} description={t("YTDG.Head.description")} accentColor="text-violet">
-				<FadingImage src={Hero} alt="" fill className="object-cover" quality={90} />
+				<Image src={Hero} alt="" fill className="object-cover" quality={90} />
 			</Title>
 			<main>
 				<section className="relative flex items-center lg:min-h-2/3-screen pb-48 xl:pb-0">

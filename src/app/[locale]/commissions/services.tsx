@@ -1,7 +1,7 @@
 "use client";
 import * as Accordion from "@radix-ui/react-accordion";
 import { useTranslations } from "next-intl";
-import FadingImage from "src/components/ui/FadingImage";
+import Image from "next/image";
 
 // An identifier or keyword cannot immediately follow a numeric literal.ts(1351)
 // Fine then, lemme give it a shitty name, see if I care.
@@ -26,7 +26,7 @@ export default function Services() {
 								50€-200€
 							</p>
 						</div>
-						<FadingImage src={TwoDeeCardImage} alt="" className="w-36 h-36" />
+						<Image src={TwoDeeCardImage} alt="" className="w-36 h-36" />
 					</div>
 				</Accordion.Trigger>
 				<Accordion.Content className="data-[state=open]:animate-accordion-slide-down data-[state=closed]:animate-accordion-slide-up">
@@ -71,7 +71,7 @@ export default function Services() {
 								100€-250€
 							</p>
 						</div>
-						<FadingImage src={MoGraphCardImage} alt="" className="w-36 h-36" />
+						<Image src={MoGraphCardImage} alt="" className="w-36 h-36" />
 					</div>
 				</Accordion.Trigger>
 				<Accordion.Content className="data-[state=open]:animate-accordion-slide-down data-[state=closed]:animate-accordion-slide-up">
@@ -101,7 +101,7 @@ export default function Services() {
 								150€-400€
 							</p>
 						</div>
-						<FadingImage src={ThreeDeeCardImage} alt="" className="w-36 h-36" />
+						<Image src={ThreeDeeCardImage} alt="" className="w-36 h-36" />
 					</div>
 				</Accordion.Trigger>
 				<Accordion.Content className="data-[state=open]:animate-accordion-slide-down data-[state=closed]:animate-accordion-slide-up">
@@ -139,7 +139,7 @@ export default function Services() {
 								200€-2000€+
 							</p>
 						</div>
-						<FadingImage src={WebsiteCardImage} alt="" className="w-36 h-36" />
+						<Image src={WebsiteCardImage} alt="" className="w-36 h-36" />
 					</div>
 				</Accordion.Trigger>
 				<Accordion.Content className="data-[state=open]:animate-accordion-slide-down data-[state=closed]:animate-accordion-slide-up">

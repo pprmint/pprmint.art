@@ -68,7 +68,7 @@ import qBittorrentIcon from "/public/assets/appicons/qBittorrent.png";
 import SpotifyIcon from "/public/assets/appicons/Spotify.png";
 import TixatiIcon from "/public/assets/appicons/Tixati.png";
 import { useTranslations } from "next-intl";
-import FadingImage from "src/components/ui/FadingImage";
+import Image from "next/image";
 import { Check, Download, LoaderCircle, Search, X } from "lucide-react";
 import Button from "src/components/ui/Button";
 
@@ -521,7 +521,7 @@ export default function Selector() {
 									>
 										<Check size={16} strokeWidth={3} />
 									</div>
-									<FadingImage
+									<Image
 										src={icon.image}
 										alt={icon.name}
 										className={
@@ -540,7 +540,7 @@ export default function Selector() {
 				item ? (
 					<a.div
 						style={styles}
-						className="fixed z-60 flex items-center justify-between left-1/2 bottom-0 xl:bottom-6 w-full xl:max-w-6xl pl-5 pr-3 py-3 backdrop-blur-xl bg-gradient-to-b from-neutral-800/75 to-neutral-900/90 border-neutral-50/10 border-t xl:border border-neutral-950 xl:ring-1 ring-inset ring-neutral-50/10 xl:rounded-2xl shadow-xl shadow-neutral-950/50"
+						className="fixed z-60 flex items-center justify-between left-1/2 bottom-0 xl:bottom-6 w-full xl:max-w-6xl pl-5 pr-3 py-3 bg-neutral-900 border-neutral-50/10 border-t xl:border border-neutral-950 xl:ring-1 ring-inset ring-neutral-50/10 xl:rounded-2xl shadow-xl shadow-neutral-950/50"
 					>
 						<div className="flex items-center">
 							{selectedCountTransition((styles, count) => (

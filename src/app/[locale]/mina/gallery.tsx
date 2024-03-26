@@ -3,7 +3,7 @@ import * as Dialog from "@radix-ui/react-dialog";
 import { EyeOff, Globe, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
-import FadingImage from "src/components/ui/FadingImage";
+import Image from "next/image";
 import { Link } from "src/navigation";
 import { MinaArtworks } from "src/types/mina-artwork";
 
@@ -23,7 +23,7 @@ export default function Gallery(artworks: { artworks: MinaArtworks }) {
 				<Dialog.Root key={art.id} onOpenChange={handleClose}>
 					<Dialog.Trigger asChild>
 						<button className="relative group overflow-hidden rounded-lg hover:contrast-75 active:contrast-100 active:opacity-75 duration-200 active:duration-75 cursor-pointer aspect-square focus-visible:animate-pulse">
-							<FadingImage
+							<Image
 								src={`https://static.pprmint.art${art.attributes.artwork.data[0].attributes.url}`}
 								width={art.attributes.artwork.data[0].attributes.width}
 								height={art.attributes.artwork.data[0].attributes.height}
@@ -47,7 +47,7 @@ export default function Gallery(artworks: { artworks: MinaArtworks }) {
 						<Dialog.Content
 							className={`fixed z-60 flex flex-col gap-12 items-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-h-svh w-screen max-w-max data-[state=open]:animate-scale-up data-[state=closed]:animate-scale-down origin-top-left overflow-clip duration-200 focus-visible:outline-none`}
 						>
-							<FadingImage
+							<Image
 								src={`https://static.pprmint.art${art.attributes.artwork.data[selectedVariant]?.attributes.url}`}
 								width={art.attributes.artwork.data[selectedVariant]?.attributes.width}
 								height={art.attributes.artwork.data[selectedVariant]?.attributes.height}

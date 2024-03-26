@@ -2,7 +2,7 @@ import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import { Suspense } from "react";
 
 import Title from "src/components/layout/Title";
-import FadingImage from "src/components/ui/FadingImage";
+import Image from "next/image";
 import { MinaArtworks } from "src/types/mina-artwork";
 
 import Ref from "./ref";
@@ -49,7 +49,7 @@ export default async function Page({ searchParams, params: { locale } }: Props) 
 	return (
 		<>
 			<Title title={t("Head.title")} description={t("Head.description")}>
-				<FadingImage src={HeroMina} alt="" fill className="object-cover" quality={90} />
+				<Image src={HeroMina} alt="" fill className="object-cover" quality={90} />
 			</Title>
 			<main>
 				<section id="lore" className="my-20 max-w-7xl mx-auto px-6 md:px-9">

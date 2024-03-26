@@ -4,7 +4,7 @@ import { Link } from "src/navigation";
 import { useTranslations } from "next-intl";
 import * as Dialog from "@radix-ui/react-dialog";
 import * as Toast from "@radix-ui/react-toast";
-import FadingImage from "src/components/ui/FadingImage";
+import Image from "next/image";
 import { config, useTransition, a, useSpring, easings } from "@react-spring/web";
 
 import ReferenceFront from "public/assets/mina/ref/front.webp";
@@ -95,7 +95,7 @@ export default function RefSheet() {
 		return cycleTransition((styles, item) =>
 			item ? (
 				<a.div className="h-full w-4/5 object-contain" style={styles}>
-					<FadingImage
+					<Image
 						src={ReferenceBack}
 						alt="Drawing of a hand with a rectangular ring, spanning across the ring and middle finger."
 						className="h-full max-h-2/3-screen lg:max-h-[80vh] object-contain"
@@ -106,7 +106,7 @@ export default function RefSheet() {
 				</a.div>
 			) : (
 				<a.div className="h-full w-4/5 object-contain" style={styles}>
-					<FadingImage
+					<Image
 						src={ReferenceFront}
 						alt="Drawing of a hand with a rectangular ring, spanning across the ring and middle finger."
 						className="h-full max-h-2/3-screen lg:max-h-[80vh] object-contain"
@@ -128,7 +128,7 @@ export default function RefSheet() {
 		return (
 			<Toast.Provider swipeDirection="right" duration={3000}>
 				<Toast.Root
-					className="flex gap-6 items-center p-3 rounded-xl shadow-lg shadow-neutral-950/50 backdrop-blur-xl bg-gradient-to-b from-neutral-800/75 to-neutral-900/90 border border-neutral-950 ring-1 ring-inset ring-neutral-50/10 data-[state=open]:animate-toast-slide-in data-[state=closed]:animate-fade-out-scale-down data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[swipe=cancel]:translate-x-0 data-[swipe=cancel]:transition-[transform_200ms_ease-out] data-[swipe=end]:animate-toast-slide-out"
+					className="flex gap-6 items-center p-3 rounded-xl shadow-lg shadow-neutral-950/50 bg-neutral-900 border border-neutral-950 ring-1 ring-inset ring-neutral-50/10 data-[state=open]:animate-toast-slide-in data-[state=closed]:animate-fade-out-scale-down data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[swipe=cancel]:translate-x-0 data-[swipe=cancel]:transition-[transform_200ms_ease-out] data-[swipe=end]:animate-toast-slide-out"
 					open={props.open}
 					onOpenChange={props.onOpenChange}
 				>
@@ -179,7 +179,7 @@ export default function RefSheet() {
 							id="hand"
 							className="flex items-center justify-center hover:bg-neutral-900 border border-neutral-900 duration-200 active:duration-100 active:opacity-75 active:shadow-inner rounded-xl p-6 cursor-pointer"
 						>
-							<FadingImage
+							<Image
 								src={ReferenceHand}
 								className="w-auto max-h-full object-contain"
 								alt="Drawing of a hand with a rectangular ring, spanning across the ring and middle finger."
@@ -196,7 +196,7 @@ export default function RefSheet() {
 							</>
 						}
 						reference={
-							<FadingImage
+							<Image
 								src={ReferenceHand}
 								alt="Drawing of a hand with a rectangular ring, spanning across the ring and middle finger."
 								className="max-h-2/3-screen w-auto lg:w-full lg:max-h-[90vh] object-contain"
@@ -210,7 +210,7 @@ export default function RefSheet() {
 							id="front"
 							className="flex items-center justify-center hover:bg-neutral-900 border border-neutral-900 duration-100 active:opacity-75 active:shadow-inner rounded-xl row-span-2 p-3 cursor-pointer"
 						>
-							<FadingImage
+							<Image
 								src={ReferenceFront}
 								className="w-auto max-h-full object-contain"
 								alt="Full-body drawing of Mina doing a peace sign, front perspective."
@@ -238,7 +238,7 @@ export default function RefSheet() {
 							id="back"
 							className="flex items-center justify-center hover:bg-neutral-900 border border-neutral-900 duration-100 active:opacity-75 active:shadow-inner rounded-xl row-span-2 p-3 cursor-pointer"
 						>
-							<FadingImage
+							<Image
 								src={ReferenceBack}
 								className="w-auto max-h-full object-contain"
 								alt="Full-body drawing of Mina doing a peace sign, back perspective."
@@ -266,13 +266,13 @@ export default function RefSheet() {
 							id="hairbow"
 							className="flex md:col-span-2 xl:col-span-1 items-center justify-center gap-6 hover:bg-neutral-900 border border-neutral-900 duration-100 active:opacity-75 active:shadow-inner rounded-xl p-6 cursor-pointer"
 						>
-							<FadingImage
+							<Image
 								src={ReferenceHairbowBack}
 								className="w-auto max-h-full object-contain"
 								alt="Outline of Mina's head, viewed from the back."
 								priority
 							/>
-							<FadingImage
+							<Image
 								src={ReferenceHairbowFront}
 								className="w-auto max-h-full object-containm hidden md:block xl:hidden"
 								alt="Outline of Mina's head, viewed from the front."
@@ -291,12 +291,12 @@ export default function RefSheet() {
 						}
 						reference={
 							<div className="flex flex-col items-center md:flex-row w-full lg:w-3/4 max-h-2/3-screen">
-								<FadingImage
+								<Image
 									src={ReferenceHairbowFront}
 									alt="Drawing of a hand with a rectangular ring, spanning across the ring and middle finger."
 									className="h-1/2 md:h-auto md:w-1/2"
 								/>
-								<FadingImage
+								<Image
 									src={ReferenceHairbowBack}
 									alt="Drawing of a hand with a rectangular ring, spanning across the ring and middle finger."
 									className="h-1/2 md:h-auto md:w-1/2"
@@ -311,7 +311,7 @@ export default function RefSheet() {
 							id="shoe"
 							className="flex items-center justify-center hover:bg-neutral-900 border border-neutral-900 duration-100 active:opacity-75 active:shadow-inner rounded-xl p-6 cursor-pointer"
 						>
-							<FadingImage
+							<Image
 								src={ReferenceShoes}
 								className="w-auto max-h-full object-contain"
 								alt="Full-body drawing of Mina doing a peace sign, front perspective."
@@ -327,7 +327,7 @@ export default function RefSheet() {
 							</>
 						}
 						reference={
-							<FadingImage
+							<Image
 								src={ReferenceShoes}
 								alt="Drawing of a hand with a rectangular ring, spanning across the ring and middle finger."
 								className="max-h-2/3-screen w-auto lg:w-full lg:max-h-[90vh] object-contain"

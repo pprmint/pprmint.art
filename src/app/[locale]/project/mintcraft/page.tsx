@@ -4,7 +4,7 @@ import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import Marquee from "react-fast-marquee";
 
 import Title from "src/components/layout/Title";
-import FadingImage from "src/components/ui/FadingImage";
+import Image from "next/image";
 
 // Container screenshots (German)
 import TSurvivalDE from "/public/assets/mintcraft/de/survival.png";
@@ -61,26 +61,26 @@ export default function Page({ params: { locale } }: Props) {
 					>
 						{locale === "en" && (
 							<>
-								<FadingImage src={TBeaconEN} alt="" quality={90} priority className="inline-block h-auto m-6" />
-								<FadingImage src={TSurvivalEN} alt="" quality={90} priority className="inline-block h-auto m-6" />
-								<FadingImage src={TEnchantingEN} alt="" quality={90} priority className="inline-block h-auto m-6" />
-								<FadingImage src={TCreativeEN} alt="" quality={90} priority className="inline-block h-auto m-6" />
-								<FadingImage src={TCraftingEN} alt="" quality={90} priority className="inline-block h-auto m-6" />
-								<FadingImage src={TFurnaceEN} alt="" quality={90} priority className="inline-block h-auto m-6" />
-								<FadingImage src={TAdvancementsEN} alt="" quality={90} priority className="inline-block h-auto m-6" />
-								<FadingImage src={TAnvilEN} alt="" quality={90} priority className="inline-block h-auto m-6" />
+								<Image src={TBeaconEN} alt="" quality={90} priority className="inline-block h-auto m-6" />
+								<Image src={TSurvivalEN} alt="" quality={90} priority className="inline-block h-auto m-6" />
+								<Image src={TEnchantingEN} alt="" quality={90} priority className="inline-block h-auto m-6" />
+								<Image src={TCreativeEN} alt="" quality={90} priority className="inline-block h-auto m-6" />
+								<Image src={TCraftingEN} alt="" quality={90} priority className="inline-block h-auto m-6" />
+								<Image src={TFurnaceEN} alt="" quality={90} priority className="inline-block h-auto m-6" />
+								<Image src={TAdvancementsEN} alt="" quality={90} priority className="inline-block h-auto m-6" />
+								<Image src={TAnvilEN} alt="" quality={90} priority className="inline-block h-auto m-6" />
 							</>
 						)}
 						{locale === "de" && (
 							<>
-								<FadingImage src={TBeaconDE} alt="" quality={90} priority className="inline-block h-auto m-6" />
-								<FadingImage src={TSurvivalDE} alt="" quality={90} priority className="inline-block h-auto m-6" />
-								<FadingImage src={TEnchantingDE} alt="" quality={90} priority className="inline-block h-auto m-6" />
-								<FadingImage src={TCreativeDE} alt="" quality={90} priority className="inline-block h-auto m-6" />
-								<FadingImage src={TCraftingDE} alt="" quality={90} priority className="inline-block h-auto m-6" />
-								<FadingImage src={TFurnaceDE} alt="" quality={90} priority className="inline-block h-auto m-6" />
-								<FadingImage src={TAdvancementsDE} alt="" quality={90} priority className="inline-block h-auto m-6" />
-								<FadingImage src={TAnvilDE} alt="" quality={90} priority className="inline-block h-auto m-6" />
+								<Image src={TBeaconDE} alt="" quality={90} priority className="inline-block h-auto m-6" />
+								<Image src={TSurvivalDE} alt="" quality={90} priority className="inline-block h-auto m-6" />
+								<Image src={TEnchantingDE} alt="" quality={90} priority className="inline-block h-auto m-6" />
+								<Image src={TCreativeDE} alt="" quality={90} priority className="inline-block h-auto m-6" />
+								<Image src={TCraftingDE} alt="" quality={90} priority className="inline-block h-auto m-6" />
+								<Image src={TFurnaceDE} alt="" quality={90} priority className="inline-block h-auto m-6" />
+								<Image src={TAdvancementsDE} alt="" quality={90} priority className="inline-block h-auto m-6" />
+								<Image src={TAnvilDE} alt="" quality={90} priority className="inline-block h-auto m-6" />
 							</>
 						)}
 					</Marquee>

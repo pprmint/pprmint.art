@@ -9,7 +9,6 @@ import Button from "src/components/ui/Button";
 
 import HehMina from "public/assets/mina/heh-upscaled.png";
 import { Link } from "src/navigation";
-import FadingImage from "src/components/ui/FadingImage";
 import { X } from "lucide-react";
 
 export default function NsfwDialog({ onAccept }: { onAccept: () => void }) {
@@ -40,7 +39,7 @@ export default function NsfwDialog({ onAccept }: { onAccept: () => void }) {
 			<Dialog.Content
 				className={`fixed inset-0 lg:inset-auto overflow-auto z-[9999] flex flex-col lg:flex-row gap-12 items-center lg:top-1/2 lg:left-1/2 w-screen max-w-5xl lg:-translate-x-1/2 lg:-translate-y-1/2 p-6 md:p-9 bg-neutral-950 lg:border border-neutral-900 ring-1 ring-neutral-950 lg:shadow-xl shadow-neutral-950/50 lg:rounded-xl data-[state=open]:animate-scale-up data-[state=closed]:animate-scale-down focus:outline-none origin-center lg:origin-top-left`}
 			>
-				<FadingImage
+				<Image
 					src={HehMina}
 					alt="A smirking Mina."
 					className="h-32 lg:h-44 w-auto rounded-full border-neutral-50"
