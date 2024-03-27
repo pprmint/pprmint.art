@@ -2,8 +2,8 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Title from "src/components/layout/Title";
 
-import TitleBackground1 from "public/assets/contact/chat_left.svg";
-import TitleBackground2 from "public/assets/contact/chat_right.svg";
+import TitleBackgroundEn from "public/assets/contact/title_en.webp";
+import TitleBackgroundDe from "public/assets/contact/title_de.webp";
 import PixelMina from "public/assets/mina64.gif";
 
 import Letter from "public/assets/contact/letter.svg";
@@ -15,7 +15,7 @@ import Chatbox from "./chatbox";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 
 type Props = {
-    params: { locale: string };
+	params: { locale: string };
 };
 
 export async function generateMetadata({ params: { locale } }: Props) {
@@ -32,8 +32,13 @@ export default function Page({ params: { locale } }: Props) {
 	return (
 		<>
 			<Title title={t("Head.title")} description={t("Head.description")}>
-				<Image src={TitleBackground1} alt="" fill className="object-cover" />
-				<Image src={TitleBackground2} alt="" fill className="object-cover" />
+				<Image
+					src={locale == "de" ? TitleBackgroundDe : TitleBackgroundEn}
+					alt=""
+					quality={100}
+					fill
+					className="object-cover object-top xl:object-[0%_15%]"
+				/>
 			</Title>
 			<main>
 				<section className="max-w-7xl mx-auto my-24 px-6 md:px-9 flex flex-col items-center justify-center">
