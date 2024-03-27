@@ -15,21 +15,17 @@ export default function MobileNavigation() {
 	// Opening and closing logic
 	const [navOpen, setNavOpen] = useState(false);
 	const transitions = useTransition(navOpen, {
-		from: { opacity: 0, y: -20 },
+		from: { opacity: 0 },
 		enter: {
 			opacity: 1,
-			y: 0,
 			config: {
 				duration: 400,
-				easing: easings.easeOutExpo,
 			},
 		},
 		leave: {
 			opacity: 0,
-			y: -20,
 			config: {
 				duration: 300,
-				easing: easings.easeInCubic,
 			},
 		},
 	});
@@ -115,7 +111,13 @@ export default function MobileNavigation() {
 									<ul>
 										{Pages.map((Page) => (
 											<Link key={Page.link} href={Page.link} onClick={handleClose}>
-												<li className={`flex items-center ${Page.link === pathname ? "text-neutral-50" : "hover:text-neutral-50 hover:bg-neutral-50/10 active:opacity-75"} px-3 py-1.5 w-full duration-100 rounded-full`}>
+												<li
+													className={`flex items-center ${
+														Page.link === pathname
+															? "text-neutral-50"
+															: "hover:text-neutral-50 hover:bg-neutral-50/10 active:opacity-75"
+													} px-3 py-1.5 w-full duration-100 rounded-full`}
+												>
 													{Page.link === pathname && <ChevronRight size={16} className="inline stroke-green mr-1.5" />}
 													{t(`Path.General.${Page.strings}.title`)}
 												</li>
@@ -130,7 +132,13 @@ export default function MobileNavigation() {
 									<ul>
 										{Works.map((Work) => (
 											<Link key={Work.link} href={Work.link} onClick={handleClose}>
-												<li className={`flex items-center ${Work.link === pathname ? "text-neutral-50" : "hover:text-neutral-50 hover:bg-neutral-50/10 active:opacity-75"} px-3 py-1.5 w-full duration-100 rounded-full`}>
+												<li
+													className={`flex items-center ${
+														Work.link === pathname
+															? "text-neutral-50"
+															: "hover:text-neutral-50 hover:bg-neutral-50/10 active:opacity-75"
+													} px-3 py-1.5 w-full duration-100 rounded-full`}
+												>
 													{Work.link === pathname && <ChevronRight size={16} className="inline stroke-green mr-1.5" />}
 													{t(`Path.Works.${Work.strings}.title`)}
 												</li>
@@ -144,7 +152,13 @@ export default function MobileNavigation() {
 									</p>
 									<ul>
 										<Link href="/privacy" onClick={handleClose}>
-											<li className={`flex items-center ${"/privacy" === pathname ? "text-neutral-50" : "hover:text-neutral-50 hover:bg-neutral-50/10 active:opacity-75"} px-3 py-1.5 w-full duration-100 rounded-full`}>
+											<li
+												className={`flex items-center ${
+													"/privacy" === pathname
+														? "text-neutral-50"
+														: "hover:text-neutral-50 hover:bg-neutral-50/10 active:opacity-75"
+												} px-3 py-1.5 w-full duration-100 rounded-full`}
+											>
 												{"/privacy" === pathname && <ChevronRight size={16} className="inline stroke-green mr-1.5" />}
 												{t("Path.Other.Privacy.title")}
 											</li>
