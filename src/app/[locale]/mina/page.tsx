@@ -140,39 +140,30 @@ export default async function Page({ searchParams, params: { locale } }: Props) 
 				</section>
 				<section className="relative flex items-end justify-center overflow-clip my-20 px-6 md:px-9 min-h-2/3-screen">
 					<div className="absolute inset-0 -z-10 overflow-clip">
-						<FadingImage
+						<Image
 							src={Stickers}
 							alt="Discord sticker menu, showing a few Mina stickers."
 							className="absolute w-4/5 md:w-1/2 xl:w-1/3 h-auto top-0 left-1/2 -translate-x-1/2"
 						/>
-						<FadingImage
+						<Image
 							src={StickerSeyana}
 							alt=""
 							className="hidden md:block absolute w-2/12 max-w-72 h-auto top-[30%] left-[4%] rotate-3"
 						/>
-						<FadingImage
+						<Image
 							src={StickerWhat}
 							alt=""
 							className="hidden md:block absolute w-2/12 max-w-72 h-auto top-[6%] left-[12%] xl:left-[18%] -rotate-6"
 						/>
-						<FadingImage
+						<Image
 							src={StickerStare}
 							alt=""
 							className="hidden md:block absolute w-2/12 max-w-72 h-auto top-[8%] right-[12%] xl:right-[18%] rotate-6"
 						/>
-						<FadingImage
+						<Image
 							src={StickerYippie}
 							alt=""
 							className="hidden md:block absolute w-2/12 max-w-72 h-auto top-[25%] right-[4%] -rotate-3"
-						/>
-						<div
-							style={{
-								maskImage:
-									"linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 80%, rgba(0,0,0,1) 100%)",
-								maskRepeat: "space",
-								backgroundRepeat: "repeat",
-							}}
-							className="absolute inset-0 bottom-0 h-full backdrop-blur-md pointer-events-none"
 						/>
 						<div className="absolute inset-0 bg-gradient-to-t from-neutral-950" />
 					</div>
