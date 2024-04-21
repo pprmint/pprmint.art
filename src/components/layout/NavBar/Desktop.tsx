@@ -49,7 +49,7 @@ export default function DesktopNavigation() {
 									<li key={Page.link}>
 										<NavigationMenu.Link
 											asChild
-											className={`group block px-3 py-2.5 rounded-lg hover:bg-neutral-800 active:opacity-75 duration-250 ease-out active:duration-75 ${
+											className={`group block px-3 py-2.5 rounded-lg hover:bg-neutral-50/10 active:scale-[0.98] active:opacity-75 duration-250 ease-out active:duration-75 ${
 												pathname === Page.link &&
 												"bg-neutral-800 pointer-events-none"
 											}`}
@@ -81,7 +81,7 @@ export default function DesktopNavigation() {
 									<li key={Work.link}>
 										<NavigationMenu.Link
 											asChild
-											className={`group block px-3 py-2.5 rounded-lg hover:bg-neutral-800 active:opacity-75 duration-250 ease-out active:duration-75 ${
+											className={`group block px-3 py-2.5 rounded-lg hover:bg-neutral-50/10 active:scale-[0.98] active:opacity-75 duration-250 ease-out active:duration-75 ${
 												pathname === Work.link &&
 												"bg-neutral-800 pointer-events-none"
 											}`}
@@ -110,7 +110,7 @@ export default function DesktopNavigation() {
 								<li>
 									<NavigationMenu.Link
 										asChild
-										className={`group block px-3 py-2.5 rounded-lg hover:bg-neutral-800 active:opacity-75 duration-250 ease-out active:duration-75 ${
+										className={`group block px-3 py-2.5 rounded-lg hover:bg-neutral-50/10 active:scale-[0.98] active:opacity-75 duration-250 ease-out active:duration-75 ${
 											pathname === "/privacy" &&
 											"bg-neutral-800 pointer-events-none"
 										}`}
@@ -130,7 +130,20 @@ export default function DesktopNavigation() {
 								<li>
 									<NavigationMenu.Link
 										asChild
-										className="group block px-3 py-2.5 rounded-lg hover:bg-neutral-50/10 active:shadow-inner duration-250 ease-out active:duration-75"
+										className="group block px-3 py-2.5 rounded-lg hover:bg-neutral-50/10 active:scale-[0.98] active:opacity-75 duration-250 ease-out active:duration-75"
+									>
+										<Link href={`https://potato.pprmint.art${pathname}`}>
+											<span className="text-neutral-50 font-display font-semibold text-xl pb-0.5">
+												{t("Path.Other.Potato.title")}
+											</span>
+											<p className="ListItemText">{t("Path.Other.Potato.description")}</p>
+										</Link>
+									</NavigationMenu.Link>
+								</li>
+								<li>
+									<NavigationMenu.Link
+										asChild
+										className="group block px-3 py-2.5 rounded-lg hover:bg-neutral-50/10 active:scale-[0.98] active:opacity-75 duration-250 ease-out active:duration-75"
 									>
 										<Link href={pathname} locale={otherLocale} scroll={false}>
 											<span className="text-neutral-50 font-display font-semibold text-xl pb-0.5">

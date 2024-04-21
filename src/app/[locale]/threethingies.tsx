@@ -1,9 +1,10 @@
 "use client";
 import { Link } from "src/navigation";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 import Image from "next/image";
+import ArrowRight from "src/icons/ArrowRight";
+import ArrowUpRight from "src/icons/ArrowUpRight";
 
 export default function ThreeThingies() {
 	const t = useTranslations("HOME");
@@ -27,7 +28,7 @@ export default function ThreeThingies() {
 					<p className="font-medium text-neutral-50 text-lg md:text-xl lg:text-2xl">
 						{t("Content.TheThreeThingies.moreOnGallery")}
 					</p>
-					<ArrowRight className="text-green" />
+					<ArrowRight className="size-6 text-green" />
 				</div>
 				<Image
 					src="https://static.pprmint.art/uploads/dark2_80a3e41e9f.png"
@@ -54,7 +55,7 @@ export default function ThreeThingies() {
 					<p className="font-medium text-neutral-50 text-lg md:text-xl lg:text-2xl">
 						{t("Content.TheThreeThingies.moreOnGallery")}
 					</p>
-					<ArrowRight className="text-blue" />
+					<ArrowRight className="size-6 text-blue" />
 				</div>
 				<Image
 					src="https://static.pprmint.art/uploads/Crystal_Cave_light_c60ed75104.png"
@@ -83,7 +84,7 @@ export default function ThreeThingies() {
 					<p className="font-medium text-neutral-50 text-lg md:text-xl lg:text-2xl">
 						{t("Content.TheThreeThingies.moreOnGitHub")}
 					</p>
-					<ArrowUpRight className="text-red" />
+					<ArrowUpRight className="size-6 text-red" />
 				</div>
 				<Image
 					src="https://static.pprmint.art/uploads/Zoompaper_aecb0eee13.png"
