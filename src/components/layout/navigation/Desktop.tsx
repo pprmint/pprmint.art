@@ -4,7 +4,7 @@ import { Link, locales, usePathname } from "src/navigation";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import { ChevronDown } from "lucide-react";
 
-import { Pages, Works } from "./Links";
+import { Pages, Projects } from "./Links";
 import Copyright from "./Copyright";
 
 const Caret = (
@@ -77,20 +77,37 @@ export default function DesktopNavigation() {
 
 						<NavigationMenu.Content className={NavMenuContent}>
 							<ul className="grid gap-1 grid-cols-2 grid-flow-row">
-								{Works.map((Work) => (
-									<li key={Work.link}>
+              <li className="col-span-2">
+									<NavigationMenu.Link
+										asChild
+										className={`group block px-3 py-2.5 rounded-lg hover:bg-neutral-50/10 active:scale-[0.98] active:opacity-75 duration-250 ease-out active:duration-75 ${
+											pathname === "/gallery" &&
+											"bg-neutral-800 pointer-events-none"
+										}`}
+									>
+										<Link href="/gallery">
+											<span className="text-neutral-50 font-display font-semibold text-xl pb-0.5">
+												{t(`Path.Works.Gallery.title`)}
+											</span>
+											<p className="ListItemText">{t(`Path.Works.Gallery.description`)}</p>
+										</Link>
+									</NavigationMenu.Link>
+								</li>
+								<hr className="col-span-2 border-neutral-50/10 my-1 mx-3" />
+								{Projects.map((Project) => (
+									<li key={Project.link}>
 										<NavigationMenu.Link
 											asChild
 											className={`group block px-3 py-2.5 rounded-lg hover:bg-neutral-50/10 active:scale-[0.98] active:opacity-75 duration-250 ease-out active:duration-75 ${
-												pathname === Work.link &&
+												pathname === Project.link &&
 												"bg-neutral-800 pointer-events-none"
 											}`}
 										>
-											<Link href={Work.link}>
+											<Link href={Project.link}>
 												<span className="text-neutral-50 font-display font-semibold text-xl pb-0.5">
-													{t(`Path.Works.${Work.strings}.title`)}
+													{t(`Path.Works.Projects.${Project.strings}.title`)}
 												</span>
-												<p className="ListItemText">{t(`Path.Works.${Work.strings}.description`)}</p>
+												<p className="ListItemText">{t(`Path.Works.Projects.${Project.strings}.description`)}</p>
 											</Link>
 										</NavigationMenu.Link>
 									</li>
