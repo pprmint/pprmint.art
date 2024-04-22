@@ -1,7 +1,6 @@
 import { Link } from "src/navigation";
 import { useTranslations } from "next-intl";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
-import { Check, ExternalLink } from "lucide-react";
 
 import Title from "src/components/layout/Title";
 import Hero from "public/assets/ytdg/hero.png";
@@ -9,9 +8,11 @@ import Image from "next/image";
 import Button from "src/components/ui/Button";
 
 import IsometricScreenshot from "public/assets/ytdg/screenshot_dark_iso.webp";
+import Check from "src/icons/Check";
+import ExternalLink from "src/icons/ExternalLink";
 
 type Props = {
-    params: { locale: string };
+	params: { locale: string };
 };
 
 export async function generateMetadata({ params: { locale } }: Props) {
@@ -67,20 +68,14 @@ export default function Page({ params: { locale } }: Props) {
 					<div className="flex flex-col">
 						<div className="flex gap-6">
 							<div className="flex flex-col">
-								<Check
-									strokeWidth={3}
-									className="size-6 bg-gradient-to-b from-violet-500 to-violet-600 text-neutral-950 rounded-full p-1"
-								/>
+								<Check className="size-6 bg-gradient-to-b from-violet-500 to-violet-600 text-neutral-950 rounded-full p-1" />
 								<div className="w-1 flex-grow bg-gradient-to-b from-violet-600 to-violet-500 ml-2.5" />
 							</div>
 							<p className="pb-3">{t("YTDG.Content.Roadmap.savingSettings")}</p>
 						</div>
 						<div className="flex gap-6">
 							<div className="flex flex-col">
-								<Check
-									strokeWidth={3}
-									className="size-6 bg-gradient-to-b from-violet-500 to-violet-600 text-neutral-950 rounded-full p-1"
-								/>
+								<Check className="size-6 bg-gradient-to-b from-violet-500 to-violet-600 text-neutral-950 rounded-full p-1" />
 								<div className="w-1 flex-grow bg-neutral-900 ml-2.5" />
 							</div>
 							<p className="pb-3">{t("YTDG.Content.Roadmap.tempFolder")}</p>
@@ -125,8 +120,8 @@ export default function Page({ params: { locale } }: Props) {
 							rel="noopener noreferrer"
 						>
 							<Button color="violet">
+								<ExternalLink />
 								{t("COMMON.download")}
-								<ExternalLink size={16} strokeWidth={3} />
 							</Button>
 						</Link>
 					</div>

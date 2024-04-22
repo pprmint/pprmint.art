@@ -4,10 +4,10 @@ import { useLocale, useTranslations } from "next-intl";
 import { useTransition, a, easings } from "@react-spring/web";
 import * as Portal from "@radix-ui/react-portal";
 import { Link, locales, usePathname } from "src/navigation";
-import Copyright from "./Copyright";
+import Copyright from "./Socials";
 
 import { Pages, Projects } from "./Links";
-import { ChevronRight } from "lucide-react";
+import ChevronRight from "src/icons/ChevronRight";
 
 export default function MobileNavigation() {
 	const t = useTranslations("NAVIGATION");
@@ -62,35 +62,26 @@ export default function MobileNavigation() {
 	return (
 		<>
 			<button
-				className="relative m-3 text-neutral-50 text-xl w-10 h-10 rounded-full hover:bg-neutral-50/10 duration-100"
+				className="relative m-3 text-neutral-50 text-xl size-[39px] rounded-full hover:bg-neutral-50/10 duration-100"
 				onClick={toggleOpen}
 			>
 				<svg
-					width="40"
-					height="40"
+					width="39"
+					height="39"
 					xmlns="http://www.w3.org/2000/svg"
-					className="absolute left-0 top-0"
-					strokeLinecap="round"
+					className="absolute left-0 top-0 stroke-neutral-50 stroke-1 fill-none"
+					strokeLinecap="butt"
 				>
 					<path
-						d={navOpen ? "M14,14 20,20 26,14" : "M12,14 20,14 28,14"}
-						fill="transparent"
-						stroke="#eee"
-						strokeWidth="2"
+						d={navOpen ? "M12.5,12.5 19.5,19.5 26.5,12.5" : "M12,12.5 19.5,12.5 27,12.5"}
 						className="duration-400 ease-out-quint"
 					/>
 					<path
-						d={navOpen ? "M20,20 20,20" : "M12,20 28,20"}
-						fill="transparent"
-						stroke="#eee"
-						strokeWidth="2"
+						d={navOpen ? "M19.5,19.5 19.5,19.5" : "M12,19.5 27,19.5"}
 						className="duration-400 ease-out-quint"
 					/>
 					<path
-						d={navOpen ? "M14,26 20,20 26,26" : "M12,26 20,26 28,26"}
-						fill="transparent"
-						stroke="#eee"
-						strokeWidth="2"
+						d={navOpen ? "M12.5,26.5 19.5,19.5 26.5,26.5" : "M12,26.5 19.5,26.5 27,26.5"}
 						className="duration-400 ease-out-quint"
 					/>
 				</svg>
@@ -118,7 +109,7 @@ export default function MobileNavigation() {
 															: "hover:text-neutral-50 group-hover:bg-neutral-50/10 group-active:opacity-75"
 													} px-3 py-1.5 w-full duration-100 rounded-[17px]`}
 												>
-													{Page.link === pathname && <ChevronRight size={16} className="inline stroke-green mr-1.5" />}
+													{Page.link === pathname && <ChevronRight className="inline fill-green mr-1.5" />}
 													{t(`Path.General.${Page.strings}.title`)}
 												</li>
 											</Link>
@@ -136,7 +127,7 @@ export default function MobileNavigation() {
 														: "hover:text-neutral-50 group-hover:bg-neutral-50/10 group-active:opacity-75"
 												} px-3 py-1.5 w-full duration-100 rounded-[17px]`}
 											>
-												{"/gallery" === pathname && <ChevronRight size={16} className="inline stroke-green mr-1.5" />}
+												{"/gallery" === pathname && <ChevronRight className="inline fill-green mr-1.5" />}
 												<div className="flex flex-col">
 													<span>{t(`Path.Works.Gallery.title`)}</span>
 													<span className="text-xs opacity-50">{t(`Path.Works.Gallery.description`)}</span>
@@ -152,7 +143,7 @@ export default function MobileNavigation() {
 															: "hover:text-neutral-50 group-hover:bg-neutral-50/10 group-active:opacity-75"
 													} px-3 py-1.5 w-full duration-100 rounded-[17px]`}
 												>
-													{Project.link === pathname && <ChevronRight size={16} className="inline stroke-green mr-1.5" />}
+													{Project.link === pathname && <ChevronRight className="inline fill-green mr-1.5" />}
 													<div className="flex flex-col">
 														<span>{t(`Path.Works.Projects.${Project.strings}.title`)}</span>
 														<span className="text-xs opacity-50">{t(`Path.Works.Projects.${Project.strings}.description`)}</span>
@@ -173,7 +164,7 @@ export default function MobileNavigation() {
 														: "hover:text-neutral-50 group-hover:bg-neutral-50/10 group-active:opacity-75"
 												} px-3 py-1.5 w-full duration-100 rounded-[17px]`}
 											>
-												{"/privacy" === pathname && <ChevronRight size={16} className="inline stroke-green mr-1.5" />}
+												{"/privacy" === pathname && <ChevronRight className="inline fill-green mr-1.5" />}
 												{t("Path.Other.Privacy.title")}
 											</li>
 										</Link>
@@ -187,7 +178,7 @@ export default function MobileNavigation() {
 										</Link>
 									</ul>
 								</div>
-								<Copyright className="pl-3" />
+								<Copyright className="pl-3 items-center" />
 							</a.div>
 						</a.div>
 					</Portal.Root>
