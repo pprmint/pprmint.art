@@ -69,7 +69,6 @@ import SpotifyIcon from "/public/assets/appicons/Spotify.png";
 import TixatiIcon from "/public/assets/appicons/Tixati.png";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { Check, Download, LoaderCircle, Search, X } from "lucide-react";
 import Button from "src/components/ui/Button";
 import Search from "src/icons/Search";
 import X from "src/icons/X";
