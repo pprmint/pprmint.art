@@ -23,6 +23,7 @@ import FanartRules from "./rules";
 import Download from "src/icons/Download";
 import Discord from "src/icons/Discord";
 import Twitter from "src/icons/Twitter";
+import FlipCharacter from "src/components/ui/FlipCharacter";
 
 type Props = {
 	params: { locale: string };
@@ -52,18 +53,18 @@ export default function Page({ searchParams, params: { locale } }: Props) {
 			<Title title={t("Head.title")} description={t("Head.description")}>
 				<div className="relative w-screen h-screen max-h-svh">
 					<p
-						className="absolute right-3 top-1/2 -translate-y-1/2 z-10 text-xs text-neutral-500"
+						className="absolute right-0 top-1/2 -translate-y-1/2 z-100 px-1 py-2 rounded-l-md text-xs text-neutral-50 bg-neutral-950/75 backdrop-blur-md"
 						style={{ writingMode: "vertical-rl" }}
 					>
 						<Twitter className="inline fill-blue rotate-90" /> @108sketches
 					</p>
-					<Image src={TitleMina} alt="" fill className="object-cover" quality={90} />
+					<Image src={TitleMina} alt="" fill className="object-cover object-top" quality={90} />
 				</div>
 			</Title>
 			<main>
 				<section
 					id="gallery"
-					className="mb-20 md:mb-28 xl:mb-32 pt-20 md:pt-28 xl:pt-32 max-w-7xl mx-auto px-3 xl:px-9"
+					className="my-20 md:my-32 xl:my-40 max-w-7xl mx-auto px-3 xl:px-9"
 				>
 					<Suspense fallback={<GallerySkeleton />}>
 						<GallerySuspense p={currentPage} artist={artist} nsfw={nsfw} />
