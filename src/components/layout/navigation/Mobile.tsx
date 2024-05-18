@@ -182,6 +182,18 @@ export default function MobileNavigation() {
 												{t("Path.Other.Privacy.title")}
 											</li>
 										</Link>
+										<Link className="group" href="/ai" onClick={handleClose}>
+											<li
+												className={`flex items-center ${
+													"/ai" === pathname
+														? "text-neutral-50"
+														: "hover:text-neutral-50 group-hover:bg-neutral-50/10 group-active:opacity-75"
+												} px-3 py-1.5 w-full duration-100 rounded-[17px]`}
+											>
+												{"/ai" === pathname && <ChevronRight className="inline fill-green mr-1.5" />}
+												{t("Path.Other.AI.title")}
+											</li>
+										</Link>
 										<Link className="group" href={pathname} locale={otherLocale} scroll={false} onClick={handleClose}>
 											<li className="flex items-center hover:text-neutral-50 group-hover:bg-neutral-50/10 group-active:opacity-75 px-3 py-1.5 w-full duration-100 rounded-[17px]">
 												<div className="flex flex-col">
