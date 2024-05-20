@@ -2,7 +2,6 @@
 import { useLocale, useTranslations } from "next-intl";
 import { Link, locales, usePathname } from "src/navigation";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
-
 import { Pages, Projects } from "./Links";
 import Copyright from "./Socials";
 import ChevronDown from "src/icons/ChevronDown";
@@ -13,11 +12,9 @@ const Caret = (
 
 export default function DesktopNavigation() {
 	const t = useTranslations("NAVIGATION");
-
 	const pathname = usePathname();
 	const locale = useLocale();
 	const otherLocale = locales?.find((cur) => cur !== locale);
-
 	// Styles
 	const NavMenuTrigger =
 		"group/root flex items-center gap-3 h-10 px-4 text-neutral-50/80 hover:text-neutral-50 data-[state='open']:text-neutral-50 data-[state='open']:backdrop-blur-md duration-250 rounded-lg";
@@ -63,7 +60,6 @@ export default function DesktopNavigation() {
 							</ul>
 						</NavigationMenu.Content>
 					</NavigationMenu.Item>
-
 					<NavigationMenu.Item>
 						<NavigationMenu.Trigger className={NavMenuTrigger}>
 							<span className="inline-flex items-center gap-3">
@@ -152,7 +148,12 @@ export default function DesktopNavigation() {
 											</span>
 											<p className="ListItemText">
 												{t.rich("Path.Other.Privacy.description", {
-													s: (chunks) => <><br /><span className="text-xs opacity-20">{chunks}</span></>,
+													s: (chunks) => (
+														<>
+															<br />
+															<span className="text-xs opacity-20">{chunks}</span>
+														</>
+													),
 												})}
 											</p>
 										</Link>
