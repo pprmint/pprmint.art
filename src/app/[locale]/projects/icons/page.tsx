@@ -1,7 +1,7 @@
 import Title from "src/components/layout/Title";
 import Cards from "./cards";
 
-import HeroImage from "public/assets/icons/title.svg";
+import HeroImage from "public/assets/icons/title.webp";
 import Image from "next/image";
 import Kofi from "src/icons/Kofi";
 import { useTranslations } from "next-intl";
@@ -28,7 +28,7 @@ export default function Page({ params: { locale } }: Props) {
 	return (
 		<>
 			<Title title={t("Head.title")} description={t("Head.description")}>
-				<Image src={HeroImage} alt="" fill className="object-cover origin-bottom" />
+				<Image src={HeroImage} alt="" fill className="object-cover object-right-bottom" />
 			</Title>
 			<main className="max-w-7xl mx-auto px-6 md:px-9">
 				<section className="my-20" id="icons">

@@ -356,7 +356,7 @@
 	},
 	"HOME": {
 		"Head": {
-			"description": "Ich mache Dinge mit Vektorpunkten, Polygonen und Code.",
+			"description": "Ich bin ein Pixelschubser und Tastendrücker.",
 			"title": "Heya"
 		},
 		"Content": {
@@ -568,6 +568,12 @@
 				"heading": "Willste?",
 				"text": "Lade dir Mintcraft entweder von Modrinth oder den GitHub-Releases herunter."
 			}
+		}
+	},
+	"MINASANS": {
+		"Head": {
+			"description": "Eine bessere serifenlose Schriftart. In Arbeit.",
+			"title": "Mina Sans"
 		}
 	},
 	"MINTSANS": {
