@@ -107,6 +107,11 @@ module.exports = withNextIntl({
 				destination: "/projects/minttriangles",
 				permanent: false,
 			},
+			{
+				source: "/redirect",
+				destination: "https://pprmint.art/redirect",
+				permanent: false,
+			},
 		];
 	},
 	async headers() {
