@@ -62,7 +62,7 @@ export default function MobileNavigation() {
 	return (
 		<>
 			<button
-				className="relative m-3 text-neutral-50 text-xl size-[39px] rounded-full hover:bg-neutral-50/10 duration-100"
+				className="relative my-3 mr-1 text-neutral-50 text-xl size-[39px] rounded-full hover:bg-neutral-50/10 duration-100"
 				onClick={toggleOpen}
 			>
 				<svg
@@ -117,7 +117,7 @@ export default function MobileNavigation() {
 									</ul>
 								</div>
 								<div className="my-9">
-									<p className="pl-3 font-display text-neutral-50 font-semibold text-2xl">{t("Path.Works.title")}</p>
+									<p className="pl-3 font-display text-neutral-50 font-semibold text-2xl">{t("Path.Work.title")}</p>
 									<ul>
 										<Link className="group" href="/gallery" onClick={handleClose}>
 											<li
@@ -129,8 +129,8 @@ export default function MobileNavigation() {
 											>
 												{"/gallery" === pathname && <ChevronRight className="inline fill-green mr-1.5" />}
 												<div className="flex flex-col">
-													<span>{t(`Path.Works.Gallery.title`)}</span>
-													<span className="text-xs opacity-50">{t(`Path.Works.Gallery.description`)}</span>
+													<span>{t(`Path.Work.Gallery.title`)}</span>
+													<span className="text-xs opacity-50">{t(`Path.Work.Gallery.description`)}</span>
 												</div>
 											</li>
 										</Link>
@@ -145,8 +145,8 @@ export default function MobileNavigation() {
 												>
 													{Project.link === pathname && <ChevronRight className="inline fill-green mr-1.5" />}
 													<div className="flex flex-col">
-														<span>{t(`Path.Works.Projects.${Project.strings}.title`)}</span>
-														<span className="text-xs opacity-50">{t(`Path.Works.Projects.${Project.strings}.description`)}</span>
+														<span>{t(`Path.Work.Projects.${Project.strings}.title`)}</span>
+														<span className="text-xs opacity-50">{t(`Path.Work.Projects.${Project.strings}.description`)}</span>
 													</div>
 												</li>
 											</Link>
@@ -161,7 +161,7 @@ export default function MobileNavigation() {
 												>
 													{"/projects" === pathname && <ChevronRight className="inline fill-green mr-1.5" />}
 													<div className="flex flex-col">
-														<span>{t("Path.Works.Projects.More.title")}</span>
+														<span>{t("Path.Work.Projects.More.title")}</span>
 													</div>
 												</li>
 											</Link>
@@ -199,6 +199,14 @@ export default function MobileNavigation() {
 												<div className="flex flex-col">
 													<span>{t("Path.Other.SwitchLocale.title")}</span>
 													<span className="text-xs opacity-50">{t("Path.Other.SwitchLocale.description")}</span>
+												</div>
+											</li>
+										</Link>
+										<Link className="group" href="https://pprmint.art/redirect" locale={otherLocale} scroll={false} onClick={handleClose}>
+											<li className="flex items-center hover:text-neutral-50 group-hover:bg-neutral-50/10 group-active:opacity-75 px-3 py-1.5 w-full duration-100 rounded-[17px]">
+												<div className="flex flex-col">
+													<span>{t("Path.Other.Potato.title")}</span>
+													<span className="text-xs opacity-50">{t("Path.Other.Potato.description")}</span>
 												</div>
 											</li>
 										</Link>

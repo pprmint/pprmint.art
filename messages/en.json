@@ -38,6 +38,12 @@
 			"title": "AI training declaration"
 		}
 	},
+	"AUTSELLIA": {
+		"Head": {
+			"title": "Website for Autsellia",
+			"description": "An artist friend and supposedly a fox girl."
+		}
+	},
 	"APPICONS": {
 		"Content": {
 			"Intro": {
@@ -291,18 +297,12 @@
 			"Email": {
 				"title": "Email",
 				"text": "The classic. If you prefer more formal means of communication, this is the way to go. I check my emails fairly frequently, so you can expect a response soon.",
-				"preferMailto": "Prefer to use your own email client? Send your email to ",
+				"preferMailto": "Prefer to use your own email client? Send your email to <Link>mail@pprmint.art</Link>.",
 				"Form": {
 					"name": "Name",
 					"emailAddress": "Email address",
 					"message": "Message",
-					"Subject": {
-						"title": "Subject",
-						"general": "General question",
-						"terms": "Terms of use",
-						"commission": "Commission",
-						"privacy": "Privacy"
-					},
+					"subject": "Subject",
 					"send": "Send",
 					"sending": "Sending...",
 					"sent": "Sent",
@@ -650,8 +650,8 @@
 					"title": "Contact"
 				}
 			},
-			"Works": {
-				"title": "Works",
+			"Work": {
+				"title": "Work",
 				"Gallery": {
 					"description": "Vector graphics, animations and 3D renders.",
 					"title": "Gallery"
@@ -705,8 +705,8 @@
 					"title": "Deutsch, bitte!"
 				},
 				"Potato": {
-					"description": "Visit a less intense version of this website.",
-					"title": "Potato"
+					"description": "Change whether to redirect to the potato site.",
+					"title": "Redirection settings"
 				}
 			}
 		},
@@ -770,8 +770,33 @@
 		"Tag": {
 			"font": "Font",
 			"design": "Design thing",
+			"website": "Website",
 			"software": "Software",
 			"customization": "Customization"
+		}
+	},
+	"REDIRECT": {
+		"Content": {
+			"heading": "Redirection",
+			"text": "Choose whether you want to be redirected to pages on potato.pprmint.art, the site with less fancy effects, when visiting any link to the main site, pprmint.art."
+		},
+		"Head": {
+			"description": "Change whether to redirect to the potato site.",
+			"title": "Redirection settings"
+		},
+		"Toast": {
+			"title": "Too laggy?",
+			"description1": "If you feel like this site runs a bit slow for you, I can redirect you to a version with less effects and eyecandy.",
+			"description2": "Should you change your mind and want to enable or disable a permanent redirect, visit <Link>pprmint.art/redirect</Link>.",
+			"once": "Redirect once",
+			"always": "Always redirect",
+			"never": "Don't redirect"
+		}
+	},
+	"TENTATIVE": {
+		"Head": {
+			"title": "Website and branding for Tentative",
+			"description": "A group of indecisive creatives, including yours truly."
 		}
 	},
 	"YTDG": {

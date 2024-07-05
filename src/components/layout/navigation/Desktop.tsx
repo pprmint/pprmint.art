@@ -17,7 +17,7 @@ export default function DesktopNavigation() {
 	const otherLocale = locales?.find((cur) => cur !== locale);
 	// Styles
 	const NavMenuTrigger =
-		"group/root flex items-center gap-3 h-10 px-4 text-neutral-50/80 hover:text-neutral-50 data-[state='open']:text-neutral-50 data-[state='open']:backdrop-blur-md duration-250 rounded-lg";
+		"group/root flex items-center gap-3 h-10 px-4 text-neutral-50/80 hover:text-neutral-50 data-[state='open']:text-neutral-50 duration-250 rounded-lg";
 	const NavMenuContent =
 		"absolute top-0 left-0 p-3 w-[600px] duration-250 data-[motion='from-start']:animate-enter-from-l data-[motion='from-end']:animate-enter-from-r data-[motion='to-start']:animate-exit-to-l data-[motion='to-end']:animate-exit-to-r";
 	const NavMenuViewport =
@@ -25,8 +25,8 @@ export default function DesktopNavigation() {
 
 	return (
 		<>
-			<NavigationMenu.Root className="relative flex justify-center" delayDuration={0}>
-				<NavigationMenu.List className="flex py-3 pr-6">
+			<NavigationMenu.Root className="relative flex justify-center items-center" delayDuration={0}>
+				<NavigationMenu.List className="flex py-2">
 					<NavigationMenu.Item>
 						<NavigationMenu.Trigger className={NavMenuTrigger}>
 							<span className="inline-flex items-center gap-3">
@@ -34,7 +34,6 @@ export default function DesktopNavigation() {
 								{Caret}
 							</span>
 						</NavigationMenu.Trigger>
-
 						<NavigationMenu.Content className={NavMenuContent}>
 							<ul className="grid gap-1 grid-flow-row grid-cols-2">
 								{Pages.map((Page) => (
@@ -42,12 +41,11 @@ export default function DesktopNavigation() {
 										<NavigationMenu.Link
 											asChild
 											className={`group block px-3 py-2.5 rounded-lg hover:bg-neutral-50/10 active:scale-[0.98] active:opacity-75 duration-250 ease-out active:duration-75 ${
-												pathname === Page.link &&
-												"bg-neutral-800 pointer-events-none"
+												pathname === Page.link && "bg-neutral-800 pointer-events-none"
 											}`}
 										>
 											<Link href={Page.link}>
-												<span className="text-neutral-50 font-display font-semibold text-xl pb-0.5">
+												<span className="text-neutral-50 font-display text-xl pb-0.5">
 													{t(`Path.General.${Page.strings}.title`)}
 												</span>
 												<p className="ListItemText">
@@ -63,26 +61,24 @@ export default function DesktopNavigation() {
 					<NavigationMenu.Item>
 						<NavigationMenu.Trigger className={NavMenuTrigger}>
 							<span className="inline-flex items-center gap-3">
-								{t("Path.Works.title")}
+								{t("Path.Work.title")}
 								{Caret}
 							</span>
 						</NavigationMenu.Trigger>
-
 						<NavigationMenu.Content className={NavMenuContent}>
 							<ul className="grid gap-1 grid-cols-2 grid-flow-row">
-              <li className="col-span-2">
+								<li className="col-span-2">
 									<NavigationMenu.Link
 										asChild
 										className={`group block px-3 py-2.5 rounded-lg hover:bg-neutral-50/10 active:scale-[0.98] active:opacity-75 duration-250 ease-out active:duration-75 ${
-											pathname === "/gallery" &&
-											"bg-neutral-800 pointer-events-none"
+											pathname === "/gallery" && "bg-neutral-800 pointer-events-none"
 										}`}
 									>
 										<Link href="/gallery">
-											<span className="text-neutral-50 font-display font-semibold text-xl pb-0.5">
-												{t(`Path.Works.Gallery.title`)}
+											<span className="text-neutral-50 font-display text-xl pb-0.5">
+												{t(`Path.Work.Gallery.title`)}
 											</span>
-											<p className="ListItemText">{t(`Path.Works.Gallery.description`)}</p>
+											<p className="ListItemText">{t(`Path.Work.Gallery.description`)}</p>
 										</Link>
 									</NavigationMenu.Link>
 								</li>
@@ -92,16 +88,15 @@ export default function DesktopNavigation() {
 										<NavigationMenu.Link
 											asChild
 											className={`group block px-3 py-2.5 rounded-lg hover:bg-neutral-50/10 active:scale-[0.98] active:opacity-75 duration-250 ease-out active:duration-75 ${
-												pathname === Project.link &&
-												"bg-neutral-800 pointer-events-none"
+												pathname === Project.link && "bg-neutral-800 pointer-events-none"
 											}`}
 										>
 											<Link href={Project.link}>
-												<span className="text-neutral-50 font-display font-semibold text-xl pb-0.5">
-													{t(`Path.Works.Projects.${Project.strings}.title`)}
+												<span className="text-neutral-50 font-display text-xl pb-0.5">
+													{t(`Path.Work.Projects.${Project.strings}.title`)}
 												</span>
 												<p className="ListItemText">
-													{t(`Path.Works.Projects.${Project.strings}.description`)}
+													{t(`Path.Work.Projects.${Project.strings}.description`)}
 												</p>
 											</Link>
 										</NavigationMenu.Link>
@@ -111,13 +106,12 @@ export default function DesktopNavigation() {
 									<NavigationMenu.Link
 										asChild
 										className={`group block px-3 py-2.5 text-center rounded-lg hover:bg-neutral-50/10 active:scale-[0.98] active:opacity-75 duration-250 ease-out active:duration-75 ${
-											pathname === "/projects" &&
-											"bg-neutral-800 pointer-events-none"
+											pathname === "/projects" && "bg-neutral-800 pointer-events-none"
 										}`}
 									>
 										<Link href="/projects">
-											<span className="text-neutral-50 font-display font-semibold pb-0.5">
-												{t("Path.Works.Projects.More.title")}
+											<span className="text-neutral-50 font-display pb-0.5">
+												{t("Path.Work.Projects.More.title")}
 											</span>
 										</Link>
 									</NavigationMenu.Link>
@@ -138,12 +132,11 @@ export default function DesktopNavigation() {
 									<NavigationMenu.Link
 										asChild
 										className={`group block px-3 py-2.5 rounded-lg hover:bg-neutral-50/10 active:scale-[0.98] active:opacity-75 duration-250 ease-out active:duration-75 ${
-											pathname === "/privacy" &&
-											"bg-neutral-800 pointer-events-none"
+											pathname === "/privacy" && "bg-neutral-800 pointer-events-none"
 										}`}
 									>
 										<Link href="/privacy">
-											<span className="text-neutral-50 font-display font-semibold text-xl pb-0.5">
+											<span className="text-neutral-50 font-display text-xl pb-0.5">
 												{t("Path.Other.Privacy.title")}
 											</span>
 											<p className="ListItemText">
@@ -163,30 +156,27 @@ export default function DesktopNavigation() {
 									<NavigationMenu.Link
 										asChild
 										className={`group block px-3 py-2.5 rounded-lg hover:bg-neutral-50/10 active:scale-[0.98] active:opacity-75 duration-250 ease-out active:duration-75 ${
-											pathname === "/ai" &&
-											"bg-neutral-800 pointer-events-none"
+											pathname === "/ai" && "bg-neutral-800 pointer-events-none"
 										}`}
 									>
 										<Link href="/ai">
-											<span className="text-neutral-50 font-display font-semibold text-xl pb-0.5">
+											<span className="text-neutral-50 font-display text-xl pb-0.5">
 												{t("Path.Other.AI.title")}
 											</span>
-											<p className="ListItemText">
-												{t("Path.Other.AI.description")}
-											</p>
+											<p className="ListItemText">{t("Path.Other.AI.description")}</p>
 										</Link>
 									</NavigationMenu.Link>
 								</li>
-								<li>
+								<li className="col-span-2">
 									<NavigationMenu.Link
 										asChild
 										className="group block px-3 py-2.5 rounded-lg hover:bg-neutral-50/10 active:scale-[0.98] active:opacity-75 duration-250 ease-out active:duration-75"
 									>
-										<Link href={pathname} locale={otherLocale} scroll={false}>
-											<span className="text-neutral-50 font-display font-semibold text-xl pb-0.5">
-												{t("Path.Other.SwitchLocale.title")}
+										<Link href="https://pprmint.art/redirect">
+											<span className="text-neutral-50 font-display text-xl pb-0.5">
+												{t("Path.Other.Potato.title")}
 											</span>
-											<p className="ListItemText">{t("Path.Other.SwitchLocale.description")}</p>
+											<p className="ListItemText">{t("Path.Other.Potato.description")}</p>
 										</Link>
 									</NavigationMenu.Link>
 								</li>
@@ -195,10 +185,13 @@ export default function DesktopNavigation() {
 						</NavigationMenu.Content>
 					</NavigationMenu.Item>
 					<NavigationMenu.Indicator className="flex items-end justify-center h-3 top-12 -z-10 duration-250 ease-out data-[state='visible']:animate-fade-in data-[state='hidden']:animate-fade-out">
-						<div className="relative bg-neutral-900 -top-2 w-full h-10 rounded-lg duration-250" />
+						<div className="relative bg-neutral-900 -top-3 w-full h-10 rounded-lg duration-250" />
 					</NavigationMenu.Indicator>
 				</NavigationMenu.List>
-				<div className="absolute flex justify-center top-[63px] right-6" style={{ perspective: 2000 }}>
+				<div
+					className="absolute flex justify-center top-[58px] left-1/2 -translate-x-1/2"
+					style={{ perspective: 2000 }}
+				>
 					<NavigationMenu.Viewport className={NavMenuViewport} />
 				</div>
 			</NavigationMenu.Root>

@@ -38,6 +38,12 @@
 			"title": "Erklärung bzgl. KI-Training"
 		}
 	},
+	"AUTSELLIA": {
+		"Head": {
+			"title": "Website für Autsellia",
+			"description": "Eine Künstler-Freundin und angeblich Fuchsmädchen."
+		}
+	},
 	"APPICONS": {
 		"Content": {
 			"Intro": {
@@ -291,18 +297,12 @@
 			"Email": {
 				"title": "Email",
 				"text": "Der Klassiker. Wenn du förmlichere Kommunikationsmittel bevorzugst, ist das die richtige Anlaufstelle. Ich prüfe meine Emails recht häufig, also kannst du mit einer zeitnahen Antwort rechnen.",
-				"preferMailto": "Möchtest du lieber deinen eigenen Email-Client verwenden? Sende deine Email an ",
+				"preferMailto": "Möchtest du lieber deinen eigenen Email-Client verwenden? Sende deine Email an <Link>mail@pprmint.art</Link>.",
 				"Form": {
 					"name": "Name",
 					"emailAddress": "Email-Adresse",
 					"message": "Nachricht",
-					"Subject": {
-						"title": "Betreff",
-						"general": "Allgemeine Frage",
-						"terms": "Nutzungsbedingungen",
-						"commission": "Auftragsarbeit",
-						"privacy": "Datenschutz"
-					},
+					"subject": "Betreff",
 					"send": "Absenden",
 					"sending": "Wird gesendet...",
 					"sent": "Gesendet",
@@ -650,7 +650,7 @@
 					"title": "Kontakt"
 				}
 			},
-			"Works": {
+			"Work": {
 				"title": "Werke",
 				"Gallery": {
 					"description": "Vektor-Grafiken, Animationen und 3D-Render.",
@@ -705,8 +705,8 @@
 					"title": "English, please!"
 				},
 				"Potato": {
-					"description": "Besuche eine weniger aufwendige Version dieser Website.",
-					"title": "Kartoffel"
+					"description": "Bestimme, ob du auf die Kartoffel-Website weitergeleitet werden möchtest.",
+					"title": "Einstellungen für Weiterleitung"
 				}
 			}
 		},
@@ -770,8 +770,33 @@
 		"Tag": {
 			"font": "Schriftart",
 			"design": "Design-Ding",
+			"website": "Website",
 			"software": "Software",
 			"customization": "Personalisierung"
+		}
+	},
+	"REDIRECT": {
+		"Content": {
+			"heading": "Weiterleitung",
+			"text": "Wähle aus, ob du bei Besuch von Links auf pprmint.art stattdessen zu potato.pprmint.art, der Website mit weniger Effekten, weitergeleitet werden möchtest."
+		},
+		"Head": {
+			"description": "Bestimme, ob du auf die Kartoffel-Website weitergeleitet werden möchtest.",
+			"title": "Weiterleitung"
+		},
+		"Toast": {
+			"title": "Etwas ruckelig?",
+			"description1": "Kommt dir diese Website etwas langsam vor, kann ich dich zu einer Version mit weniger Effekten und Eyecandy weiterleiten.",
+			"description2": "Solltest du deine Meinung ändern und doch eine permanente Weiterleitung de/aktivieren wollen, besuche <Link>pprmint.art/redirect</Link>.",
+			"once": "Einmal weiterleiten",
+			"always": "Immer weiterleiten",
+			"never": "Nicht weiterleiten"
+		}
+	},
+	"TENTATIVE": {
+		"Head": {
+			"title": "Website und Branding für Tentative",
+			"description": "Eine Gruppe von unschlüssigen Kreativen, einschließlich meiner Wenigkeit."
 		}
 	},
 	"YTDG": {

@@ -1,19 +1,17 @@
-import { useTranslations } from "next-intl";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { Link } from "src/navigation";
 import Title from "src/components/layout/Title";
+import Button from "src/components/ui/Button";
+import Twitter from "src/icons/Twitter";
 
 import TitleBackgroundEn from "public/assets/contact/title_en.webp";
 import TitleBackgroundDe from "public/assets/contact/title_de.webp";
-import PixelMina from "public/assets/mina64.gif";
-
 import Letter from "public/assets/contact/letter.svg";
 import Bubbles from "public/assets/contact/bubbles.svg";
-import PaperPlane from "public/assets/contact/paperplane.svg";
-import { Link } from "src/navigation";
-import Button from "src/components/ui/Button";
 import Chatbox from "./chatbox";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
-import Twitter from "src/icons/Twitter";
+import Form from "./form";
 
 type Props = {
 	params: { locale: string };
@@ -57,50 +55,33 @@ export default function Page({ params: { locale } }: Props) {
 				</section>
 				<section className="group relative w-full overflow-clip border-y border-y-neutral-900">
 					<div className="max-w-7xl mx-auto py-12">
-						<div className="max-w-xl lg:max-w-3xl px-6 md:px-9 py-9  h-full">
+						<div className="max-w-xl lg:max-w-3xl px-6 md:px-9 py-9 h-full">
 							<h2>
 								{t("Content.Email.title")}
 								<span className="text-green">.</span>
 							</h2>
 							<p className="pb-9">{t("Content.Email.text")}</p>
-							<Link
-								href={`mailto:mail@pprmint.art?subject=${t("Content.Message.subject")}&body=${t(
-									"Content.Message.body"
-								)}`}
-							>
-								<Button tabIndex={-1} color="green">
-									mail@pprmint.art
-								</Button>
-							</Link>
+							<Form />
+							<p className="mt-9 text-xs">
+								{t.rich("Content.Email.preferMailto", {
+									Link: (chunks) => (
+										<Link
+											href={`mailto:${chunks}?subject=${t("Content.Message.subject")}&body=${t(
+												"Content.Message.body"
+											)}`}
+											className="text-link"
+										>
+											{chunks}
+										</Link>
+									),
+								})}
+							</p>
 						</div>
 					</div>
 					<Image
 						src={Letter}
 						alt=""
 						className="absolute -z-10 w-1/2 md:w-1/3 h-auto bottom-0 md:top-1/2 md:-translate-y-1/2 right-0 xl:right-12 2xl:right-40 opacity-50"
-					/>
-				</section>
-				<section className="group relative w-full overflow-clip border-b border-b-neutral-900">
-					<div className="max-w-7xl mx-auto py-12">
-						<div className="max-w-xl lg:max-w-3xl px-6 md:px-9 py-9 h-full">
-							<h2>
-								{t("Content.Telegram.title")}
-								<span className="text-green">.</span>
-							</h2>
-							<p className="pb-9">{t("Content.Telegram.text")}</p>
-							<div className="w-max">
-								<Link href="https://t.me/npprmint" target="_blank" rel="noopener noreferrer">
-									<Button tabIndex={-1} color="green">
-										{t("Content.Telegram.button")}
-									</Button>
-								</Link>
-							</div>
-						</div>
-					</div>
-					<Image
-						src={PaperPlane}
-						alt=""
-						className="absolute -z-10 w-1/2 md:w-1/4 h-auto bottom-0 md:top-1/2 md:-translate-y-1/2 right-0 xl:right-16 2xl:right-48 opacity-50"
 					/>
 				</section>
 				<section className="group relative w-full overflow-clip border-b border-b-neutral-900">
