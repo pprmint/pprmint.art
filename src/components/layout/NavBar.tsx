@@ -20,7 +20,7 @@ export default function NavBar() {
 			className="z-90 fixed h-16 pl-6 md:pl-9 pr-2 md:pr-5 top-0 left-0 right-0 bg-neutral-950 border-b border-b-neutral-900 flex items-center justify-between duration-300"
 		>
 			<Link href="/" className="z-80 my-auto drop-shadow-[0px_2px_12px_#1118]">
-				<Image src={Wordmark} alt="pprmint. logo" className="h-auto w-[150px] mt-1 duration-250" />
+				<Image src={Wordmark} alt="pprmint. logo" className="h-auto w-[140px] mt-1 duration-250" />
 			</Link>
 			<div className="hidden z-80 md:flex">
 				<DesktopNavigation />
