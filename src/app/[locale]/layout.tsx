@@ -49,7 +49,6 @@ export default function LocaleLayout({ children, params: { locale } }: Props) {
 					<NavBar />
 					{children}
 					<Footer />
-					<PotatoRedirect />
 					<ScrollToTopButton />
 				</NextIntlClientProvider>
 			</body>
