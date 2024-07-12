@@ -1,10 +1,34 @@
 import Button from "src/components/ui/Button";
 import Checkbox from "src/components/ui/Checkbox";
 import VideoPlayer from "src/components/ui/VideoPlayer";
+import AudioPlayer from "src/components/ui/AudioPlayer";
+import Image from "next/image";
+
+import Seyana from "public/assets/mina/sticker_seyana.webp";
+
+export async function generateMetadata() {
+	return {
+		title: "Test page",
+		description: "Check out some random UI elements and unfinished stuff.",
+	};
+}
 
 export default function Page() {
 	return (
 		<main className="min-h-screen max-w-7xl mx-auto pt-48 px-6 md:px-9">
+			<section className="mb-48">
+				<h2>Audio player</h2>
+				<div className="flex flex-wrap justify-between">
+					<AudioPlayer src="/assets/Intro.wav" title="Intro sound" artist="pprmint." />
+					<AudioPlayer src="/assets/Intro.wav" title="Intro sound" artist="pprmint.">
+						<Image src={Seyana} alt="" className="size-full object-cover" />
+					</AudioPlayer>
+				</div>
+			</section>
+			<section className="mb-48">
+				<h2>Video player</h2>
+				<VideoPlayer src="https://static.pprmint.art/videos/Takashi.mp4" />
+			</section>
 			<section id="texts" className="mb-48">
 				<h1>The quick brown fox jumps over the lazy dog. 1234567890</h1>
 				<h2>The quick brown fox jumps over the lazy dog. 1234567890</h2>
@@ -151,10 +175,6 @@ export default function Page() {
 					<Checkbox checked color="pink" />
 					<Checkbox checked disabled />
 				</div>
-			</section>
-			<section className="flex flex-col gap-6 mb-48">
-				<h2>Video player</h2>
-				<VideoPlayer src="https://static.pprmint.art/videos/Takashi.mp4" />
 			</section>
 		</main>
 	);
