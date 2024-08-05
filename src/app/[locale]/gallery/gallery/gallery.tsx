@@ -20,7 +20,7 @@ export default function Gallery(works: { works: Works }) {
 					<Dialog.Trigger asChild>
 						<button className="group/button relative overflow-clip cursor-pointer aspect-video bg-neutral-900 hover:bg-neutral-50 active:bg-neutral-950 duration-250 active:duration-75 ease-out-quint">
 							<Image
-								src={`https://static.pprmint.art${work.attributes.cover.data.attributes.url}`}
+								src={`https://static.pprmint.de${work.attributes.cover.data.attributes.url}`}
 								width={work.attributes.cover.data.attributes.width}
 								height={work.attributes.cover.data.attributes.height}
 								alt=""
@@ -54,7 +54,7 @@ export default function Gallery(works: { works: Works }) {
 							</button>
 							<div className="relative overflow-hidden h-80 md:h-1/3-screen">
 								<Image
-									src={`https://static.pprmint.art${work.attributes.cover.data.attributes.formats.thumbnail.url}`}
+									src={`https://static.pprmint.de${work.attributes.cover.data.attributes.formats.thumbnail.url}`}
 									alt={work.attributes.title}
 									fill
 									className={`object-cover ${work.attributes.coverFocus} h-full min-w-full contrast-[0.87] blur-lg`}
@@ -93,7 +93,7 @@ export default function Gallery(works: { works: Works }) {
 								media.attributes.mime.startsWith("image") ? (
 									<Image
 										key={media.id.toString()}
-										src={`https://static.pprmint.art${media.attributes.url}`}
+										src={`https://static.pprmint.de${media.attributes.url}`}
 										alt={media.attributes.alternativeText}
 										width={media.attributes.width}
 										height={media.attributes.height}
@@ -106,7 +106,7 @@ export default function Gallery(works: { works: Works }) {
 											controls
 											key={media.id.toString()}
 											className="w-full h-auto"
-											src={`https://static.pprmint.art${media.attributes.url}`}
+											src={`https://static.pprmint.de${media.attributes.url}`}
 										/>
 									)
 								)

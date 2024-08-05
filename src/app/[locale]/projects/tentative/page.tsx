@@ -142,7 +142,7 @@ export default function Page({ params: { locale } }: Props) {
 								<Menu />
 							</div>
 						</div>
-						<Carousel images={[OldWebsite1, OldWebsite2, OldWebsite3]} className="rounded-md" />
+						<Carousel images={[OldWebsite1, OldWebsite2, OldWebsite3]} className="rounded-md w-full aspect-video" />
 					</div>
 					<p>
 						There wasn't really much rhyme or reason behind the decisions I made here. I just saw this as an
@@ -227,7 +227,7 @@ export default function Page({ params: { locale } }: Props) {
 						made in a 7x7 pixel grid for more simplicity, but also flexibility. These can be used at small
 						scale as they are, or at large scale with other effects like borders and gradients.
 					</p>
-					<div className="flex w-full justify-evenly gap-12 my-9">
+					<div className="grid grid-cols-2 md:grid-cols-3 w-full items-center justify-between gap-12 my-9">
 						<div>
 							<FadingImage src={IconWxz} alt="" className="size-full md:size-64" />
 							<p className="text-center mt-6 text-neutral-50 text-xl font-display font-medium">wxsonz</p>

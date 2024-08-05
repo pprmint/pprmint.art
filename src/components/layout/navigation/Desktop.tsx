@@ -1,6 +1,6 @@
 "use client";
-import { useLocale, useTranslations } from "next-intl";
-import { Link, locales, usePathname } from "src/navigation";
+import { useTranslations } from "next-intl";
+import { Link, usePathname } from "src/navigation";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import { Pages, Projects } from "./Links";
 import Copyright from "./Socials";
@@ -13,8 +13,6 @@ const Caret = (
 export default function DesktopNavigation() {
 	const t = useTranslations("NAVIGATION");
 	const pathname = usePathname();
-	const locale = useLocale();
-	const otherLocale = locales?.find((cur) => cur !== locale);
 	// Styles
 	const NavMenuTrigger =
 		"group/root flex items-center gap-3 h-10 px-4 text-neutral-50/80 hover:text-neutral-50 data-[state='open']:text-neutral-50 duration-250 rounded-lg";
@@ -172,7 +170,7 @@ export default function DesktopNavigation() {
 										asChild
 										className="group block px-3 py-2.5 rounded-lg hover:bg-neutral-50/10 active:scale-[0.98] active:opacity-75 duration-250 ease-out active:duration-75"
 									>
-										<Link href="https://pprmint.art/redirect">
+										<Link href="https://pprmint.de/redirect">
 											<span className="text-neutral-50 font-display text-xl pb-0.5">
 												{t("Path.Other.Potato.title")}
 											</span>

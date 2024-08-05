@@ -194,6 +194,20 @@ export default function MobileNavigation() {
 												{t("Path.Other.AI.title")}
 											</li>
 										</Link>
+										<Link className="group" href={`https://potato.pprmint.de${pathname}`}>
+											<li
+												className={`flex items-center ${
+													"/privacy" === pathname
+														? "text-neutral-50"
+														: "hover:text-neutral-50 group-hover:bg-neutral-50/10 group-active:opacity-75"
+												} px-3 py-1.5 w-full duration-100 rounded-[17px]`}
+											>
+												<div className="flex flex-col">
+													<span>{t("Path.Other.Potato.title")}</span>
+													<span className="text-xs opacity-50">{t("Path.Other.Potato.description")}</span>
+												</div>
+											</li>
+										</Link>
 										<Link className="group" href={pathname} locale={otherLocale} scroll={false} onClick={handleClose}>
 											<li className="flex items-center hover:text-neutral-50 group-hover:bg-neutral-50/10 group-active:opacity-75 px-3 py-1.5 w-full duration-100 rounded-[17px]">
 												<div className="flex flex-col">
@@ -202,7 +216,7 @@ export default function MobileNavigation() {
 												</div>
 											</li>
 										</Link>
-										<Link className="group" href="https://pprmint.art/redirect" locale={otherLocale} scroll={false} onClick={handleClose}>
+										<Link className="group" href="https://pprmint.de/redirect" locale={otherLocale} scroll={false} onClick={handleClose}>
 											<li className="flex items-center hover:text-neutral-50 group-hover:bg-neutral-50/10 group-active:opacity-75 px-3 py-1.5 w-full duration-100 rounded-[17px]">
 												<div className="flex flex-col">
 													<span>{t("Path.Other.Potato.title")}</span>

@@ -38,11 +38,10 @@ export default function NavBar() {
 					{locales.map((locale, _) => (
 						<span
 							key={locale}
-							className={`text-sm py-0.5 w-9 text-center uppercase ${
-								currentLocale === locale
-									? "bg-gradient-to-b from-neutral-50 to-neutral-100 text-neutral-950 shadow-sm"
-									: "text-neutral-50/80"
-							} rounded-full`}
+							className={`text-sm py-0.5 w-9 text-center uppercase ${currentLocale === locale
+								? "bg-gradient-to-b from-neutral-50 to-neutral-100 text-neutral-950 shadow-sm"
+								: "text-neutral-50/80"
+								} rounded-full`}
 						>
 							{locale}
 						</span>

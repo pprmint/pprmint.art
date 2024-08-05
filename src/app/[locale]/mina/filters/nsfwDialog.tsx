@@ -8,7 +8,6 @@ import * as Dialog from "@radix-ui/react-dialog";
 import Button from "src/components/ui/Button";
 
 import HehMina from "public/assets/mina/heh-upscaled.png";
-import FadingImage from "src/components/ui/FadingImage";
 import X from "src/icons/X";
 
 export default function NsfwDialog({ onAccept }: { onAccept: () => void }) {

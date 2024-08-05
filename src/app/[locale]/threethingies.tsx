@@ -31,7 +31,7 @@ export default function ThreeThingies() {
 					<ArrowRight className="size-6 text-green" />
 				</div>
 				<Image
-					src="https://static.pprmint.art/uploads/dark2_80a3e41e9f.png"
+					src="https://static.pprmint.de/uploads/dark2_80a3e41e9f.png"
 					fill
 					className="z-0 object-cover saturate-0 opacity-10 group-hover:opacity-20 group-focus-visible:opacity-20 duration-200"
 					alt=""
@@ -58,7 +58,7 @@ export default function ThreeThingies() {
 					<ArrowRight className="size-6 text-blue" />
 				</div>
 				<Image
-					src="https://static.pprmint.art/uploads/Crystal_Cave_light_c60ed75104.png"
+					src="https://static.pprmint.de/uploads/Crystal_Cave_light_c60ed75104.png"
 					fill
 					className="z-0 object-cover saturate-0 opacity-10 group-hover:opacity-20 group-focus-visible:opacity-20 duration-200"
 					alt=""
@@ -87,7 +87,7 @@ export default function ThreeThingies() {
 					<ArrowUpRight className="size-6 text-red" />
 				</div>
 				<Image
-					src="https://static.pprmint.art/uploads/Zoompaper_aecb0eee13.png"
+					src="https://static.pprmint.de/uploads/Zoompaper_aecb0eee13.png"
 					fill
 					className="z-0 object-cover saturate-0 opacity-10 group-hover:opacity-20 group-focus-visible:opacity-20 duration-200"
 					alt=""
